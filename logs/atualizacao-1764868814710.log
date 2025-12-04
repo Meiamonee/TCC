@@ -1,0 +1,17 @@
+═══════════════════════════════════════════════════
+🚀 INICIANDO ATUALIZAÇÃO AUTOMÁTICA
+═══════════════════════════════════════════════════
+📅 Data/Hora: 04/12/2025, 14:20:14
+═══════════════════════════════════════════════════
+
+
+🕷️  Executando scraper...
+📅 04/12/2025, 14:20:14
+
+[ERRO] ❌ Erro no scraper: spawn C:\WINDOWS\system32\cmd.exe ENOENT
+[ERRO] 
+═══════════════════════════════════════════════════
+[ERRO] ❌ ERRO NA ATUALIZAÇÃO AUTOMÁTICA
+[ERRO] ═══════════════════════════════════════════════════
+[ERRO] Error: spawn C:\WINDOWS\system32\cmd.exe ENOENT
+[ERRO] 

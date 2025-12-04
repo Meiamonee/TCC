@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scheduler": "node scheduler.js",
+    "scheduler:now": "node scheduler.js --run-now",
+    "atualizar": "node scripts/atualizarSuperVale.js",
+    "importar": "node scripts/importSuperVale.js",
+    "testar": "node scripts/testarComparacao.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongoose": "^9.0.0",
+    "node-cron": "^4.2.1"
+  }
+}
