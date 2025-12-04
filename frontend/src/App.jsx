@@ -3,6 +3,7 @@ import { Search, ShoppingBag, Menu } from 'lucide-react'
 import ProductList from './components/ProductList'
 import CategoryMenu from './components/CategoryMenu'
 import SupermarketMenu from './components/SupermarketMenu'
+import ComparisonSidebar from './components/ComparisonSidebar'
 import Pagination from './components/Pagination'
 import productsData from './data/products.json'
 
@@ -15,6 +16,8 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
+  const [comparisonSidebarOpen, setComparisonSidebarOpen] = useState(false)
+  const [selectedProductForComparison, setSelectedProductForComparison] = useState(null)
 
   useEffect(() => {
     // In a real app, you might fetch this from an API
@@ -51,6 +54,15 @@ function App() {
   const handlePageChange = (page) => {
     setCurrentPage(page)
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleCompareProduct = (product) => {
+    setSelectedProductForComparison(product)
+    setComparisonSidebarOpen(true)
+  }
+
+  const handleCloseSidebar = () => {
+    setComparisonSidebarOpen(false)
   }
 
   return (
@@ -145,7 +157,10 @@ function App() {
                 </div>
               </div>
 
-              <ProductList products={paginatedProducts} />
+              <ProductList
+                products={paginatedProducts}
+                onCompare={handleCompareProduct}
+              />
 
               <Pagination
                 currentPage={currentPage}
@@ -156,6 +171,14 @@ function App() {
           </div>
         </div>
       </main>
+
+      {/* Comparison Sidebar */}
+      <ComparisonSidebar
+        isOpen={comparisonSidebarOpen}
+        onClose={handleCloseSidebar}
+        selectedProduct={selectedProductForComparison}
+        allProducts={products}
+      />
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-12 py-8">

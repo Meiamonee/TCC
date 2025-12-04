@@ -1,7 +1,7 @@
 import React from 'react';
-import { ShoppingCart, AlertCircle } from 'lucide-react';
+import { Scale, AlertCircle } from 'lucide-react';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onCompare }) => {
     const isDisponivel = product.disponivel !== false; // Se não tiver o campo, assume disponível
 
     return (
@@ -14,6 +14,16 @@ const ProductCard = ({ product }) => {
                     className={`absolute top-0 left-0 w-full h-full object-contain p-4 transition-transform duration-300 ${isDisponivel ? 'group-hover:scale-105' : 'grayscale'
                         }`}
                 />
+
+                {/* Badge de Supermercado */}
+                {product.supermercado && (
+                    <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-bold shadow-md ${product.supermercado === 'supervale'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white'
+                        : 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white'
+                        }`}>
+                        {product.supermercado === 'supervale' ? 'SuperVale' : 'Fonseca'}
+                    </div>
+                )}
 
                 {/* Badge de Indisponível */}
                 {!isDisponivel && (
@@ -33,20 +43,21 @@ const ProductCard = ({ product }) => {
                     {product.name}
                 </h3>
 
-                <div className="mt-auto pt-3 border-t border-gray-50 flex items-center justify-between">
-                    <div className={`text-lg font-bold ${isDisponivel ? 'text-gray-900' : 'text-gray-400'}`}>
-                        {product.price}
-                    </div>
+                <div className={`text-2xl font-bold mb-3 ${isDisponivel ? 'text-gray-900' : 'text-gray-400'}`}>
+                    {product.price}
+                </div>
 
+                <div className="mt-auto pt-3 border-t border-gray-50">
                     <button
-                        className={`p-2 rounded-full transition-colors duration-200 ${isDisponivel
-                                ? 'bg-green-600 hover:bg-green-700 text-white'
-                                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        className={`w-full py-2.5 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${isDisponivel
+                            ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-md hover:shadow-lg transform hover:scale-105'
+                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                             }`}
-                        aria-label="Adicionar ao carrinho"
                         disabled={!isDisponivel}
+                        onClick={() => isDisponivel && onCompare && onCompare(product)}
                     >
-                        <ShoppingCart size={18} />
+                        <Scale size={18} />
+                        {isDisponivel ? 'Comparar' : 'Indisponível'}
                     </button>
                 </div>
 
