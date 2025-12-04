@@ -14,5 +14,10 @@
 }
 
 body {
-  background-color: #f9fafb;
+  background-color: #f8fafc;
+  /* Slate-50 */
+  color: #0f172a;
+  /* Slate-900 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

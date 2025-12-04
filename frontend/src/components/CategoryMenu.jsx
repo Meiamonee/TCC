@@ -5,9 +5,9 @@ const CategoryMenu = ({ categories, selectedCategory, onSelectCategory }) => {
         <div className="flex overflow-x-auto pb-4 gap-2 mb-6 scrollbar-hide">
             <button
                 onClick={() => onSelectCategory(null)}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-200 ${selectedCategory === null
-                        ? 'bg-green-600 text-white shadow-md'
-                        : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${selectedCategory === null
+                        ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20'
+                        : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                     }`}
             >
                 Todos
@@ -17,9 +17,9 @@ const CategoryMenu = ({ categories, selectedCategory, onSelectCategory }) => {
                 <button
                     key={category}
                     onClick={() => onSelectCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-200 ${selectedCategory === category
-                            ? 'bg-green-600 text-white shadow-md'
-                            : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                    className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${selectedCategory === category
+                            ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20'
+                            : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                         }`}
                 >
                     {category}

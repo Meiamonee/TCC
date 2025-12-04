@@ -118,56 +118,65 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
 
     if (!isOpen) return null;
 
+    if (!isOpen) return null;
+
     return (
         <>
             {/* Backdrop */}
             <div
-                className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
+                className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 transition-opacity duration-300"
                 onClick={onClose}
             />
 
             {/* Sidebar */}
-            <div className={`fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-50 transform transition-transform duration-300 overflow-y-auto ${isOpen ? 'translate-x-0' : 'translate-x-full'
+            <div className={`fixed top-0 right-0 h-full w-full md:w-[450px] bg-white shadow-2xl z-50 transform transition-transform duration-300 overflow-y-auto ${isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}>
                 {/* Header */}
-                <div className="sticky top-0 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 flex items-center justify-between shadow-lg z-10">
-                    <h2 className="text-lg font-bold flex items-center gap-2">
-                        <TrendingDown size={24} />
-                        Comparar Preços
-                    </h2>
+                <div className="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between z-10">
+                    <div>
+                        <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            Comparar Preços
+                        </h2>
+                        <p className="text-xs text-slate-500 mt-0.5">Encontre a melhor oferta</p>
+                    </div>
                     <button
                         onClick={onClose}
-                        className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                        className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
                     >
-                        <X size={24} />
+                        <X size={20} />
                     </button>
                 </div>
 
                 {selectedProduct && (
-                    <div className="p-4">
+                    <div className="p-6 space-y-8">
                         {/* Produto Selecionado */}
-                        <div className="mb-6">
-                            <h3 className="text-sm font-semibold text-gray-500 uppercase mb-3">Produto Selecionado</h3>
-                            <div className="bg-gray-50 rounded-xl p-4 border-2 border-purple-200">
-                                <img
-                                    src={selectedProduct.image}
-                                    alt={selectedProduct.name}
-                                    className="w-full h-32 object-contain mb-3"
-                                />
-                                <h4 className="font-semibold text-gray-800 mb-2 line-clamp-2">{selectedProduct.name}</h4>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-2xl font-bold text-purple-600">{selectedProduct.price}</span>
-                                    <span className={`px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${getSupermarketColor(selectedProduct.supermercado)}`}>
+                        <div>
+                            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Produto Selecionado</h3>
+                            <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex gap-4">
+                                <div className="w-20 h-20 flex-shrink-0 bg-slate-50 rounded-lg p-2">
+                                    <img
+                                        src={selectedProduct.image}
+                                        alt={selectedProduct.name}
+                                        className="w-full h-full object-contain mix-blend-multiply"
+                                    />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                    <div className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase mb-2 ${selectedProduct.supermercado === 'supervale'
+                                            ? 'bg-emerald-50 text-emerald-700'
+                                            : 'bg-blue-50 text-blue-700'
+                                        }`}>
                                         {getSupermarketName(selectedProduct.supermercado)}
-                                    </span>
+                                    </div>
+                                    <h4 className="font-medium text-slate-900 text-sm line-clamp-2 mb-2">{selectedProduct.name}</h4>
+                                    <div className="text-xl font-bold text-slate-900">{selectedProduct.price}</div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Comparação */}
                         <div>
-                            <h3 className="text-sm font-semibold text-gray-500 uppercase mb-3">
-                                {allProductsToCompare.length > 0 ? 'Comparação de Preços' : 'Produto não encontrado em outras lojas'}
+                            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+                                {allProductsToCompare.length > 0 ? 'Disponível em outras lojas' : 'Sem similares encontrados'}
                             </h3>
 
                             {allProductsToCompare.length > 0 ? (
@@ -179,48 +188,50 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
                                         return (
                                             <div
                                                 key={`${product.supermercado}-${index}`}
-                                                className={`rounded-xl p-4 border-2 transition-all ${isCheapest
-                                                        ? 'bg-green-50 border-green-500 shadow-lg'
-                                                        : 'bg-white border-gray-200'
+                                                className={`rounded-xl p-4 border transition-all ${isCheapest
+                                                    ? 'bg-emerald-50/50 border-emerald-200 ring-1 ring-emerald-100'
+                                                    : 'bg-white border-slate-200 hover:border-slate-300'
                                                     }`}
                                             >
-                                                {isCheapest && (
-                                                    <div className="flex items-center gap-2 mb-2">
-                                                        <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                                                            <Check size={14} />
-                                                            MAIS BARATO
-                                                        </div>
+                                                <div className="flex justify-between items-start mb-3">
+                                                    <div className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase ${product.supermercado === 'supervale'
+                                                            ? 'bg-emerald-100 text-emerald-800'
+                                                            : 'bg-blue-100 text-blue-800'
+                                                        }`}>
+                                                        {getSupermarketName(product.supermercado)}
                                                     </div>
-                                                )}
-
-                                                <div className="flex items-start justify-between mb-2">
-                                                    <div className="flex-1">
-                                                        <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${getSupermarketColor(product.supermercado)} mb-2`}>
-                                                            {getSupermarketName(product.supermercado)}
+                                                    {isCheapest && (
+                                                        <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-white px-2 py-0.5 rounded-full shadow-sm border border-emerald-100">
+                                                            <Check size={12} strokeWidth={3} />
+                                                            MELHOR PREÇO
                                                         </div>
-                                                        <p className="text-sm text-gray-600 line-clamp-2">{product.name}</p>
-                                                    </div>
+                                                    )}
                                                 </div>
 
-                                                <div className="flex items-center justify-between">
-                                                    <span className={`text-xl font-bold ${isCheapest ? 'text-green-600' : 'text-gray-800'}`}>
-                                                        {product.price}
-                                                    </span>
-                                                    {priceDiff && (
-                                                        <span className="text-sm text-red-600 font-semibold flex items-center gap-1">
-                                                            <TrendingUp size={16} />
-                                                            {priceDiff}
-                                                        </span>
-                                                    )}
+                                                <div className="flex items-center gap-4">
+                                                    <div className="flex-1 min-w-0">
+                                                        <p className="text-sm text-slate-600 line-clamp-1 mb-1">{product.name}</p>
+                                                        <div className="flex items-baseline gap-2">
+                                                            <span className={`text-lg font-bold ${isCheapest ? 'text-emerald-700' : 'text-slate-900'}`}>
+                                                                {product.price}
+                                                            </span>
+                                                            {priceDiff && (
+                                                                <span className="text-xs font-medium text-red-500 flex items-center">
+                                                                    <TrendingUp size={12} className="mr-0.5" />
+                                                                    {priceDiff}
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         );
                                     })}
                                 </div>
                             ) : (
-                                <div className="text-center py-8 text-gray-500">
-                                    <p>Nenhum produto similar encontrado em outras lojas.</p>
-                                    <p className="text-xs mt-2">Comparamos apenas produtos com mesma unidade e quantidade.</p>
+                                <div className="text-center py-12 bg-slate-50 rounded-xl border border-dashed border-slate-200">
+                                    <p className="text-slate-500 text-sm font-medium">Nenhum similar encontrado</p>
+                                    <p className="text-xs text-slate-400 mt-1">Mesma unidade e quantidade</p>
                                 </div>
                             )}
                         </div>
