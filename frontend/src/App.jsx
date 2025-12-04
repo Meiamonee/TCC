@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Search, ShoppingBag, Menu } from 'lucide-react'
 import ProductList from './components/ProductList'
 import CategoryMenu from './components/CategoryMenu'
+import SupermarketMenu from './components/SupermarketMenu'
 import Pagination from './components/Pagination'
 import productsData from './data/products.json'
 
@@ -10,6 +11,7 @@ const ITEMS_PER_PAGE = 40;
 function App() {
   const [products, setProducts] = useState([])
   const [selectedCategory, setSelectedCategory] = useState(null)
+  const [selectedSupermarket, setSelectedSupermarket] = useState(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -19,10 +21,10 @@ function App() {
     setProducts(productsData)
   }, [])
 
-  // Reset to page 1 when category or search changes
+  // Reset to page 1 when category, supermarket or search changes
   useEffect(() => {
     setCurrentPage(1)
-  }, [selectedCategory, searchTerm])
+  }, [selectedCategory, selectedSupermarket, searchTerm])
 
   const categories = useMemo(() => {
     const cats = new Set(productsData.map(p => p.department))
@@ -32,10 +34,11 @@ function App() {
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
       const matchesCategory = selectedCategory ? product.department === selectedCategory : true
+      const matchesSupermarket = selectedSupermarket ? product.supermercado === selectedSupermarket : true
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase())
-      return matchesCategory && matchesSearch
+      return matchesCategory && matchesSupermarket && matchesSearch
     })
-  }, [products, selectedCategory, searchTerm])
+  }, [products, selectedCategory, selectedSupermarket, searchTerm])
 
   // Pagination calculations
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE)
@@ -103,43 +106,55 @@ function App() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
-        {/* Categories */}
-        <section className="mb-8">
-          <h2 className="text-lg font-bold text-gray-800 mb-4 px-1">Departamentos</h2>
-          <CategoryMenu
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onSelectCategory={setSelectedCategory}
-          />
-        </section>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Sidebar - Supermercados */}
+          <aside className="lg:col-span-1">
+            <SupermarketMenu
+              selectedSupermarket={selectedSupermarket}
+              onSelectSupermarket={setSelectedSupermarket}
+            />
+          </aside>
 
+          {/* Main Content Area */}
+          <div className="lg:col-span-3">
+            {/* Categories */}
+            <section className="mb-8">
+              <h2 className="text-lg font-bold text-gray-800 mb-4 px-1">Departamentos</h2>
+              <CategoryMenu
+                categories={categories}
+                selectedCategory={selectedCategory}
+                onSelectCategory={setSelectedCategory}
+              />
+            </section>
 
-        {/* Products */}
-        <section>
-          <div className="flex items-center justify-between mb-6 px-1">
-            <h2 className="text-xl font-bold text-gray-800">
-              {selectedCategory || 'Todos os Produtos'}
-            </h2>
-            <div className="flex flex-col items-end gap-1">
-              <span className="text-sm text-gray-500 font-medium">
-                {filteredProducts.length} produtos
-              </span>
-              {totalPages > 1 && (
-                <span className="text-xs text-gray-400">
-                  Página {currentPage} de {totalPages}
-                </span>
-              )}
-            </div>
+            {/* Products */}
+            <section>
+              <div className="flex items-center justify-between mb-6 px-1">
+                <h2 className="text-xl font-bold text-gray-800">
+                  {selectedCategory || 'Todos os Produtos'}
+                </h2>
+                <div className="flex flex-col items-end gap-1">
+                  <span className="text-sm text-gray-500 font-medium">
+                    {filteredProducts.length} produtos
+                  </span>
+                  {totalPages > 1 && (
+                    <span className="text-xs text-gray-400">
+                      Página {currentPage} de {totalPages}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <ProductList products={paginatedProducts} />
+
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+            </section>
           </div>
-
-          <ProductList products={paginatedProducts} />
-
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-          />
-        </section>
+        </div>
       </main>
 
       {/* Footer */}
