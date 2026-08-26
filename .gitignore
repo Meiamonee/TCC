@@ -1,0 +1,34 @@
+# Dependencias
+node_modules/
+
+# Variaveis locais e segredos
+.env
+.env.*
+!.env.example
+
+# Builds e caches
+dist/
+build/
+coverage/
+.vite/
+.cache/
+
+# Logs e temporarios
+logs/
+tmp/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Artefatos de debug dos scrapers
+scraper/debug_*.html
+scraper/debug_*.png
+scraper-fonseca/debug_*.html
+scraper-fonseca/debug_*.png
+
+# Sistema/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -2,12 +2,12 @@ import React from 'react';
 
 const CategoryMenu = ({ categories, selectedCategory, onSelectCategory }) => {
     return (
-        <div className="flex overflow-x-auto pb-4 gap-2 mb-6 scrollbar-hide">
+        <div className="mb-4 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             <button
                 onClick={() => onSelectCategory(null)}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${selectedCategory === null
-                        ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20'
-                        : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                className={`whitespace-nowrap rounded px-4 py-2.5 text-sm font-semibold transition-colors ${selectedCategory === null
+                    ? 'bg-violet-700 text-white'
+                    : 'border border-zinc-200 bg-white text-zinc-700 hover:border-violet-300 hover:text-violet-700'
                     }`}
             >
                 Todos
@@ -17,9 +17,9 @@ const CategoryMenu = ({ categories, selectedCategory, onSelectCategory }) => {
                 <button
                     key={category}
                     onClick={() => onSelectCategory(category)}
-                    className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${selectedCategory === category
-                            ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20'
-                            : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                    className={`whitespace-nowrap rounded px-4 py-2.5 text-sm font-semibold transition-colors ${selectedCategory === category
+                        ? 'bg-violet-700 text-white'
+                        : 'border border-zinc-200 bg-white text-zinc-700 hover:border-violet-300 hover:text-violet-700'
                         }`}
                 >
                     {category}

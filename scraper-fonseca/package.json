@@ -1,7 +1,7 @@
 {
-  "name": "supervale-scraper",
+  "name": "fonseca-scraper",
   "version": "1.0.0",
-  "description": "Scraper for Supervale Supermercados",
+  "description": "Scraper for Supermercados Fonseca",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,13 +9,13 @@
   },
   "keywords": [
     "scraper",
-    "puppeteer",
-    "supervale"
+    "selenium",
+    "fonseca"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mongoose": "^9.0.0",
-    "puppeteer": "^23.0.0"
+    "selenium-webdriver": "^4.45.0"
   }
 }

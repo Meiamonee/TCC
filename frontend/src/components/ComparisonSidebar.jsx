@@ -38,6 +38,20 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
         return null;
     };
 
+    const getProductPrice = (product) => {
+        if (typeof product.priceNumber === 'number') return product.priceNumber;
+
+        const normalized = String(product.price || '')
+            .normalize('NFKC')
+            .replace(/\s/g, '')
+            .replace(/[^\d,.-]/g, '')
+            .replace(/\.(?=\d{3}(?:\D|$))/g, '')
+            .replace(',', '.');
+
+        const match = normalized.match(/\d+(?:\.\d+)?/);
+        return match ? Number(match[0]) : 0;
+    };
+
     // Buscar produtos similares COM MESMA UNIDADE
     const similarProducts = useMemo(() => {
         if (!selectedProduct) return [];
@@ -75,9 +89,7 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
 
         // Ordenar por preço
         return similar.sort((a, b) => {
-            const priceA = parseFloat(a.price.replace(/[^\d,]/g, '').replace(',', '.'));
-            const priceB = parseFloat(b.price.replace(/[^\d,]/g, '').replace(',', '.'));
-            return priceA - priceB;
+            return getProductPrice(a) - getProductPrice(b);
         });
     }, [selectedProduct, allProducts]);
 
@@ -91,8 +103,8 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
     const cheapestProduct = useMemo(() => {
         if (allProductsToCompare.length === 0) return null;
         return allProductsToCompare.reduce((min, product) => {
-            const minPrice = parseFloat(min.price.replace(/[^\d,]/g, '').replace(',', '.'));
-            const productPrice = parseFloat(product.price.replace(/[^\d,]/g, '').replace(',', '.'));
+            const minPrice = getProductPrice(min);
+            const productPrice = getProductPrice(product);
             return productPrice < minPrice ? product : min;
         });
     }, [allProductsToCompare]);
@@ -100,23 +112,15 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
     // Calcular diferença de preço
     const getPriceDifference = (product) => {
         if (!cheapestProduct) return null;
-        const cheapestPrice = parseFloat(cheapestProduct.price.replace(/[^\d,]/g, '').replace(',', '.'));
-        const productPrice = parseFloat(product.price.replace(/[^\d,]/g, '').replace(',', '.'));
+        const cheapestPrice = getProductPrice(cheapestProduct);
+        const productPrice = getProductPrice(product);
         const diff = productPrice - cheapestPrice;
         return diff > 0 ? `+R$ ${diff.toFixed(2).replace('.', ',')}` : null;
-    };
-
-    const getSupermarketColor = (supermercado) => {
-        return supermercado === 'supervale'
-            ? 'from-green-500 to-emerald-600'
-            : 'from-blue-500 to-cyan-600';
     };
 
     const getSupermarketName = (supermercado) => {
         return supermercado === 'supervale' ? 'SuperVale' : 'Fonseca';
     };
-
-    if (!isOpen) return null;
 
     if (!isOpen) return null;
 

@@ -9,12 +9,12 @@
   },
   "keywords": [
     "scraper",
-    "puppeteer",
+    "selenium",
     "supervale"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^23.0.0"
+    "selenium-webdriver": "^4.45.0"
   }
 }

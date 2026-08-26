@@ -1,149 +1,252 @@
-const puppeteer = require('puppeteer');
+const { Builder, By, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs');
+const path = require('path');
 const config = require('./config');
 
-(async () => {
-    console.log('Starting scraper...');
-    const browser = await puppeteer.launch({
-        headless: false,
-        defaultViewport: null,
-        args: ['--start-maximized', '--no-sandbox', '--disable-setuid-sandbox']
-    });
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+const DEFAULT_PAGE_DELAY_MS = 8000;
+const DEFAULT_PAGE_DELAY_JITTER_MS = 4000;
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
-    const allProducts = [];
+function parseNonNegativeInteger(value, fallback) {
+    const parsed = Number.parseInt(value, 10);
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
+}
 
-    for (const dept of config.departments) {
-        console.log(`Scraping department: ${dept.name} (${dept.url})`);
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-        try {
-            await page.goto(dept.url, { waitUntil: 'networkidle2', timeout: 60000 });
-        } catch (error) {
-            console.error(`Failed to load department ${dept.name}: ${error.message}`);
-            continue;
-        }
+function getDelayConfig(options) {
+    return {
+        pageDelayMs: parseNonNegativeInteger(
+            options.pageDelayMs ?? process.env.SCRAPER_PAGE_DELAY_MS,
+            DEFAULT_PAGE_DELAY_MS
+        ),
+        pageDelayJitterMs: parseNonNegativeInteger(
+            options.pageDelayJitterMs ?? process.env.SCRAPER_PAGE_DELAY_JITTER_MS,
+            DEFAULT_PAGE_DELAY_JITTER_MS
+        )
+    };
+}
 
-        let pageNum = 1;
-        let previousProductIds = new Set();
+function getChromeBinaryPath(options) {
+    return options.chromeBinaryPath
+        || process.env.CHROME_BINARY_PATH
+        || process.env.SELENIUM_CHROME_BINARY_PATH;
+}
 
-        while (true) {
-            console.log(`  Scraping page ${pageNum}...`);
+function getChromeDriverPath(options) {
+    return options.chromeDriverPath
+        || process.env.CHROMEDRIVER_PATH
+        || process.env.SELENIUM_CHROMEDRIVER_PATH;
+}
 
-            // Wait for products to load
-            try {
-                await page.waitForSelector(config.selectors.productContainer, { timeout: 15000 });
-            } catch (e) {
-                console.log('  No products found on this page (or timeout). Stopping pagination.');
-                break;
-            }
+function getSeleniumManagerPath(options) {
+    return options.seleniumManagerPath
+        || process.env.SE_MANAGER_PATH;
+}
 
-            // Extract products with IDs to detect duplicates
-            const products = await page.evaluate((selectors) => {
-                const items = [];
-                const productCards = document.querySelectorAll(selectors.productContainer);
+function buildChromeOptions(headless, options) {
+    const chromeOptions = new chrome.Options()
+        .addArguments(
+            '--no-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--window-size=1366,768',
+            `--user-agent=${USER_AGENT}`
+        );
 
-                productCards.forEach(card => {
-                    const titleEl = card.querySelector(selectors.productTitle);
-                    const priceEl = card.querySelector(selectors.productPrice);
-                    const imgEl = card.querySelector(selectors.productImage);
-                    const linkEl = card.querySelector('a[href^="/produto/"]');
-
-                    if (titleEl && priceEl && linkEl) {
-                        // Extract product ID from URL
-                        const urlMatch = linkEl.href.match(/\/produto\/(\d+)\//);
-                        const productId = urlMatch ? urlMatch[1] : null;
-
-                        items.push({
-                            id: productId,
-                            name: titleEl.innerText.trim(),
-                            price: priceEl.innerText.trim(),
-                            image: imgEl ? imgEl.src : null,
-                            url: linkEl.href
-                        });
-                    }
-                });
-                return items;
-            }, config.selectors);
-
-            console.log(`    Found ${products.length} products.`);
-
-            // Check if we're seeing the same products (duplicate page)
-            const currentProductIds = new Set(products.map(p => p.id).filter(id => id));
-
-            if (currentProductIds.size === 0) {
-                console.log('  No valid products on this page. Stopping pagination.');
-                break;
-            }
-
-            // Check for duplicates - if all products are the same as previous page, we've looped
-            const allDuplicates = products.every(p => previousProductIds.has(p.id));
-            if (pageNum > 1 && allDuplicates) {
-                console.log('  All products are duplicates from previous page. Reached the end.');
-                break;
-            }
-
-            // Add products to results
-            products.forEach(p => {
-                p.department = dept.name;
-                allProducts.push(p);
-            });
-
-            // Update previous IDs for next iteration
-            previousProductIds = currentProductIds;
-
-            // Try to click "Next page" button
-            const clickedNext = await page.evaluate(() => {
-                const buttons = Array.from(document.querySelectorAll('button'));
-                const nextBtn = buttons.find(btn =>
-                    btn.getAttribute('aria-label')?.includes('Próxima página') ||
-                    btn.getAttribute('title')?.includes('Próxima página')
-                );
-
-                if (nextBtn && !nextBtn.disabled) {
-                    nextBtn.click();
-                    return true;
-                }
-                return false;
-            });
-
-            if (!clickedNext) {
-                console.log('  No next page button available. This is the last page.');
-                break;
-            }
-
-            console.log('  Clicked next page button. Waiting for page to update...');
-
-            // Wait for page to update after clicking
-            try {
-                // Get current URL before waiting
-                const urlBefore = page.url();
-
-                // Wait for page to update (give it time to navigate)
-                await new Promise(r => setTimeout(r, 3000));
-
-                // Check if URL changed
-                const urlAfter = page.url();
-                if (urlBefore === urlAfter) {
-                    console.log('  URL did not change after clicking. Might be last page.');
-                }
-
-                // Wait for products to reload
-                await page.waitForSelector(config.selectors.productContainer, { timeout: 10000 });
-
-                pageNum++;
-                await new Promise(r => setTimeout(r, 1000));
-            } catch (err) {
-                console.log('  Error waiting for page update:', err.message);
-                break;
-            }
-        }
+    if (headless) {
+        chromeOptions.addArguments('--headless=new');
+    } else {
+        chromeOptions.addArguments('--start-maximized');
     }
 
-    console.log(`Scraping complete. Total products found: ${allProducts.length}`);
+    const chromeBinaryPath = getChromeBinaryPath(options);
+    if (chromeBinaryPath) {
+        console.log(`Using Chrome binary from ${chromeBinaryPath}`);
+        chromeOptions.setChromeBinaryPath(chromeBinaryPath);
+    }
 
-    fs.writeFileSync('products.json', JSON.stringify(allProducts, null, 2));
-    console.log('Data saved to products.json');
+    return chromeOptions;
+}
 
-    await browser.close();
-})();
+async function createDriver(headless, options) {
+    const seleniumManagerPath = getSeleniumManagerPath(options);
+    if (options.seleniumManagerPath) {
+        process.env.SE_MANAGER_PATH = options.seleniumManagerPath;
+    }
+
+    let builder = new Builder()
+        .forBrowser('chrome')
+        .setChromeOptions(buildChromeOptions(headless, options));
+
+    const chromeDriverPath = getChromeDriverPath(options);
+    if (chromeDriverPath) {
+        console.log(`Using ChromeDriver from ${chromeDriverPath}`);
+        builder = builder.setChromeService(new chrome.ServiceBuilder(chromeDriverPath));
+    } else if (seleniumManagerPath) {
+        console.log(`Using Selenium Manager from ${seleniumManagerPath} to resolve ChromeDriver.`);
+    } else {
+        console.log('Using Selenium Manager to resolve ChromeDriver automatically.');
+    }
+
+    return builder.build();
+}
+
+async function waitBeforeScrapingNextPage(pageDelayMs, pageDelayJitterMs) {
+    const jitter = pageDelayJitterMs > 0 ? Math.floor(Math.random() * (pageDelayJitterMs + 1)) : 0;
+    const waitMs = pageDelayMs + jitter;
+
+    if (waitMs > 0) {
+        console.log(`  Waiting ${(waitMs / 1000).toFixed(1)}s before scraping the next page...`);
+        await sleep(waitMs);
+    }
+}
+
+async function extractProducts(driver, selectors) {
+    return driver.executeScript((domSelectors) => {
+        const items = [];
+        const productCards = document.querySelectorAll(domSelectors.productContainer);
+
+        productCards.forEach(card => {
+            const titleEl = card.querySelector(domSelectors.productTitle);
+            const priceEl = card.querySelector(domSelectors.productPrice);
+            const imgEl = card.querySelector(domSelectors.productImage);
+            const linkEl = card.querySelector('a[href^="/produto/"]');
+
+            if (titleEl && priceEl && linkEl) {
+                const urlMatch = linkEl.href.match(/\/produto\/(\d+)\//);
+                const productId = urlMatch ? urlMatch[1] : null;
+
+                items.push({
+                    id: productId,
+                    name: titleEl.innerText.trim(),
+                    price: priceEl.innerText.trim(),
+                    image: imgEl ? imgEl.src : null,
+                    url: linkEl.href
+                });
+            }
+        });
+
+        return items;
+    }, selectors);
+}
+
+async function clickNextPage(driver, selectors) {
+    return driver.executeScript((domSelectors) => {
+        const buttons = Array.from(document.querySelectorAll('button'));
+        const nextBtn = buttons.find(btn =>
+            btn.getAttribute('aria-label')?.includes(domSelectors.paginationNextText) ||
+            btn.getAttribute('title')?.includes(domSelectors.paginationNextText)
+        );
+
+        if (nextBtn && !nextBtn.disabled) {
+            nextBtn.click();
+            return true;
+        }
+
+        return false;
+    }, selectors);
+}
+
+async function scrapeProducts(options = {}) {
+    const outputPath = options.outputPath || path.join(__dirname, 'products.json');
+    const headless = options.headless ?? process.env.SCRAPER_HEADLESS !== 'false';
+    const { pageDelayMs, pageDelayJitterMs } = getDelayConfig(options);
+
+    console.log('Starting SuperVale scraper...');
+    console.log(`Page delay configured: ${pageDelayMs}ms + up to ${pageDelayJitterMs}ms random jitter.`);
+
+    const driver = await createDriver(headless, options);
+    const allProducts = [];
+
+    try {
+        for (const dept of config.departments) {
+            console.log(`Scraping department: ${dept.name} (${dept.url})`);
+
+            try {
+                await driver.get(dept.url);
+            } catch (error) {
+                console.error(`Failed to load department ${dept.name}: ${error.message}`);
+                continue;
+            }
+
+            let pageNum = 1;
+            let previousProductIds = new Set();
+
+            while (true) {
+                console.log(`  Scraping page ${pageNum}...`);
+
+                try {
+                    await driver.wait(until.elementLocated(By.css(config.selectors.productContainer)), 15000);
+                } catch (_error) {
+                    console.log('  No products found on this page. Stopping pagination.');
+                    break;
+                }
+
+                const products = await extractProducts(driver, config.selectors);
+
+                console.log(`    Found ${products.length} products.`);
+
+                const currentProductIds = new Set(products.map(p => p.id).filter(Boolean));
+
+                if (currentProductIds.size === 0) {
+                    console.log('  No valid products on this page. Stopping pagination.');
+                    break;
+                }
+
+                const allDuplicates = products.every(p => previousProductIds.has(p.id));
+                if (pageNum > 1 && allDuplicates) {
+                    console.log('  All products are duplicates from previous page. Reached the end.');
+                    break;
+                }
+
+                products.forEach(product => {
+                    product.department = dept.name;
+                    allProducts.push(product);
+                });
+
+                previousProductIds = currentProductIds;
+
+                const clickedNext = await clickNextPage(driver, config.selectors);
+
+                if (!clickedNext) {
+                    console.log('  No next page button available. This is the last page.');
+                    break;
+                }
+
+                await sleep(3000);
+
+                try {
+                    await driver.wait(until.elementLocated(By.css(config.selectors.productContainer)), 10000);
+                    pageNum++;
+                    await waitBeforeScrapingNextPage(pageDelayMs, pageDelayJitterMs);
+                } catch (error) {
+                    console.log(`  Error waiting for page update: ${error.message}`);
+                    break;
+                }
+            }
+        }
+
+        fs.writeFileSync(outputPath, JSON.stringify(allProducts, null, 2), 'utf8');
+        console.log(`Scraping complete. Total products found: ${allProducts.length}`);
+        console.log(`Data saved to ${outputPath}`);
+
+        return allProducts;
+    } finally {
+        await driver.quit();
+    }
+}
+
+if (require.main === module) {
+    scrapeProducts()
+        .then(() => process.exit(0))
+        .catch(error => {
+            console.error('Scraper failed:', error);
+            process.exit(1);
+        });
+}
+
+module.exports = scrapeProducts;

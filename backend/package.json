@@ -2,20 +2,28 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --check server.js",
     "scheduler": "node scheduler.js",
     "scheduler:now": "node scheduler.js --run-now",
-    "atualizar": "node scripts/atualizarSuperVale.js",
+    "atualizar": "node scripts/atualizarTodos.js",
+    "atualizar:supervale": "node scripts/atualizarSuperVale.js",
+    "atualizar:fonseca": "node scripts/atualizarFonseca.js",
     "importar": "node scripts/importSuperVale.js",
+    "importar:supervale": "node scripts/importSuperVale.js",
+    "importar:fonseca": "node scripts/importFonseca.js",
     "testar": "node scripts/testarComparacao.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^17.2.3",
+    "express": "^5.2.1",
     "mongoose": "^9.0.0",
     "node-cron": "^4.2.1"
   }

@@ -1,51 +1,52 @@
-const puppeteer = require('puppeteer');
+const { Builder } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs');
+
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 (async () => {
     console.log('Starting pagination debug scraper...');
-    const browser = await puppeteer.launch({
-        headless: false,
-        defaultViewport: null,
-        args: ['--start-maximized', '--no-sandbox', '--disable-setuid-sandbox']
-    });
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    const options = new chrome.Options()
+        .addArguments(
+            '--start-maximized',
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            `--user-agent=${USER_AGENT}`
+        );
+    const driver = await new Builder()
+        .forBrowser('chrome')
+        .setChromeOptions(options)
+        .build();
 
-    const url = "https://www.supervalesupermercados.com.br/departamentos/bebidas";
-    console.log(`Navigating to ${url}`);
+    try {
+        await driver.manage().setTimeouts({ pageLoad: 60000 });
 
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+        const url = "https://www.supervalesupermercados.com.br/departamentos/bebidas";
+        console.log(`Navigating to ${url}`);
 
-    console.log('Waiting for 10 seconds...');
-    await new Promise(r => setTimeout(r, 10000));
+        await driver.get(url);
 
-    console.log('Scrolling to bottom...');
-    await page.evaluate(async () => {
-        await new Promise((resolve) => {
-            let totalHeight = 0;
-            const distance = 100;
-            const timer = setInterval(() => {
-                const scrollHeight = document.body.scrollHeight;
-                window.scrollBy(0, distance);
-                totalHeight += distance;
+        console.log('Waiting for 10 seconds...');
+        await sleep(10000);
 
-                if (totalHeight >= scrollHeight - window.innerHeight) {
-                    clearInterval(timer);
-                    resolve();
-                }
-            }, 100);
-        });
-    });
+        console.log('Scrolling to bottom...');
+        await driver.executeScript('window.scrollTo(0, document.body.scrollHeight);');
 
-    console.log('Waiting for 5 seconds after scroll...');
-    await new Promise(r => setTimeout(r, 5000));
+        console.log('Waiting for 5 seconds after scroll...');
+        await sleep(5000);
 
-    console.log('Taking screenshot of bottom...');
-    await page.screenshot({ path: 'debug_pagination_bottom.png', fullPage: true });
+        console.log('Taking screenshot of bottom...');
+        const screenshot = await driver.takeScreenshot();
+        fs.writeFileSync('debug_pagination_bottom.png', screenshot, 'base64');
 
-    console.log('Saving HTML...');
-    const html = await page.content();
-    fs.writeFileSync('debug_pagination.html', html);
-
-    await browser.close();
+        console.log('Saving HTML...');
+        const html = await driver.executeScript('return document.documentElement.outerHTML;');
+        fs.writeFileSync('debug_pagination.html', html);
+    } finally {
+        await driver.quit();
+    }
 })();

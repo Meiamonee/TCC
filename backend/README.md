@@ -1,87 +1,62 @@
-# ✅ Sistema de Atualização Automática Funcionando!
+# Backend
 
-## Status Atual
+Backend do comparador de precos.
 
-🟢 **Scheduler ATIVO e RODANDO**
+Ele tem duas responsabilidades:
 
-O sistema está configurado para atualizar automaticamente o banco de dados MongoDB nos seguintes horários:
-- **6h da manhã** (todos os dias)
-- **18h da tarde** (todos os dias)
+- Executar o pipeline de scraping e importar os produtos no MongoDB.
+- Servir uma API HTTP para o frontend consultar os produtos em tempo de execucao.
 
-## Como Funciona
-
-### Atualização Automática
-
-O scheduler (`npm run scheduler`) está rodando em background e irá:
-
-1. ⏰ **Aguardar horário agendado** (6h ou 18h)
-2. 📂 **Ler `products.json`** (gerado pelo scraper)
-3. 🔍 **Comparar com MongoDB**
-4. ✨ **Adicionar novos produtos**
-5. 💰 **Atualizar preços alterados**
-6. 📊 **Salvar histórico de mudanças**
-7. 🚫 **Marcar produtos removidos**
-
-### Workflow Completo
-
-```
-1. Execute o scraper manualmente:
-   cd scraper
-   node index.js
-   
-2. O scheduler detecta automaticamente e atualiza MongoDB
-   (nos horários: 6h e 18h)
-```
-
-## Comandos Disponíveis
-
-### Iniciar Scheduler (já está rodando!)
+## Scripts
 
 ```bash
-npm run scheduler
+npm run dev
 ```
 
-### Atualizar MongoDB Manualmente
+Inicia a API em `http://localhost:3001`.
 
 ```bash
 npm run atualizar
 ```
 
-### Executar Scraper Manualmente
+Executa os scrapers de SuperVale e Fonseca e importa os dados para o MongoDB.
 
 ```bash
-cd ../scraper
-node index.js
+npm run atualizar:supervale
+npm run atualizar:fonseca
 ```
 
-## Teste Realizado
+Executa o scraping e a importacao de apenas um mercado.
 
-✅ **3.580 produtos processados com sucesso!**
-
-```
-📊 Resumo:
-   ✨ Novos produtos: 0
-   🔄 Atualizados: 3580
-   💰 Preços alterados: 0
-   🚫 Marcados como indisponíveis: 0
-   ❌ Erros: 0
+```bash
+npm run importar:supervale
+npm run importar:fonseca
 ```
 
-## Logs
+Importa os arquivos `products.json` ja existentes, sem executar scraping novo.
 
-Cada atualização gera um log em:
+```bash
+npm run scheduler
 ```
-backend/logs/atualizacao-[timestamp].log
-```
 
-## Próximos Passos
+Mantem o agendamento ativo para atualizar todos os dias as 6h e 18h.
 
-Para ter atualização **totalmente automática** do scraper + MongoDB:
+## API
 
-1. **Opção 1:** Usar Task Scheduler do Windows para executar `node scraper/index.js` antes dos horários (ex: 5:30h e 17:30h)
+- `GET /api/health`
+- `GET /api/produtos`
+- `GET /api/categorias`
+- `GET /api/supermercados`
+- `POST /api/scraping/atualizar`
 
-2. **Opção 2:** Criar um script batch que executa scraper + atualização
+Variaveis de ambiente:
 
-3. **Opção 3:** Modificar scheduler para executar scraper via Puppeteer diretamente (mais complexo)
-
-Por enquanto, o sistema está funcionando perfeitamente para atualizar o MongoDB automaticamente sempre que você executar o scraper!
+- `MONGODB_URI`: conexao MongoDB usada pelo backend. Padrao: `mongodb://localhost:27017/Mercados`
+- `MONGO_URI` ou `MONGO_URL`: nomes alternativos aceitos para a mesma conexao.
+- `PORT`: porta da API. Padrao: `3001`
+- `CORS_ORIGIN`: origens liberadas, separadas por virgula.
+- `SCRAPER_PAGE_DELAY_MS`: pausa base entre paginas do scraper. Padrao no `.env`: `8000`
+- `SCRAPER_PAGE_DELAY_JITTER_MS`: variacao aleatoria somada a pausa base. Padrao no `.env`: `4000`
+- `CHROME_BINARY_PATH` ou `SELENIUM_CHROME_BINARY_PATH`: caminho do executavel do Chrome usado pelo Selenium.
+- `CHROMEDRIVER_PATH` ou `SELENIUM_CHROMEDRIVER_PATH`: caminho do ChromeDriver. Se nao for definido, o Selenium Manager resolve automaticamente.
+- `SE_MANAGER_PATH`: caminho de um Selenium Manager customizado.

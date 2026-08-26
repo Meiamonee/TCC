@@ -1,17 +1,15 @@
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 const connectDB = require('../config/database');
 const Produto = require('../models/Produto');
-const Categoria = require('../models/Categoria');
 
 async function testarComparacao() {
     try {
-        console.log('🧪 Testando queries de comparação de preços\n');
+        console.log('Testando queries de comparacao de precos\n');
 
         await connectDB();
 
-        // Teste 1: Buscar produtos por nome normalizado
-        console.log('📝 Teste 1: Buscar produtos similares');
-        console.log('   Buscando: "coca cola"...\n');
+        console.log('Teste 1: buscar produtos similares');
+        console.log('Buscando: "coca cola"...\n');
 
         const cocaCola = await Produto.find({
             nomeNormalizado: /coca cola/i,
@@ -20,18 +18,14 @@ async function testarComparacao() {
             .sort({ preco: 1 })
             .limit(5);
 
-        console.log(`   Encontrados: ${cocaCola.length} produtos`);
-        cocaCola.forEach((p, i) => {
-            console.log(`   ${i + 1}. ${p.nome}`);
-            console.log(`      Preço: R$ ${p.preco.toFixed(2)}`);
-            console.log(`      Categoria: ${p.categoria}`);
-            console.log('');
+        console.log(`Encontrados: ${cocaCola.length} produtos`);
+        cocaCola.forEach((produto, index) => {
+            console.log(`${index + 1}. ${produto.nome}`);
+            console.log(`   Preco: R$ ${produto.preco.toFixed(2)}`);
+            console.log(`   Categoria: ${produto.categoria}`);
         });
 
-        // Teste 2: Produtos mais baratos por categoria
-        console.log('\n📊 Teste 2: Produtos mais baratos da categoria "Bebidas"');
-        console.log('   Top 10 mais baratos:\n');
-
+        console.log('\nTeste 2: produtos mais baratos da categoria "Bebidas"');
         const maisBaratos = await Produto.find({
             categoria: 'Bebidas',
             disponivel: true
@@ -39,18 +33,13 @@ async function testarComparacao() {
             .sort({ preco: 1 })
             .limit(10);
 
-        maisBaratos.forEach((p, i) => {
-            console.log(`   ${i + 1}. ${p.nome}`);
-            console.log(`      R$ ${p.preco.toFixed(2)}`);
+        maisBaratos.forEach((produto, index) => {
+            console.log(`${index + 1}. ${produto.nome} - R$ ${produto.preco.toFixed(2)}`);
         });
 
-        // Teste 3: Estatísticas de preços por categoria
-        console.log('\n\n📈 Teste 3: Estatísticas de preços por categoria\n');
-
+        console.log('\nTeste 3: estatisticas de preco por categoria');
         const stats = await Produto.aggregate([
-            {
-                $match: { disponivel: true }
-            },
+            { $match: { disponivel: true } },
             {
                 $group: {
                     _id: '$categoria',
@@ -60,24 +49,18 @@ async function testarComparacao() {
                     precoMaximo: { $max: '$preco' }
                 }
             },
-            {
-                $sort: { count: -1 }
-            }
+            { $sort: { count: -1 } }
         ]);
 
-        stats.forEach(cat => {
-            console.log(`   ${cat._id}:`);
-            console.log(`      Produtos: ${cat.count}`);
-            console.log(`      Preço médio: R$ ${cat.precoMedio.toFixed(2)}`);
-            console.log(`      Mais barato: R$ ${cat.precoMinimo.toFixed(2)}`);
-            console.log(`      Mais caro: R$ ${cat.precoMaximo.toFixed(2)}`);
-            console.log('');
+        stats.forEach(categoria => {
+            console.log(`${categoria._id}:`);
+            console.log(`   Produtos: ${categoria.count}`);
+            console.log(`   Preco medio: R$ ${categoria.precoMedio.toFixed(2)}`);
+            console.log(`   Mais barato: R$ ${categoria.precoMinimo.toFixed(2)}`);
+            console.log(`   Mais caro: R$ ${categoria.precoMaximo.toFixed(2)}`);
         });
 
-        // Teste 4: Busca por texto (simulando busca do usuário)
-        console.log('\n🔍 Teste 4: Busca por texto "arroz"');
-        console.log('   Resultados:\n');
-
+        console.log('\nTeste 4: busca por texto "arroz"');
         const arroz = await Produto.find({
             $text: { $search: 'arroz' },
             disponivel: true
@@ -85,13 +68,11 @@ async function testarComparacao() {
             .sort({ preco: 1 })
             .limit(5);
 
-        arroz.forEach((p, i) => {
-            console.log(`   ${i + 1}. ${p.nome} - R$ ${p.preco.toFixed(2)}`);
+        arroz.forEach((produto, index) => {
+            console.log(`${index + 1}. ${produto.nome} - R$ ${produto.preco.toFixed(2)}`);
         });
 
-        // Teste 5: Comparação futura entre supermercados (preparado para quando houver mais)
-        console.log('\n\n🏪 Teste 5: Produtos por supermercado\n');
-
+        console.log('\nTeste 5: produtos por supermercado');
         const porSupermercado = await Produto.aggregate([
             {
                 $group: {
@@ -102,18 +83,16 @@ async function testarComparacao() {
             }
         ]);
 
-        porSupermercado.forEach(s => {
-            console.log(`   ${s._id}:`);
-            console.log(`      Total de produtos: ${s.totalProdutos}`);
-            console.log(`      Preço médio: R$ ${s.precoMedio.toFixed(2)}`);
-            console.log('');
+        porSupermercado.forEach(supermercado => {
+            console.log(`${supermercado._id}:`);
+            console.log(`   Total de produtos: ${supermercado.totalProdutos}`);
+            console.log(`   Preco medio: R$ ${supermercado.precoMedio.toFixed(2)}`);
         });
 
-        console.log('✅ Todos os testes concluídos!\n');
-
+        console.log('\nTestes concluidos.');
         process.exit(0);
     } catch (error) {
-        console.error('❌ Erro nos testes:', error);
+        console.error('Erro nos testes:', error);
         process.exit(1);
     }
 }

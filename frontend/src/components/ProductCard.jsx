@@ -1,73 +1,89 @@
 import React from 'react';
-import { Scale, AlertCircle } from 'lucide-react';
+import { AlertCircle, ExternalLink } from 'lucide-react';
 
 const ProductCard = ({ product, onCompare }) => {
     const isDisponivel = product.disponivel !== false;
+    const supermarketName = product.supermercado === 'supervale' ? 'SuperVale' : 'Fonseca';
+    const supermarketLogo = product.supermercado === 'supervale'
+        ? '/logos/supervale.png'
+        : '/logos/fonseca.png';
 
     return (
-        <div className={`group bg-white rounded-xl border transition-all duration-300 flex flex-col h-full ${isDisponivel
-                ? 'border-slate-200 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/5'
-                : 'border-slate-100 opacity-60'
+        <article className={`flex h-full flex-col overflow-hidden rounded border bg-white transition-colors ${isDisponivel
+            ? 'border-zinc-200 hover:border-violet-300'
+            : 'border-zinc-100 opacity-60'
             }`}>
-            {/* Image Container */}
-            <div className="relative pt-[100%] overflow-hidden rounded-t-xl bg-white">
+            <div className="relative aspect-square overflow-hidden bg-white">
                 <img
                     src={product.image || 'https://via.placeholder.com/250'}
                     alt={product.name}
-                    className={`absolute top-0 left-0 w-full h-full object-contain p-6 transition-transform duration-500 ${isDisponivel ? 'group-hover:scale-105' : 'grayscale'
+                    className={`absolute inset-0 h-full w-full object-contain p-5 ${isDisponivel ? '' : 'grayscale'
                         }`}
                 />
 
-                {/* Supermarket Badge - Minimalist */}
                 {product.supermercado && (
-                    <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wide uppercase ${product.supermercado === 'supervale'
-                            ? 'bg-emerald-50 text-emerald-700 border border-emerald-100'
-                            : 'bg-blue-50 text-blue-700 border border-blue-100'
-                        }`}>
-                        {product.supermercado === 'supervale' ? 'SuperVale' : 'Fonseca'}
+                    <div
+                        title={supermarketName}
+                        aria-label={supermarketName}
+                        className="absolute left-3 top-3 flex h-9 w-12 items-center justify-center rounded border border-zinc-200 bg-white p-1"
+                    >
+                        <img
+                            src={supermarketLogo}
+                            alt={supermarketName}
+                            className="h-full w-full object-contain"
+                        />
                     </div>
                 )}
 
-                {/* Unavailable Badge */}
                 {!isDisponivel && (
-                    <div className="absolute top-3 right-3 bg-slate-100 text-slate-500 text-[10px] font-bold px-2 py-1 rounded-md border border-slate-200 flex items-center gap-1">
+                    <div className="absolute right-3 top-3 flex items-center gap-1 rounded border border-zinc-200 bg-zinc-100 px-2 py-1 text-[10px] font-semibold text-zinc-500">
                         <AlertCircle size={12} />
-                        Indisponível
+                        Indisponivel
                     </div>
                 )}
             </div>
 
-            {/* Content */}
-            <div className="p-5 flex flex-col flex-grow border-t border-slate-50">
-                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">
+            <div className="flex flex-grow flex-col border-t border-zinc-100 p-4">
+                <div className="mb-2 text-[10px] font-semibold uppercase text-zinc-500">
                     {product.department}
                 </div>
 
-                <h3 className="text-slate-700 font-medium text-sm leading-relaxed mb-4 line-clamp-2 flex-grow group-hover:text-blue-600 transition-colors" title={product.name}>
+                <h3 className="mb-3 line-clamp-2 min-h-[40px] text-sm font-medium leading-5 text-zinc-800" title={product.name}>
                     {product.name}
                 </h3>
 
-                <div className="flex items-end justify-between gap-3 mt-auto">
-                    <div className={`text-xl font-bold tracking-tight ${isDisponivel ? 'text-slate-900' : 'text-slate-300'}`}>
+                <div className="mt-auto">
+                    <div className="mb-1 text-[11px] font-medium text-zinc-500">a partir de</div>
+                    <div className={`text-xl font-bold ${isDisponivel ? 'text-zinc-950' : 'text-zinc-300'}`}>
                         {product.price}
                     </div>
+                </div>
 
+                <div className="mt-4 flex items-center gap-2">
                     <button
-                        className={`p-2 rounded-lg transition-all duration-200 flex items-center justify-center ${isDisponivel
-                                ? 'bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white border border-slate-200 hover:border-blue-600'
-                                : 'bg-slate-50 text-slate-300 cursor-not-allowed'
+                        className={`flex h-10 flex-1 items-center justify-center rounded border text-sm font-semibold transition-colors ${isDisponivel
+                            ? 'border-violet-700 bg-violet-700 text-white hover:border-violet-800 hover:bg-violet-800'
+                            : 'cursor-not-allowed border-zinc-100 bg-zinc-50 text-zinc-300'
                             }`}
                         disabled={!isDisponivel}
                         onClick={() => isDisponivel && onCompare && onCompare(product)}
-                        title="Comparar Preço"
+                        title="Comparar preco"
                     >
-                        <Scale size={18} />
+                        Comparar
                     </button>
+                    <a
+                        className="flex h-10 w-10 items-center justify-center rounded border border-zinc-200 bg-white text-zinc-500 transition-colors hover:border-violet-300 hover:text-violet-700"
+                        href={product.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        title="Abrir oferta"
+                    >
+                        <ExternalLink size={16} />
+                    </a>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 
 export default ProductCard;
-
