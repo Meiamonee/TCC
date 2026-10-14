@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
@@ -58,7 +58,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 disabled={currentPage === totalPages}
                 className="flex h-10 items-center gap-1 rounded border border-zinc-200 bg-white px-3 text-sm font-semibold text-zinc-700 transition-colors hover:border-violet-300 hover:text-violet-700 disabled:cursor-not-allowed disabled:opacity-50"
             >
-                <span className="hidden sm:inline">Proxima</span>
+                <span className="hidden sm:inline">Próxima</span>
                 <ChevronRight size={18} />
             </button>
         </div>
