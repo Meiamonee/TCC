@@ -21,7 +21,10 @@ const ABREVIACOES = {
     trad: 'tradicional',
     integ: 'integral',
     desnat: 'desnatado',
-    ret: 'retornavel'
+    ret: 'retornavel',
+    // Nomes comerciais de acucar da Uniao que escondem o tipo do produto.
+    cristalcucar: 'cristal',
+    glacucar: 'confeiteiro'
 };
 
 // Palavras que descrevem embalagem, classificacao generica ou ligacao, e nao o produto.
@@ -37,7 +40,7 @@ const PALAVRAS_IGNORADAS = new Set([
 // Inclui versoes (zero, integral...), sabores/fragancias e intensidades (cafe extra forte).
 const VARIANTES = new Set([
     'zero', 'diet', 'light', 'integral', 'desnatado', 'semidesnatado', 'semlactose', 'semalcool',
-    'semgluten', 'parboilizado', 'retornavel', 'organico', 'demerara', 'mascavo', 'cristal',
+    'semgluten', 'parboilizado', 'retornavel', 'organico', 'demerara', 'mascavo', 'cristal', 'confeiteiro',
     'descafeinado', 'infantil', 'kids', 'refil',
     'intenso', 'forte', 'extraforte', 'suave', 'gourmet', 'expresso', 'espresso',
     'coco', 'limao', 'neutro', 'maca', 'laranja', 'uva', 'morango', 'baunilha', 'menta',

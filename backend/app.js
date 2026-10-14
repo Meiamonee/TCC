@@ -6,7 +6,7 @@ const Produto = require('./models/Produto');
 const HistoricoPreco = require('./models/HistoricoPreco');
 const Supermercado = require('./models/Supermercado');
 const { formatarPreco, SUPERMARKETS } = require('./services/importProducts');
-const { buscarEquivalentes, buscarSimilares, precoComparavel } = require('./services/comparacao');
+const { buscarEquivalentes, buscarSimilares, carregarEstatisticas, palavrasDeTipo, precoComparavel } = require('./services/comparacao');
 const { cotarLista } = require('./services/listaCompras');
 const { calcularCestaBasica } = require('./services/cestaBasica');
 const { obterEstatisticas } = require('./services/estatisticas');
@@ -223,6 +223,37 @@ function criarApp() {
                 economiaPercentual: Math.round((1 - precoComparavel(item) / referencia) * 100)
             }))
         });
+    }));
+
+    // Outros produtos do mesmo tipo (ex.: outras cervejas), para continuar navegando.
+    // Sem tipo identificado, usa o mesmo departamento.
+    app.get('/api/produtos/:id/relacionados', rota(async (req, res) => {
+        const produto = await carregarProduto(req.params.id);
+        const limite = Math.min(Math.max(Number.parseInt(req.query.limite, 10) || 12, 1), 30);
+        const [nucleo] = palavrasDeTipo(produto, await carregarEstatisticas());
+
+        const filtro = {
+            _id: { $ne: produto._id },
+            disponivel: true,
+            categoria: produto.categoria,
+            supermercado: { $in: Object.keys(SUPERMARKETS) }
+        };
+        if (nucleo) filtro.tokens = nucleo;
+
+        const candidatos = await Produto.find(filtro).limit(400).lean();
+
+        // Um item por nome (o mesmo produto aparece em varios mercados), do menor preco por kg/L.
+        const vistos = new Set([produto.nomeNormalizado]);
+        const relacionados = candidatos
+            .sort((a, b) => precoComparavel(a) - precoComparavel(b))
+            .filter(item => {
+                if (vistos.has(item.nomeNormalizado)) return false;
+                vistos.add(item.nomeNormalizado);
+                return true;
+            })
+            .slice(0, limite);
+
+        res.json({ tipo: nucleo || null, produtos: relacionados.map(formatarProduto) });
     }));
 
     // Historico de precos dos ultimos dias, com menor e maior preco do periodo.

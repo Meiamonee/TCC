@@ -51,6 +51,10 @@ export function fetchSimilares(id, limite = 6) {
     return request(`/produtos/${id}/similares?limite=${limite}`)
 }
 
+export function fetchRelacionados(id, limite = 12) {
+    return request(`/produtos/${id}/relacionados?limite=${limite}`)
+}
+
 export function fetchHistorico(id) {
     return request(`/produtos/${id}/historico`)
 }

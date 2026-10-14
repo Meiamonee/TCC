@@ -52,6 +52,12 @@ test('gerarTokens normaliza abreviacoes e separa variantes', () => {
     assert.deepEqual(pedrilho.variantes, ['zero']);
 });
 
+test('nomes comerciais de acucar revelam o tipo (cristal x refinado)', () => {
+    assert.deepEqual(gerarTokens('Açúcar Cristalçúcar União 1kg').variantes, ['cristal']);
+    assert.deepEqual(gerarTokens('Açúcar União Glaçúcar De Confeiteiro 500g').variantes, ['confeiteiro']);
+    assert.deepEqual(gerarTokens('Acucar Refinado Uniao 1kg').variantes, []);
+});
+
 test('cerveja zero e sem alcool, e cafe extra forte e uma variante', () => {
     assert.deepEqual(gerarTokens('Cerveja Heineken Zero 350ml').variantes, ['semalcool']);
     assert.deepEqual(gerarTokens('Cerveja Lager Zero Álcool Heineken Lata 350ml').variantes, ['semalcool']);
