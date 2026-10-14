@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "supervale",
+    "nome": "SuperVale",
+    "url": "https://www.supervalesupermercados.com.br",
+    "directory": "scraper",
+    "logo": "/logos/supervale.png",
+    "platform": "vipcommerce",
+    "city": "Poços de Caldas",
+    "address": "Av. João Pinheiro, 1460"
+  },
+  {
+    "slug": "vilasul",
+    "nome": "Vila Sul",
+    "url": "https://www.vilasul.com.br",
+    "directory": "scraper-vilasul",
+    "logo": "/logos/vilasul.png",
+    "platform": "vipcommerce",
+    "city": "Poços de Caldas",
+    "address": "Avenida Sílvio Monteiro dos Santos, 180"
+  },
+  {
+    "slug": "sanmichel",
+    "nome": "San Michel",
+    "url": "https://www.supersanmichel.com.br",
+    "directory": "scraper-sanmichel",
+    "logo": "/logos/sanmichel.png",
+    "platform": "vipcommerce",
+    "city": "Poços de Caldas",
+    "address": "Avenida Mansur Frayha, 875"
+  },
+  {
+    "slug": "vn",
+    "nome": "VN Autosserviço",
+    "url": "https://www.vnautosservico.com.br",
+    "directory": "scraper-vn",
+    "logo": "/logos/vn.png",
+    "platform": "vipcommerce",
+    "city": "Poços de Caldas",
+    "address": "Avenida João Pinheiro, 2345"
+  },
+  {
+    "slug": "pedrilho",
+    "nome": "Pedrilho",
+    "url": "https://www.pedrilho.com.br",
+    "directory": "scraper-pedrilho",
+    "logo": "/logos/pedrilho.jpeg",
+    "platform": "instabuy",
+    "city": "Poços de Caldas",
+    "address": "R. José Augusto de Carvalho, 55"
+  }
+]

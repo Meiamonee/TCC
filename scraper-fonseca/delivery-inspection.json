@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    {
+      "outer": "<input id=\"search-term\" autocomplete=\"off\" tabindex=\"0\" class=\"custom-placeholder disabled:opacity-60 input-background search-input ng-untouched ng-pristine ng-valid\" placeholder=\"O que você precisa?\">"
+    },
+    {
+      "outer": "<input _ngcontent-serverapp-c1010070549=\"\" id=\"cep\" type=\"tel\" formcontrolname=\"cep\" aria-label=\"Precisamos validar seu CEP para saber se o nosso serviço atende a sua\n      região. DIgite seu CEP\" autocomplete=\"off\" data-cy=\"solicitar-cep-input\" class=\"ng-untouched ng-pristine ng-invalid\" placeholder=\" \" aria-describedby=\"field-msg-otadgl\">"
+    }
+  ],
+  "text": "R$ 4,07\n/600g\nTomate Grape 500g\nR$ 15,98\n/bd\nMais Produtos\nPadaria\n\nmais 16\nPão Francês Fonseca 300g Aprox. 5 Unidades\nR$ 16,90/kg\nR$ 5,07\n/300g\nRosca Fonseca 270g\nR$ 27,89/kg\nR$ 7,53\n/270g\nPão De Hambúrguer Com Gergelim Fonseca 230g\nR$ 25,91/kg\nR$ 5,96\n/230g\nDonuts Fonseca 100gr\nR$ 59,90/kg\nR$ 5,99\n/100g\nPão Italiano Fonseca 250g\nR$ 47,92/kg\nR$ 11,98\n/250g\nBisnaga Fonseca 200g\nR$ 25,90/kg\nR$ 5,18\n/200g\nPão Da Fazenda Fonseca 260g\nR$ 46,00/kg\nR$ 11,96\n/260g\nPão Hot Dog Fonseca 300g\nR$ 26,97/kg\nR$ 8,09\n/300g\nBrioche Fonseca 200gr\nR$ 46,00/kg\nR$ 9,20\n/200g\nPão De Brioche Para Hamburguer Fonseca 240gr\nR$ 34,92/kg\nR$ 8,38\n/240g\nMais Produtos\nReceitas\n\nFooter placeholder\n\nNós utilizamos cookies para melhorar sua experiência de navegação, personalizar conteúdo e anúncios, e para analisar nosso tráfego. Ao continuar navegando em nosso site, você concorda com a nossa Política de Privacidade.\n\ncontinuar e fechar\nQual o seu CEP?\nPrecisamos validar seu CEP para saber se o nosso serviço atende a sua região.\nDigite seu CEP*\nVerificar Disponibilidade\nIr para o conteúdo principal\nIr para a navegação\nSupermercados Online – Loja Virtual\nPular para conteúdo\nProdutos\nContato\nAtualizações do sistema\nÁrea de injeção de componentes dinâmicos.\n\n© 2025 Supermercados Online. Todos os direitos reservados."
+}

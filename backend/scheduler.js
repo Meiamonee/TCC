@@ -1,70 +1,90 @@
 require('dotenv').config({ quiet: true });
 const cron = require('node-cron');
-const path = require('path');
-const fs = require('fs');
-const { executarPipelineScraping } = require('./services/scrapingPipeline');
+const connectDB = require('./config/database');
+const {
+    CollectionBusyError,
+    launchCollection,
+    recordSkippedCollection,
+    recoverInterruptedRuns,
+    waitForCurrentCollection
+} = require('./services/collectionRunner');
 
-const LOG_DIR = path.join(__dirname, 'logs');
+const DEFAULT_SCHEDULE = '0 6,18 * * *';
+const DEFAULT_TIMEZONE = 'America/Sao_Paulo';
+let scheduledTask = null;
 
-if (!fs.existsSync(LOG_DIR)) {
-    fs.mkdirSync(LOG_DIR, { recursive: true });
-}
-
-async function executarAtualizacao() {
-    const logFile = path.join(LOG_DIR, `atualizacao-${Date.now()}.log`);
-    const logStream = fs.createWriteStream(logFile, { encoding: 'utf8' });
-    const originalLog = console.log;
-    const originalError = console.error;
-
-    console.log = (...args) => {
-        originalLog(...args);
-        logStream.write(`${args.join(' ')}\n`);
-    };
-
-    console.error = (...args) => {
-        originalError(...args);
-        logStream.write(`[ERRO] ${args.join(' ')}\n`);
-    };
-
+async function executeScheduledCollection() {
     try {
-        console.log('==================================================');
-        console.log('INICIANDO ATUALIZACAO AUTOMATICA');
-        console.log(`Data/Hora: ${new Date().toLocaleString('pt-BR')}`);
-        console.log('==================================================');
-
-        const resultado = await executarPipelineScraping();
-
-        console.log('\nATUALIZACAO CONCLUIDA');
-        console.log(JSON.stringify(resultado.resultados, null, 2));
-        return resultado;
+        const run = await launchCollection({ trigger: 'scheduled', market: 'todos' });
+        console.log(`[scheduler] Coleta ${run.id} iniciada.`);
+        return run;
     } catch (error) {
-        console.error('ERRO NA ATUALIZACAO AUTOMATICA');
-        console.error(error);
+        if (error instanceof CollectionBusyError || error.code === 'COLLECTION_BUSY') {
+            const skipped = await recordSkippedCollection({
+                trigger: 'scheduled',
+                market: 'todos',
+                reason: 'Outra coleta ja estava em execucao no horario agendado.'
+            });
+            console.log(`[scheduler] Execucao ${skipped.id} ignorada porque ja existe uma coleta ativa.`);
+            return skipped;
+        }
+        console.error('[scheduler] Falha ao iniciar coleta:', error);
         throw error;
-    } finally {
-        console.log = originalLog;
-        console.error = originalError;
-        logStream.end();
-        console.log(`Log salvo em: ${logFile}\n`);
     }
 }
 
-cron.schedule('0 6,18 * * *', () => {
-    console.log('Executando atualizacao agendada (6h e 18h).');
-    executarAtualizacao().catch(error => {
-        console.error('Falha no scheduler:', error.message);
+function startScheduler() {
+    if (process.env.SCHEDULER_ENABLED === 'false') {
+        console.log('[scheduler] Desabilitado por SCHEDULER_ENABLED=false.');
+        return null;
+    }
+    if (scheduledTask) return scheduledTask;
+
+    const expression = process.env.COLLECTION_CRON || DEFAULT_SCHEDULE;
+    const timezone = process.env.COLLECTION_TIMEZONE || DEFAULT_TIMEZONE;
+    if (!cron.validate(expression)) {
+        throw new Error('COLLECTION_CRON invalido');
+    }
+
+    scheduledTask = cron.schedule(expression, () => {
+        executeScheduledCollection().catch(() => undefined);
+    }, {
+        timezone,
+        noOverlap: true
     });
-}, {
-    timezone: 'America/Sao_Paulo'
-});
 
-console.log('Scheduler configurado.');
-console.log('Agendamento ativo: todos os dias as 6h e 18h (America/Sao_Paulo).');
-console.log('Para atualizar agora: npm run scheduler:now');
-console.log('Scheduler rodando. Pressione Ctrl+C para parar.\n');
+    console.log(`[scheduler] Ativo: ${expression} (${timezone}).`);
+    return scheduledTask;
+}
 
-if (process.argv.includes('--run-now')) {
-    executarAtualizacao().catch(error => {
-        console.error('Falha na execucao inicial:', error.message);
+function stopScheduler() {
+    if (!scheduledTask) return;
+    scheduledTask.stop();
+    scheduledTask = null;
+}
+
+async function runStandalone() {
+    await connectDB();
+    await recoverInterruptedRuns();
+    startScheduler();
+
+    if (process.argv.includes('--run-now')) {
+        await executeScheduledCollection();
+        await waitForCurrentCollection();
+    }
+}
+
+if (require.main === module) {
+    runStandalone().catch(error => {
+        console.error('[scheduler] Falha fatal:', error);
+        process.exitCode = 1;
     });
 }
+
+module.exports = {
+    DEFAULT_SCHEDULE,
+    DEFAULT_TIMEZONE,
+    executeScheduledCollection,
+    startScheduler,
+    stopScheduler
+};

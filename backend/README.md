@@ -19,21 +19,13 @@ Inicia a API em `http://localhost:3001`.
 npm run atualizar
 ```
 
-Executa os scrapers de SuperVale e Fonseca e importa os dados para o MongoDB.
+Executa os scrapers de SuperVale, Vila Sul, San Michel, VN e Pedrilho e importa os dados para o MongoDB.
 
-```bash
-npm run atualizar:supervale
-npm run atualizar:fonseca
-```
+Para executar somente um mercado, use na raiz `npm run coleta -- coletar supervale`,
+trocando o último argumento por `vilasul`, `sanmichel`, `vn` ou `pedrilho`.
+Para importar um JSON já coletado, use `node backend/scripts/mercado.js importar MERCADO`.
 
-Executa o scraping e a importacao de apenas um mercado.
-
-```bash
-npm run importar:supervale
-npm run importar:fonseca
-```
-
-Importa os arquivos `products.json` ja existentes, sem executar scraping novo.
+Os novos coletores verificam a unidade de Pocos de Caldas. Consulte [execucao e validacao dos coletores](../scrapers/README.md) para dependencias, amostras e relatórios. Arquivos de amostra nao sao importados por esses comandos.
 
 ```bash
 npm run scheduler
@@ -44,7 +36,9 @@ Mantem o agendamento ativo para atualizar todos os dias as 6h e 18h.
 ## API
 
 - `GET /api/health`
-- `GET /api/produtos`
+- `GET /api/produtos?page=1&limit=24&sort=name`: catálogo paginado. Aceita `supermercado`, `categoria`, `search`, `min`, `max`, `sort=low|high|name` e `includeIndisponiveis=true`.
+- `GET /api/catalogo/filtros`: categorias e quantidades por supermercado para a barra de filtros.
+- `GET /api/produtos/:id/comparacoes`: produto selecionado e grupos de ofertas de outros mercados.
 - `GET /api/categorias`
 - `GET /api/supermercados`
 - `POST /api/scraping/atualizar`

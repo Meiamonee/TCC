@@ -1,0 +1,227 @@
+{
+  "supermercado": "vn",
+  "complete": true,
+  "categories": [
+    {
+      "name": "Açougue",
+      "url": "https://www.vnautosservico.com.br/departamentos/acougue",
+      "products": 76,
+      "batches": 5,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/acougue"
+      ]
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.vnautosservico.com.br/departamentos/congelados",
+      "products": 121,
+      "batches": 7,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/congelados"
+      ]
+    },
+    {
+      "name": "Frios e laticínios",
+      "url": "https://www.vnautosservico.com.br/departamentos/frios-e-laticinios",
+      "products": 358,
+      "batches": 21,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/frios-e-laticinios"
+      ]
+    },
+    {
+      "name": "Hortifruti",
+      "url": "https://www.vnautosservico.com.br/departamentos/hortifruti",
+      "products": 111,
+      "batches": 8,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/hortifruti"
+      ]
+    },
+    {
+      "name": "Biscoitos e chocolates",
+      "url": "https://www.vnautosservico.com.br/departamentos/biscoitos-e-chocolates",
+      "products": 592,
+      "batches": 34,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/biscoitos-e-chocolates"
+      ]
+    },
+    {
+      "name": "Matinais e sobremesas",
+      "url": "https://www.vnautosservico.com.br/departamentos/matinais-e-sobremesas",
+      "products": 437,
+      "batches": 28,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/matinais-e-sobremesas"
+      ]
+    },
+    {
+      "name": "Perfumaria e higiene",
+      "url": "https://www.vnautosservico.com.br/departamentos/perfumaria-e-higiene",
+      "products": 950,
+      "batches": 68,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/perfumaria-e-higiene"
+      ]
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.vnautosservico.com.br/departamentos/bebidas",
+      "products": 598,
+      "batches": 34,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/bebidas"
+      ]
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.vnautosservico.com.br/departamentos/limpeza",
+      "products": 724,
+      "batches": 51,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/limpeza"
+      ]
+    },
+    {
+      "name": "Mercearia",
+      "url": "https://www.vnautosservico.com.br/departamentos/mercearia",
+      "products": 775,
+      "batches": 46,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/mercearia"
+      ]
+    },
+    {
+      "name": "Saude e bem estar",
+      "url": "https://www.vnautosservico.com.br/departamentos/saude-e-bem-estar",
+      "products": 109,
+      "batches": 7,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/saude-e-bem-estar"
+      ]
+    },
+    {
+      "name": "Peixaria",
+      "url": "https://www.vnautosservico.com.br/departamentos/peixaria",
+      "products": 10,
+      "batches": 1,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/peixaria"
+      ]
+    },
+    {
+      "name": "Padaria-lanchonete- conf",
+      "url": "https://www.vnautosservico.com.br/departamentos/padaria-lanchonete-conf",
+      "products": 122,
+      "batches": 9,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/padaria-lanchonete-conf"
+      ]
+    },
+    {
+      "name": "Pet shop",
+      "url": "https://www.vnautosservico.com.br/departamentos/pet-shop",
+      "products": 146,
+      "batches": 10,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/pet-shop"
+      ]
+    },
+    {
+      "name": "Bazar e flores",
+      "url": "https://www.vnautosservico.com.br/departamentos/bazar-e-flores",
+      "products": 343,
+      "batches": 31,
+      "complete": true,
+      "listings": [
+        "https://www.vnautosservico.com.br/departamentos/bazar-e-flores"
+      ]
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-09-23T14:39:30.413Z",
+  "discoveredDepartments": [
+    {
+      "name": "Açougue",
+      "url": "https://www.vnautosservico.com.br/departamentos/acougue"
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.vnautosservico.com.br/departamentos/congelados"
+    },
+    {
+      "name": "Frios e laticínios",
+      "url": "https://www.vnautosservico.com.br/departamentos/frios-e-laticinios"
+    },
+    {
+      "name": "Hortifruti",
+      "url": "https://www.vnautosservico.com.br/departamentos/hortifruti"
+    },
+    {
+      "name": "Biscoitos e chocolates",
+      "url": "https://www.vnautosservico.com.br/departamentos/biscoitos-e-chocolates"
+    },
+    {
+      "name": "Matinais e sobremesas",
+      "url": "https://www.vnautosservico.com.br/departamentos/matinais-e-sobremesas"
+    },
+    {
+      "name": "Perfumaria e higiene",
+      "url": "https://www.vnautosservico.com.br/departamentos/perfumaria-e-higiene"
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.vnautosservico.com.br/departamentos/bebidas"
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.vnautosservico.com.br/departamentos/limpeza"
+    },
+    {
+      "name": "Mercearia",
+      "url": "https://www.vnautosservico.com.br/departamentos/mercearia"
+    },
+    {
+      "name": "Saude e bem estar",
+      "url": "https://www.vnautosservico.com.br/departamentos/saude-e-bem-estar"
+    },
+    {
+      "name": "Peixaria",
+      "url": "https://www.vnautosservico.com.br/departamentos/peixaria"
+    },
+    {
+      "name": "Padaria-lanchonete- conf",
+      "url": "https://www.vnautosservico.com.br/departamentos/padaria-lanchonete-conf"
+    },
+    {
+      "name": "Pet shop",
+      "url": "https://www.vnautosservico.com.br/departamentos/pet-shop"
+    },
+    {
+      "name": "Bazar e flores",
+      "url": "https://www.vnautosservico.com.br/departamentos/bazar-e-flores"
+    }
+  ],
+  "store": {
+    "city": "Poços de Caldas",
+    "address": "Avenida João Pinheiro, 2345"
+  },
+  "products": 5472,
+  "finishedAt": "2026-09-23T14:54:13.519Z",
+  "resumedAcrossDays": false
+}

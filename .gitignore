@@ -21,11 +21,18 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Estado operacional gerado pelos coletores
+**/archive/
+**/products.checkpoint.json
+**/products.partial.json
+**/products.pilot*.json
+**/products.sample*.json
+**/products.test.json
+**/products.validation*.json
+
 # Artefatos de debug dos scrapers
-scraper/debug_*.html
-scraper/debug_*.png
-scraper-fonseca/debug_*.html
-scraper-fonseca/debug_*.png
+**/debug_*.html
+**/debug_*.png
 
 # Sistema/editor
 .DS_Store

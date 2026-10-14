@@ -1,372 +1,547 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Menu, RefreshCw, Search, X } from 'lucide-react'
-import ProductList from './components/ProductList'
-import CategoryMenu from './components/CategoryMenu'
-import SupermarketMenu from './components/SupermarketMenu'
-import ComparisonSidebar from './components/ComparisonSidebar'
-import Pagination from './components/Pagination'
-import { fetchProducts } from './services/api'
+import { useCallback, useEffect, useState } from "react";
+import {
+  MapPin,
+  Search,
+  ArrowLeft,
+  ArrowRight,
+  RefreshCw,
+  SlidersHorizontal,
+  Info,
+} from "lucide-react";
+import { fetchProducts, fetchCatalogFilters, fetchProductComparisons } from "./services/api";
+import { supermarkets, getSupermarket } from "./services/supermarkets";
+import ComparisonPage from './components/ComparisonPage';
+import CatalogCard from "./components/CatalogCard";
+import superPrecoLogo from "./assets/superpreco-logo.png";
+import "./App.css";
 
-const ITEMS_PER_PAGE = 40
-
-function App() {
-  const [products, setProducts] = useState([])
-  const [selectedCategory, setSelectedCategory] = useState(null)
-  const [selectedSupermarket, setSelectedSupermarket] = useState(null)
-  const [searchTerm, setSearchTerm] = useState('')
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
-  const [comparisonSidebarOpen, setComparisonSidebarOpen] = useState(false)
-  const [selectedProductForComparison, setSelectedProductForComparison] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [isRefreshing, setIsRefreshing] = useState(false)
-  const [loadError, setLoadError] = useState(null)
-  const [lastUpdatedAt, setLastUpdatedAt] = useState(null)
-
-  const loadProducts = useCallback(async ({ silent = false } = {}) => {
-    try {
-      if (silent) {
-        setIsRefreshing(true)
-      } else {
-        setIsLoading(true)
-      }
-
-      setLoadError(null)
-      const response = await fetchProducts()
-
-      setProducts(response.data || [])
-      setLastUpdatedAt(new Date())
-    } catch {
-      setLoadError('Nao foi possivel carregar os produtos da API.')
-      if (!silent) {
-        setProducts([])
-      }
-    } finally {
-      setIsLoading(false)
-      setIsRefreshing(false)
-    }
-  }, [])
-
-  useEffect(() => {
-    loadProducts()
-
-    const refreshTimer = window.setInterval(() => {
-      loadProducts({ silent: true })
-    }, 60000)
-
-    return () => window.clearInterval(refreshTimer)
-  }, [loadProducts])
-
-  useEffect(() => {
-    setCurrentPage(1)
-    setIsMenuOpen(false)
-  }, [selectedCategory, selectedSupermarket, searchTerm])
-
-  const categoryStats = useMemo(() => {
-    return products.reduce((acc, product) => {
-      if (!product.department) return acc
-      acc[product.department] = (acc[product.department] || 0) + 1
-      return acc
-    }, {})
-  }, [products])
-
-  const categories = useMemo(() => {
-    return Object.keys(categoryStats).sort((a, b) => a.localeCompare(b, 'pt-BR'))
-  }, [categoryStats])
-
-  const supermarkets = useMemo(() => {
-    const countsBySupermarket = products.reduce((acc, product) => {
-      if (!product.supermercado) return acc
-      acc[product.supermercado] = (acc[product.supermercado] || 0) + 1
-      return acc
-    }, {})
-
-    return [
-      {
-        id: null,
-        name: 'Todos os Supermercados',
-        count: products.length
-      },
-      {
-        id: 'supervale',
-        name: 'SuperVale',
-        count: countsBySupermarket.supervale || 0
-      },
-      {
-        id: 'fonseca',
-        name: 'Supermercado Fonseca',
-        count: countsBySupermarket.fonseca || 0
-      }
-    ]
-  }, [products])
-
-  const filteredProducts = useMemo(() => {
-    const normalizedSearch = searchTerm.trim().toLowerCase()
-
-    return products.filter(product => {
-      const matchesCategory = selectedCategory ? product.department === selectedCategory : true
-      const matchesSupermarket = selectedSupermarket ? product.supermercado === selectedSupermarket : true
-      const matchesSearch = normalizedSearch ? product.name.toLowerCase().includes(normalizedSearch) : true
-      return matchesCategory && matchesSupermarket && matchesSearch
-    })
-  }, [products, selectedCategory, selectedSupermarket, searchTerm])
-
-  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE)
-  const paginatedProducts = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
-    const endIndex = startIndex + ITEMS_PER_PAGE
-    return filteredProducts.slice(startIndex, endIndex)
-  }, [filteredProducts, currentPage])
-
-  const selectedSupermarketName = supermarkets.find(item => item.id === selectedSupermarket)?.name
-  const listTitle = selectedCategory || 'Todos os produtos'
-  const lastUpdatedLabel = lastUpdatedAt ? lastUpdatedAt.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : '--:--'
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const handleCompareProduct = (product) => {
-    setSelectedProductForComparison(product)
-    setComparisonSidebarOpen(true)
-  }
-
-  const handleCloseSidebar = () => {
-    setComparisonSidebarOpen(false)
-  }
-
-  const clearFilters = () => {
-    setSelectedCategory(null)
-    setSelectedSupermarket(null)
-    setSearchTerm('')
-  }
-
-  const filters = (
-    <div className="space-y-5">
-      <SupermarketMenu
-        supermarkets={supermarkets}
-        selectedSupermarket={selectedSupermarket}
-        onSelectSupermarket={setSelectedSupermarket}
-      />
-
-      <div className="rounded border border-zinc-200 bg-white p-5">
-        <h2 className="mb-4 text-xs font-semibold uppercase tracking-wide text-zinc-950">Resumo</h2>
-        <div className="space-y-3 text-sm">
-          <div className="flex items-center justify-between">
-            <span className="text-zinc-500">Produtos</span>
-            <span className="font-semibold text-zinc-950">{products.length}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-zinc-500">Categorias</span>
-            <span className="font-semibold text-zinc-950">{categories.length}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-zinc-500">Atualizado</span>
-            <span className="font-semibold text-zinc-950">{lastUpdatedLabel}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-
+function HowItWorks() {
   return (
-    <div className="min-h-screen bg-[#f7f7fb] font-sans text-zinc-950">
-      <header className="sticky top-0 z-40 border-b border-violet-900/30 bg-violet-800 text-white">
-        <div className="mx-auto flex min-h-20 max-w-[1480px] items-center gap-3 px-4 py-3 lg:px-8">
-          <button
-            className="rounded p-2 text-white/85 transition-colors hover:bg-white/10 lg:hidden"
-            onClick={() => setIsMenuOpen(true)}
-            aria-label="Abrir filtros"
-          >
-            <Menu size={24} />
-          </button>
+    <main className="shell info-page">
+      <a href="#/" className="back-link">
+        <ArrowLeft size={17} /> Voltar aos produtos
+      </a>
+      <span className="eyebrow">SUPERPREÇO</span>
+      <h1>
+        Uma escolha melhor começa
+        <br />
+        com uma boa comparação.
+      </h1>
+      <p className="intro">
+        Reunimos preços publicados pelos supermercados de Poços de Caldas para
+        ajudar você a planejar suas compras.
+      </p>
+      <div className="steps">
+        {[
+          [
+            "01",
+            "Encontre seu produto",
+            "Busque pelo nome ou marca. Use os filtros de mercado, categoria e preço para refinar os resultados.",
+          ],
+          [
+            "02",
+            "Confira as ofertas",
+            "Abra “Ver ofertas” para comparar o mesmo produto em outros mercados e navegar por produtos similares ou alternativas.",
+          ],
+          [
+            "03",
+            "Visite o supermercado",
+            "Confira o preço atual no site da loja. A compra acontece diretamente com o supermercado.",
+          ],
+        ].map(([n, title, text]) => (
+          <section key={n}>
+            <span>{n}</span>
+            <h2>{title}</h2>
+            <p>{text}</p>
+          </section>
+        ))}
+      </div>
+      <section className="info-box">
+        <h2>O que considerar na comparação</h2>
+        <p>
+          O comparador normaliza nome, marca, categoria, quantidade e variante.
+          Correspondências com 95% ou mais são certas; entre 80% e 94% são
+          prováveis. Ambas aparecem em “Mesmo produto em outros mercados”.
+        </p>
+        <p>
+          “Produtos similares” reúne variações próximas da mesma marca, enquanto
+          “Alternativas” apresenta substitutos da mesma família. Esses dois grupos
+          usam carrosséis e comparam o preço por kg, litro ou unidade. Promoções,
+          clube e cashback aparecem separadamente e não determinam o menor preço normal.
+        </p>
+        <p>
+          Estamos testando com uma base parcial. Nem todos os produtos e
+          departamentos das lojas estão presentes.
+        </p>
+      </section>
+      <h2>Mercados cadastrados</h2>
+      <div className="market-list">
+        {supermarkets.map((m) => (
+          <span className="market-brand" data-market={m.id} key={m.id}>
+            <img src={m.logo} alt={`Logo ${m.name}`} />
+            <span>{m.name}</span>
+          </span>
+        ))}
+      </div>
+      <a className="primary-button" href="#/">
+        Explorar produtos <ArrowRight size={17} />
+      </a>
+    </main>
+  );
+}
 
-          <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-white text-sm font-semibold text-violet-800">
-              PM
-            </div>
-            <div className="hidden min-w-0 sm:block">
-              <div className="text-xl font-semibold leading-5">Preco Mercado</div>
-              <div className="text-xs font-medium text-white/70">SuperVale e Fonseca</div>
-            </div>
-          </div>
-
-          <div className="flex flex-1 items-center rounded bg-white p-1">
-            <button
-              className="hidden h-11 shrink-0 items-center rounded px-4 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 md:flex"
-              onClick={() => setSelectedCategory(null)}
+export default function App() {
+  const [catalog, setCatalog] = useState({data:[],total:0,totalPages:1});
+  const [facets, setFacets] = useState({categories:[],markets:{}});
+  const [detail, setDetail] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [error, setError] = useState("");
+  const [route, setRoute] = useState(window.location.hash || "#/");
+  const [query, setQuery] = useState("");
+  const [market, setMarket] = useState("");
+  const [category, setCategory] = useState("");
+  const [minimum, setMinimum] = useState("");
+  const [maximum, setMaximum] = useState("");
+  const [onlyAvailable, setOnlyAvailable] = useState(true);
+  const [sort, setSort] = useState("name");
+  const [page, setPage] = useState(1);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const [deferredQuery, setDeferredQuery] = useState("");
+  const isCatalog = route === "#/" || route === "#";
+  const isInfo = route === "#/como-funciona";
+  const selectedId = route.startsWith("#/produto/") ? route.slice(10) : null;
+  const load = useCallback(() => { setRefreshing(true); setRefreshKey(key => key + 1); }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setDeferredQuery(query), 250);
+    return () => clearTimeout(timer);
+  }, [query]);
+  useEffect(() => {
+    if (!isCatalog) return;
+    const controller = new AbortController();
+    fetchProducts({page,sort,market,category,query:deferredQuery,minimum,maximum,onlyAvailable}, controller.signal)
+      .then(response => { setCatalog(response); setError(""); })
+      .catch(error => { if (error.name !== 'AbortError') setError("Não foi possível carregar os produtos. Verifique se a API e o MongoDB estão ligados."); })
+      .finally(() => { if (!controller.signal.aborted) { setLoading(false); setRefreshing(false); } });
+    return () => controller.abort();
+  }, [isCatalog,page,sort,market,category,deferredQuery,minimum,maximum,onlyAvailable,refreshKey]);
+  useEffect(() => {
+    if (!isCatalog) return;
+    const controller = new AbortController();
+    fetchCatalogFilters(onlyAvailable,controller.signal)
+      .then(setFacets)
+      .catch(error => { if (error.name !== 'AbortError') setError("Não foi possível carregar os filtros."); });
+    return () => controller.abort();
+  }, [isCatalog,onlyAvailable,refreshKey]);
+  useEffect(() => {
+    if (!selectedId) return;
+    const controller = new AbortController();
+    fetchProductComparisons(selectedId,controller.signal)
+      .then(response => { setDetail(response); setError(""); })
+      .catch(error => { if (error.name !== 'AbortError') { setDetail(null); setError("Não foi possível abrir este produto."); } });
+    return () => controller.abort();
+  }, [selectedId]);
+  useEffect(() => {
+    const change = () => {
+      setRoute(window.location.hash || "#/");
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener("hashchange", change);
+    return () => window.removeEventListener("hashchange", change);
+  }, []);
+  const categories = facets.categories;
+  const counts = facets.markets;
+  const pages = Math.max(1, catalog.totalPages);
+  const current = Math.min(page, pages);
+  const visible = catalog.data;
+  const changeFilter = (setter, value) => {
+    setter(value);
+    setPage(1);
+  };
+  const reset = () => {
+    setMarket("");
+    setCategory("");
+    setQuery("");
+    setMinimum("");
+    setMaximum("");
+    setOnlyAvailable(true);
+    setPage(1);
+  };
+  const hasFilters =
+    market || category || query || minimum || maximum || !onlyAvailable;
+  const selected = selectedId && detail?.product.id === selectedId ? detail.product : null;
+  return (
+    <div className="app-layout">
+      <header className="site-header">
+        <div className="shell header-inner">
+          <a href="#/" className="brand" aria-label="SuperPreço — início">
+            <img src={superPrecoLogo} alt="SuperPreço" />
+          </a>
+          <nav aria-label="Navegação principal">
+            <a
+              href="#/"
+              className={!isInfo ? "active" : ""}
+              aria-current={isCatalog ? "page" : undefined}
             >
-              Todas as categorias
-            </button>
-            <div className="hidden h-7 w-px bg-zinc-200 md:block" />
-            <div className="relative flex-1">
-              <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" size={19} />
-              <input
-                type="text"
-                placeholder="Digite sua busca..."
-                className="h-11 w-full rounded border-0 bg-white pl-10 pr-3 text-sm font-medium text-zinc-900 outline-none placeholder:text-zinc-400"
-                value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-              />
-            </div>
-          </div>
-
-          <button
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white/10 text-white transition-colors hover:bg-white/20 disabled:opacity-50"
-            onClick={() => loadProducts({ silent: true })}
-            disabled={isRefreshing}
-            title={lastUpdatedAt ? `Atualizado ${lastUpdatedLabel}` : 'Atualizar produtos'}
-            aria-label="Atualizar produtos"
-          >
-            <RefreshCw size={21} />
-          </button>
+              Comparar
+            </a>
+            <a
+              href="#/como-funciona"
+              className={isInfo ? "active" : ""}
+              aria-current={isInfo ? "page" : undefined}
+            >
+              Como funciona
+            </a>
+          </nav>
+          <span className="location">
+            <MapPin size={17} /> Poços de Caldas, MG
+          </span>
         </div>
       </header>
-
-      <main className="mx-auto max-w-[1480px] px-4 py-6 lg:px-8">
-        <section className="mb-6 overflow-hidden rounded border border-zinc-200 bg-white">
-          <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
-            <div className="px-5 py-6 text-zinc-950 sm:px-8 lg:px-10">
-              <div className="mb-3 inline-flex items-center rounded border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-semibold uppercase text-zinc-600">
-                {products.length} ofertas monitoradas
-              </div>
-              <h1 className="max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl">
-                Comparacao de precos de mercado
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm font-medium leading-6 text-zinc-600 sm:text-base">
-                Produtos coletados dos mercados locais, organizados para busca, filtro e comparacao direta.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-px bg-zinc-200">
-              <button
-                className={`bg-white p-5 text-left transition-colors hover:bg-zinc-50 ${selectedSupermarket === 'supervale' ? 'ring-1 ring-inset ring-violet-700' : ''}`}
-                onClick={() => setSelectedSupermarket('supervale')}
-              >
-                <div className="text-2xl font-semibold text-zinc-950">{supermarkets.find(item => item.id === 'supervale')?.count || 0}</div>
-                <div className="mt-1 text-sm font-semibold text-zinc-600">SuperVale</div>
-              </button>
-              <button
-                className={`bg-white p-5 text-left transition-colors hover:bg-zinc-50 ${selectedSupermarket === 'fonseca' ? 'ring-1 ring-inset ring-violet-700' : ''}`}
-                onClick={() => setSelectedSupermarket('fonseca')}
-              >
-                <div className="text-2xl font-semibold text-zinc-950">{supermarkets.find(item => item.id === 'fonseca')?.count || 0}</div>
-                <div className="mt-1 text-sm font-semibold text-zinc-600">Fonseca</div>
-              </button>
-              <div className="col-span-2 bg-white p-5">
-                <div className="text-sm font-semibold text-zinc-950">Dados importados no MongoDB</div>
-                <div className="text-sm font-medium text-zinc-500">Ultima leitura: {lastUpdatedLabel}</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {isMenuOpen && (
-          <div className="fixed inset-0 z-50 lg:hidden">
-            <button
-              className="absolute inset-0 bg-zinc-950/50"
-              onClick={() => setIsMenuOpen(false)}
-              aria-label="Fechar filtros"
-            />
-            <aside className="absolute left-0 top-0 h-full w-[min(88vw,360px)] overflow-y-auto bg-[#f7f7fb] p-4 shadow-xl">
-              <div className="mb-4 flex items-center justify-between">
-                <span className="text-sm font-semibold uppercase tracking-wide text-zinc-950">Filtros</span>
-                <button
-                  className="rounded border border-zinc-200 bg-white p-2 text-zinc-600"
-                  onClick={() => setIsMenuOpen(false)}
-                  aria-label="Fechar filtros"
-                >
-                  <X size={20} />
-                </button>
-              </div>
-              {filters}
-            </aside>
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[280px_1fr]">
-          <aside className="hidden lg:block">
-            <div className="sticky top-32">
-              {filters}
-            </div>
-          </aside>
-
-          <section className="min-w-0">
-            <div className="mb-4">
-              <div className="mb-3 flex items-center justify-between">
-                <h2 className="text-xs font-semibold uppercase tracking-wide text-zinc-950">Departamentos</h2>
-                {(selectedCategory || selectedSupermarket || searchTerm) && (
-                  <button
-                    className="text-sm font-semibold text-violet-700 hover:text-violet-900"
-                    onClick={clearFilters}
+      {isInfo ? (
+        <HowItWorks />
+      ) : (
+        <>
+          {isCatalog && (
+            <>
+              <section className="shell hero">
+                <div className="hero-content">
+                  <h1>
+                    Compare preços.
+                    <br />
+                    Compre melhor.
+                  </h1>
+                  <p>Encontre ofertas nos mercados da sua cidade.</p>
+                  <form
+                    className="search-form"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("catalog")
+                        .scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
-                    Limpar filtros
-                  </button>
-                )}
-              </div>
-              <CategoryMenu
-                categories={categories}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
-              />
-            </div>
-
-            <div className="mb-4 flex flex-col gap-2 border-b border-zinc-200 pb-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">{listTitle}</h2>
-                <p className="text-sm font-medium text-zinc-500">
-                  {selectedSupermarketName ? `${selectedSupermarketName} - ` : ''}{filteredProducts.length} resultados
-                </p>
-              </div>
-              <div className="rounded border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700">
-                Pagina {Math.min(currentPage, Math.max(totalPages, 1))} de {Math.max(totalPages, 1)}
-              </div>
-            </div>
-
-            {isLoading ? (
-              <div className="flex items-center justify-center rounded border border-zinc-200 bg-white py-20 text-sm font-semibold text-zinc-500">
-                Carregando produtos...
-              </div>
-            ) : loadError ? (
-              <div className="rounded border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
-                {loadError}
-              </div>
-            ) : (
-              <>
-                <ProductList
-                  products={paginatedProducts}
-                  onCompare={handleCompareProduct}
-                />
-
-                <div className="pt-6">
-                  <Pagination
-                    currentPage={currentPage}
-                    totalPages={totalPages}
-                    onPageChange={handlePageChange}
-                  />
+                    <label className="search-input">
+                      <Search size={21} />
+                      <input
+                        aria-label="Buscar por produto ou marca"
+                        placeholder="Busque por produto ou marca"
+                        value={query}
+                        onChange={(e) => changeFilter(setQuery, e.target.value)}
+                      />
+                    </label>
+                    <button className="primary-button">Buscar</button>
+                  </form>
                 </div>
-              </>
-            )}
-          </section>
-        </div>
-      </main>
+              </section>
+              <div className="market-tabs-wrap">
+                <div
+                  className="shell market-tabs"
+                  aria-label="Filtrar por supermercado"
+                >
+                  <button
+                    className={!market ? "active" : ""}
+                    aria-pressed={!market}
+                    onClick={() => changeFilter(setMarket, "")}
+                  >
+                    Todos
+                  </button>
+                  {supermarkets.map((m) => (
+                    <button
+                      key={m.id}
+                      className={market === m.id ? "active" : ""}
+                      aria-pressed={market === m.id}
+                      onClick={() => changeFilter(setMarket, m.id)}
+                    >
+                      {m.name}
+                      <span title={onlyAvailable ? "Produtos disponíveis na última coleta" : "Todos os produtos coletados"}>
+                        {counts[m.id] || 0}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
+          {error && (
+            <div className="shell error-message" role="alert">
+              {error}
+              <button onClick={load}>Tentar novamente</button>
+            </div>
+          )}
+          {isCatalog && loading ? (
+            <main className="shell state-panel" role="status">
+              <RefreshCw className="spinning" />
+              <h2>Carregando produtos</h2>
+              <p>Consultando os preços coletados dos mercados.</p>
+            </main>
+          ) : isCatalog ? (
+            <main id="catalog" className="shell catalog-layout">
+              <button
+                className="outline-button mobile-filter"
+                aria-expanded={filtersOpen}
+                onClick={() => setFiltersOpen(!filtersOpen)}
+              >
+                <SlidersHorizontal size={17} />
+                {filtersOpen ? "Fechar filtros" : "Categorias e filtros"}
+              </button>
+              <aside
+                className={`filters ${filtersOpen ? "open" : ""}`}
+                aria-label="Filtros"
+              >
+                <div className="filter-title">
+                  <h2>Categorias</h2>
+                  {hasFilters && <button onClick={reset}>Limpar</button>}
+                </div>
+                <div className="category-list">
+                  <button
+                    className={!category ? "active" : ""}
+                    aria-pressed={!category}
+                    onClick={() => changeFilter(setCategory, "")}
+                  >
+                    Todas
+                  </button>
+                  {categories.map((c) => (
+                    <button
+                      key={c}
+                      className={category === c ? "active" : ""}
+                      aria-pressed={category === c}
+                      onClick={() => changeFilter(setCategory, c)}
+                    >
+                      {c}
+                    </button>
+                  ))}
+                </div>
+                <div className="price-filter">
+                  <h2>Preço</h2>
+                  <div>
+                    <label>
+                      Mínimo
+                      <input
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        placeholder="R$ 0"
+                        value={minimum}
+                        onChange={(e) =>
+                          changeFilter(setMinimum, e.target.value)
+                        }
+                      />
+                    </label>
+                    <label>
+                      Máximo
+                      <input
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        placeholder="Sem limite"
+                        value={maximum}
+                        onChange={(e) =>
+                          changeFilter(setMaximum, e.target.value)
+                        }
+                      />
+                    </label>
+                  </div>
+                  {minimum !== "" &&
+                    maximum !== "" &&
+                    Number(minimum) > Number(maximum) && (
+                      <p className="field-error">
+                        O mínimo deve ser menor que o máximo.
+                      </p>
+                    )}
+                </div>
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={onlyAvailable}
+                    onChange={(e) =>
+                      changeFilter(setOnlyAvailable, e.target.checked)
+                    }
+                  />
+                  Somente disponíveis
+                </label>
+                <div className="sample-note">
+                  <Info size={16} />
+                  <span>
+                    Base parcial para testes.
+                    <br />
+                    Preços sujeitos a alteração.
+                  </span>
+                </div>
+              </aside>
+              <section className="catalog-results">
+                <div className="section-heading">
+                  <div>
+                    <h2>
+                      {category ||
+                        (query ? "Resultados da busca" : "Explore os produtos")}
+                    </h2>
+                    <p className="muted small">
+                      {catalog.total} produtos {onlyAvailable ? "disponíveis" : "coletados"}
+                      {market
+                        ? ` · ${getSupermarket(market).name}`
+                        : " · mercados de Poços de Caldas"}
+                    </p>
+                  </div>
+                  <div className="sort-controls">
+                    <label>
+                      <span className="sr-only">Ordenar produtos</span>
+                      <select
+                        value={sort}
+                        onChange={(e) => changeFilter(setSort, e.target.value)}
+                      >
+                        <option value="name">Ordenar: nome</option>
+                        <option value="low">Menor preço</option>
+                        <option value="high">Maior preço</option>
+                      </select>
+                    </label>
+                    <button
+                      className="icon-button"
+                      onClick={load}
+                      disabled={refreshing}
+                      aria-label="Atualizar produtos"
+                    >
+                      <RefreshCw
+                        size={17}
+                        className={refreshing ? "spinning" : ""}
+                      />
+                    </button>
+                  </div>
+                </div>
+                {hasFilters && (
+                  <div className="active-filters">
+                    <span>
+                      {market
+                        ? getSupermarket(market).name
+                        : "Todos os mercados"}
+                      {category && ` / ${category}`}
+                      {query && ` / “${query}”`}
+                    </span>
+                    <button onClick={reset}>Limpar filtros</button>
+                  </div>
+                )}
+                {visible.length ? (
+                  <div className="product-grid">
+                    {visible.map((p) => (
+                      <CatalogCard
+                        key={p.id}
+                        product={p}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="state-panel">
+                    <Search size={30} />
+                    <h3>Nenhum produto encontrado</h3>
+                    <p>Tente outro termo ou ajuste os filtros.</p>
+                    <button className="outline-button" onClick={reset}>
+                      Limpar filtros
+                    </button>
+                  </div>
+                )}
+                <div className="catalog-bottom">
+                  <p className="small muted">
+                    Confira o preço e a disponibilidade no site do mercado.
+                  </p>
+                  {pages > 1 && (
+                    <nav className="pagination" aria-label="Paginação">
+                      <button
+                        aria-label="Página anterior"
+                        disabled={current === 1}
+                        onClick={() => {
+                          setPage(current - 1);
+                          document.getElementById("catalog").scrollIntoView();
+                        }}
+                      >
+                        <ArrowLeft size={16} />
+                      </button>
+                      <span>
+                        Página {current} de {pages}
+                      </span>
+                      <button
+                        aria-label="Próxima página"
+                        disabled={current === pages}
+                        onClick={() => {
+                          setPage(current + 1);
+                          document.getElementById("catalog").scrollIntoView();
+                        }}
+                      >
+                        <ArrowRight size={16} />
+                      </button>
+                    </nav>
+                  )}
+                </div>
+              </section>
+            </main>
+          ) : selected ? (
+            <ComparisonPage product={selected} groups={detail.groups} />
+          ) : selectedId && !error ? (
+            <main className="shell state-panel" role="status">
+              <RefreshCw className="spinning" />
+              <h2>Carregando comparação</h2>
+              <p>Consultando as ofertas dos outros mercados.</p>
+            </main>
+          ) : (
+            <main className="shell state-panel">
+              <h1>Página não encontrada</h1>
+              <p>O produto pode não estar disponível nesta base.</p>
+              <a href="#/" className="primary-button">
+                Voltar ao catálogo
+              </a>
+            </main>
+          )}
+        </>
+      )}
+      <footer className="site-footer">
+        <div className="shell footer-layout">
+          <div className="footer-identity">
+            <a className="footer-brand" href="#/" aria-label="Ir para o início do SuperPreço">
+              <img src={superPrecoLogo} alt="SuperPreço" />
+            </a>
+            <p>Compare com calma.<br />Escolha melhor.</p>
+          </div>
 
-      <ComparisonSidebar
-        isOpen={comparisonSidebarOpen}
-        onClose={handleCloseSidebar}
-        selectedProduct={selectedProductForComparison}
-        allProducts={products}
-      />
+          <div className="footer-content">
+            <div className="footer-top">
+              <p>Comparação de preços para escolhas mais conscientes.</p>
+              <nav className="footer-nav" aria-label="Links do rodapé">
+                <a href="#/">Produtos</a>
+                <a href="#/como-funciona">Como funciona</a>
+              </nav>
+            </div>
 
-      <footer className="mt-10 border-t border-zinc-200 bg-white py-8">
-        <div className="mx-auto flex max-w-[1480px] flex-col gap-2 px-4 text-sm font-medium text-zinc-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <span>Comparador de precos de mercado</span>
-          <span>{products.length} produtos monitorados</span>
+            <div className="footer-markets">
+              <div className="footer-market-copy">
+                <span>Mercados acompanhados</span>
+                <p>Preços publicados por supermercados de Poços de Caldas.</p>
+              </div>
+              <div className="footer-market-logos" aria-label="Mercados acompanhados pelo SuperPreço">
+                {supermarkets.map((m) => (
+                  <span
+                    className="footer-market-logo"
+                    data-market={m.id}
+                    title={m.name}
+                    key={m.id}
+                  >
+                    <img src={m.logo} alt={m.name} />
+                    <span>{m.name}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="footer-bottom">
+              <div className="footer-credit">
+                <span>Feito por</span>
+                <strong>Pedro Lucas de Souza Faria</strong>
+                <span>Instituto Federal de Poços de Caldas</span>
+              </div>
+              <p>Preços e disponibilidade podem mudar. Confirme sempre no site do mercado.</p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
-export default App

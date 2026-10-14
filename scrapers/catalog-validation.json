@@ -1,0 +1,65 @@
+{
+  "at": "2026-09-18T03:38:13.987Z",
+  "total": 919,
+  "available": 866,
+  "markets": {
+    "pedrilho": 176,
+    "sanmichel": 80,
+    "supervale": 387,
+    "vilasul": 120,
+    "vn": 156
+  },
+  "pilot": {
+    "arroz": {
+      "products": 7,
+      "markets": [
+        "supervale"
+      ],
+      "matches": {
+        "identical": 0,
+        "equivalent": 0,
+        "similar": 0
+      },
+      "examples": []
+    },
+    "leite": {
+      "products": 19,
+      "markets": [
+        "pedrilho",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "matches": {
+        "identical": 0,
+        "equivalent": 1,
+        "similar": 0
+      },
+      "examples": [
+        {
+          "a": "Leite Fermentado Itambito Itambé 450g",
+          "b": "Leite Fermentado Itambito Itambé 450g",
+          "markets": [
+            "vilasul",
+            "vn"
+          ],
+          "type": "equivalent",
+          "reason": "Mesma marca, descrição e quantidade; sem confirmação por código de barras"
+        }
+      ]
+    },
+    "cafe": {
+      "products": 9,
+      "markets": [
+        "pedrilho",
+        "supervale"
+      ],
+      "matches": {
+        "identical": 0,
+        "equivalent": 0,
+        "similar": 0
+      },
+      "examples": []
+    }
+  }
+}

@@ -1,0 +1,3780 @@
+{
+  "startedAt": "2026-09-17T15:39:26.433Z",
+  "rounds": [
+    {
+      "round": 1,
+      "total": 583,
+      "rawCards": 20,
+      "uniqueIds": 20,
+      "priced": 20,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 2,
+      "total": 583,
+      "rawCards": 40,
+      "uniqueIds": 40,
+      "priced": 40,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 3,
+      "total": 583,
+      "rawCards": 60,
+      "uniqueIds": 60,
+      "priced": 60,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 4,
+      "total": 583,
+      "rawCards": 80,
+      "uniqueIds": 80,
+      "priced": 80,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 5,
+      "total": 583,
+      "rawCards": 100,
+      "uniqueIds": 100,
+      "priced": 100,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 6,
+      "total": 583,
+      "rawCards": 120,
+      "uniqueIds": 120,
+      "priced": 120,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 7,
+      "total": 583,
+      "rawCards": 140,
+      "uniqueIds": 140,
+      "priced": 140,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 8,
+      "total": 583,
+      "rawCards": 160,
+      "uniqueIds": 160,
+      "priced": 160,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 9,
+      "total": 583,
+      "rawCards": 180,
+      "uniqueIds": 180,
+      "priced": 180,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 10,
+      "total": 583,
+      "rawCards": 200,
+      "uniqueIds": 200,
+      "priced": 200,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 11,
+      "total": 583,
+      "rawCards": 220,
+      "uniqueIds": 220,
+      "priced": 220,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 12,
+      "total": 583,
+      "rawCards": 240,
+      "uniqueIds": 240,
+      "priced": 240,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 13,
+      "total": 583,
+      "rawCards": 260,
+      "uniqueIds": 260,
+      "priced": 260,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 14,
+      "total": 583,
+      "rawCards": 280,
+      "uniqueIds": 280,
+      "priced": 280,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 15,
+      "total": 583,
+      "rawCards": 300,
+      "uniqueIds": 300,
+      "priced": 300,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 16,
+      "total": 583,
+      "rawCards": 320,
+      "uniqueIds": 320,
+      "priced": 320,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 17,
+      "total": 583,
+      "rawCards": 340,
+      "uniqueIds": 340,
+      "priced": 340,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 18,
+      "total": 583,
+      "rawCards": 360,
+      "uniqueIds": 360,
+      "priced": 360,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 19,
+      "total": 583,
+      "rawCards": 380,
+      "uniqueIds": 380,
+      "priced": 380,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 20,
+      "total": 583,
+      "rawCards": 400,
+      "uniqueIds": 400,
+      "priced": 400,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 21,
+      "total": 583,
+      "rawCards": 420,
+      "uniqueIds": 420,
+      "priced": 420,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 22,
+      "total": 583,
+      "rawCards": 440,
+      "uniqueIds": 440,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 23,
+      "total": 583,
+      "rawCards": 460,
+      "uniqueIds": 460,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 24,
+      "total": 583,
+      "rawCards": 480,
+      "uniqueIds": 480,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 25,
+      "total": 583,
+      "rawCards": 500,
+      "uniqueIds": 500,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 26,
+      "total": 583,
+      "rawCards": 520,
+      "uniqueIds": 520,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 27,
+      "total": 583,
+      "rawCards": 540,
+      "uniqueIds": 540,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 28,
+      "total": 583,
+      "rawCards": 560,
+      "uniqueIds": 560,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 29,
+      "total": 583,
+      "rawCards": 580,
+      "uniqueIds": 580,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    },
+    {
+      "round": 30,
+      "total": 583,
+      "rawCards": 583,
+      "uniqueIds": 583,
+      "priced": 424,
+      "missingId": [],
+      "duplicates": []
+    }
+  ],
+  "store": {
+    "city": "Poços de Caldas",
+    "address": "Av. João Pinheiro, 1460"
+  },
+  "lastCards": [
+    {
+      "id": "6212",
+      "index": 0,
+      "name": "Salgadinho Cheetos Lua Queijo Parmesao 35g",
+      "url": "https://www.supervalesupermercados.com.br/produto/6212/salgadinho-cheetos-lua-queijo-parmesao-35g"
+    },
+    {
+      "id": "6211",
+      "index": 1,
+      "name": "Biscoito Cream Cracker Vilma 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6211/biscoito-cream-cracker-vilma-170gr"
+    },
+    {
+      "id": "6160",
+      "index": 2,
+      "name": "Bala Dori Gomets Tubo Frutas 32gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6160/bala-dori-gomets-tubo-frutas-32gr"
+    },
+    {
+      "id": "6137",
+      "index": 3,
+      "name": "Biscoito Nestle Negresco Baunilha 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6137/biscoito-nestle-negresco-baunilha-90gr"
+    },
+    {
+      "id": "6112",
+      "index": 4,
+      "name": "Biscoito Aymoré Cracker Manteiga 164gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6112/biscoito-aymore-cracker-manteiga-164gr"
+    },
+    {
+      "id": "6092",
+      "index": 5,
+      "name": "Salgadinho Cheetos Onda Requeijao 160gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6092/salgadinho-cheetos-onda-requeijao-160gr"
+    },
+    {
+      "id": "6077",
+      "index": 6,
+      "name": "Biscoito Aymore Cream Cracker 345gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6077/biscoito-aymore-cream-cracker-345gr"
+    },
+    {
+      "id": "6040",
+      "index": 7,
+      "name": "Salgadinho Cebolitos 138gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6040/salgadinho-cebolitos-138gr"
+    },
+    {
+      "id": "6034",
+      "index": 8,
+      "name": "Sequilho Newbread Coco 240gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6034/sequilho-newbread-coco-240gr"
+    },
+    {
+      "id": "6022",
+      "index": 9,
+      "name": "Biscoito Aymore Tortini Trufa De Chocolate 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6022/biscoito-aymore-tortini-trufa-de-chocolate-90gr"
+    },
+    {
+      "id": "5977",
+      "index": 10,
+      "name": "Salgadinho Keleck Bacon 55gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5977/salgadinho-keleck-bacon-55gr"
+    },
+    {
+      "id": "5947",
+      "index": 11,
+      "name": "Biscoito Vilma Maizena 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5947/biscoito-vilma-maizena-360gr"
+    },
+    {
+      "id": "5937",
+      "index": 12,
+      "name": "Biscoito Aymore Amanteigado Coco 248gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5937/biscoito-aymore-amanteigado-coco-248gr"
+    },
+    {
+      "id": "5930",
+      "index": 13,
+      "name": "Biscoito Aymore Agua E Sal 164gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5930/biscoito-aymore-agua-e-sal-164gr"
+    },
+    {
+      "id": "5895",
+      "index": 14,
+      "name": "Salgadinho Cheetos Onda Requeijao 40g",
+      "url": "https://www.supervalesupermercados.com.br/produto/5895/salgadinho-cheetos-onda-requeijao-40g"
+    },
+    {
+      "id": "5874",
+      "index": 15,
+      "name": "Chocolate Arcor Tortuguita Baunilha 15gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5874/chocolate-arcor-tortuguita-baunilha-15gr"
+    },
+    {
+      "id": "5835",
+      "index": 16,
+      "name": "Biscoito Vilma Maizena 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5835/biscoito-vilma-maizena-170gr"
+    },
+    {
+      "id": "5801",
+      "index": 17,
+      "name": "Bolinho Bauducco Duo Chocolate 27gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5801/bolinho-bauducco-duo-chocolate-27gr"
+    },
+    {
+      "id": "5798",
+      "index": 18,
+      "name": "Rosquinha Newbread Chocolate 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5798/rosquinha-newbread-chocolate-300gr"
+    },
+    {
+      "id": "5763",
+      "index": 19,
+      "name": "Chocolate Waffer Lacta Ouro Branco 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5763/chocolate-waffer-lacta-ouro-branco-25gr"
+    },
+    {
+      "id": "5723",
+      "index": 20,
+      "name": "Batata Pratic Lever Ondulada Cebola E Salsa 45gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5723/batata-pratic-lever-ondulada-cebola-e-salsa-45gr"
+    },
+    {
+      "id": "5682",
+      "index": 21,
+      "name": "Salgadinho Cheetos Mix De Queijos 36gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5682/salgadinho-cheetos-mix-de-queijos-36gr"
+    },
+    {
+      "id": "5671",
+      "index": 22,
+      "name": "Biscoito Danix Recheado Chocolate 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5671/biscoito-danix-recheado-chocolate-130gr"
+    },
+    {
+      "id": "5663",
+      "index": 23,
+      "name": "Chocolate Bis Lacta Oreo 100,8gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5663/chocolate-bis-lacta-oreo-1008gr"
+    },
+    {
+      "id": "5652",
+      "index": 24,
+      "name": "Salgadinho Keleck Hambuguer 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5652/salgadinho-keleck-hambuguer-50gr"
+    },
+    {
+      "id": "5594",
+      "index": 25,
+      "name": "Biscoito Club Social Pizza 141gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5594/biscoito-club-social-pizza-141gr"
+    },
+    {
+      "id": "5582",
+      "index": 26,
+      "name": "Salgadinho Apetit Pele Sabor Bacon 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5582/salgadinho-apetit-pele-sabor-bacon-70gr"
+    },
+    {
+      "id": "5567",
+      "index": 27,
+      "name": "Biscoito Nestle Bono Recheado Chocolate 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5567/biscoito-nestle-bono-recheado-chocolate-90gr"
+    },
+    {
+      "id": "5517",
+      "index": 28,
+      "name": "Biscoito Bauducco Recheado Duplo Chocolate 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5517/biscoito-bauducco-recheado-duplo-chocolate-140gr"
+    },
+    {
+      "id": "5503",
+      "index": 29,
+      "name": "Torrada Visconti Tradicional 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5503/torrada-visconti-tradicional-120gr"
+    },
+    {
+      "id": "5489",
+      "index": 30,
+      "name": "Rosquinha Mabel Leite 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5489/rosquinha-mabel-leite-300gr"
+    },
+    {
+      "id": "5479",
+      "index": 31,
+      "name": "Bolinho Bauducco Baunilha Recheio Chocolate 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5479/bolinho-bauducco-baunilha-recheio-chocolate-40gr"
+    },
+    {
+      "id": "5439",
+      "index": 32,
+      "name": "Biscoito Aymore Leite 345gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5439/biscoito-aymore-leite-345gr"
+    },
+    {
+      "id": "5405",
+      "index": 33,
+      "name": "Bolinho Ana Maria Napolitano 42gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5405/bolinho-ana-maria-napolitano-42gr"
+    },
+    {
+      "id": "5397",
+      "index": 34,
+      "name": "Chocolate Lacta Ao Leite 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5397/chocolate-lacta-ao-leite-80gr"
+    },
+    {
+      "id": "5342",
+      "index": 35,
+      "name": "Biscoito Renata Cream Cracker 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5342/biscoito-renata-cream-cracker-170gr"
+    },
+    {
+      "id": "5309",
+      "index": 36,
+      "name": "Torrada Crocantissimo Pullman Peito De Peru Com Requeijao 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5309/torrada-crocantissimo-pullman-peito-de-peru-com-requeijao-40gr"
+    },
+    {
+      "id": "5294",
+      "index": 37,
+      "name": "Batata Lays Sensacoes Frango Grelhado 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5294/batata-lays-sensacoes-frango-grelhado-70gr"
+    },
+    {
+      "id": "5264",
+      "index": 38,
+      "name": "Biscoito De Coco Renata 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5264/biscoito-de-coco-renata-360gr"
+    },
+    {
+      "id": "5238",
+      "index": 39,
+      "name": "Biscoito Cream Cracker Renata 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5238/biscoito-cream-cracker-renata-360gr"
+    },
+    {
+      "id": "5159",
+      "index": 40,
+      "name": "Pirulito Diploko Explosive Uva 11gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5159/pirulito-diploko-explosive-uva-11gr"
+    },
+    {
+      "id": "5156",
+      "index": 41,
+      "name": "Salgadinho Batata Pringles Sabor Creme E Cebola 109gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5156/salgadinho-batata-pringles-sabor-creme-e-cebola-109gr"
+    },
+    {
+      "id": "5138",
+      "index": 42,
+      "name": "Rosquinha Vilma Chocolate 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5138/rosquinha-vilma-chocolate-500gr"
+    },
+    {
+      "id": "5089",
+      "index": 43,
+      "name": "Biscoito Bauducco Recheado Chocolate 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5089/biscoito-bauducco-recheado-chocolate-140gr"
+    },
+    {
+      "id": "5053",
+      "index": 44,
+      "name": "Marshmallow Haribo Chamallows Cables Coloridos 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5053/marshmallow-haribo-chamallows-cables-coloridos-70gr"
+    },
+    {
+      "id": "5015",
+      "index": 45,
+      "name": "Biscoito Nestle Nesfit Delice Cacau E Avela 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5015/biscoito-nestle-nesfit-delice-cacau-e-avela-140gr"
+    },
+    {
+      "id": "4968",
+      "index": 46,
+      "name": "Biscoito Aymore Wafer Sabor Chocolate 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4968/biscoito-aymore-wafer-sabor-chocolate-105gr"
+    },
+    {
+      "id": "4953",
+      "index": 47,
+      "name": "Bombom Raffaello Com 9un 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4953/bombom-raffaello-com-9un-90gr"
+    },
+    {
+      "id": "4949",
+      "index": 48,
+      "name": "Chocolate Lacta 5star 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4949/chocolate-lacta-5star-40gr"
+    },
+    {
+      "id": "4938",
+      "index": 49,
+      "name": "Biscoito Wafer Prestigio 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4938/biscoito-wafer-prestigio-110gr"
+    },
+    {
+      "id": "4913",
+      "index": 50,
+      "name": "Rosquinha Vilma Leite 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4913/rosquinha-vilma-leite-500gr"
+    },
+    {
+      "id": "4842",
+      "index": 51,
+      "name": "Rosquinha Newbread Coco 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4842/rosquinha-newbread-coco-300gr"
+    },
+    {
+      "id": "4841",
+      "index": 52,
+      "name": "Pururuca Bottrel 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4841/pururuca-bottrel-100gr"
+    },
+    {
+      "id": "4831",
+      "index": 53,
+      "name": "Bala De Gelatina Docile Gummies Amora 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4831/bala-de-gelatina-docile-gummies-amora-80gr"
+    },
+    {
+      "id": "4820",
+      "index": 54,
+      "name": "Chocolate Em Barra Ao Leite Lacta Shot 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4820/chocolate-em-barra-ao-leite-lacta-shot-80gr"
+    },
+    {
+      "id": "4788",
+      "index": 55,
+      "name": "Biscoito Wafer Aymore Limao 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4788/biscoito-wafer-aymore-limao-105gr"
+    },
+    {
+      "id": "4728",
+      "index": 56,
+      "name": "Salgadinho Snack Keleck Bacon 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4728/salgadinho-snack-keleck-bacon-40gr"
+    },
+    {
+      "id": "4721",
+      "index": 57,
+      "name": "Biscoito Galo Recheado Chocolate 112gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4721/biscoito-galo-recheado-chocolate-112gr"
+    },
+    {
+      "id": "4693",
+      "index": 58,
+      "name": "Salgadinho Batata Pringles Sabor Queijo 109gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4693/salgadinho-batata-pringles-sabor-queijo-109gr"
+    },
+    {
+      "id": "4684",
+      "index": 59,
+      "name": "Salgadinho Doritos Queijo Nacho 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4684/salgadinho-doritos-queijo-nacho-120gr"
+    },
+    {
+      "id": "4673",
+      "index": 60,
+      "name": "Chocolate Branco Lacta Laka Oreo 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4673/chocolate-branco-lacta-laka-oreo-80gr"
+    },
+    {
+      "id": "4648",
+      "index": 61,
+      "name": "Bolinho Ana Maria Baunilha 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4648/bolinho-ana-maria-baunilha-80gr"
+    },
+    {
+      "id": "4607",
+      "index": 62,
+      "name": "Bombom Arcor Bon O Bon Morango 15gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4607/bombom-arcor-bon-o-bon-morango-15gr"
+    },
+    {
+      "id": "4573",
+      "index": 63,
+      "name": "Bala Halls Morango 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4573/bala-halls-morango-28gr"
+    },
+    {
+      "id": "4571",
+      "index": 64,
+      "name": "Chocolate Nestle Charge 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4571/chocolate-nestle-charge-40gr"
+    },
+    {
+      "id": "4534",
+      "index": 65,
+      "name": "Pastilha Tic Tac Laranja 14,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4534/pastilha-tic-tac-laranja-145gr"
+    },
+    {
+      "id": "4523",
+      "index": 66,
+      "name": "Chocolate Kinder Bueno Chocolate Ao Leite 43gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4523/chocolate-kinder-bueno-chocolate-ao-leite-43gr"
+    },
+    {
+      "id": "4486",
+      "index": 67,
+      "name": "Biscoito Waffer Bauducco Morango 92gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4486/biscoito-waffer-bauducco-morango-92gr"
+    },
+    {
+      "id": "4473",
+      "index": 68,
+      "name": "Chocolate Lacta Amaro 40% Cacau 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4473/chocolate-lacta-amaro-40-cacau-80gr"
+    },
+    {
+      "id": "4461",
+      "index": 69,
+      "name": "Pastilha Tic Tac Frutas 14,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4461/pastilha-tic-tac-frutas-145gr"
+    },
+    {
+      "id": "4448",
+      "index": 70,
+      "name": "Wafer Renata Morango 115gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4448/wafer-renata-morango-115gr"
+    },
+    {
+      "id": "4445",
+      "index": 71,
+      "name": "Biscoito Renata Cristal 420gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4445/biscoito-renata-cristal-420gr"
+    },
+    {
+      "id": "4443",
+      "index": 72,
+      "name": "Pastilha Tic Tac Citrus 14,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4443/pastilha-tic-tac-citrus-145gr"
+    },
+    {
+      "id": "4432",
+      "index": 73,
+      "name": "Biscoito Danix Recheado Morango 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4432/biscoito-danix-recheado-morango-130gr"
+    },
+    {
+      "id": "4429",
+      "index": 74,
+      "name": "Biscoito Aymore Salpet Tradicional 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4429/biscoito-aymore-salpet-tradicional-200gr"
+    },
+    {
+      "id": "4391",
+      "index": 75,
+      "name": "Biscoito Aymore Maizena 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4391/biscoito-aymore-maizena-170gr"
+    },
+    {
+      "id": "4384",
+      "index": 76,
+      "name": "Bombom Ferrero Collection Com 7un 77gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4384/bombom-ferrero-collection-com-7un-77gr"
+    },
+    {
+      "id": "4374",
+      "index": 77,
+      "name": "Salgadinho Torcida Cebola 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4374/salgadinho-torcida-cebola-60gr"
+    },
+    {
+      "id": "4271",
+      "index": 78,
+      "name": "Bala Halls Extra Forte 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4271/bala-halls-extra-forte-28gr"
+    },
+    {
+      "id": "4219",
+      "index": 79,
+      "name": "Chocolate Kinder Ovo Menina 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4219/chocolate-kinder-ovo-menina-20gr"
+    },
+    {
+      "id": "4196",
+      "index": 80,
+      "name": "Pastilha Tic Tac Menta Crush 14,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4196/pastilha-tic-tac-menta-crush-145gr"
+    },
+    {
+      "id": "4149",
+      "index": 81,
+      "name": "Biscoito Nestle Classic Recheado Chocolate 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4149/biscoito-nestle-classic-recheado-chocolate-140gr"
+    },
+    {
+      "id": "4111",
+      "index": 82,
+      "name": "Biscoito Renata Recheado Divertix Brigadeiro 112gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4111/biscoito-renata-recheado-divertix-brigadeiro-112gr"
+    },
+    {
+      "id": "4047",
+      "index": 83,
+      "name": "Chocolate Lacta Sonho De Valsa 98gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4047/chocolate-lacta-sonho-de-valsa-98gr"
+    },
+    {
+      "id": "4026",
+      "index": 84,
+      "name": "Biscoito Cream Cracker Galo 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4026/biscoito-cream-cracker-galo-360gr"
+    },
+    {
+      "id": "3962",
+      "index": 85,
+      "name": "Biscoito Bauduco Cookies Sabor Chocolate 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3962/biscoito-bauduco-cookies-sabor-chocolate-100gr"
+    },
+    {
+      "id": "3949",
+      "index": 86,
+      "name": "Chocolate Waffer Lacta Sonho De Valsa 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3949/chocolate-waffer-lacta-sonho-de-valsa-25gr"
+    },
+    {
+      "id": "3940",
+      "index": 87,
+      "name": "Bombom Chokito Com Flocos E Chocolate 32gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3940/bombom-chokito-com-flocos-e-chocolate-32gr"
+    },
+    {
+      "id": "3912",
+      "index": 88,
+      "name": "Chocolate Garoto Ao Leite 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3912/chocolate-garoto-ao-leite-80gr"
+    },
+    {
+      "id": "3911",
+      "index": 89,
+      "name": "Biscoito Nestle Chocobiscuit Ao Leite 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3911/biscoito-nestle-chocobiscuit-ao-leite-90gr"
+    },
+    {
+      "id": "3901",
+      "index": 90,
+      "name": "Chiclete Trident Sabor Tutti Frutti 8gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/3901/chiclete-trident-sabor-tutti-frutti-8gr-com-5un"
+    },
+    {
+      "id": "3893",
+      "index": 91,
+      "name": "Biscoito Bono Recheado Limao 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3893/biscoito-bono-recheado-limao-90gr"
+    },
+    {
+      "id": "3877",
+      "index": 92,
+      "name": "Chocolate Kinder Bueno White 39gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3877/chocolate-kinder-bueno-white-39gr"
+    },
+    {
+      "id": "3864",
+      "index": 93,
+      "name": "Pastilha Tic Tac Morango 14,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3864/pastilha-tic-tac-morango-145gr"
+    },
+    {
+      "id": "3860",
+      "index": 94,
+      "name": "Rosquinha Aymore Coco 350gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3860/rosquinha-aymore-coco-350gr"
+    },
+    {
+      "id": "3821",
+      "index": 95,
+      "name": "Chiclete Trident Morango 8gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/3821/chiclete-trident-morango-8gr-com-5un"
+    },
+    {
+      "id": "3815",
+      "index": 96,
+      "name": "Biscoito Aymore Amanteigado Leite E Chocolate 248gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3815/biscoito-aymore-amanteigado-leite-e-chocolate-248gr"
+    },
+    {
+      "id": "3770",
+      "index": 97,
+      "name": "Rosquinha Newbread Leite 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3770/rosquinha-newbread-leite-300gr"
+    },
+    {
+      "id": "3740",
+      "index": 98,
+      "name": "Biscoito Wafer Nestle Nescau Chocolate 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3740/biscoito-wafer-nestle-nescau-chocolate-110gr"
+    },
+    {
+      "id": "3648",
+      "index": 99,
+      "name": "Salgadinho Torcida Queijo 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3648/salgadinho-torcida-queijo-60gr"
+    },
+    {
+      "id": "3541",
+      "index": 100,
+      "name": "Chocolate Arcor Brigadeiro 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3541/chocolate-arcor-brigadeiro-80gr"
+    },
+    {
+      "id": "3536",
+      "index": 101,
+      "name": "Chocolate Nestle Prestigio 33gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3536/chocolate-nestle-prestigio-33gr"
+    },
+    {
+      "id": "3529",
+      "index": 102,
+      "name": "Biscoito Aymore Amanteigado Chocolate 248gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3529/biscoito-aymore-amanteigado-chocolate-248gr"
+    },
+    {
+      "id": "3523",
+      "index": 103,
+      "name": "Bombom Lacta Sonho De Valsa 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3523/bombom-lacta-sonho-de-valsa-20gr"
+    },
+    {
+      "id": "3505",
+      "index": 104,
+      "name": "Biscoito Bauducco Recheado Morango 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3505/biscoito-bauducco-recheado-morango-140gr"
+    },
+    {
+      "id": "3501",
+      "index": 105,
+      "name": "Batata Pratic Leve Natural 45g",
+      "url": "https://www.supervalesupermercados.com.br/produto/3501/batata-pratic-leve-natural-45g"
+    },
+    {
+      "id": "3456",
+      "index": 106,
+      "name": "Chiclete Trident Herbal Fresh 8gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/3456/chiclete-trident-herbal-fresh-8gr-com-5un"
+    },
+    {
+      "id": "3385",
+      "index": 107,
+      "name": "Chocolate Arcor Cacau 70% Amargo 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3385/chocolate-arcor-cacau-70-amargo-80gr"
+    },
+    {
+      "id": "3346",
+      "index": 108,
+      "name": "Biscoito Club Social Queijo 141gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3346/biscoito-club-social-queijo-141gr"
+    },
+    {
+      "id": "3329",
+      "index": 109,
+      "name": "Biscoito Nestle Passatempo Leite Maltado 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3329/biscoito-nestle-passatempo-leite-maltado-150gr"
+    },
+    {
+      "id": "3317",
+      "index": 110,
+      "name": "Batata Pratic Leve Churrasco 45gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3317/batata-pratic-leve-churrasco-45gr"
+    },
+    {
+      "id": "3288",
+      "index": 111,
+      "name": "Chiclete Trident Sabor Hortela 8,5gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/3288/chiclete-trident-sabor-hortela-85gr-com-5un"
+    },
+    {
+      "id": "3268",
+      "index": 112,
+      "name": "Chocolate Snickers Pe De Moleque 42gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3268/chocolate-snickers-pe-de-moleque-42gr"
+    },
+    {
+      "id": "3261",
+      "index": 113,
+      "name": "Salgadinho Doritos Queijo Nacho 32gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3261/salgadinho-doritos-queijo-nacho-32gr"
+    },
+    {
+      "id": "3250",
+      "index": 114,
+      "name": "Bala Halls Melancia 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3250/bala-halls-melancia-28gr"
+    },
+    {
+      "id": "3225",
+      "index": 115,
+      "name": "Biscoito Maizena Renata 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3225/biscoito-maizena-renata-360gr"
+    },
+    {
+      "id": "3200",
+      "index": 116,
+      "name": "Chocolate Garoto Caribe 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3200/chocolate-garoto-caribe-28gr"
+    },
+    {
+      "id": "3187",
+      "index": 117,
+      "name": "Biscoito Aymore Tortini Morango 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3187/biscoito-aymore-tortini-morango-90gr"
+    },
+    {
+      "id": "3133",
+      "index": 118,
+      "name": "Biscoito Bauducco Waffer Maxi Cookies 104gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3133/biscoito-bauducco-waffer-maxi-cookies-104gr"
+    },
+    {
+      "id": "3119",
+      "index": 119,
+      "name": "Salgadinho Snack Keleck Churrasco 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3119/salgadinho-snack-keleck-churrasco-40gr"
+    },
+    {
+      "id": "3061",
+      "index": 120,
+      "name": "Biscoito Polvilho Italianinha Tradicional 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3061/biscoito-polvilho-italianinha-tradicional-200gr"
+    },
+    {
+      "id": "3023",
+      "index": 121,
+      "name": "Chocolate Arcor Rocklets 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3023/chocolate-arcor-rocklets-80gr"
+    },
+    {
+      "id": "2997",
+      "index": 122,
+      "name": "Salgadinho Cheetos Bola Queijo Suico 33gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2997/salgadinho-cheetos-bola-queijo-suico-33gr"
+    },
+    {
+      "id": "2967",
+      "index": 123,
+      "name": "Chocolate Ao Leite Arcor Tablete 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2967/chocolate-ao-leite-arcor-tablete-80gr"
+    },
+    {
+      "id": "2916",
+      "index": 124,
+      "name": "Chocolate Nestle Lollo 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2916/chocolate-nestle-lollo-28gr"
+    },
+    {
+      "id": "2885",
+      "index": 125,
+      "name": "Chocolate Kinder Ovo Joy Com Surpresa 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2885/chocolate-kinder-ovo-joy-com-surpresa-20gr"
+    },
+    {
+      "id": "2872",
+      "index": 126,
+      "name": "Chiclete Trident Sabor Menta 8,5gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/2872/chiclete-trident-sabor-menta-85gr-com-5un"
+    },
+    {
+      "id": "2831",
+      "index": 127,
+      "name": "Torresmo Krast 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2831/torresmo-krast-150gr"
+    },
+    {
+      "id": "2821",
+      "index": 128,
+      "name": "Biscoito Agua E Sal Galo 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2821/biscoito-agua-e-sal-galo-360gr"
+    },
+    {
+      "id": "2785",
+      "index": 129,
+      "name": "Biscoito Vilma Cracker Integral 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2785/biscoito-vilma-cracker-integral-360gr"
+    },
+    {
+      "id": "2784",
+      "index": 130,
+      "name": "Chocolate Arcor Tortuguita Brigadeiro 15,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2784/chocolate-arcor-tortuguita-brigadeiro-155gr"
+    },
+    {
+      "id": "2781",
+      "index": 131,
+      "name": "Salgadinho Cheetos Bola Queijo Suiço 125gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2781/salgadinho-cheetos-bola-queijo-suico-125gr"
+    },
+    {
+      "id": "2776",
+      "index": 132,
+      "name": "Salgadinho Doritos Queijo Nacho 75gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2776/salgadinho-doritos-queijo-nacho-75gr"
+    },
+    {
+      "id": "2754",
+      "index": 133,
+      "name": "Bombom Ferrero Rocher Com 8un 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2754/bombom-ferrero-rocher-com-8un-100gr"
+    },
+    {
+      "id": "2721",
+      "index": 134,
+      "name": "Rosquinha Newbread Milho 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2721/rosquinha-newbread-milho-300gr"
+    },
+    {
+      "id": "2665",
+      "index": 135,
+      "name": "Biscoito Aymore Maizena Chocolate 345gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2665/biscoito-aymore-maizena-chocolate-345gr"
+    },
+    {
+      "id": "2651",
+      "index": 136,
+      "name": "Chocolate Nestle Ao Leite Suflair 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2651/chocolate-nestle-ao-leite-suflair-50gr"
+    },
+    {
+      "id": "2568",
+      "index": 137,
+      "name": "Biscoito Nestle Recheado Bono Morango 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2568/biscoito-nestle-recheado-bono-morango-90gr"
+    },
+    {
+      "id": "2544",
+      "index": 138,
+      "name": "Chiclete Trident Sabor Canela 8,5gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/2544/chiclete-trident-sabor-canela-85gr-com-5un"
+    },
+    {
+      "id": "2539",
+      "index": 139,
+      "name": "Salgadinho Batata Pringles Sabor Churrasco 109gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2539/salgadinho-batata-pringles-sabor-churrasco-109gr"
+    },
+    {
+      "id": "2534",
+      "index": 140,
+      "name": "Biscoito Wafer Aymore Chocolate Com Avelã 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2534/biscoito-wafer-aymore-chocolate-com-avela-105gr"
+    },
+    {
+      "id": "2531",
+      "index": 141,
+      "name": "Bolinho Ana Maria Cobertura Chocolate 42gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2531/bolinho-ana-maria-cobertura-chocolate-42gr"
+    },
+    {
+      "id": "2495",
+      "index": 142,
+      "name": "Biscoito Nestle Negresco Chocolate 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2495/biscoito-nestle-negresco-chocolate-90gr"
+    },
+    {
+      "id": "2489",
+      "index": 143,
+      "name": "Doritos Sweet Chili 120g",
+      "url": "https://www.supervalesupermercados.com.br/produto/2489/doritos-sweet-chili-120g"
+    },
+    {
+      "id": "2473",
+      "index": 144,
+      "name": "Wafer Renata Brigadeiro 115gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2473/wafer-renata-brigadeiro-115gr"
+    },
+    {
+      "id": "2456",
+      "index": 145,
+      "name": "Bombom Ferrero Rocher Com 3 Un 37,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2456/bombom-ferrero-rocher-com-3-un-375gr"
+    },
+    {
+      "id": "2405",
+      "index": 146,
+      "name": "Biscoito Italianinha Queijo 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2405/biscoito-italianinha-queijo-200gr"
+    },
+    {
+      "id": "2395",
+      "index": 147,
+      "name": "Rosquinha Rancheiro Coco 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2395/rosquinha-rancheiro-coco-300gr"
+    },
+    {
+      "id": "2356",
+      "index": 148,
+      "name": "Bolinho Ana Maria Tradicional Chocolate 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2356/bolinho-ana-maria-tradicional-chocolate-80gr"
+    },
+    {
+      "id": "2355",
+      "index": 149,
+      "name": "Bala Halls Cereja 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2355/bala-halls-cereja-28gr"
+    },
+    {
+      "id": "2348",
+      "index": 150,
+      "name": "Bombom Lacta Grandes Sucessos 250,6gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2348/bombom-lacta-grandes-sucessos-2506gr"
+    },
+    {
+      "id": "2328",
+      "index": 151,
+      "name": "Biscoito Aymore Maizena 345gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2328/biscoito-aymore-maizena-345gr"
+    },
+    {
+      "id": "2269",
+      "index": 152,
+      "name": "Bolinho Bauducco Morango 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2269/bolinho-bauducco-morango-40gr"
+    },
+    {
+      "id": "2166",
+      "index": 153,
+      "name": "Salgadinho Snack Keleck Galeto 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2166/salgadinho-snack-keleck-galeto-40gr"
+    },
+    {
+      "id": "2106",
+      "index": 154,
+      "name": "Biscoito Club Social Original 144gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2106/biscoito-club-social-original-144gr"
+    },
+    {
+      "id": "2071",
+      "index": 155,
+      "name": "Salgadinho Snack Keleck Salsa E Cebola 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2071/salgadinho-snack-keleck-salsa-e-cebola-40gr"
+    },
+    {
+      "id": "2068",
+      "index": 156,
+      "name": "Biscoito Club Social Presunto 141gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2068/biscoito-club-social-presunto-141gr"
+    },
+    {
+      "id": "2065",
+      "index": 157,
+      "name": "Biscoito Sequilhos Newbread Leite Condensado 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2065/biscoito-sequilhos-newbread-leite-condensado-300gr"
+    },
+    {
+      "id": "2013",
+      "index": 158,
+      "name": "Biscoito Vilma Cream Cracker 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2013/biscoito-vilma-cream-cracker-360gr"
+    },
+    {
+      "id": "2010",
+      "index": 159,
+      "name": "Chocolate Nestle Classic Ao Leite 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2010/chocolate-nestle-classic-ao-leite-80gr"
+    },
+    {
+      "id": "2005",
+      "index": 160,
+      "name": "Biscoito Aymore Cream Cracker 164gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2005/biscoito-aymore-cream-cracker-164gr"
+    },
+    {
+      "id": "2001",
+      "index": 161,
+      "name": "Biscoito Aymore Agua E Sal 345gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2001/biscoito-aymore-agua-e-sal-345gr"
+    },
+    {
+      "id": "1997",
+      "index": 162,
+      "name": "Biscoito Amanteigada Renata Coco 330gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1997/biscoito-amanteigada-renata-coco-330gr"
+    },
+    {
+      "id": "1985",
+      "index": 163,
+      "name": "Biscoito Nestle Recheado Moca 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1985/biscoito-nestle-recheado-moca-140gr"
+    },
+    {
+      "id": "1972",
+      "index": 164,
+      "name": "Salgadinho Cheetos Mix De Queijos 131gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1972/salgadinho-cheetos-mix-de-queijos-131gr"
+    },
+    {
+      "id": "1918",
+      "index": 165,
+      "name": "Salgadinho Torcida Bacon 60g",
+      "url": "https://www.supervalesupermercados.com.br/produto/1918/salgadinho-torcida-bacon-60g"
+    },
+    {
+      "id": "1897",
+      "index": 166,
+      "name": "Biscoito Aymore Amanteigado Leite 248gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1897/biscoito-aymore-amanteigado-leite-248gr"
+    },
+    {
+      "id": "1890",
+      "index": 167,
+      "name": "Salgadinho Fandangos Presunto 160g",
+      "url": "https://www.supervalesupermercados.com.br/produto/1890/salgadinho-fandangos-presunto-160g"
+    },
+    {
+      "id": "1828",
+      "index": 168,
+      "name": "Salgadinho Takis 56g. Xplosion",
+      "url": "https://www.supervalesupermercados.com.br/produto/1828/salgadinho-takis-56g-xplosion"
+    },
+    {
+      "id": "1813",
+      "index": 169,
+      "name": "Salgadinho Baconzitos 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1813/salgadinho-baconzitos-130gr"
+    },
+    {
+      "id": "1795",
+      "index": 170,
+      "name": "Biscoito Bauducco Recheado Baunilha 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1795/biscoito-bauducco-recheado-baunilha-140gr"
+    },
+    {
+      "id": "1773",
+      "index": 171,
+      "name": "Biscoito Waffer Bauducco Chocolate 92gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1773/biscoito-waffer-bauducco-chocolate-92gr"
+    },
+    {
+      "id": "1688",
+      "index": 172,
+      "name": "Batata Ruffles Churrasco 68gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1688/batata-ruffles-churrasco-68gr"
+    },
+    {
+      "id": "1622",
+      "index": 173,
+      "name": "Chocolate Lacta Laka 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1622/chocolate-lacta-laka-80gr"
+    },
+    {
+      "id": "1577",
+      "index": 174,
+      "name": "Salg Keleck 50g Requeijao",
+      "url": "https://www.supervalesupermercados.com.br/produto/1577/salg-keleck-50g-requeijao"
+    },
+    {
+      "id": "1526",
+      "index": 175,
+      "name": "Biscoito Danix Recheado Choco-shake 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1526/biscoito-danix-recheado-chocoshake-130gr"
+    },
+    {
+      "id": "1505",
+      "index": 176,
+      "name": "Batata Ruffles Original 167gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1505/batata-ruffles-original-167gr"
+    },
+    {
+      "id": "1479",
+      "index": 177,
+      "name": "Chocolate Bis Lacta Laka 100,8gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1479/chocolate-bis-lacta-laka-1008gr"
+    },
+    {
+      "id": "1460",
+      "index": 178,
+      "name": "Chiclete Trident Melancia 8gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/1460/chiclete-trident-melancia-8gr-com-5un"
+    },
+    {
+      "id": "1458",
+      "index": 179,
+      "name": "Bala Halls Mentol 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1458/bala-halls-mentol-28gr"
+    },
+    {
+      "id": "1415",
+      "index": 180,
+      "name": "Bombom Lacta Ouro Branco 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1415/bombom-lacta-ouro-branco-20gr"
+    },
+    {
+      "id": "1397",
+      "index": 181,
+      "name": "Chocolate Branco Arcor Tablete 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1397/chocolate-branco-arcor-tablete-80gr"
+    },
+    {
+      "id": "1369",
+      "index": 182,
+      "name": "Rosquinha Mabel Coco 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1369/rosquinha-mabel-coco-500gr"
+    },
+    {
+      "id": "1368",
+      "index": 183,
+      "name": "Biscoito Waffer Bauducco Chocolate E Avela 92gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1368/biscoito-waffer-bauducco-chocolate-e-avela-92gr"
+    },
+    {
+      "id": "1335",
+      "index": 184,
+      "name": "Torrada Bauducco Multigraos 142gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1335/torrada-bauducco-multigraos-142gr"
+    },
+    {
+      "id": "1316",
+      "index": 185,
+      "name": "Salgadinho Fandangos Presunto 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1316/salgadinho-fandangos-presunto-35gr"
+    },
+    {
+      "id": "1293",
+      "index": 186,
+      "name": "Caixa De Bombom Sonho De Valsa + Ouro Branco 220gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1293/caixa-de-bombom-sonho-de-valsa-ouro-branco-220gr"
+    },
+    {
+      "id": "1287",
+      "index": 187,
+      "name": "Biscoito Wafer Aymore Morango 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1287/biscoito-wafer-aymore-morango-105gr"
+    },
+    {
+      "id": "1256",
+      "index": 188,
+      "name": "Biscoito Amanteigada Renata Leite 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1256/biscoito-amanteigada-renata-leite-360gr"
+    },
+    {
+      "id": "1251",
+      "index": 189,
+      "name": "Wafer Renata Limao 115gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1251/wafer-renata-limao-115gr"
+    },
+    {
+      "id": "1242",
+      "index": 190,
+      "name": "Bombom Bon O Bon Arcor Beijinho 15gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1242/bombom-bon-o-bon-arcor-beijinho-15gr"
+    },
+    {
+      "id": "1232",
+      "index": 191,
+      "name": "Biscoito Maizena Renata 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1232/biscoito-maizena-renata-170gr"
+    },
+    {
+      "id": "1207",
+      "index": 192,
+      "name": "Torrada Bauducco Integral 142gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1207/torrada-bauducco-integral-142gr"
+    },
+    {
+      "id": "1150",
+      "index": 193,
+      "name": "Chocolate Lacta Diamante Negro E Laka 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1150/chocolate-lacta-diamante-negro-e-laka-80gr"
+    },
+    {
+      "id": "1109",
+      "index": 194,
+      "name": "Pipoca Doce Vovozinha 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1109/pipoca-doce-vovozinha-60gr"
+    },
+    {
+      "id": "1026",
+      "index": 195,
+      "name": "Biscoito Nestle Passatempo Leite 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1026/biscoito-nestle-passatempo-leite-150gr"
+    },
+    {
+      "id": "1014",
+      "index": 196,
+      "name": "Biscoito Bono Doce De Leite 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1014/biscoito-bono-doce-de-leite-90gr"
+    },
+    {
+      "id": "998",
+      "index": 197,
+      "name": "Chocolate Snickers Caramelo Com Amendoim Nougat 45gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/998/chocolate-snickers-caramelo-com-amendoim-nougat-45gr"
+    },
+    {
+      "id": "977",
+      "index": 198,
+      "name": "Biscoito Nestle Recheado Prestigio 140gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/977/biscoito-nestle-recheado-prestigio-140gr"
+    },
+    {
+      "id": "948",
+      "index": 199,
+      "name": "Bombom Raffaello Ferrero Com 30gr 3un",
+      "url": "https://www.supervalesupermercados.com.br/produto/948/bombom-raffaello-ferrero-com-30gr-3un"
+    },
+    {
+      "id": "946",
+      "index": 200,
+      "name": "Salgadinho Doritos Dinamita Flamin Hot 60g",
+      "url": "https://www.supervalesupermercados.com.br/produto/946/salgadinho-doritos-dinamita-flamin-hot-60g"
+    },
+    {
+      "id": "853",
+      "index": 201,
+      "name": "Salgadinho Cebolitos 45g",
+      "url": "https://www.supervalesupermercados.com.br/produto/853/salgadinho-cebolitos-45g"
+    },
+    {
+      "id": "841",
+      "index": 202,
+      "name": "Wafer Renata Chocolate 115gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/841/wafer-renata-chocolate-115gr"
+    },
+    {
+      "id": "829",
+      "index": 203,
+      "name": "Salgadinho Fandangos Queijo 160g",
+      "url": "https://www.supervalesupermercados.com.br/produto/829/salgadinho-fandangos-queijo-160g"
+    },
+    {
+      "id": "825",
+      "index": 204,
+      "name": "Chocolate Kinder Tronky 18gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/825/chocolate-kinder-tronky-18gr"
+    },
+    {
+      "id": "814",
+      "index": 205,
+      "name": "Bolinho Ana Maria Gotas De Chocolate 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/814/bolinho-ana-maria-gotas-de-chocolate-70gr"
+    },
+    {
+      "id": "803",
+      "index": 206,
+      "name": "Chocolate Em Barra Ao Leite Nestle Suflair Aerado 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/803/chocolate-em-barra-ao-leite-nestle-suflair-aerado-80gr"
+    },
+    {
+      "id": "801",
+      "index": 207,
+      "name": "Rosquinha Vilma Coco 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/801/rosquinha-vilma-coco-500gr"
+    },
+    {
+      "id": "781",
+      "index": 208,
+      "name": "Salgadinho Cebolitos 91gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/781/salgadinho-cebolitos-91gr"
+    },
+    {
+      "id": "777",
+      "index": 209,
+      "name": "Torrada Crocantissimo Pullman Sabor Salame E Limao 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/777/torrada-crocantissimo-pullman-sabor-salame-e-limao-40gr"
+    },
+    {
+      "id": "714",
+      "index": 210,
+      "name": "Torrada Crocantissimo Pullman Sabor Churrasco 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/714/torrada-crocantissimo-pullman-sabor-churrasco-40gr"
+    },
+    {
+      "id": "711",
+      "index": 211,
+      "name": "Salgadinho Stiksy Palito 76gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/711/salgadinho-stiksy-palito-76gr"
+    },
+    {
+      "id": "689",
+      "index": 212,
+      "name": "Batata Ruffles Original 68gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/689/batata-ruffles-original-68gr"
+    },
+    {
+      "id": "603",
+      "index": 213,
+      "name": "Batata Pratic Leve Ondulada Bacon 45g",
+      "url": "https://www.supervalesupermercados.com.br/produto/603/batata-pratic-leve-ondulada-bacon-45g"
+    },
+    {
+      "id": "596",
+      "index": 214,
+      "name": "Chocolate Em Barra Lacta Diamante Negro 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/596/chocolate-em-barra-lacta-diamante-negro-80gr"
+    },
+    {
+      "id": "581",
+      "index": 215,
+      "name": "Salgadinho Doritos Sweet Chilli 75g",
+      "url": "https://www.supervalesupermercados.com.br/produto/581/salgadinho-doritos-sweet-chilli-75g"
+    },
+    {
+      "id": "568",
+      "index": 216,
+      "name": "Biscoito Passatempo Recheado Chocolate 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/568/biscoito-passatempo-recheado-chocolate-130gr"
+    },
+    {
+      "id": "562",
+      "index": 217,
+      "name": "Salgadinho Fandangos Queijo 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/562/salgadinho-fandangos-queijo-35gr"
+    },
+    {
+      "id": "557",
+      "index": 218,
+      "name": "Biscoito Cookies Bauducco Original 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/557/biscoito-cookies-bauducco-original-100gr"
+    },
+    {
+      "id": "521",
+      "index": 219,
+      "name": "Bombom Garoto Serenata De Amor 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/521/bombom-garoto-serenata-de-amor-20gr"
+    },
+    {
+      "id": "496",
+      "index": 220,
+      "name": "Chocolate Kinder Ovo Menino 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/496/chocolate-kinder-ovo-menino-20gr"
+    },
+    {
+      "id": "463",
+      "index": 221,
+      "name": "Biscoito Galo Recheado Brigadeiro 112gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/463/biscoito-galo-recheado-brigadeiro-112gr"
+    },
+    {
+      "id": "458",
+      "index": 222,
+      "name": "Biscoito Galo Recheado Morango 112gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/458/biscoito-galo-recheado-morango-112gr"
+    },
+    {
+      "id": "440",
+      "index": 223,
+      "name": "Chiclete Trident Fresh Intense 8gr Com 5un",
+      "url": "https://www.supervalesupermercados.com.br/produto/440/chiclete-trident-fresh-intense-8gr-com-5un"
+    },
+    {
+      "id": "364",
+      "index": 224,
+      "name": "Chocolate Arcor Amendoim 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/364/chocolate-arcor-amendoim-80gr"
+    },
+    {
+      "id": "356",
+      "index": 225,
+      "name": "Chocolate Arcor Tortuguita Chocolate Branco 15,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/356/chocolate-arcor-tortuguita-chocolate-branco-155gr"
+    },
+    {
+      "id": "333",
+      "index": 226,
+      "name": "Biscoito Wafer Bono Nestle Chocolate 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/333/biscoito-wafer-bono-nestle-chocolate-110gr"
+    },
+    {
+      "id": "314",
+      "index": 227,
+      "name": "Biscoito Aymoretortini Chocolate 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/314/biscoito-aymoretortini-chocolate-90gr"
+    },
+    {
+      "id": "290",
+      "index": 228,
+      "name": "Salgadinho Baconzitos 86gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/290/salgadinho-baconzitos-86gr"
+    },
+    {
+      "id": "269",
+      "index": 229,
+      "name": "Ovinhos Chocolate Arcor Tortuguita Chocovinhos 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/269/ovinhos-chocolate-arcor-tortuguita-chocovinhos-50gr"
+    },
+    {
+      "id": "231",
+      "index": 230,
+      "name": "Torrada Visconti Integral 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/231/torrada-visconti-integral-120gr"
+    },
+    {
+      "id": "226",
+      "index": 231,
+      "name": "Biscoito Flamboyant Champagne 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/226/biscoito-flamboyant-champagne-150gr"
+    },
+    {
+      "id": "210",
+      "index": 232,
+      "name": "Biscoito De Leite Renata 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/210/biscoito-de-leite-renata-360gr"
+    },
+    {
+      "id": "200",
+      "index": 233,
+      "name": "Bala Halls Menta Verde 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/200/bala-halls-menta-verde-28gr"
+    },
+    {
+      "id": "188",
+      "index": 234,
+      "name": "Chocolate Nutella Ferrero B-ready 22gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/188/chocolate-nutella-ferrero-bready-22gr"
+    },
+    {
+      "id": "155",
+      "index": 235,
+      "name": "Salgadinho Batata Pringles Sabor Original 104gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/155/salgadinho-batata-pringles-sabor-original-104gr"
+    },
+    {
+      "id": "145",
+      "index": 236,
+      "name": "Torrada Bauducco Tradicional 142gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/145/torrada-bauducco-tradicional-142gr"
+    },
+    {
+      "id": "96",
+      "index": 237,
+      "name": "Batata Ruffles Cebola E Salsa 68gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/96/batata-ruffles-cebola-e-salsa-68gr"
+    },
+    {
+      "id": "80",
+      "index": 238,
+      "name": "Biscoito Renata Agua E Sal 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/80/biscoito-renata-agua-e-sal-360gr"
+    },
+    {
+      "id": "75",
+      "index": 239,
+      "name": "Biscoito Amanteigado Renata Chocolate 330gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/75/biscoito-amanteigado-renata-chocolate-330gr"
+    },
+    {
+      "id": "65",
+      "index": 240,
+      "name": "Chocolate Lacta Bis Ao Leite 100,8gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/65/chocolate-lacta-bis-ao-leite-1008gr"
+    },
+    {
+      "id": "53",
+      "index": 241,
+      "name": "Chocolate Em Pó Kodilar Do Papa 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/53/chocolate-em-po-kodilar-do-papa-200gr"
+    },
+    {
+      "id": "20",
+      "index": 242,
+      "name": "Chocolate Lacta Ouro Branco 98gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/20/chocolate-lacta-ouro-branco-98gr"
+    },
+    {
+      "id": "16",
+      "index": 243,
+      "name": "Biscoito Danix Recheado Choco Chocolate 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/16/biscoito-danix-recheado-choco-chocolate-130gr"
+    },
+    {
+      "id": "6330",
+      "index": 244,
+      "name": "Chocolate M&m`s Minis Ao Leite Tubo 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6330/chocolate-mms-minis-ao-leite-tubo-30gr"
+    },
+    {
+      "id": "6274",
+      "index": 245,
+      "name": "Biscoito Nestle Nesfit Integral Banana, Aveia & Canela 160gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6274/biscoito-nestle-nesfit-integral-banana-aveia-canela-160gr"
+    },
+    {
+      "id": "6376",
+      "index": 246,
+      "name": "Biscoito Fabitos Vovozinha Polvilho E Sal 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6376/biscoito-fabitos-vovozinha-polvilho-e-sal-100gr"
+    },
+    {
+      "id": "6481",
+      "index": 247,
+      "name": "Salgadinho Snack Fabitos Bolinha De Bacon 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6481/salgadinho-snack-fabitos-bolinha-de-bacon-100gr"
+    },
+    {
+      "id": "6474",
+      "index": 248,
+      "name": "Salgadinho Snack Fabitos Pimenta Mexicana 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6474/salgadinho-snack-fabitos-pimenta-mexicana-100gr"
+    },
+    {
+      "id": "6773",
+      "index": 249,
+      "name": "Salgadinho Batata Pringles Cheddar E Bacon 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6773/salgadinho-batata-pringles-cheddar-e-bacon-105gr"
+    },
+    {
+      "id": "6824",
+      "index": 250,
+      "name": "Bolinho Ana Maria Cobertura De Pão De Mel 42gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6824/bolinho-ana-maria-cobertura-de-pao-de-mel-42gr"
+    },
+    {
+      "id": "6837",
+      "index": 251,
+      "name": "Chocolate Snickers White 42gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6837/chocolate-snickers-white-42gr"
+    },
+    {
+      "id": "6882",
+      "index": 252,
+      "name": "Chocolate Lacta Bis De Limão 100,8gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6882/chocolate-lacta-bis-de-limao-1008gr"
+    },
+    {
+      "id": "6982",
+      "index": 253,
+      "name": "Pururuca Bottrel 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6982/pururuca-bottrel-60gr"
+    },
+    {
+      "id": "7098",
+      "index": 254,
+      "name": "Chocolate Arcor Block38gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7098/chocolate-arcor-block38gr"
+    },
+    {
+      "id": "7170",
+      "index": 255,
+      "name": "Chocolate Trento Chocolate Branco 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7170/chocolate-trento-chocolate-branco-29gr"
+    },
+    {
+      "id": "7167",
+      "index": 256,
+      "name": "Chocolate Trento Dark 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7167/chocolate-trento-dark-29gr"
+    },
+    {
+      "id": "7166",
+      "index": 257,
+      "name": "Chocolate Trento Chocolate 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7166/chocolate-trento-chocolate-29gr"
+    },
+    {
+      "id": "7215",
+      "index": 258,
+      "name": "Bala Gelatina Fini Minhocas 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7215/bala-gelatina-fini-minhocas-90gr"
+    },
+    {
+      "id": "7212",
+      "index": 259,
+      "name": "Bala Gelatina Fini Sour Tubes 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7212/bala-gelatina-fini-sour-tubes-90gr"
+    },
+    {
+      "id": "7211",
+      "index": 260,
+      "name": "Bala Gelatina Fini Bananas 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7211/bala-gelatina-fini-bananas-90gr"
+    },
+    {
+      "id": "7209",
+      "index": 261,
+      "name": "Bala Gelatina Fini Minhocas 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7209/bala-gelatina-fini-minhocas-90gr"
+    },
+    {
+      "id": "7208",
+      "index": 262,
+      "name": "Bala Gelatina Fini Ursinhos 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7208/bala-gelatina-fini-ursinhos-90gr"
+    },
+    {
+      "id": "7293",
+      "index": 263,
+      "name": "Bombom Lacta Oreo Un",
+      "url": "https://www.supervalesupermercados.com.br/produto/7293/bombom-lacta-oreo-un"
+    },
+    {
+      "id": "7348",
+      "index": 264,
+      "name": "Rosquinha Newbread Leite 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7348/rosquinha-newbread-leite-500gr"
+    },
+    {
+      "id": "7408",
+      "index": 265,
+      "name": "Pirulito Florestal Zolle Framboesa 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7408/pirulito-florestal-zolle-framboesa-120gr"
+    },
+    {
+      "id": "7405",
+      "index": 266,
+      "name": "Pirulito Florestal Bruxolito Q Pinta 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7405/pirulito-florestal-bruxolito-q-pinta-120gr"
+    },
+    {
+      "id": "7376",
+      "index": 267,
+      "name": "Bala De Goma Florestal Coração 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7376/bala-de-goma-florestal-coracao-60gr"
+    },
+    {
+      "id": "7470",
+      "index": 268,
+      "name": "Salgadinho Cheetos Crunhhy Mcheddar 62gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7470/salgadinho-cheetos-crunhhy-mcheddar-62gr"
+    },
+    {
+      "id": "7695",
+      "index": 269,
+      "name": "Biscoito Wafer Bauducco Snack 20gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7695/biscoito-wafer-bauducco-snack-20gr"
+    },
+    {
+      "id": "7693",
+      "index": 270,
+      "name": "Biscoito Bauducco Bigcookies Orgina 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7693/biscoito-bauducco-bigcookies-orgina-30gr"
+    },
+    {
+      "id": "7676",
+      "index": 271,
+      "name": "Biscoito Bauduco Cookies Pinta Ligua 96gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7676/biscoito-bauduco-cookies-pinta-ligua-96gr"
+    },
+    {
+      "id": "7675",
+      "index": 272,
+      "name": "Biscoito Bauduco Cookies Dentadura 96gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7675/biscoito-bauduco-cookies-dentadura-96gr"
+    },
+    {
+      "id": "7674",
+      "index": 273,
+      "name": "Biscoito Wafer Bauduco Max Pistache 104gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7674/biscoito-wafer-bauduco-max-pistache-104gr"
+    },
+    {
+      "id": "7737",
+      "index": 274,
+      "name": "Rosquinha Rancheiro 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7737/rosquinha-rancheiro-500gr"
+    },
+    {
+      "id": "7740",
+      "index": 275,
+      "name": "Bolinho Bauducco Gotas De Chocolate 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7740/bolinho-bauducco-gotas-de-chocolate-40gr"
+    },
+    {
+      "id": "7742",
+      "index": 276,
+      "name": "Biscoito Aymores Multipack Maria 370gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7742/biscoito-aymores-multipack-maria-370gr"
+    },
+    {
+      "id": "7755",
+      "index": 277,
+      "name": "Batata Ruffel Original Tubo 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7755/batata-ruffel-original-tubo-100gr"
+    },
+    {
+      "id": "7826",
+      "index": 278,
+      "name": "Bala Butter Toffee Coco 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7826/bala-butter-toffee-coco-90gr"
+    },
+    {
+      "id": "7825",
+      "index": 279,
+      "name": "Bala Butter Toffee Leite 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7825/bala-butter-toffee-leite-90gr"
+    },
+    {
+      "id": "7868",
+      "index": 280,
+      "name": "Salgadinho Petisko Pimenta Mexicana 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7868/salgadinho-petisko-pimenta-mexicana-40gr"
+    },
+    {
+      "id": "7865",
+      "index": 281,
+      "name": "Sequilhos Vovó Clara Tradicional 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7865/sequilhos-vovo-clara-tradicional-300gr"
+    },
+    {
+      "id": "7864",
+      "index": 282,
+      "name": "Sequilhos Vovó Clara Leite 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7864/sequilhos-vovo-clara-leite-300gr"
+    },
+    {
+      "id": "7862",
+      "index": 283,
+      "name": "Salgadinho Petisko Cebola E Salsa 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7862/salgadinho-petisko-cebola-e-salsa-40gr"
+    },
+    {
+      "id": "7861",
+      "index": 284,
+      "name": "Salgadinho Petisko Pizza 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7861/salgadinho-petisko-pizza-40gr"
+    },
+    {
+      "id": "7859",
+      "index": 285,
+      "name": "Bolinho Ana Maria Morango 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7859/bolinho-ana-maria-morango-70gr"
+    },
+    {
+      "id": "7858",
+      "index": 286,
+      "name": "Salgadinho Takis Intense Nacho 56gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7858/salgadinho-takis-intense-nacho-56gr"
+    },
+    {
+      "id": "8016",
+      "index": 287,
+      "name": "Chocolate Trento Caramelo 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8016/chocolate-trento-caramelo-29gr"
+    },
+    {
+      "id": "7902",
+      "index": 288,
+      "name": "Chocolate Trento Bites Avelãs Ao Leite 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7902/chocolate-trento-bites-avelas-ao-leite-40gr"
+    },
+    {
+      "id": "7901",
+      "index": 289,
+      "name": "Chocolate Trento Bites Ao Leite 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7901/chocolate-trento-bites-ao-leite-40gr"
+    },
+    {
+      "id": "7900",
+      "index": 290,
+      "name": "Chocolate Trento Bites Torta De Limão 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7900/chocolate-trento-bites-torta-de-limao-40gr"
+    },
+    {
+      "id": "7898",
+      "index": 291,
+      "name": "Chocolate Trento Bites Duo 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7898/chocolate-trento-bites-duo-40gr"
+    },
+    {
+      "id": "7897",
+      "index": 292,
+      "name": "Chocolate Trento Bites Dark 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7897/chocolate-trento-bites-dark-40gr"
+    },
+    {
+      "id": "7889",
+      "index": 293,
+      "name": "Chocolate Trento Morango 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7889/chocolate-trento-morango-25gr"
+    },
+    {
+      "id": "7884",
+      "index": 294,
+      "name": "Chocolate Trento Massimo Brownie 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7884/chocolate-trento-massimo-brownie-25gr"
+    },
+    {
+      "id": "7883",
+      "index": 295,
+      "name": "Chocolate Trento Duo 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7883/chocolate-trento-duo-29gr"
+    },
+    {
+      "id": "7882",
+      "index": 296,
+      "name": "Chocolate Trento Cheesecake Morango 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7882/chocolate-trento-cheesecake-morango-29gr"
+    },
+    {
+      "id": "8014",
+      "index": 297,
+      "name": "Marshmallow Florestal Malloween 250gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8014/marshmallow-florestal-malloween-250gr"
+    },
+    {
+      "id": "8012",
+      "index": 298,
+      "name": "Bala De Goma Florestal Sininhos 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8012/bala-de-goma-florestal-sininhos-150gr"
+    },
+    {
+      "id": "8004",
+      "index": 299,
+      "name": "Bala De Goma Florestal Gominhos 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8004/bala-de-goma-florestal-gominhos-150gr"
+    },
+    {
+      "id": "8002",
+      "index": 300,
+      "name": "Bala De Goma Florestal Ursinho 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8002/bala-de-goma-florestal-ursinho-150gr"
+    },
+    {
+      "id": "7999",
+      "index": 301,
+      "name": "Bala De Goma Florestal Bananas 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7999/bala-de-goma-florestal-bananas-150gr"
+    },
+    {
+      "id": "8052",
+      "index": 302,
+      "name": "Sobremesa Itambé Brigadeirão 180gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8052/sobremesa-itambe-brigadeirao-180gr"
+    },
+    {
+      "id": "7888",
+      "index": 303,
+      "name": "Biscoito Recheado Vilma Chocolate 84gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7888/biscoito-recheado-vilma-chocolate-84gr"
+    },
+    {
+      "id": "7851",
+      "index": 304,
+      "name": "Biscoito Recheado Vilma Limao 84gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7851/biscoito-recheado-vilma-limao-84gr"
+    },
+    {
+      "id": "7848",
+      "index": 305,
+      "name": "Biscoito Vilma Picnic Chocolate 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7848/biscoito-vilma-picnic-chocolate-200gr"
+    },
+    {
+      "id": "7207",
+      "index": 306,
+      "name": "Bala Gelatina Fini Tubes Uva 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7207/bala-gelatina-fini-tubes-uva-90gr"
+    },
+    {
+      "id": "8086",
+      "index": 307,
+      "name": "Bala Gelatina Fini Amoras 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8086/bala-gelatina-fini-amoras-80gr"
+    },
+    {
+      "id": "8077",
+      "index": 308,
+      "name": "Bala Gelatina Fini Burguers 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8077/bala-gelatina-fini-burguers-80gr"
+    },
+    {
+      "id": "7210",
+      "index": 309,
+      "name": "Bala Gelatina Fini Tubes Tutti Fruti 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7210/bala-gelatina-fini-tubes-tutti-fruti-90gr"
+    },
+    {
+      "id": "7850",
+      "index": 310,
+      "name": "Biscoito Recheado Vilma Morango 84gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7850/biscoito-recheado-vilma-morango-84gr"
+    },
+    {
+      "id": "8159",
+      "index": 311,
+      "name": "Chocolate Nissin Croc Choco Leite Flocos De Milho 44gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8159/chocolate-nissin-croc-choco-leite-flocos-de-milho-44gr"
+    },
+    {
+      "id": "8097",
+      "index": 312,
+      "name": "Chocolate Nissin Croc Choco Branco Flocos De Milho 44gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8097/chocolate-nissin-croc-choco-branco-flocos-de-milho-44gr"
+    },
+    {
+      "id": "8161",
+      "index": 313,
+      "name": "Biscoito Zaytas Lemon Pepper 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8161/biscoito-zaytas-lemon-pepper-80gr"
+    },
+    {
+      "id": "8083",
+      "index": 314,
+      "name": "Bala Gelatina Fini Fazendo Arte 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8083/bala-gelatina-fini-fazendo-arte-80gr"
+    },
+    {
+      "id": "8082",
+      "index": 315,
+      "name": "Bala Gelatina Fini Ovos Fritos 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8082/bala-gelatina-fini-ovos-fritos-80gr"
+    },
+    {
+      "id": "8071",
+      "index": 316,
+      "name": "Marshmallow Fini Torção 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8071/marshmallow-fini-torcao-80gr"
+    },
+    {
+      "id": "8085",
+      "index": 317,
+      "name": "Bala Gelatina Fini Aro Morango 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8085/bala-gelatina-fini-aro-morango-80gr"
+    },
+    {
+      "id": "8081",
+      "index": 318,
+      "name": "Bala Gelatina Fini Oceanitos 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8081/bala-gelatina-fini-oceanitos-80gr"
+    },
+    {
+      "id": "8070",
+      "index": 319,
+      "name": "Bala Gelatina Fini Sorvetinho 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8070/bala-gelatina-fini-sorvetinho-80gr"
+    },
+    {
+      "id": "8084",
+      "index": 320,
+      "name": "Chiclete Fini Ovos Dinossauro 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8084/chiclete-fini-ovos-dinossauro-80gr"
+    },
+    {
+      "id": "8249",
+      "index": 321,
+      "name": "Biscoito Artes Da Kaka Beliscão 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8249/biscoito-artes-da-kaka-beliscao-150gr"
+    },
+    {
+      "id": "8246",
+      "index": 322,
+      "name": "Biscoito Artes Da Kaka Enrolada Coco 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8246/biscoito-artes-da-kaka-enrolada-coco-150gr"
+    },
+    {
+      "id": "8245",
+      "index": 323,
+      "name": "Biscoito Artes Da Kaka Sequilho Leite Condensado 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8245/biscoito-artes-da-kaka-sequilho-leite-condensado-150gr"
+    },
+    {
+      "id": "8242",
+      "index": 324,
+      "name": "Biscoito Artes Da Kaka Beliscão 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8242/biscoito-artes-da-kaka-beliscao-300gr"
+    },
+    {
+      "id": "8241",
+      "index": 325,
+      "name": "Biscoito Artes Da Kaka Cavaca 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8241/biscoito-artes-da-kaka-cavaca-150gr"
+    },
+    {
+      "id": "8240",
+      "index": 326,
+      "name": "Biscoito Artes Da Kaka Beijinho Freira 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8240/biscoito-artes-da-kaka-beijinho-freira-150gr"
+    },
+    {
+      "id": "8239",
+      "index": 327,
+      "name": "Biscoito Artes Da Kaka Mineirinho 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8239/biscoito-artes-da-kaka-mineirinho-300gr"
+    },
+    {
+      "id": "8235",
+      "index": 328,
+      "name": "Biscoito Artes Da Kaka Cavaca Recheada 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8235/biscoito-artes-da-kaka-cavaca-recheada-300gr"
+    },
+    {
+      "id": "8234",
+      "index": 329,
+      "name": "Confeito Rocklets 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8234/confeito-rocklets-80gr"
+    },
+    {
+      "id": "8233",
+      "index": 330,
+      "name": "Confeito Rocklets 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8233/confeito-rocklets-40gr"
+    },
+    {
+      "id": "8228",
+      "index": 331,
+      "name": "Biscoito Choco Biscuit Bob Amendoim 76gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8228/biscoito-choco-biscuit-bob-amendoim-76gr"
+    },
+    {
+      "id": "8223",
+      "index": 332,
+      "name": "Bombom Bonobon Pistache 15gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8223/bombom-bonobon-pistache-15gr"
+    },
+    {
+      "id": "8222",
+      "index": 333,
+      "name": "Bombom Bonobon Paçoca 15gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8222/bombom-bonobon-pacoca-15gr"
+    },
+    {
+      "id": "8151",
+      "index": 334,
+      "name": "Bala Dip Loko Burguer 15gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8151/bala-dip-loko-burguer-15gr"
+    },
+    {
+      "id": "8072",
+      "index": 335,
+      "name": "Bala Gelatina Fini Caveira Recheada 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8072/bala-gelatina-fini-caveira-recheada-80gr"
+    },
+    {
+      "id": "8156",
+      "index": 336,
+      "name": "Bala Dip Loko Olhos Recheados 12gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8156/bala-dip-loko-olhos-recheados-12gr"
+    },
+    {
+      "id": "8154",
+      "index": 337,
+      "name": "Chocolate Dip,loko Surprise 11gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8154/chocolate-diploko-surprise-11gr"
+    },
+    {
+      "id": "8153",
+      "index": 338,
+      "name": "Bala Dip Loko Minhocas 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8153/bala-dip-loko-minhocas-30gr"
+    },
+    {
+      "id": "8256",
+      "index": 339,
+      "name": "Chocolate Nestle Charge Recheado 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8256/chocolate-nestle-charge-recheado-90gr"
+    },
+    {
+      "id": "8254",
+      "index": 340,
+      "name": "Chocolate Nestle Prestigio Recheado 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8254/chocolate-nestle-prestigio-recheado-90gr"
+    },
+    {
+      "id": "8253",
+      "index": 341,
+      "name": "Chocolate Nestle Negresco Recheado 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8253/chocolate-nestle-negresco-recheado-90gr"
+    },
+    {
+      "id": "8038",
+      "index": 342,
+      "name": "Biscoito Integrale Renata Aveia Mel Banana 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8038/biscoito-integrale-renata-aveia-mel-banana-150gr"
+    },
+    {
+      "id": "8074",
+      "index": 343,
+      "name": "Marshmallow Fini Rosa E Branco 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8074/marshmallow-fini-rosa-e-branco-80gr"
+    },
+    {
+      "id": "8295",
+      "index": 344,
+      "name": "Biscoito Clube Social Cebola Caramelizada 141gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8295/biscoito-clube-social-cebola-caramelizada-141gr"
+    },
+    {
+      "id": "8337",
+      "index": 345,
+      "name": "Salgadinho Doritos Nacho 183gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8337/salgadinho-doritos-nacho-183gr"
+    },
+    {
+      "id": "8324",
+      "index": 346,
+      "name": "Salgadinho Elma Chips Sortido 94gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8324/salgadinho-elma-chips-sortido-94gr"
+    },
+    {
+      "id": "8320",
+      "index": 347,
+      "name": "Salgadinho Pingo D.ouro 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8320/salgadinho-pingo-douro-30gr"
+    },
+    {
+      "id": "8316",
+      "index": 348,
+      "name": "Batata Sencações Peito De Peru 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8316/batata-sencacoes-peito-de-peru-35gr"
+    },
+    {
+      "id": "8334",
+      "index": 349,
+      "name": "Salgadinho Doritos Dinamita Framin Hot 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8334/salgadinho-doritos-dinamita-framin-hot-110gr"
+    },
+    {
+      "id": "8326",
+      "index": 350,
+      "name": "Salgadinho Cebolistos 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8326/salgadinho-cebolistos-35gr"
+    },
+    {
+      "id": "8319",
+      "index": 351,
+      "name": "Batata Lays Classicas 62gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8319/batata-lays-classicas-62gr"
+    },
+    {
+      "id": "8336",
+      "index": 352,
+      "name": "Batata Lays Copa Queijo Camembert 62gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8336/batata-lays-copa-queijo-camembert-62gr"
+    },
+    {
+      "id": "8331",
+      "index": 353,
+      "name": "Batata Lays Taco Mexicano 62gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8331/batata-lays-taco-mexicano-62gr"
+    },
+    {
+      "id": "8379",
+      "index": 354,
+      "name": "Bombom Garoto Sortido 220gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8379/bombom-garoto-sortido-220gr"
+    },
+    {
+      "id": "8382",
+      "index": 355,
+      "name": "Biscoito Recheado Aymore Brigadeiro 86gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8382/biscoito-recheado-aymore-brigadeiro-86gr"
+    },
+    {
+      "id": "8381",
+      "index": 356,
+      "name": "Biscoito Recheado Aymore Creme 86gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8381/biscoito-recheado-aymore-creme-86gr"
+    },
+    {
+      "id": "8380",
+      "index": 357,
+      "name": "Biscoito Recheado Aymore Chocolate 86gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8380/biscoito-recheado-aymore-chocolate-86gr"
+    },
+    {
+      "id": "8378",
+      "index": 358,
+      "name": "Biscoito Recheado Aymore Morango 86gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8378/biscoito-recheado-aymore-morango-86gr"
+    },
+    {
+      "id": "8259",
+      "index": 359,
+      "name": "Bombom Nestle Especialidades 220gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8259/bombom-nestle-especialidades-220gr"
+    },
+    {
+      "id": "8428",
+      "index": 360,
+      "name": "Biscoito Passatempo Recheado Prestigio Branco 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8428/biscoito-passatempo-recheado-prestigio-branco-90gr"
+    },
+    {
+      "id": "8426",
+      "index": 361,
+      "name": "Biscoito Passatempo Recheado Galak 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8426/biscoito-passatempo-recheado-galak-90gr"
+    },
+    {
+      "id": "8453",
+      "index": 362,
+      "name": "Chocolate Arcor Block Recheado Amendoim 45gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8453/chocolate-arcor-block-recheado-amendoim-45gr"
+    },
+    {
+      "id": "8452",
+      "index": 363,
+      "name": "Chocolate Arcor Block Recheado Paçoca Cremosa 165gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8452/chocolate-arcor-block-recheado-pacoca-cremosa-165gr"
+    },
+    {
+      "id": "8429",
+      "index": 364,
+      "name": "Bolinho Bauducco Duo Fini Marshmallow 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8429/bolinho-bauducco-duo-fini-marshmallow-30gr"
+    },
+    {
+      "id": "8460",
+      "index": 365,
+      "name": "Chocolate Ao Leite Gran Creme Zero 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8460/chocolate-ao-leite-gran-creme-zero-40gr"
+    },
+    {
+      "id": "8456",
+      "index": 366,
+      "name": "Chocolate Brancoo Gran Creme Zero 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8456/chocolate-brancoo-gran-creme-zero-40gr"
+    },
+    {
+      "id": "8421",
+      "index": 367,
+      "name": "Bala Jujuba Colorida Junita 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8421/bala-jujuba-colorida-junita-100gr"
+    },
+    {
+      "id": "8448",
+      "index": 368,
+      "name": "Chocolate Arcor Block Recheado Avelã 165gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8448/chocolate-arcor-block-recheado-avela-165gr"
+    },
+    {
+      "id": "8317",
+      "index": 369,
+      "name": "Salgadinho Doritos Dinamita Pimenta Mexicana 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8317/salgadinho-doritos-dinamita-pimenta-mexicana-110gr"
+    },
+    {
+      "id": "8424",
+      "index": 370,
+      "name": "Biscoito Passatempo Recheado Alpino 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8424/biscoito-passatempo-recheado-alpino-90gr"
+    },
+    {
+      "id": "8396",
+      "index": 371,
+      "name": "Agua Mineiral São Lorenço Sem Gas 300ml Pet",
+      "url": "https://www.supervalesupermercados.com.br/produto/8396/agua-mineiral-sao-lorenco-sem-gas-300ml-pet"
+    },
+    {
+      "id": "8600",
+      "index": 372,
+      "name": "Bala Chita Abacaxi 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8600/bala-chita-abacaxi-100gr"
+    },
+    {
+      "id": "8599",
+      "index": 373,
+      "name": "Bala Drops Icekiss Azedinha Morango 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8599/bala-drops-icekiss-azedinha-morango-29gr"
+    },
+    {
+      "id": "8604",
+      "index": 374,
+      "name": "Bala Drops Icekiss Extra Fort 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8604/bala-drops-icekiss-extra-fort-29gr"
+    },
+    {
+      "id": "8603",
+      "index": 375,
+      "name": "Bala Drops Icekiss Cereja 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8603/bala-drops-icekiss-cereja-29gr"
+    },
+    {
+      "id": "8602",
+      "index": 376,
+      "name": "Bala Drops Icekiss Melao 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8602/bala-drops-icekiss-melao-29gr"
+    },
+    {
+      "id": "8608",
+      "index": 377,
+      "name": "Bala Drops Icekiss Tentação Morango 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8608/bala-drops-icekiss-tentacao-morango-29gr"
+    },
+    {
+      "id": "8607",
+      "index": 378,
+      "name": "Bala Drops Icekiss Azedinha Sor Mor Mas 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8607/bala-drops-icekiss-azedinha-sor-mor-mas-35gr"
+    },
+    {
+      "id": "8606",
+      "index": 379,
+      "name": "Bala Drops Icekiss Menta 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8606/bala-drops-icekiss-menta-29gr"
+    },
+    {
+      "id": "8605",
+      "index": 380,
+      "name": "Bala Drops Icekiss Tentação Cereja 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8605/bala-drops-icekiss-tentacao-cereja-29gr"
+    },
+    {
+      "id": "8615",
+      "index": 381,
+      "name": "Bala Icekiss Azed Morango 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8615/bala-icekiss-azed-morango-100gr"
+    },
+    {
+      "id": "8613",
+      "index": 382,
+      "name": "Bala Drops Icekiss Lilith M Vermelho 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8613/bala-drops-icekiss-lilith-m-vermelho-35gr"
+    },
+    {
+      "id": "8612",
+      "index": 383,
+      "name": "Bala Santa Helena Paçoquita 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8612/bala-santa-helena-pacoquita-100gr"
+    },
+    {
+      "id": "8611",
+      "index": 384,
+      "name": "Bala Drops Icekiss Mast Chita 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8611/bala-drops-icekiss-mast-chita-35gr"
+    },
+    {
+      "id": "8610",
+      "index": 385,
+      "name": "Bala Icekiss Azed Yorgute 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8610/bala-icekiss-azed-yorgute-100gr"
+    },
+    {
+      "id": "8609",
+      "index": 386,
+      "name": "Bala Drops Icekiss Azedinha Yogurte 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8609/bala-drops-icekiss-azedinha-yogurte-35gr"
+    },
+    {
+      "id": "8623",
+      "index": 387,
+      "name": "Biscoito Hipopo Lanche Chocolate 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8623/biscoito-hipopo-lanche-chocolate-40gr"
+    },
+    {
+      "id": "8622",
+      "index": 388,
+      "name": "Biscoito Dimel Pão De Mel 350gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8622/biscoito-dimel-pao-de-mel-350gr"
+    },
+    {
+      "id": "8621",
+      "index": 389,
+      "name": "Biscoito Hipopo Lanche Morango 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8621/biscoito-hipopo-lanche-morango-40gr"
+    },
+    {
+      "id": "8620",
+      "index": 390,
+      "name": "Biscoito Hipopo Lanche Baunilha 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8620/biscoito-hipopo-lanche-baunilha-40gr"
+    },
+    {
+      "id": "8629",
+      "index": 391,
+      "name": "Biscoito Recheado Hipopo Morango 72gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8629/biscoito-recheado-hipopo-morango-72gr"
+    },
+    {
+      "id": "8628",
+      "index": 392,
+      "name": "Biscoito Quero Quero Chocolate 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8628/biscoito-quero-quero-chocolate-300gr"
+    },
+    {
+      "id": "8627",
+      "index": 393,
+      "name": "Biscoito Recheado Hipopo Doce Leite 72gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8627/biscoito-recheado-hipopo-doce-leite-72gr"
+    },
+    {
+      "id": "8626",
+      "index": 394,
+      "name": "Biscoito Recheado Hipopo Baunilha 72gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8626/biscoito-recheado-hipopo-baunilha-72gr"
+    },
+    {
+      "id": "8625",
+      "index": 395,
+      "name": "Biscoito Quero Quero Tradicional 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8625/biscoito-quero-quero-tradicional-300gr"
+    },
+    {
+      "id": "8624",
+      "index": 396,
+      "name": "Biscoito Recheado Hipopo Chocolate 72gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8624/biscoito-recheado-hipopo-chocolate-72gr"
+    },
+    {
+      "id": "8646",
+      "index": 397,
+      "name": "Chiclet Icekiss Fresh Mint 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8646/chiclet-icekiss-fresh-mint-40gr"
+    },
+    {
+      "id": "8643",
+      "index": 398,
+      "name": "Chiclet Icekiss Lypto 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8643/chiclet-icekiss-lypto-40gr"
+    },
+    {
+      "id": "8638",
+      "index": 399,
+      "name": "Chocolate Nestle Chocostick Avelã 24gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8638/chocolate-nestle-chocostick-avela-24gr"
+    },
+    {
+      "id": "8698",
+      "index": 400,
+      "name": "Pão Dimel Cory Brigadeiro 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8698/pao-dimel-cory-brigadeiro-90gr"
+    },
+    {
+      "id": "8697",
+      "index": 401,
+      "name": "Palito Cory Chocolate Branco 68gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8697/palito-cory-chocolate-branco-68gr"
+    },
+    {
+      "id": "8696",
+      "index": 402,
+      "name": "Pão Dimel Cory Chocolate A Leite 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8696/pao-dimel-cory-chocolate-a-leite-90gr"
+    },
+    {
+      "id": "8693",
+      "index": 403,
+      "name": "Pão Dimel Cory Chocolate Branco 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8693/pao-dimel-cory-chocolate-branco-90gr"
+    },
+    {
+      "id": "8690",
+      "index": 404,
+      "name": "Palito Cory Dark 68gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8690/palito-cory-dark-68gr"
+    },
+    {
+      "id": "8688",
+      "index": 405,
+      "name": "Palito Cory Torta Limao 8gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8688/palito-cory-torta-limao-8gr"
+    },
+    {
+      "id": "8685",
+      "index": 406,
+      "name": "Palito Cory Chocolate Leite 68gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8685/palito-cory-chocolate-leite-68gr"
+    },
+    {
+      "id": "8701",
+      "index": 407,
+      "name": "Pastilha Icekiss Zero Fresh Mint 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8701/pastilha-icekiss-zero-fresh-mint-35gr"
+    },
+    {
+      "id": "8699",
+      "index": 408,
+      "name": "Pastilha Icekiss Zero Xtrong 5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8699/pastilha-icekiss-zero-xtrong-5gr"
+    },
+    {
+      "id": "8717",
+      "index": 409,
+      "name": "Salgadinho Takis Carne Loka 49gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8717/salgadinho-takis-carne-loka-49gr"
+    },
+    {
+      "id": "8713",
+      "index": 410,
+      "name": "Salgadinho Takis Buckin Runch 49gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8713/salgadinho-takis-buckin-runch-49gr"
+    },
+    {
+      "id": "8645",
+      "index": 411,
+      "name": "Chiclet Trident Pote Melancia E Menta 54gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8645/chiclet-trident-pote-melancia-e-menta-54gr"
+    },
+    {
+      "id": "8644",
+      "index": 412,
+      "name": "Chiclet Trident Pote Hortela 54gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8644/chiclet-trident-pote-hortela-54gr"
+    },
+    {
+      "id": "8639",
+      "index": 413,
+      "name": "Chiclet Trident Pote Menta 54gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8639/chiclet-trident-pote-menta-54gr"
+    },
+    {
+      "id": "995",
+      "index": 414,
+      "name": "Biscoito Cookies Nestle Negresco 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/995/biscoito-cookies-nestle-negresco-60gr"
+    },
+    {
+      "id": "7281",
+      "index": 415,
+      "name": "Chocolate Chocobisc Nestlé Ao Leite 78gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7281/chocolate-chocobisc-nestle-ao-leite-78gr"
+    },
+    {
+      "id": "2411",
+      "index": 416,
+      "name": "Chocolate Talento Garoto Avelas 85gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2411/chocolate-talento-garoto-avelas-85gr"
+    },
+    {
+      "id": "4623",
+      "index": 417,
+      "name": "Biscoito Nestle Chocobiscuit Pasta De Amendoim 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4623/biscoito-nestle-chocobiscuit-pasta-de-amendoim-90gr"
+    },
+    {
+      "id": "5072",
+      "index": 418,
+      "name": "Chocolate Garoto Meio Amargo 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5072/chocolate-garoto-meio-amargo-80gr"
+    },
+    {
+      "id": "5868",
+      "index": 419,
+      "name": "Chocolate Nestle Classic Meio Amargo 40% Cacau 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5868/chocolate-nestle-classic-meio-amargo-40-cacau-80gr"
+    },
+    {
+      "id": "1211",
+      "index": 420,
+      "name": "Cookie Alpino Gotas De Chocolate 60g",
+      "url": "https://www.supervalesupermercados.com.br/produto/1211/cookie-alpino-gotas-de-chocolate-60g"
+    },
+    {
+      "id": "235",
+      "index": 421,
+      "name": "Chocolate Galak Branco 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/235/chocolate-galak-branco-80gr"
+    },
+    {
+      "id": "4681",
+      "index": 422,
+      "name": "Biscoito Nestle Calipso Chocolate 130gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4681/biscoito-nestle-calipso-chocolate-130gr"
+    },
+    {
+      "id": "2291",
+      "index": 423,
+      "name": "Bombom Nestle Especialidades Sortidos 251gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2291/bombom-nestle-especialidades-sortidos-251gr"
+    },
+    {
+      "id": "6202",
+      "index": 424,
+      "name": "Ovo Pascoa Toc Mix Chocolate Ao Leite 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6202/ovo-pascoa-toc-mix-chocolate-ao-leite-500gr"
+    },
+    {
+      "id": "6144",
+      "index": 425,
+      "name": "Ovo De Pascoa Lacta Sonho De Valsa 277gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6144/ovo-de-pascoa-lacta-sonho-de-valsa-277gr"
+    },
+    {
+      "id": "6135",
+      "index": 426,
+      "name": "Chocolate Bis Black Com 16 Un 100,8gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6135/chocolate-bis-black-com-16-un-1008gr"
+    },
+    {
+      "id": "5965",
+      "index": 427,
+      "name": "Ovo De Pascoa Kinder Ovo Miraculous 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5965/ovo-de-pascoa-kinder-ovo-miraculous-100gr"
+    },
+    {
+      "id": "5927",
+      "index": 428,
+      "name": "Bolo Ana Maria Pinguinos Triplo Chocolate 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5927/bolo-ana-maria-pinguinos-triplo-chocolate-80gr"
+    },
+    {
+      "id": "5867",
+      "index": 429,
+      "name": "Biscoito Passatempo Maisena 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5867/biscoito-passatempo-maisena-170gr"
+    },
+    {
+      "id": "5731",
+      "index": 430,
+      "name": "Torrada Crocantissimo Pullman Sabor Queijo E Cebola 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5731/torrada-crocantissimo-pullman-sabor-queijo-e-cebola-40gr"
+    },
+    {
+      "id": "5617",
+      "index": 431,
+      "name": "Ovo Pascoa Kinder Menino 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5617/ovo-pascoa-kinder-menino-150gr"
+    },
+    {
+      "id": "5382",
+      "index": 432,
+      "name": "Biscoito Wafer Bauducco Limao 92gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5382/biscoito-wafer-bauducco-limao-92gr"
+    },
+    {
+      "id": "5363",
+      "index": 433,
+      "name": "Ovo Pascoa Toc Mix Chocolate Ao Leite 250gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5363/ovo-pascoa-toc-mix-chocolate-ao-leite-250gr"
+    },
+    {
+      "id": "5205",
+      "index": 434,
+      "name": "Ovo Pascoa Ferrero Rocher Caixa 137gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5205/ovo-pascoa-ferrero-rocher-caixa-137gr"
+    },
+    {
+      "id": "5026",
+      "index": 435,
+      "name": "Biscoito Vilma Agua E Sal 360gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/5026/biscoito-vilma-agua-e-sal-360gr"
+    },
+    {
+      "id": "4825",
+      "index": 436,
+      "name": "Pipoca Doce Vovozinha 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4825/pipoca-doce-vovozinha-150gr"
+    },
+    {
+      "id": "4807",
+      "index": 437,
+      "name": "Salgadinho Keleck Churrasco 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4807/salgadinho-keleck-churrasco-150gr"
+    },
+    {
+      "id": "4803",
+      "index": 438,
+      "name": "Chocolate Arcor Bon O Bon 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4803/chocolate-arcor-bon-o-bon-30gr"
+    },
+    {
+      "id": "4708",
+      "index": 439,
+      "name": "Biscoito Recheado Nestle Negresco Morango 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4708/biscoito-recheado-nestle-negresco-morango-90gr"
+    },
+    {
+      "id": "4592",
+      "index": 440,
+      "name": "Biscoito Vovo Clara Tradicional 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4592/biscoito-vovo-clara-tradicional-90gr"
+    },
+    {
+      "id": "4357",
+      "index": 441,
+      "name": "Chocolate Snickers Dark 42gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4357/chocolate-snickers-dark-42gr"
+    },
+    {
+      "id": "4234",
+      "index": 442,
+      "name": "Biscoito Integral Aymore Cereal Mix Aveia E Mel 135gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4234/biscoito-integral-aymore-cereal-mix-aveia-e-mel-135gr"
+    },
+    {
+      "id": "4139",
+      "index": 443,
+      "name": "Salgadinho Keleck Presunto 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4139/salgadinho-keleck-presunto-150gr"
+    },
+    {
+      "id": "4118",
+      "index": 444,
+      "name": "Salgadinho Keleck Churrasco 55gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4118/salgadinho-keleck-churrasco-55gr"
+    },
+    {
+      "id": "4018",
+      "index": 445,
+      "name": "Salgadinho Keleck Presunto 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/4018/salgadinho-keleck-presunto-50gr"
+    },
+    {
+      "id": "3759",
+      "index": 446,
+      "name": "Ovo De Pascoa Toc Lac Chocolate Branco 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3759/ovo-de-pascoa-toc-lac-chocolate-branco-120gr"
+    },
+    {
+      "id": "3587",
+      "index": 447,
+      "name": "Ovo Pascoa Toc Mix Chocolate Ao Leite 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3587/ovo-pascoa-toc-mix-chocolate-ao-leite-100gr"
+    },
+    {
+      "id": "3546",
+      "index": 448,
+      "name": "Chocolate Classic Diplomata Castanha De Caju 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3546/chocolate-classic-diplomata-castanha-de-caju-80gr"
+    },
+    {
+      "id": "3542",
+      "index": 449,
+      "name": "Ovo Pascoa Toc Mix Chocolate Ao Leite 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3542/ovo-pascoa-toc-mix-chocolate-ao-leite-50gr"
+    },
+    {
+      "id": "3515",
+      "index": 450,
+      "name": "Salgadinho Keleck Cebola 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3515/salgadinho-keleck-cebola-50gr"
+    },
+    {
+      "id": "3462",
+      "index": 451,
+      "name": "Wafer Lacta Amandita Recheio Creme Com Cacau 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3462/wafer-lacta-amandita-recheio-creme-com-cacau-200gr"
+    },
+    {
+      "id": "3408",
+      "index": 452,
+      "name": "Biscoito Aymore Cereal Mix Cacau E Cereais Integral 135gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3408/biscoito-aymore-cereal-mix-cacau-e-cereais-integral-135gr"
+    },
+    {
+      "id": "3389",
+      "index": 453,
+      "name": "Chocolate Garoto Ao Leite Castanha De Caju 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3389/chocolate-garoto-ao-leite-castanha-de-caju-80gr"
+    },
+    {
+      "id": "3363",
+      "index": 454,
+      "name": "Biscoito Aymore Salpet Tradicional 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3363/biscoito-aymore-salpet-tradicional-100gr"
+    },
+    {
+      "id": "3334",
+      "index": 455,
+      "name": "Salgadinho Takis Extremo Fuego Pimenta 56gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3334/salgadinho-takis-extremo-fuego-pimenta-56gr"
+    },
+    {
+      "id": "3283",
+      "index": 456,
+      "name": "Salgadinho Fandangos Presunto 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3283/salgadinho-fandangos-presunto-60gr"
+    },
+    {
+      "id": "3257",
+      "index": 457,
+      "name": "Pastilha Tic Tac Menta 49gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3257/pastilha-tic-tac-menta-49gr"
+    },
+    {
+      "id": "3171",
+      "index": 458,
+      "name": "Biscoito Vovo Clara Escaldado 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3171/biscoito-vovo-clara-escaldado-150gr"
+    },
+    {
+      "id": "3135",
+      "index": 459,
+      "name": "Salgadinho Cheetos Lua Queijo Parmesao 143gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/3135/salgadinho-cheetos-lua-queijo-parmesao-143gr"
+    },
+    {
+      "id": "2988",
+      "index": 460,
+      "name": "Chocolate Twix Original 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2988/chocolate-twix-original-40gr"
+    },
+    {
+      "id": "2971",
+      "index": 461,
+      "name": "Ovo De Pascoa Kinder Smurfs 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2971/ovo-de-pascoa-kinder-smurfs-100gr"
+    },
+    {
+      "id": "2823",
+      "index": 462,
+      "name": "Bala De Gelatina Haribo Barbie 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2823/bala-de-gelatina-haribo-barbie-80gr"
+    },
+    {
+      "id": "2490",
+      "index": 463,
+      "name": "Biscoito Oreo Original 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2490/biscoito-oreo-original-90gr"
+    },
+    {
+      "id": "2462",
+      "index": 464,
+      "name": "Salgadinho Keleck Cheddar E Bacon 50gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2462/salgadinho-keleck-cheddar-e-bacon-50gr"
+    },
+    {
+      "id": "2341",
+      "index": 465,
+      "name": "Chocolate Garoto Branco 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2341/chocolate-garoto-branco-80gr"
+    },
+    {
+      "id": "2186",
+      "index": 466,
+      "name": "Salgadinho Takis 56g. Hot Chilli",
+      "url": "https://www.supervalesupermercados.com.br/produto/2186/salgadinho-takis-56g-hot-chilli"
+    },
+    {
+      "id": "2088",
+      "index": 467,
+      "name": "Salgadinho Keleck Pizza 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2088/salgadinho-keleck-pizza-150gr"
+    },
+    {
+      "id": "2079",
+      "index": 468,
+      "name": "Ovo Pascoa Ferrero Rocher Collection 350gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2079/ovo-pascoa-ferrero-rocher-collection-350gr"
+    },
+    {
+      "id": "2015",
+      "index": 469,
+      "name": "Bala De Gelatina Haribo Dentinhos 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2015/bala-de-gelatina-haribo-dentinhos-80gr"
+    },
+    {
+      "id": "1964",
+      "index": 470,
+      "name": "Rosquinha Aymore Leite 350gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1964/rosquinha-aymore-leite-350gr"
+    },
+    {
+      "id": "1838",
+      "index": 471,
+      "name": "Ovo Pascoa Toc Mix Crocante 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1838/ovo-pascoa-toc-mix-crocante-110gr"
+    },
+    {
+      "id": "1640",
+      "index": 472,
+      "name": "Salgadinho Keleck Cebola 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1640/salgadinho-keleck-cebola-150gr"
+    },
+    {
+      "id": "1562",
+      "index": 473,
+      "name": "Salgadinho Keleck Galinha Caipira 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1562/salgadinho-keleck-galinha-caipira-150gr"
+    },
+    {
+      "id": "1123",
+      "index": 474,
+      "name": "Ovo Pascoa Ferrero Rocher 225gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/1123/ovo-pascoa-ferrero-rocher-225gr"
+    },
+    {
+      "id": "757",
+      "index": 475,
+      "name": "Ovo Pascoa Toc Lac Chocolate Ao Leite 125gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/757/ovo-pascoa-toc-lac-chocolate-ao-leite-125gr"
+    },
+    {
+      "id": "717",
+      "index": 476,
+      "name": "Chocolate Garoto Caju E Passas 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/717/chocolate-garoto-caju-e-passas-80gr"
+    },
+    {
+      "id": "696",
+      "index": 477,
+      "name": "Biscoito Nestle Wafer Negresco 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/696/biscoito-nestle-wafer-negresco-110gr"
+    },
+    {
+      "id": "676",
+      "index": 478,
+      "name": "Ovo Pascoa Kinder Menina 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/676/ovo-pascoa-kinder-menina-150gr"
+    },
+    {
+      "id": "618",
+      "index": 479,
+      "name": "Bala Halls Menta Prata 28gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/618/bala-halls-menta-prata-28gr"
+    },
+    {
+      "id": "570",
+      "index": 480,
+      "name": "Ovo Pascoa Kinder Natoons 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/570/ovo-pascoa-kinder-natoons-150gr"
+    },
+    {
+      "id": "36",
+      "index": 481,
+      "name": "Biscoito Agua E Sal Vilma 170gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/36/biscoito-agua-e-sal-vilma-170gr"
+    },
+    {
+      "id": "6294",
+      "index": 482,
+      "name": "Biscoito Integral Aymore Cereal Mix Banana E Canela 135gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6294/biscoito-integral-aymore-cereal-mix-banana-e-canela-135gr"
+    },
+    {
+      "id": "6417",
+      "index": 483,
+      "name": "Chocolate Garoto Trio Negresco 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6417/chocolate-garoto-trio-negresco-90gr"
+    },
+    {
+      "id": "6431",
+      "index": 484,
+      "name": "Chocolate Garoto Trio Bono 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6431/chocolate-garoto-trio-bono-90gr"
+    },
+    {
+      "id": "6444",
+      "index": 485,
+      "name": "Salgadinho Doritos Ketchup 110gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6444/salgadinho-doritos-ketchup-110gr"
+    },
+    {
+      "id": "6473",
+      "index": 486,
+      "name": "Salgadinho Snack Fabitos Pimenta Calabresa 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6473/salgadinho-snack-fabitos-pimenta-calabresa-100gr"
+    },
+    {
+      "id": "6983",
+      "index": 487,
+      "name": "Pururuca Bottrel 30gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/6983/pururuca-bottrel-30gr"
+    },
+    {
+      "id": "7001",
+      "index": 488,
+      "name": "Salgadinho Skiny Natural 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7001/salgadinho-skiny-natural-60gr"
+    },
+    {
+      "id": "7138",
+      "index": 489,
+      "name": "Biscoito Oreo Recheio Chocolate 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7138/biscoito-oreo-recheio-chocolate-90gr"
+    },
+    {
+      "id": "7144",
+      "index": 490,
+      "name": "Salgadinho Keleck Cheddar Bacon 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7144/salgadinho-keleck-cheddar-bacon-150gr"
+    },
+    {
+      "id": "7152",
+      "index": 491,
+      "name": "Ovo De Páscoa Miraculous Arcor 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7152/ovo-de-pascoa-miraculous-arcor-100gr"
+    },
+    {
+      "id": "7169",
+      "index": 492,
+      "name": "Chocolate Trento Torta De Limão 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7169/chocolate-trento-torta-de-limao-29gr"
+    },
+    {
+      "id": "7168",
+      "index": 493,
+      "name": "Chocolate Trento Avela 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7168/chocolate-trento-avela-29gr"
+    },
+    {
+      "id": "7175",
+      "index": 494,
+      "name": "Ovo Pascoa Tortuguita Ao Leite 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7175/ovo-pascoa-tortuguita-ao-leite-120gr"
+    },
+    {
+      "id": "7174",
+      "index": 495,
+      "name": "Ovo De Pascoa Arcor Rocklets Ao Leite 220gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7174/ovo-de-pascoa-arcor-rocklets-ao-leite-220gr"
+    },
+    {
+      "id": "7173",
+      "index": 496,
+      "name": "Ovo Pascoa Tortuguita Unicornio 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7173/ovo-pascoa-tortuguita-unicornio-120gr"
+    },
+    {
+      "id": "7172",
+      "index": 497,
+      "name": "Ovo Pascoa Bon O Bon Beijinho 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7172/ovo-pascoa-bon-o-bon-beijinho-150gr"
+    },
+    {
+      "id": "7179",
+      "index": 498,
+      "name": "Chocolate Trento Nuts 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7179/chocolate-trento-nuts-25gr"
+    },
+    {
+      "id": "7200",
+      "index": 499,
+      "name": "Ovo De Pascoa Nestle Classic 199gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7200/ovo-de-pascoa-nestle-classic-199gr"
+    },
+    {
+      "id": "7199",
+      "index": 500,
+      "name": "Ovo De Pascoa Nestle Galak 199gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7199/ovo-de-pascoa-nestle-galak-199gr"
+    },
+    {
+      "id": "7203",
+      "index": 501,
+      "name": "Ovo De Pascoa Nestle Kit Kat White 332gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7203/ovo-de-pascoa-nestle-kit-kat-white-332gr"
+    },
+    {
+      "id": "7202",
+      "index": 502,
+      "name": "Ovo De Pascoa Nestle Alpino Ao Leite 349,5gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7202/ovo-de-pascoa-nestle-alpino-ao-leite-3495gr"
+    },
+    {
+      "id": "7201",
+      "index": 503,
+      "name": "Ovo De Pascoa Nestle Kit Kat 332gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7201/ovo-de-pascoa-nestle-kit-kat-332gr"
+    },
+    {
+      "id": "7214",
+      "index": 504,
+      "name": "Bala Gelatina Fini Dentadura 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7214/bala-gelatina-fini-dentadura-90gr"
+    },
+    {
+      "id": "7213",
+      "index": 505,
+      "name": "Bala Gelatina Fini Tubes Morango 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7213/bala-gelatina-fini-tubes-morango-90gr"
+    },
+    {
+      "id": "7206",
+      "index": 506,
+      "name": "Bala Gelatina Fini Beijos Morango 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7206/bala-gelatina-fini-beijos-morango-90gr"
+    },
+    {
+      "id": "7205",
+      "index": 507,
+      "name": "Bala Gelatina Fini Salada De Frutas 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7205/bala-gelatina-fini-salada-de-frutas-90gr"
+    },
+    {
+      "id": "7182",
+      "index": 508,
+      "name": "Ovo De Pascoa 15 Lacta Leite 157gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7182/ovo-de-pascoa-15-lacta-leite-157gr"
+    },
+    {
+      "id": "7181",
+      "index": 509,
+      "name": "Ovo Pascoa Lacta 15 Diamante Negro 163gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7181/ovo-pascoa-lacta-15-diamante-negro-163gr"
+    },
+    {
+      "id": "7180",
+      "index": 510,
+      "name": "Ovo Pascoa Lacta Laka 162gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7180/ovo-pascoa-lacta-laka-162gr"
+    },
+    {
+      "id": "7266",
+      "index": 511,
+      "name": "Ovo De Pascoa Arcor Tortuguita Ao Leite Acompanha Tortuguita Cabeça Maluca 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7266/ovo-de-pascoa-arcor-tortuguita-ao-leite-acompanha-tortuguita-cabeca-maluca-120gr"
+    },
+    {
+      "id": "7265",
+      "index": 512,
+      "name": "Ovo De Pascoa Arcor Free Fire Acompanha Luminaria 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7265/ovo-de-pascoa-arcor-free-fire-acompanha-luminaria-100gr"
+    },
+    {
+      "id": "7264",
+      "index": 513,
+      "name": "Ovo De Pascoa Arcor Tortuguita Chocolate Branco Acompanha Tortuguita Cabeça Maluca 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7264/ovo-de-pascoa-arcor-tortuguita-chocolate-branco-acompanha-tortuguita-cabeca-maluca-120gr"
+    },
+    {
+      "id": "7263",
+      "index": 514,
+      "name": "Ovo Pascoa Arcor Tortuguita Brigadeiro 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7263/ovo-pascoa-arcor-tortuguita-brigadeiro-120gr"
+    },
+    {
+      "id": "7262",
+      "index": 515,
+      "name": "Ovo De Pascoa Bonobon Morango 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7262/ovo-de-pascoa-bonobon-morango-150gr"
+    },
+    {
+      "id": "7268",
+      "index": 516,
+      "name": "Ovo Pascoa Tortuguita Confeito 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7268/ovo-pascoa-tortuguita-confeito-120gr"
+    },
+    {
+      "id": "7267",
+      "index": 517,
+      "name": "Ovo De Pascoa Arcor Carros Radical Turbo Acompanha 1 Jogo Digital 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7267/ovo-de-pascoa-arcor-carros-radical-turbo-acompanha-1-jogo-digital-120gr"
+    },
+    {
+      "id": "7282",
+      "index": 518,
+      "name": "Bombom Garoto Crocribe 250gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7282/bombom-garoto-crocribe-250gr"
+    },
+    {
+      "id": "7280",
+      "index": 519,
+      "name": "Chocolate Chocotrio Nestle Avelã 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7280/chocolate-chocotrio-nestle-avela-90gr"
+    },
+    {
+      "id": "7347",
+      "index": 520,
+      "name": "Rosquinha Newbread Coco 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7347/rosquinha-newbread-coco-500gr"
+    },
+    {
+      "id": "7410",
+      "index": 521,
+      "name": "Pirulito Florestal Pop Kiss Vamp 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7410/pirulito-florestal-pop-kiss-vamp-120gr"
+    },
+    {
+      "id": "7407",
+      "index": 522,
+      "name": "Pirulito Florestal Flopito Chicle Giga Tuti Fruti 125gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7407/pirulito-florestal-flopito-chicle-giga-tuti-fruti-125gr"
+    },
+    {
+      "id": "7404",
+      "index": 523,
+      "name": "Pirulito Florestal Pop Kiss Beija Mais 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7404/pirulito-florestal-pop-kiss-beija-mais-120gr"
+    },
+    {
+      "id": "7397",
+      "index": 524,
+      "name": "Marshmallow Florestal Fofs Twist Azul E Branco 220gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7397/marshmallow-florestal-fofs-twist-azul-e-branco-220gr"
+    },
+    {
+      "id": "7395",
+      "index": 525,
+      "name": "Marshmallow Florestal Zero % Açucar 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7395/marshmallow-florestal-zero-acucar-70gr"
+    },
+    {
+      "id": "7381",
+      "index": 526,
+      "name": "Bala De Goma Florestal Bananas 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7381/bala-de-goma-florestal-bananas-60gr"
+    },
+    {
+      "id": "7378",
+      "index": 527,
+      "name": "Bala Goma Florestal Gominhos 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7378/bala-goma-florestal-gominhos-60gr"
+    },
+    {
+      "id": "7377",
+      "index": 528,
+      "name": "Bala Florestal Balinha Do Coração Morango 108gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7377/bala-florestal-balinha-do-coracao-morango-108gr"
+    },
+    {
+      "id": "7553",
+      "index": 529,
+      "name": "Biscoito Polvilho Vovó Clara Argola Queijo 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7553/biscoito-polvilho-vovo-clara-argola-queijo-90gr"
+    },
+    {
+      "id": "7568",
+      "index": 530,
+      "name": "Salgadinho Cheetos Crunchy Pimenta Mexicana 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7568/salgadinho-cheetos-crunchy-pimenta-mexicana-120gr"
+    },
+    {
+      "id": "7564",
+      "index": 531,
+      "name": "Batata Pringles Portuguesa 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7564/batata-pringles-portuguesa-105gr"
+    },
+    {
+      "id": "7563",
+      "index": 532,
+      "name": "Batata Pringles Calabresa 105gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7563/batata-pringles-calabresa-105gr"
+    },
+    {
+      "id": "7379",
+      "index": 533,
+      "name": "Bala Goma Florestal Minhocas Azedinhas 65gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7379/bala-goma-florestal-minhocas-azedinhas-65gr"
+    },
+    {
+      "id": "7706",
+      "index": 534,
+      "name": "Chocolow Biscuit 60gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7706/chocolow-biscuit-60gr"
+    },
+    {
+      "id": "7669",
+      "index": 535,
+      "name": "Chocolate Lacta Laka Recheiro De Caramelo 104gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7669/chocolate-lacta-laka-recheiro-de-caramelo-104gr"
+    },
+    {
+      "id": "7738",
+      "index": 536,
+      "name": "Rosquinha Rancheiro Coco 600gr Gratis 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7738/rosquinha-rancheiro-coco-600gr-gratis-100gr"
+    },
+    {
+      "id": "7754",
+      "index": 537,
+      "name": "Batata Ruffel Cebola E Salsa Tubo 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7754/batata-ruffel-cebola-e-salsa-tubo-100gr"
+    },
+    {
+      "id": "7827",
+      "index": 538,
+      "name": "Bala Butter Toffee Maracuja 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7827/bala-butter-toffee-maracuja-90gr"
+    },
+    {
+      "id": "7870",
+      "index": 539,
+      "name": "Salgadinho Buen Apetit Pimentinha 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7870/salgadinho-buen-apetit-pimentinha-100gr"
+    },
+    {
+      "id": "7866",
+      "index": 540,
+      "name": "Salgadinho Buen Apetit Bacon 100gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7866/salgadinho-buen-apetit-bacon-100gr"
+    },
+    {
+      "id": "7863",
+      "index": 541,
+      "name": "Sequilhos Vovó Clara Coco 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7863/sequilhos-vovo-clara-coco-300gr"
+    },
+    {
+      "id": "7860",
+      "index": 542,
+      "name": "Salgadinho Petisko Costelinha Com Limão 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7860/salgadinho-petisko-costelinha-com-limao-40gr"
+    },
+    {
+      "id": "7857",
+      "index": 543,
+      "name": "Bolinho Ana Maria Triplo Chocolate 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7857/bolinho-ana-maria-triplo-chocolate-70gr"
+    },
+    {
+      "id": "7856",
+      "index": 544,
+      "name": "Bolinho Ana Maria Banoffe 70gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7856/bolinho-ana-maria-banoffe-70gr"
+    },
+    {
+      "id": "8015",
+      "index": 545,
+      "name": "Chocolate Trento Milk 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8015/chocolate-trento-milk-29gr"
+    },
+    {
+      "id": "7893",
+      "index": 546,
+      "name": "Chocolate Trento Mousse Trufa 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7893/chocolate-trento-mousse-trufa-25gr"
+    },
+    {
+      "id": "7886",
+      "index": 547,
+      "name": "Chocolate Trento Massimo Dark 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7886/chocolate-trento-massimo-dark-25gr"
+    },
+    {
+      "id": "7885",
+      "index": 548,
+      "name": "Chocolate Trento Massimo Coco 25gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7885/chocolate-trento-massimo-coco-25gr"
+    },
+    {
+      "id": "8010",
+      "index": 549,
+      "name": "Biscoito Wafer Look Chocolate 55gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8010/biscoito-wafer-look-chocolate-55gr"
+    },
+    {
+      "id": "8009",
+      "index": 550,
+      "name": "Biscoito Wafer Look Atrevidos 55gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8009/biscoito-wafer-look-atrevidos-55gr"
+    },
+    {
+      "id": "8008",
+      "index": 551,
+      "name": "Biscoito Wafer Look Morango 55gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8008/biscoito-wafer-look-morango-55gr"
+    },
+    {
+      "id": "8007",
+      "index": 552,
+      "name": "Bala De Goma Florestal Minhocas Azedinhas 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8007/bala-de-goma-florestal-minhocas-azedinhas-150gr"
+    },
+    {
+      "id": "7998",
+      "index": 553,
+      "name": "Biscoito Wafer Look Cookies E Cream 55gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7998/biscoito-wafer-look-cookies-e-cream-55gr"
+    },
+    {
+      "id": "8058",
+      "index": 554,
+      "name": "Chocolate M&m`s Cookie Pouch 120gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8058/chocolate-mms-cookie-pouch-120gr"
+    },
+    {
+      "id": "8051",
+      "index": 555,
+      "name": "Chocolate M&m`s Cookies 35gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8051/chocolate-mms-cookies-35gr"
+    },
+    {
+      "id": "8028",
+      "index": 556,
+      "name": "Batata Palha El Shaday 250gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8028/batata-palha-el-shaday-250gr"
+    },
+    {
+      "id": "7849",
+      "index": 557,
+      "name": "Biscoito Recheado Vilma Picnic Chocolate 125gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7849/biscoito-recheado-vilma-picnic-chocolate-125gr"
+    },
+    {
+      "id": "8000",
+      "index": 558,
+      "name": "Bala Florestal Sortida 500gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8000/bala-florestal-sortida-500gr"
+    },
+    {
+      "id": "8118",
+      "index": 559,
+      "name": "Chocolate Lacta Bis Sortido 119,7 Gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8118/chocolate-lacta-bis-sortido-1197-gr"
+    },
+    {
+      "id": "7903",
+      "index": 560,
+      "name": "Chocolate Trento Bites Mousse Maracuja 40gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/7903/chocolate-trento-bites-mousse-maracuja-40gr"
+    },
+    {
+      "id": "8006",
+      "index": 561,
+      "name": "Marshmaloow Florestal Fofs Para Assar 220gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8006/marshmaloow-florestal-fofs-para-assar-220gr"
+    },
+    {
+      "id": "8075",
+      "index": 562,
+      "name": "Chiclete Fini Melancia 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8075/chiclete-fini-melancia-80gr"
+    },
+    {
+      "id": "8248",
+      "index": 563,
+      "name": "Biscoito Artes Da Kaka Beijinho De Freira 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8248/biscoito-artes-da-kaka-beijinho-de-freira-300gr"
+    },
+    {
+      "id": "8247",
+      "index": 564,
+      "name": "Biscoito Artes Da Kaka Mineirinho 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8247/biscoito-artes-da-kaka-mineirinho-150gr"
+    },
+    {
+      "id": "8244",
+      "index": 565,
+      "name": "Biscoito Artes Da Kaka Canela 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8244/biscoito-artes-da-kaka-canela-150gr"
+    },
+    {
+      "id": "8237",
+      "index": 566,
+      "name": "Biscoito Artes Da Kaka Bolacha Mista 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8237/biscoito-artes-da-kaka-bolacha-mista-300gr"
+    },
+    {
+      "id": "8236",
+      "index": 567,
+      "name": "Biscoito Artes Da Kaka Sequilho Leite Condensado 300gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8236/biscoito-artes-da-kaka-sequilho-leite-condensado-300gr"
+    },
+    {
+      "id": "8274",
+      "index": 568,
+      "name": "Ovo Pascoa Arcor Rocklets Ao Leite 200gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8274/ovo-pascoa-arcor-rocklets-ao-leite-200gr"
+    },
+    {
+      "id": "8276",
+      "index": 569,
+      "name": "Ovo Pascoa Arcor Tortuguita Headphone 100 Headset",
+      "url": "https://www.supervalesupermercados.com.br/produto/8276/ovo-pascoa-arcor-tortuguita-headphone-100-headset"
+    },
+    {
+      "id": "8279",
+      "index": 570,
+      "name": "Ovo Pascoa Bon O Bon Supreme 238gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8279/ovo-pascoa-bon-o-bon-supreme-238gr"
+    },
+    {
+      "id": "8278",
+      "index": 571,
+      "name": "Ovo Pascoa Bon O Bon Paçoca 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8278/ovo-pascoa-bon-o-bon-pacoca-150gr"
+    },
+    {
+      "id": "8277",
+      "index": 572,
+      "name": "Ovo Pascoa Arcor Block 230gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8277/ovo-pascoa-arcor-block-230gr"
+    },
+    {
+      "id": "8258",
+      "index": 573,
+      "name": "Ovo De Pascoa Kit Kat Ao Leite 338.5 Gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8258/ovo-de-pascoa-kit-kat-ao-leite-3385-gr"
+    },
+    {
+      "id": "8255",
+      "index": 574,
+      "name": "Chocolate Nestle Alpino 80gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8255/chocolate-nestle-alpino-80gr"
+    },
+    {
+      "id": "8327",
+      "index": 575,
+      "name": "Salgadinho Baconzitos 36gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8327/salgadinho-baconzitos-36gr"
+    },
+    {
+      "id": "8318",
+      "index": 576,
+      "name": "Salgadinho Cheetos Onda Requeijão 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8318/salgadinho-cheetos-onda-requeijao-90gr"
+    },
+    {
+      "id": "8415",
+      "index": 577,
+      "name": "Bala De Goma Bolix Junita Azedinha 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8415/bala-de-goma-bolix-junita-azedinha-150gr"
+    },
+    {
+      "id": "8410",
+      "index": 578,
+      "name": "Bala De Goma Junita Acída 150gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8410/bala-de-goma-junita-acida-150gr"
+    },
+    {
+      "id": "8601",
+      "index": 579,
+      "name": "Bala Drops Icekiss Azedinha Uva 29gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8601/bala-drops-icekiss-azedinha-uva-29gr"
+    },
+    {
+      "id": "8640",
+      "index": 580,
+      "name": "Chocolate Nestle Chocostick Caramelo Salgado 24gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8640/chocolate-nestle-chocostick-caramelo-salgado-24gr"
+    },
+    {
+      "id": "8642",
+      "index": 581,
+      "name": "Chiclet Trident Pote Morango Limão 54gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/8642/chiclet-trident-pote-morango-limao-54gr"
+    },
+    {
+      "id": "2484",
+      "index": 582,
+      "name": "Biscoito Nestle Chocobiscuit Chocolate 90gr",
+      "url": "https://www.supervalesupermercados.com.br/produto/2484/biscoito-nestle-chocobiscuit-chocolate-90gr"
+    }
+  ],
+  "finishedAt": "2026-09-17T15:46:37.535Z"
+}

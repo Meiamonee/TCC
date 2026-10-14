@@ -1,0 +1,242 @@
+{
+  "supermercado": "vilasul",
+  "complete": true,
+  "categories": [
+    {
+      "name": "Açougue",
+      "url": "https://www.vilasul.com.br/departamentos/acougue",
+      "products": 186,
+      "batches": 11,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/acougue"
+      ]
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.vilasul.com.br/departamentos/congelados",
+      "products": 296,
+      "batches": 17,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/congelados"
+      ]
+    },
+    {
+      "name": "Frios e laticínios",
+      "url": "https://www.vilasul.com.br/departamentos/frios-e-laticinios",
+      "products": 805,
+      "batches": 47,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/frios-e-laticinios"
+      ]
+    },
+    {
+      "name": "Hortifruti",
+      "url": "https://www.vilasul.com.br/departamentos/hortifruti",
+      "products": 201,
+      "batches": 14,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/hortifruti"
+      ]
+    },
+    {
+      "name": "Biscoitos e chocolates",
+      "url": "https://www.vilasul.com.br/departamentos/biscoitos-e-chocolates",
+      "products": 895,
+      "batches": 51,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/biscoitos-e-chocolates"
+      ]
+    },
+    {
+      "name": "Matinais e sobremesas",
+      "url": "https://www.vilasul.com.br/departamentos/matinais-e-sobremesas",
+      "products": 739,
+      "batches": 44,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/matinais-e-sobremesas"
+      ]
+    },
+    {
+      "name": "Perfumaria e higiene",
+      "url": "https://www.vilasul.com.br/departamentos/perfumaria-e-higiene",
+      "products": 1315,
+      "batches": 90,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/perfumaria-e-higiene"
+      ],
+      "attempts": 1
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.vilasul.com.br/departamentos/bebidas",
+      "products": 1022,
+      "batches": 55,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/bebidas"
+      ]
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.vilasul.com.br/departamentos/limpeza",
+      "products": 860,
+      "batches": 57,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/limpeza"
+      ]
+    },
+    {
+      "name": "Mercearia",
+      "url": "https://www.vilasul.com.br/departamentos/mercearia",
+      "products": 1262,
+      "batches": 73,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/mercearia"
+      ]
+    },
+    {
+      "name": "Saude e bem estar",
+      "url": "https://www.vilasul.com.br/departamentos/saude-e-bem-estar",
+      "products": 348,
+      "batches": 19,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/saude-e-bem-estar"
+      ]
+    },
+    {
+      "name": "Peixaria",
+      "url": "https://www.vilasul.com.br/departamentos/peixaria",
+      "products": 79,
+      "batches": 5,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/peixaria"
+      ]
+    },
+    {
+      "name": "Padaria-lanchonete- conf",
+      "url": "https://www.vilasul.com.br/departamentos/padaria-lanchonete-conf",
+      "products": 258,
+      "batches": 17,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/padaria-lanchonete-conf"
+      ]
+    },
+    {
+      "name": "Pet shop",
+      "url": "https://www.vilasul.com.br/departamentos/pet-shop",
+      "products": 155,
+      "batches": 10,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/pet-shop"
+      ]
+    },
+    {
+      "name": "Bazar e flores",
+      "url": "https://www.vilasul.com.br/departamentos/bazar-e-flores",
+      "products": 517,
+      "batches": 38,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/bazar-e-flores"
+      ]
+    },
+    {
+      "name": "Oriental-arabe-sirio",
+      "url": "https://www.vilasul.com.br/departamentos/oriental-arabe-sirio",
+      "products": 14,
+      "batches": 1,
+      "complete": true,
+      "listings": [
+        "https://www.vilasul.com.br/departamentos/oriental-arabe-sirio"
+      ]
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-09-23T14:00:54.068Z",
+  "discoveredDepartments": [
+    {
+      "name": "Açougue",
+      "url": "https://www.vilasul.com.br/departamentos/acougue"
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.vilasul.com.br/departamentos/congelados"
+    },
+    {
+      "name": "Frios e laticínios",
+      "url": "https://www.vilasul.com.br/departamentos/frios-e-laticinios"
+    },
+    {
+      "name": "Hortifruti",
+      "url": "https://www.vilasul.com.br/departamentos/hortifruti"
+    },
+    {
+      "name": "Biscoitos e chocolates",
+      "url": "https://www.vilasul.com.br/departamentos/biscoitos-e-chocolates"
+    },
+    {
+      "name": "Matinais e sobremesas",
+      "url": "https://www.vilasul.com.br/departamentos/matinais-e-sobremesas"
+    },
+    {
+      "name": "Perfumaria e higiene",
+      "url": "https://www.vilasul.com.br/departamentos/perfumaria-e-higiene"
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.vilasul.com.br/departamentos/bebidas"
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.vilasul.com.br/departamentos/limpeza"
+    },
+    {
+      "name": "Mercearia",
+      "url": "https://www.vilasul.com.br/departamentos/mercearia"
+    },
+    {
+      "name": "Saude e bem estar",
+      "url": "https://www.vilasul.com.br/departamentos/saude-e-bem-estar"
+    },
+    {
+      "name": "Peixaria",
+      "url": "https://www.vilasul.com.br/departamentos/peixaria"
+    },
+    {
+      "name": "Padaria-lanchonete- conf",
+      "url": "https://www.vilasul.com.br/departamentos/padaria-lanchonete-conf"
+    },
+    {
+      "name": "Pet shop",
+      "url": "https://www.vilasul.com.br/departamentos/pet-shop"
+    },
+    {
+      "name": "Bazar e flores",
+      "url": "https://www.vilasul.com.br/departamentos/bazar-e-flores"
+    },
+    {
+      "name": "Oriental-arabe-sirio",
+      "url": "https://www.vilasul.com.br/departamentos/oriental-arabe-sirio"
+    }
+  ],
+  "store": {
+    "city": "Poços de Caldas",
+    "address": "Avenida Sílvio Monteiro dos Santos, 180"
+  },
+  "products": 8952,
+  "finishedAt": "2026-09-23T14:28:35.923Z",
+  "resumedAcrossDays": false
+}

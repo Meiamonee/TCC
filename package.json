@@ -8,11 +8,18 @@
     "dev": "node scripts/start.js",
     "start:backend": "npm --prefix backend run dev",
     "start:frontend": "npm --prefix frontend run dev",
-    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
     "build": "npm --prefix frontend run build",
-    "test": "npm --prefix backend test && npm --prefix frontend run lint"
+    "test": "npm run test:core && npm --prefix backend test && npm --prefix frontend run lint",
+    "test:scrapers": "node --test scrapers/dom.test.js",
+    "coleta": "node scrapers/manage.js",
+    "test:core": "node --test scrapers/reliability.test.js frontend/src/services/api.test.js frontend/src/services/comparison.test.js backend/services/adminAuth.test.js backend/services/collectionRunner.test.js backend/services/canonicalProducts.test.mjs backend/services/batchWriter.test.js backend/services/catalogQuery.test.js backend/services/comparisonCategories.test.js backend/services/importProducts.test.js scrapers/retry.test.js",
+    "catalog:sync": "node backend/scripts/syncCanonicalProducts.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.45.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }

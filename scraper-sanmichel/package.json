@@ -1,0 +1,9 @@
+{
+  "name": "sanmichel-scraper",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "smoke": "node index.js --smoke"
+  }
+}

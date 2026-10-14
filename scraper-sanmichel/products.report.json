@@ -1,0 +1,213 @@
+{
+  "supermercado": "sanmichel",
+  "complete": true,
+  "categories": [
+    {
+      "name": "Mercearia",
+      "url": "https://www.supersanmichel.com.br/departamentos/mercearia",
+      "products": 570,
+      "batches": 33,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/mercearia"
+      ]
+    },
+    {
+      "name": "Carnes",
+      "url": "https://www.supersanmichel.com.br/departamentos/carnes",
+      "products": 123,
+      "batches": 12,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/carnes"
+      ]
+    },
+    {
+      "name": "Hortifruti",
+      "url": "https://www.supersanmichel.com.br/departamentos/hortifruti",
+      "products": 140,
+      "batches": 11,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/hortifruti"
+      ]
+    },
+    {
+      "name": "Biscoitos e chocolates",
+      "url": "https://www.supersanmichel.com.br/departamentos/biscoitos-e-chocolates",
+      "products": 546,
+      "batches": 33,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/biscoitos-e-chocolates"
+      ]
+    },
+    {
+      "name": "Cereais e farináceos",
+      "url": "https://www.supersanmichel.com.br/departamentos/cereais-e-farinacios",
+      "products": 126,
+      "batches": 8,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/cereais-e-farinacios"
+      ]
+    },
+    {
+      "name": "Matinais e sobremesas",
+      "url": "https://www.supersanmichel.com.br/departamentos/matinais-e-sobremesas",
+      "products": 573,
+      "batches": 34,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/matinais-e-sobremesas"
+      ]
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.supersanmichel.com.br/departamentos/bebidas",
+      "products": 458,
+      "batches": 30,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/bebidas"
+      ]
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.supersanmichel.com.br/departamentos/limpeza",
+      "products": 652,
+      "batches": 36,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/limpeza"
+      ]
+    },
+    {
+      "name": "Perfumaria e higiene",
+      "url": "https://www.supersanmichel.com.br/departamentos/perfumaria-e-higiene",
+      "products": 794,
+      "batches": 44,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/perfumaria-e-higiene"
+      ]
+    },
+    {
+      "name": "Frios e laticínios",
+      "url": "https://www.supersanmichel.com.br/departamentos/frios-e-laticinios",
+      "products": 398,
+      "batches": 25,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/frios-e-laticinios"
+      ]
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.supersanmichel.com.br/departamentos/congelados",
+      "products": 179,
+      "batches": 14,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/congelados"
+      ]
+    },
+    {
+      "name": "Padaria",
+      "url": "https://www.supersanmichel.com.br/departamentos/padaria",
+      "products": 108,
+      "batches": 8,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/padaria"
+      ]
+    },
+    {
+      "name": "Animais",
+      "url": "https://www.supersanmichel.com.br/departamentos/animais",
+      "products": 66,
+      "batches": 4,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/animais"
+      ]
+    },
+    {
+      "name": "Bazar e utilidades",
+      "url": "https://www.supersanmichel.com.br/departamentos/bazar-e-utilidades",
+      "products": 340,
+      "batches": 19,
+      "complete": true,
+      "listings": [
+        "https://www.supersanmichel.com.br/departamentos/bazar-e-utilidades"
+      ]
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-09-23T14:28:43.739Z",
+  "discoveredDepartments": [
+    {
+      "name": "Mercearia",
+      "url": "https://www.supersanmichel.com.br/departamentos/mercearia"
+    },
+    {
+      "name": "Carnes",
+      "url": "https://www.supersanmichel.com.br/departamentos/carnes"
+    },
+    {
+      "name": "Hortifruti",
+      "url": "https://www.supersanmichel.com.br/departamentos/hortifruti"
+    },
+    {
+      "name": "Biscoitos e chocolates",
+      "url": "https://www.supersanmichel.com.br/departamentos/biscoitos-e-chocolates"
+    },
+    {
+      "name": "Cereais e farináceos",
+      "url": "https://www.supersanmichel.com.br/departamentos/cereais-e-farinacios"
+    },
+    {
+      "name": "Matinais e sobremesas",
+      "url": "https://www.supersanmichel.com.br/departamentos/matinais-e-sobremesas"
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.supersanmichel.com.br/departamentos/bebidas"
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.supersanmichel.com.br/departamentos/limpeza"
+    },
+    {
+      "name": "Perfumaria e higiene",
+      "url": "https://www.supersanmichel.com.br/departamentos/perfumaria-e-higiene"
+    },
+    {
+      "name": "Frios e laticínios",
+      "url": "https://www.supersanmichel.com.br/departamentos/frios-e-laticinios"
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.supersanmichel.com.br/departamentos/congelados"
+    },
+    {
+      "name": "Padaria",
+      "url": "https://www.supersanmichel.com.br/departamentos/padaria"
+    },
+    {
+      "name": "Animais",
+      "url": "https://www.supersanmichel.com.br/departamentos/animais"
+    },
+    {
+      "name": "Bazar e utilidades",
+      "url": "https://www.supersanmichel.com.br/departamentos/bazar-e-utilidades"
+    }
+  ],
+  "store": {
+    "city": "Poços de Caldas",
+    "address": "Avenida Mansur Frayha, 875"
+  },
+  "products": 5073,
+  "finishedAt": "2026-09-23T14:39:26.322Z",
+  "resumedAcrossDays": false
+}

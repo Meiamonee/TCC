@@ -1,0 +1,33 @@
+{
+  "market": "sanmichel",
+  "startedAt": "2026-09-22T18:25:15.743Z",
+  "apply": false,
+  "requested": 1,
+  "validated": [],
+  "changedPrices": [
+    {
+      "id": "6aad0033429c642b086bf85c",
+      "name": "Pernil Pedaço Sem Osso 600g",
+      "url": "https://www.supersanmichel.com.br/produto/6256/pernil-pedaco-sem-osso-600g",
+      "storedPrice": 14.34,
+      "observedPrice": 9.5,
+      "evidence": {
+        "rawText": "R$ 9,50",
+        "rawUnitText": "/500g",
+        "source": "detail_page",
+        "confidence": 100,
+        "collectedBasis": "unit",
+        "scope": "TOTAL",
+        "packageQuantity": {
+          "unit": "g",
+          "value": 500
+        },
+        "previousPrice": null,
+        "changeRatio": null,
+        "historyAnomaly": false
+      }
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-09-22T18:25:42.515Z"
+}

@@ -1,0 +1,2007 @@
+{
+  "reviewedAt": "2026-09-22",
+  "scope": "Pares de anuncios reais dos cinco mercados; identidade baseada nas descricoes coletadas, sem GTIN.",
+  "cases": [
+    {
+      "a": {
+        "id": "6aaa115ecffee15836522eff",
+        "productId": "alho-dente-de-prata-200gr",
+        "name": "Alho Dente De Prata 200Gr",
+        "department": "Hortifruti",
+        "priceBasis": "unit",
+        "priceNumber": 9.2,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T11:55:00.165Z",
+        "url": "https://www.pedrilho.com.br/p/alho-dente-de-prata-200gr"
+      },
+      "b": {
+        "id": "6aacb88fbacdf345ed50891b",
+        "productId": "1264",
+        "name": "Alho Dente De Prata 200gr",
+        "department": "Hortifruti",
+        "priceBasis": "unit",
+        "priceNumber": 8.9,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:07:36.279Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/1264/alho-dente-de-prata-200gr"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2964429c642b086d181c",
+        "productId": "bebida-lactea-itambe-morango-540g",
+        "name": "bebida láctea Itambé morango 540g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 7.19,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:09:00.826Z",
+        "url": "https://www.pedrilho.com.br/p/bebida-lactea-itambe-morango-540g"
+      },
+      "b": {
+        "id": "6aad0cd2429c642b086c52b5",
+        "productId": "3862",
+        "name": "Bebida Láctea Itambé Morango 540g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 7.19,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.789Z",
+        "url": "https://www.supersanmichel.com.br/produto/3862/bebida-lactea-itambe-morango-540g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2a6f429c642b086d1e9f",
+        "productId": "leite-quata-desnatado-1l",
+        "name": "Leite Quatá Desnatado 1L",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 6.09,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:12:14.903Z",
+        "url": "https://www.pedrilho.com.br/p/leite-quata-desnatado-1l"
+      },
+      "b": {
+        "id": "6aad0d3d429c642b086c56de",
+        "productId": "1680",
+        "name": "Leite Quatá Desnatado 1l",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 4.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.790Z",
+        "url": "https://www.supersanmichel.com.br/produto/1680/leite-quata-desnatado-1l"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2a6f429c642b086d1ea1",
+        "productId": "leite-longa-vida-quata-semidesnatado-1l",
+        "name": "Leite Longa Vida Quatá Semidesnatado 1L",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 6.09,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:12:14.903Z",
+        "url": "https://www.pedrilho.com.br/p/leite-longa-vida-quata-semidesnatado-1l"
+      },
+      "b": {
+        "id": "6aad0cbc429c642b086c51dc",
+        "productId": "968",
+        "name": "Leite Longa Vida Quata Semidesnatado 1l",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 4.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.789Z",
+        "url": "https://www.supersanmichel.com.br/produto/968/leite-longa-vida-quata-semidesnatado-1l"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2ae2429c642b086d2061",
+        "productId": "margarina-cremosa-com-sal-qualy-pote-250g",
+        "name": "Margarina Cremosa com Sal Qualy Pote 250g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 6.4,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:14:15.357Z",
+        "url": "https://www.pedrilho.com.br/p/margarina-cremosa-com-sal-qualy-pote-250g"
+      },
+      "b": {
+        "id": "6aad0cf8429c642b086c5403",
+        "productId": "3064",
+        "name": "Margarina Cremosa Com Sal Qualy Pote 250g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 6.89,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.789Z",
+        "url": "https://www.supersanmichel.com.br/produto/3064/margarina-cremosa-com-sal-qualy-pote-250g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2aee429c642b086d211d",
+        "productId": "creme-vegetal-original-com-sal-becel-pote-500g",
+        "name": "Creme Vegetal Original com Sal Becel Pote 500g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 9.39,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:14:15.357Z",
+        "url": "https://www.pedrilho.com.br/p/creme-vegetal-original-com-sal-becel-pote-500g"
+      },
+      "b": {
+        "id": "6aad0d0e429c642b086c54fa",
+        "productId": "2537",
+        "name": "Creme Vegetal Original Com Sal Becel Pote 500g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 15.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.789Z",
+        "url": "https://www.supersanmichel.com.br/produto/2537/creme-vegetal-original-com-sal-becel-pote-500g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2d4b429c642b086d2796",
+        "productId": "canjica-branca-junita-500gr",
+        "name": "Canjica Branca Junita 500Gr",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 6.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:24:38.912Z",
+        "url": "https://www.pedrilho.com.br/p/canjica-branca-junita-500gr"
+      },
+      "b": {
+        "id": "6a8e6c9f529825a44b9346c0",
+        "productId": "4987",
+        "name": "Canjica Branca Junita 500gr",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:59:22.585Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/4987/canjica-branca-junita-500gr"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2d93429c642b086d2876",
+        "productId": "arroz-parboilizado-tipo-1-pilecco-nobre-pacote-5kg",
+        "name": "Arroz Parboilizado Tipo 1 Pilecco Nobre Pacote 5kg",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 26.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:25:31.925Z",
+        "url": "https://www.pedrilho.com.br/p/arroz-parboilizado-tipo-1-pilecco-nobre-pacote-5kg"
+      },
+      "b": {
+        "id": "6aad03ac429c642b086c0a8b",
+        "productId": "3393",
+        "name": "Arroz Parboilizado Tipo 1 Pilecco Nobre Pacote 5kg",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 27.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:26:42.108Z",
+        "url": "https://www.supersanmichel.com.br/produto/3393/arroz-parboilizado-tipo-1-pilecco-nobre-pacote-5kg"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2e3b429c642b086d2938",
+        "productId": "farinha-de-trigo-tres-coroas-1kg",
+        "name": "Farinha de Trigo Três Coroas 1kg",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 3.79,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:28:17.674Z",
+        "url": "https://www.pedrilho.com.br/p/farinha-de-trigo-tres-coroas-1kg"
+      },
+      "b": {
+        "id": "6aacb6f7bacdf345ed5084f5",
+        "productId": "1714",
+        "name": "Farinha De Trigo Tres Coroas 1kg",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 3.98,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:59:22.585Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/1714/farinha-de-trigo-tres-coroas-1kg"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2eef429c642b086d29d9",
+        "productId": "feijao-preto-du-irineu-1kg",
+        "name": "Feijao Preto Du Irineu 1Kg",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 6.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:31:14.638Z",
+        "url": "https://www.pedrilho.com.br/p/feijao-preto-du-irineu-1kg"
+      },
+      "b": {
+        "id": "6aab62d71f0a938d66722295",
+        "productId": "2604",
+        "name": "Feijao Preto Du Irineu 1kg",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 8.98,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:59:22.585Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/2604/feijao-preto-du-irineu-1kg"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad30f6429c642b086d2e16",
+        "productId": "cerveja-tijuca-puro-malte-350ml",
+        "name": "Cerveja Tijuca Puro Malte 350ML",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 3.4,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:40:22.779Z",
+        "url": "https://www.pedrilho.com.br/p/cerveja-tijuca-puro-malte-350ml"
+      },
+      "b": {
+        "id": "6aacd21cbacdf345ed50f870",
+        "productId": "29368",
+        "name": "Cerveja Tijuca Puro Malte 350ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 2.91,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:59:32.655Z",
+        "url": "https://www.vilasul.com.br/produto/29368/cerveja-tijuca-puro-malte-350ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3167429c642b086d3243",
+        "productId": "cerveja-pilsen-coronita-extra-garrafa-210ml",
+        "name": "Cerveja Pilsen Coronita Extra Garrafa 210ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 5.39,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:43:25.297Z",
+        "url": "https://www.pedrilho.com.br/p/cerveja-pilsen-coronita-extra-garrafa-210ml"
+      },
+      "b": {
+        "id": "6aacd00ebacdf345ed50ecb3",
+        "productId": "886",
+        "name": "Cerveja Pilsen Coronita Extra Garrafa 210ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 6.47,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:59:32.654Z",
+        "url": "https://www.vilasul.com.br/produto/886/cerveja-pilsen-coronita-extra-garrafa-210ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad32b2429c642b086d3b3b",
+        "productId": "energetico-melancia-red-bull-lata-250ml-the-summer-edition",
+        "name": "Energético Melancia Red Bull Lata 250ml The Summer Edition",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 10.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:49:04.568Z",
+        "url": "https://www.pedrilho.com.br/p/energetico-melancia-red-bull-lata-250ml-the-summer-edition"
+      },
+      "b": {
+        "id": "6aad06af429c642b086c1d9c",
+        "productId": "1542",
+        "name": "Energético Melancia Red Bull Lata 250ml The Summer Edition",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 9.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:43:29.922Z",
+        "url": "https://www.supersanmichel.com.br/produto/1542/energetico-melancia-red-bull-lata-250ml-the-summer-edition"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad335d429c642b086d3ff8",
+        "productId": "isotonico-powerade-limao-500ml",
+        "name": "Isotônico Powerade Limão 500ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 3.89,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:50:12.185Z",
+        "url": "https://www.pedrilho.com.br/p/isotonico-powerade-limao-500ml"
+      },
+      "b": {
+        "id": "6aacd314bacdf345ed50feff",
+        "productId": "20297",
+        "name": "Isotônico Powerade Limão 500ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 5.16,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:59:32.655Z",
+        "url": "https://www.vilasul.com.br/produto/20297/isotonico-powerade-limao-500ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad37fa429c642b086d64c3",
+        "productId": "acucar-extra-fino-santa-isabel-1kg",
+        "name": "Acucar Extra Fino Santa Isabel 1Kg",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 4.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:09:55.950Z",
+        "url": "https://www.pedrilho.com.br/p/acucar-extra-fino-santa-isabel-1kg"
+      },
+      "b": {
+        "id": "6aacbb41bacdf345ed509056",
+        "productId": "7639",
+        "name": "Açucar Extra Fino Santa Isabel 1kg",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 3.69,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:18:40.808Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/7639/acucar-extra-fino-santa-isabel-1kg"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3a01429c642b086d7458",
+        "productId": "cafe-soluvel-coado-pilao-sache-50g",
+        "name": "Café Solúvel Coado Pilão Sachê 50g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 7.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:19:57.390Z",
+        "url": "https://www.pedrilho.com.br/p/cafe-soluvel-coado-pilao-sache-50g"
+      },
+      "b": {
+        "id": "6aacc8bfbacdf345ed50c7af",
+        "productId": "7897",
+        "name": "Café Solúvel Coado Pilão Sachê 50g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 10.13,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:22:49.453Z",
+        "url": "https://www.vilasul.com.br/produto/7897/cafe-soluvel-coado-pilao-sache-50g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3a0f429c642b086d750b",
+        "productId": "cafe-evolutto-premium-500g",
+        "name": "Cafe Evolutto Premium 500G",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 36.2,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:19:57.390Z",
+        "url": "https://www.pedrilho.com.br/p/cafe-evolutto-premium-500g"
+      },
+      "b": {
+        "id": "6aacc98abacdf345ed50cba7",
+        "productId": "25910",
+        "name": "Cafe Evolutto Premium 500g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 32.89,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:22:49.454Z",
+        "url": "https://www.vilasul.com.br/produto/25910/cafe-evolutto-premium-500g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3a3e429c642b086d780d",
+        "productId": "cafe-torrado-e-moido-extraforte-cafe-pacaembu-pacote-500g",
+        "name": "Café Torrado e Moído Extraforte Café Pacaembu Pacote 500g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 29.49,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:19:57.390Z",
+        "url": "https://www.pedrilho.com.br/p/cafe-torrado-e-moido-extraforte-cafe-pacaembu-pacote-500g"
+      },
+      "b": {
+        "id": "6aad049f429c642b086c0fee",
+        "productId": "3160",
+        "name": "Café Torrado E Moído Extraforte Café Pacaembu Pacote 500g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 21.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/3160/cafe-torrado-e-moido-extraforte-cafe-pacaembu-pacote-500g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3ed2429c642b086d9369",
+        "productId": "oleo-composto-faisao-lata-200ml",
+        "name": "Óleo Composto Faisão Lata 200ml",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:39:04.016Z",
+        "url": "https://www.pedrilho.com.br/p/oleo-composto-faisao-lata-200ml"
+      },
+      "b": {
+        "id": "6aacbbffbacdf345ed5092cb",
+        "productId": "2864",
+        "name": "Oleo Composto Faisao Lata 200ml",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 13.49,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:24:36.560Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/2864/oleo-composto-faisao-lata-200ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3f06429c642b086d9425",
+        "productId": "azeitona-tozzi-com-caroco-sache-80g",
+        "name": "Azeitona Tozzi Com Caroço Sache 80G",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 3.55,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:40:08.032Z",
+        "url": "https://www.pedrilho.com.br/p/azeitona-tozzi-com-caroco-sache-80g"
+      },
+      "b": {
+        "id": "6aacf688429c642b086bc8d6",
+        "productId": "17104",
+        "name": "Azeitona Tozzi Com Caroço Sachê 80g",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 3.95,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T08:39:07.001Z",
+        "url": "https://www.vilasul.com.br/produto/17104/azeitona-tozzi-com-caroco-sache-80g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3f46429c642b086d95b4",
+        "productId": "hortela-kodilar-20g",
+        "name": "Hortelã kodilar 20G",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 2.85,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:41:01.592Z",
+        "url": "https://www.pedrilho.com.br/p/hortela-kodilar-20g"
+      },
+      "b": {
+        "id": "6aacbc17bacdf345ed50935a",
+        "productId": "1741",
+        "name": "Hortela Kodilar 20g",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 4.95,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:24:36.560Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/1741/hortela-kodilar-20g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad41ac429c642b086da443",
+        "productId": "macarrao-com-ovos-santa-amalia-alfabeto-500g",
+        "name": "Macarrão com Ovos Santa Amália Alfabeto 500g",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 4.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:51:22.825Z",
+        "url": "https://www.pedrilho.com.br/p/macarrao-com-ovos-santa-amalia-alfabeto-500g"
+      },
+      "b": {
+        "id": "6aacfe72429c642b086be891",
+        "productId": "5026",
+        "name": "Macarrão Com Ovos Santa Amália Alfabeto 500g",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 3.69,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:10:37.279Z",
+        "url": "https://www.supersanmichel.com.br/produto/5026/macarrao-com-ovos-santa-amalia-alfabeto-500g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad463a429c642b086dccf5",
+        "productId": "wafer-cookies-n-creme-hershey-s-mais-pacote-102g",
+        "name": "Wafer Cookies 'n' Creme Hershey's Mais Pacote 102g",
+        "department": "Biscoitos e Chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 6.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T14:10:44.057Z",
+        "url": "https://www.pedrilho.com.br/p/wafer-cookies-n-creme-hershey-s-mais-pacote-102g"
+      },
+      "b": {
+        "id": "6aacc4f2bacdf345ed50b34d",
+        "productId": "551",
+        "name": "Wafer Cookies `n` Creme Hershey`s Mais Pacote 102g",
+        "department": "Biscoitos e chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 6.49,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:11:48.717Z",
+        "url": "https://www.vilasul.com.br/produto/551/wafer-cookies-n-creme-hersheys-mais-pacote-102g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad46be429c642b086dce9c",
+        "productId": "chocolate-dark-snickers-pacote-42g",
+        "name": "Chocolate Dark Snickers Pacote 42g",
+        "department": "Biscoitos e Chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 4.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T14:14:38.098Z",
+        "url": "https://www.pedrilho.com.br/p/chocolate-dark-snickers-pacote-42g"
+      },
+      "b": {
+        "id": "6aacc50cbacdf345ed50b3e4",
+        "productId": "2250",
+        "name": "Chocolate Dark Snickers Pacote 42g",
+        "department": "Biscoitos e chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 5.14,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:11:48.717Z",
+        "url": "https://www.vilasul.com.br/produto/2250/chocolate-dark-snickers-pacote-42g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad4729429c642b086dd5dd",
+        "productId": "chocolate-ao-leite-arcor-pacote-80g",
+        "name": "Chocolate ao Leite Arcor Pacote 80g",
+        "department": "Biscoitos e Chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 8.59,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T14:14:38.098Z",
+        "url": "https://www.pedrilho.com.br/p/chocolate-ao-leite-arcor-pacote-80g"
+      },
+      "b": {
+        "id": "6aad0220429c642b086c00c7",
+        "productId": "1513",
+        "name": "Chocolate Ao Leite Arcor Pacote 80g",
+        "department": "Biscoitos e chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 8.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:25:02.356Z",
+        "url": "https://www.supersanmichel.com.br/produto/1513/chocolate-ao-leite-arcor-pacote-80g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad4b01429c642b086deb45",
+        "productId": "pao-integral-castanha-do-para-quinoa-nutrella-pacote-350g",
+        "name": "Pão Integral Castanha-do-Pará & Quinoa Nutrella Pacote 350g",
+        "department": "Padaria",
+        "priceBasis": "unit",
+        "priceNumber": 15.65,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:20:43.239Z",
+        "url": "https://www.pedrilho.com.br/p/pao-integral-castanha-do-para-quinoa-nutrella-pacote-350g"
+      },
+      "b": {
+        "id": "6aacbd3abacdf345ed50961f",
+        "productId": "6299",
+        "name": "Pao Integral Castanha-do-para & Quinoa Nutrella Pacote 350g",
+        "department": "Padaria",
+        "priceBasis": "unit",
+        "priceNumber": 15.9,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:27:06.313Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/6299/pao-integral-castanhadopara-quinoa-nutrella-pacote-350g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f3d90958bd41bb66842d",
+        "productId": "pao-de-forma-visconti-tradicional-400g",
+        "name": "Pão de Forma Visconti Tradicional 400G",
+        "department": "Padaria",
+        "priceBasis": "unit",
+        "priceNumber": 6.29,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:20:43.240Z",
+        "url": "https://www.pedrilho.com.br/p/pao-de-forma-visconti-tradicional-400g"
+      },
+      "b": {
+        "id": "6aad0ef0429c642b086c5c92",
+        "productId": "4199",
+        "name": "Pão De Forma Visconti Tradicional 400g",
+        "department": "Padaria",
+        "priceBasis": "unit",
+        "priceNumber": 6.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:15:17.604Z",
+        "url": "https://www.supersanmichel.com.br/produto/4199/pao-de-forma-visconti-tradicional-400g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f4260958bd41bb6684cf",
+        "productId": "empanado-de-frango-tradicional-perdigao-mini-chicken-pacote-1kg",
+        "name": "Empanado de Frango Tradicional Perdigão Mini Chicken Pacote 1kg",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 23.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:22:18.380Z",
+        "url": "https://www.pedrilho.com.br/p/empanado-de-frango-tradicional-perdigao-mini-chicken-pacote-1kg"
+      },
+      "b": {
+        "id": "6aad0e00429c642b086c598a",
+        "productId": "5627",
+        "name": "Empanado De Frango Tradicional Perdigão Mini Chicken Pacote 1kg",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 23.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:13:42.434Z",
+        "url": "https://www.supersanmichel.com.br/produto/5627/empanado-de-frango-tradicional-perdigao-mini-chicken-pacote-1kg"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f4ad0958bd41bb66861b",
+        "productId": "sanduiche-congelado-x-cheddar-cremoso-sadia-hot-pocket-pacote-145g",
+        "name": "Sanduíche Congelado X-Cheddar Cremoso Sadia Hot Pocket Pacote 145g",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 7.89,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:25:15.610Z",
+        "url": "https://www.pedrilho.com.br/p/sanduiche-congelado-x-cheddar-cremoso-sadia-hot-pocket-pacote-145g"
+      },
+      "b": {
+        "id": "6aad0e0d429c642b086c59d7",
+        "productId": "539",
+        "name": "Sanduíche Congelado X-cheddar Cremoso Sadia Hot Pocket Pacote 145g",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 7.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:13:42.434Z",
+        "url": "https://www.supersanmichel.com.br/produto/539/sanduiche-congelado-xcheddar-cremoso-sadia-hot-pocket-pacote-145g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f57a0958bd41bb6687d6",
+        "productId": "pizza-brasileira-perdigao-caixa-460g",
+        "name": "Pizza Brasileira Perdigão Caixa 460g",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 22.69,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:27:44.493Z",
+        "url": "https://www.pedrilho.com.br/p/pizza-brasileira-perdigao-caixa-460g"
+      },
+      "b": {
+        "id": "6aacc067bacdf345ed50a05a",
+        "productId": "4587",
+        "name": "Pizza Brasileira Perdigão Caixa 460g",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 23.09,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:42:44.057Z",
+        "url": "https://www.vilasul.com.br/produto/4587/pizza-brasileira-perdigao-caixa-460g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f7d80958bd41bb669597",
+        "productId": "condicionador-monange-restaura-que-eu-gosto-325ml",
+        "name": "Condicionador Monange Restaura Que Eu Gosto 325Ml",
+        "department": "Perfumaria e Higiene",
+        "priceBasis": "unit",
+        "priceNumber": 8.1,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:38:11.162Z",
+        "url": "https://www.pedrilho.com.br/p/condicionador-monange-restaura-que-eu-gosto-325ml"
+      },
+      "b": {
+        "id": "6aaccc0ebacdf345ed50d811",
+        "productId": "8020",
+        "name": "Condicionador Monange Restaura Que Eu Gosto 325ml",
+        "department": "Perfumaria e higiene",
+        "priceBasis": "unit",
+        "priceNumber": 12.31,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:45:18.931Z",
+        "url": "https://www.vilasul.com.br/produto/8020/condicionador-monange-restaura-que-eu-gosto-325ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1fe15a5adc9938c61c8a6",
+        "productId": "condicionador-pantene-bambu-nutre-cresce-bisnaga-150ml",
+        "name": "Condicionador Pantene Bambu Nutre & Cresce Bisnaga 150ml",
+        "department": "Perfumaria e Higiene",
+        "priceBasis": "unit",
+        "priceNumber": 19.3,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:04:22.975Z",
+        "url": "https://www.pedrilho.com.br/p/condicionador-pantene-bambu-nutre-cresce-bisnaga-150ml"
+      },
+      "b": {
+        "id": "6aad0b77429c642b086c47a2",
+        "productId": "303",
+        "name": "Condicionador Pantene Bambu Nutre & Cresce Bisnaga 150ml",
+        "department": "Perfumaria e higiene",
+        "priceBasis": "unit",
+        "priceNumber": 19.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:03:52.753Z",
+        "url": "https://www.supersanmichel.com.br/produto/303/condicionador-pantene-bambu-nutre-cresce-bisnaga-150ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1fe62a5adc9938c61cb81",
+        "productId": "creme-tratamento-skala-uva-1kg",
+        "name": "Creme Tratamento Skala Uva 1Kg",
+        "department": "Perfumaria e Higiene",
+        "priceBasis": "unit",
+        "priceNumber": 12.89,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:06:06.974Z",
+        "url": "https://www.pedrilho.com.br/p/creme-tratamento-skala-uva-1kg"
+      },
+      "b": {
+        "id": "6aacbf05bacdf345ed509c2e",
+        "productId": "7040",
+        "name": "Creme Tratamento Skala Uva 1kg",
+        "department": "Perfumaria e higiene",
+        "priceBasis": "unit",
+        "priceNumber": 12.99,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:35:56.934Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/7040/creme-tratamento-skala-uva-1kg"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab2066ba5adc9938c622921",
+        "productId": "alimento-para-gatos-adultos-casserole-com-atum-e-salmao-purina-fancy-feast-sache-85g",
+        "name": "Alimento para Gatos Adultos Casserole com Atum e Salmão Purina Fancy Feast Sachê 85g",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 3.69,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:39:56.862Z",
+        "url": "https://www.pedrilho.com.br/p/alimento-para-gatos-adultos-casserole-com-atum-e-salmao-purina-fancy-feast-sache-85g"
+      },
+      "b": {
+        "id": "6aad0f45429c642b086c5db5",
+        "productId": "5319",
+        "name": "Alimento Para Gatos Adultos Casserole Com Atum E Salmão Purina Fancy Feast Sachê 85g",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 5.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:16:09.548Z",
+        "url": "https://www.supersanmichel.com.br/produto/5319/alimento-para-gatos-adultos-casserole-com-atum-e-salmao-purina-fancy-feast-sache-85g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab20676a5adc9938c622954",
+        "productId": "alimento-para-gatos-adultos-frango-ao-molho-kitekat-sache-70g",
+        "name": "Alimento para Gatos Adultos Frango ao Molho Kitekat Sachê 70g",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 2.79,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:39:56.862Z",
+        "url": "https://www.pedrilho.com.br/p/alimento-para-gatos-adultos-frango-ao-molho-kitekat-sache-70g"
+      },
+      "b": {
+        "id": "6aad0f51429c642b086c5df5",
+        "productId": "2332",
+        "name": "Alimento Para Gatos Adultos Frango Ao Molho Kitekat Sachê 70g",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 3.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:16:09.548Z",
+        "url": "https://www.supersanmichel.com.br/produto/2332/alimento-para-gatos-adultos-frango-ao-molho-kitekat-sache-70g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab20708a5adc9938c622c6e",
+        "productId": "amaciante-de-roupa-concentrado-frescor-da-primavera-downy-frasco-1l",
+        "name": "Amaciante de Roupa Concentrado Frescor da Primavera Downy Frasco 1l",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 25.2,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:44:01.305Z",
+        "url": "https://www.pedrilho.com.br/p/amaciante-de-roupa-concentrado-frescor-da-primavera-downy-frasco-1l"
+      },
+      "b": {
+        "id": "6aad087c429c642b086c2c7e",
+        "productId": "5868",
+        "name": "Amaciante De Roupa Concentrado Frescor Da Primavera Downy Frasco 1l",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 19.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:51:33.511Z",
+        "url": "https://www.supersanmichel.com.br/produto/5868/amaciante-de-roupa-concentrado-frescor-da-primavera-downy-frasco-1l"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab20750a5adc9938c622d11",
+        "productId": "amaciante-de-roupa-concentrado-agua-fresca-downy-frasco-500ml",
+        "name": "Amaciante de Roupa Concentrado Água Fresca Downy Frasco 500ml",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 12.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:44:01.305Z",
+        "url": "https://www.pedrilho.com.br/p/amaciante-de-roupa-concentrado-agua-fresca-downy-frasco-500ml"
+      },
+      "b": {
+        "id": "6aad08ed429c642b086c2f42",
+        "productId": "1830",
+        "name": "Amaciante De Roupa Concentrado Água Fresca Downy Frasco 500ml",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 12.5,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:51:33.511Z",
+        "url": "https://www.supersanmichel.com.br/produto/1830/amaciante-de-roupa-concentrado-agua-fresca-downy-frasco-500ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab208e7a5adc9938c623b9c",
+        "productId": "limpa-vidro-liquido-cif-squeeze-500ml",
+        "name": "Limpa-Vidro Líquido Cif Squeeze 500ml",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 15.49,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:52:45.542Z",
+        "url": "https://www.pedrilho.com.br/p/limpa-vidro-liquido-cif-squeeze-500ml"
+      },
+      "b": {
+        "id": "6aacd45bbacdf345ed51035e",
+        "productId": "8043",
+        "name": "Limpa-vidro Líquido Cif Squeeze 500ml",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 19.37,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T08:19:39.316Z",
+        "url": "https://www.vilasul.com.br/produto/8043/limpavidro-liquido-cif-squeeze-500ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aaa115ecffee15836522d14",
+        "productId": "1625",
+        "name": "Salsicha Viena Perdigao Svi 500g",
+        "department": "Carnes",
+        "priceBasis": "unit",
+        "priceNumber": 12.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:14:04.167Z",
+        "url": "https://www.supersanmichel.com.br/produto/1625/salsicha-viena-perdigao-svi-500g"
+      },
+      "b": {
+        "id": "6aaa115dcffee15836522c2c",
+        "productId": "7453",
+        "name": "Salsicha Viena Perdigao Svi 500g",
+        "department": "Carnes",
+        "priceBasis": "unit",
+        "priceNumber": 14.33,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:38:27.768Z",
+        "url": "https://www.vilasul.com.br/produto/7453/salsicha-viena-perdigao-svi-500g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aaa115ecffee15836522d1e",
+        "productId": "5772",
+        "name": "Linguiça Tipo Calabresa Seara 400g",
+        "department": "Carnes",
+        "priceBasis": "unit",
+        "priceNumber": 15.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:14:04.167Z",
+        "url": "https://www.supersanmichel.com.br/produto/5772/linguica-tipo-calabresa-seara-400g"
+      },
+      "b": {
+        "id": "6aacb6a8bacdf345ed50844b",
+        "productId": "1539",
+        "name": "Linguica Tipo Calabresa Seara 400g",
+        "department": "Carnes",
+        "priceBasis": "unit",
+        "priceNumber": 16.99,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:58:06.950Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/1539/linguica-tipo-calabresa-seara-400g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2a6f429c642b086d1e9f",
+        "productId": "leite-quata-desnatado-1l",
+        "name": "Leite Quatá Desnatado 1L",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 6.09,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:12:14.903Z",
+        "url": "https://www.pedrilho.com.br/p/leite-quata-desnatado-1l"
+      },
+      "b": {
+        "id": "6aad0cbc429c642b086c51dc",
+        "productId": "968",
+        "name": "Leite Longa Vida Quata Semidesnatado 1l",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 4.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.789Z",
+        "url": "https://www.supersanmichel.com.br/produto/968/leite-longa-vida-quata-semidesnatado-1l"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad3a3e429c642b086d780d",
+        "productId": "cafe-torrado-e-moido-extraforte-cafe-pacaembu-pacote-500g",
+        "name": "Café Torrado e Moído Extraforte Café Pacaembu Pacote 500g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 29.49,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:19:57.390Z",
+        "url": "https://www.pedrilho.com.br/p/cafe-torrado-e-moido-extraforte-cafe-pacaembu-pacote-500g"
+      },
+      "b": {
+        "id": "6aad0435429c642b086c0c05",
+        "productId": "1525",
+        "name": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 21.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/1525/cafe-torrado-e-moido-tradicional-cafe-pacaembu-pacote-500g"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6ab20676a5adc9938c62295e",
+        "productId": "alimento-para-gatos-adultos-carne-ao-molho-kitekat-sache-70g",
+        "name": "Alimento para Gatos Adultos Carne ao Molho Kitekat Sachê 70g",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 2.79,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:39:56.862Z",
+        "url": "https://www.pedrilho.com.br/p/alimento-para-gatos-adultos-carne-ao-molho-kitekat-sache-70g"
+      },
+      "b": {
+        "id": "6aad0f51429c642b086c5df5",
+        "productId": "2332",
+        "name": "Alimento Para Gatos Adultos Frango Ao Molho Kitekat Sachê 70g",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 3.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:16:09.548Z",
+        "url": "https://www.supersanmichel.com.br/produto/2332/alimento-para-gatos-adultos-frango-ao-molho-kitekat-sache-70g"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6ab20708a5adc9938c622c6e",
+        "productId": "amaciante-de-roupa-concentrado-frescor-da-primavera-downy-frasco-1l",
+        "name": "Amaciante de Roupa Concentrado Frescor da Primavera Downy Frasco 1l",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 25.2,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:44:01.305Z",
+        "url": "https://www.pedrilho.com.br/p/amaciante-de-roupa-concentrado-frescor-da-primavera-downy-frasco-1l"
+      },
+      "b": {
+        "id": "6aad08ed429c642b086c2f42",
+        "productId": "1830",
+        "name": "Amaciante De Roupa Concentrado Água Fresca Downy Frasco 500ml",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 12.5,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:51:33.511Z",
+        "url": "https://www.supersanmichel.com.br/produto/1830/amaciante-de-roupa-concentrado-agua-fresca-downy-frasco-500ml"
+      },
+      "expected": "none"
+    },
+    {
+      "a": {
+        "id": "6ab20490a5adc9938c621626",
+        "productId": "sabonete-dove-90g-pele-sensivel",
+        "name": "Sabonete Dove 90g Pele Sensível",
+        "department": "Perfumaria e Higiene",
+        "priceBasis": "unit",
+        "priceNumber": 5.59,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T04:32:05.070Z",
+        "url": "https://www.pedrilho.com.br/p/sabonete-dove-90g-pele-sensivel"
+      },
+      "b": {
+        "id": "6aaccb10bacdf345ed50d245",
+        "productId": "2581",
+        "name": "Sabonete Dove Branco Original 90g",
+        "department": "Perfumaria e higiene",
+        "priceBasis": "unit",
+        "priceNumber": 6.04,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:45:18.930Z",
+        "url": "https://www.vilasul.com.br/produto/2581/sabonete-dove-branco-original-90g"
+      },
+      "expected": "none"
+    },
+    {
+      "a": {
+        "id": "6ab1f7d80958bd41bb669597",
+        "productId": "condicionador-monange-restaura-que-eu-gosto-325ml",
+        "name": "Condicionador Monange Restaura Que Eu Gosto 325Ml",
+        "department": "Perfumaria e Higiene",
+        "priceBasis": "unit",
+        "priceNumber": 8.1,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-22T03:38:11.162Z",
+        "url": "https://www.pedrilho.com.br/p/condicionador-monange-restaura-que-eu-gosto-325ml"
+      },
+      "b": {
+        "id": "6aaccb27bacdf345ed50d2ea",
+        "productId": "3289",
+        "name": "Condicionador Monange Boost Crescimento 325ml",
+        "department": "Perfumaria e higiene",
+        "priceBasis": "unit",
+        "priceNumber": 12.31,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:45:18.930Z",
+        "url": "https://www.vilasul.com.br/produto/3289/condicionador-monange-boost-crescimento-325ml"
+      },
+      "expected": "none"
+    },
+    {
+      "a": {
+        "id": "6aad3ed2429c642b086d9369",
+        "productId": "oleo-composto-faisao-lata-200ml",
+        "name": "Óleo Composto Faisão Lata 200ml",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:39:04.016Z",
+        "url": "https://www.pedrilho.com.br/p/oleo-composto-faisao-lata-200ml"
+      },
+      "b": {
+        "id": "6aacbbc6bacdf345ed5091be",
+        "productId": "5212",
+        "name": "Oleo Composto Faisao Lata 500ml",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 21.9,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:24:36.560Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/5212/oleo-composto-faisao-lata-500ml"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad3424429c642b086d482b",
+        "productId": "refrigerante-coca-cola-lata-220ml",
+        "name": "Refrigerante Coca-Cola Lata 220ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 2.75,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:55:48.730Z",
+        "url": "https://www.pedrilho.com.br/p/refrigerante-coca-cola-lata-220ml"
+      },
+      "b": {
+        "id": "6aacb276bacdf345ed507af4",
+        "productId": "1252",
+        "name": "Refrigerante Coca Cola Lata 350ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 3.99,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:44:34.827Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/1252/refrigerante-coca-cola-lata-350ml"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad343e429c642b086d49e4",
+        "productId": "refrigerante-fanta-uva-15l",
+        "name": "Refrigerante FANTA Uva 1,5L",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 6.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:55:48.730Z",
+        "url": "https://www.pedrilho.com.br/p/refrigerante-fanta-uva-15l"
+      },
+      "b": {
+        "id": "6aad0642429c642b086c1b92",
+        "productId": "760",
+        "name": "Refrigerante Fanta Uva 600ml",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 5.49,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:43:29.922Z",
+        "url": "https://www.supersanmichel.com.br/produto/760/refrigerante-fanta-uva-600ml"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad04eb429c642b086c12c3",
+        "productId": "3552",
+        "name": "Nutella Ferrero 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 24.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/3552/nutella-ferrero-350g"
+      },
+      "b": {
+        "id": "6a8e6c9f529825a44b93478e",
+        "productId": "5906",
+        "name": "Nutella Ferrero 140g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 12.99,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:18:40.808Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/5906/nutella-ferrero-140g"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad0594429c642b086c171f",
+        "productId": "8103",
+        "name": "Achoc Em Po Nescau 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/8103/achoc-em-po-nescau-350g"
+      },
+      "b": {
+        "id": "6aacc9a3bacdf345ed50cc80",
+        "productId": "28060",
+        "name": "Achoc.nescau Po Cilindro 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 11.86,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:22:49.454Z",
+        "url": "https://www.vilasul.com.br/produto/28060/achocnescau-po-cilindro-350g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad0594429c642b086c171f",
+        "productId": "8103",
+        "name": "Achoc Em Po Nescau 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/8103/achoc-em-po-nescau-350g"
+      },
+      "b": {
+        "id": "6aad15f7429c642b086c90e5",
+        "productId": "28060",
+        "name": "Achoc.nescau Po Cilindro 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 10.59,
+        "gtin": null,
+        "supermercado": "vn",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:47:11.038Z",
+        "url": "https://www.vnautosservico.com.br/produto/28060/achocnescau-po-cilindro-350g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad0594429c642b086c171f",
+        "productId": "8103",
+        "name": "Achoc Em Po Nescau 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/8103/achoc-em-po-nescau-350g"
+      },
+      "b": {
+        "id": "6aacbb41bacdf345ed509048",
+        "productId": "7104",
+        "name": "Achocolatado Em Pó Nescau Lata 350gr",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 12.59,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:18:40.808Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/7104/achocolatado-em-po-nescau-lata-350gr"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad0594429c642b086c171f",
+        "productId": "8103",
+        "name": "Achoc Em Po Nescau 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/8103/achoc-em-po-nescau-350g"
+      },
+      "b": {
+        "id": "6aacc97fbacdf345ed50cb6b",
+        "productId": "25756",
+        "name": "Achoc.nescau 350g 32% Menos Acuc.",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 17.35,
+        "gtin": null,
+        "supermercado": "vilasul",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T05:22:49.454Z",
+        "url": "https://www.vilasul.com.br/produto/25756/achocnescau-350g-32-menos-acuc"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad0594429c642b086c171f",
+        "productId": "8103",
+        "name": "Achoc Em Po Nescau 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/8103/achoc-em-po-nescau-350g"
+      },
+      "b": {
+        "id": "6aad36e3429c642b086d61e2",
+        "productId": "achocolatado-po-nescau-lata-200g",
+        "name": "Achocolatado Pó Nescau Lata 200g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 5.99,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:06:12.386Z",
+        "url": "https://www.pedrilho.com.br/p/achocolatado-po-nescau-lata-200g"
+      },
+      "expected": "none"
+    },
+    {
+      "a": {
+        "id": "6aad0594429c642b086c171f",
+        "productId": "8103",
+        "name": "Achoc Em Po Nescau 350g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/8103/achoc-em-po-nescau-350g"
+      },
+      "b": {
+        "id": "6aad36cc429c642b086d60c3",
+        "productId": "achocolatado-po-nescau-menos-acucar-lata-350g",
+        "name": "Achocolatado Pó Nescau Menos Açúcar Lata 350g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 16.3,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T13:06:12.385Z",
+        "url": "https://www.pedrilho.com.br/p/achocolatado-po-nescau-menos-acucar-lata-350g"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad30c2429c642b086d2d56",
+        "productId": "bebida-a-base-de-soja-pessego-ades-caixa-1l",
+        "name": "Bebida à Base de Soja Pêssego Ades Caixa 1l",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 7.79,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:39:06.440Z",
+        "url": "https://www.pedrilho.com.br/p/bebida-a-base-de-soja-pessego-ades-caixa-1l"
+      },
+      "b": {
+        "id": "6aad06f4429c642b086c20e7",
+        "productId": "297",
+        "name": "Bebida Á Base De Soja Ades Pessego 1l",
+        "department": "Bebidas",
+        "priceBasis": "unit",
+        "priceNumber": 8.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:43:29.922Z",
+        "url": "https://www.supersanmichel.com.br/produto/297/bebida-a-base-de-soja-ades-pessego-1l"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad36cc429c642b086d60a7",
+        "productId": "achocolatado-po-original-toddy-pote-370g",
+        "name": "Achocolatado Pó Original Toddy Pote 370g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 11.2,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:06:12.385Z",
+        "url": "https://www.pedrilho.com.br/p/achocolatado-po-original-toddy-pote-370g"
+      },
+      "b": {
+        "id": "6aad0428429c642b086c0bb5",
+        "productId": "2772",
+        "name": "Achocolatado Toddy Po Original 370g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 10.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/2772/achocolatado-toddy-po-original-370g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad3e7a429c642b086d900d",
+        "productId": "molho-de-tomate-tradicional-fugini-sache-300g",
+        "name": "Molho de Tomate Tradicional Fugini Sachê 300g",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 1.95,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:38:12.993Z",
+        "url": "https://www.pedrilho.com.br/p/molho-de-tomate-tradicional-fugini-sache-300g"
+      },
+      "b": {
+        "id": "6a8e6c9f529825a44b9347c0",
+        "productId": "6021",
+        "name": "Molho De Tomate Fugini Tradicional 300gr",
+        "department": "Mercearia",
+        "priceBasis": "unit",
+        "priceNumber": 1.99,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T04:24:36.559Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/6021/molho-de-tomate-fugini-tradicional-300gr"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad450b429c642b086dbd5f",
+        "productId": "chocolate-ao-leite-lacta-pacote-80g",
+        "name": "Chocolate ao Leite Lacta Pacote 80g",
+        "department": "Biscoitos e Chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 9.95,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T14:10:44.057Z",
+        "url": "https://www.pedrilho.com.br/p/chocolate-ao-leite-lacta-pacote-80g"
+      },
+      "b": {
+        "id": "6aacb4c7bacdf345ed507f45",
+        "productId": "5397",
+        "name": "Chocolate Lacta Ao Leite 80gr",
+        "department": "Biscoitos e chocolates",
+        "priceBasis": "unit",
+        "priceNumber": 9.98,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:56:49.200Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/5397/chocolate-lacta-ao-leite-80gr"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f5f20958bd41bb6688eb",
+        "productId": "sorvete-napolitano-kibon-cremosissimo-pote-15l",
+        "name": "Sorvete Napolitano Kibon Cremosíssimo Pote 1,5l",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 27.9,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-22T03:31:03.191Z",
+        "url": "https://www.pedrilho.com.br/p/sorvete-napolitano-kibon-cremosissimo-pote-15l"
+      },
+      "b": {
+        "id": "6aad0e0d429c642b086c59d9",
+        "productId": "2749",
+        "name": "Sorvete Kibon Cremosíssimo Napolitano 1,5l",
+        "department": "Congelados",
+        "priceBasis": "unit",
+        "priceNumber": 31.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:13:42.434Z",
+        "url": "https://www.supersanmichel.com.br/produto/2749/sorvete-kibon-cremosissimo-napolitano-15l"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab2079ea5adc9938c622f64",
+        "productId": "desinfetante-lavanda-candura-frasco-2l",
+        "name": "Desinfetante Lavanda Candura Frasco 2l",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 5.69,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-22T04:45:56.645Z",
+        "url": "https://www.pedrilho.com.br/p/desinfetante-lavanda-candura-frasco-2l"
+      },
+      "b": {
+        "id": "6aad0870429c642b086c2bd5",
+        "productId": "5091",
+        "name": "Desinfetante Candura 2lt Lavanda",
+        "department": "Limpeza",
+        "priceBasis": "unit",
+        "priceNumber": 6.89,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:51:33.511Z",
+        "url": "https://www.supersanmichel.com.br/produto/5091/desinfetante-candura-2lt-lavanda"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad0f5e429c642b086c5e2a",
+        "productId": "89",
+        "name": "Alimento Para Gatos Friskies 85g Atum Ao Molho",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 2.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:16:09.548Z",
+        "url": "https://www.supersanmichel.com.br/produto/89/alimento-para-gatos-friskies-85g-atum-ao-molho"
+      },
+      "b": {
+        "id": "6aacb3cbbacdf345ed507d61",
+        "productId": "3247",
+        "name": "Alimento Para Gatos Friskies Atum Ao Molho 85gr",
+        "department": "Animais",
+        "priceBasis": "unit",
+        "priceNumber": 3.79,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:45:15.344Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/3247/alimento-para-gatos-friskies-atum-ao-molho-85gr"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6ab1f76b0958bd41bb6691bf",
+        "productId": "creme-para-pentear-seda-liso-perfeito-frasco-300ml",
+        "name": "Creme para Pentear Seda Liso Perfeito Frasco 300ml",
+        "department": "Perfumaria e Higiene",
+        "priceBasis": "unit",
+        "priceNumber": 12.49,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-22T03:38:11.161Z",
+        "url": "https://www.pedrilho.com.br/p/creme-para-pentear-seda-liso-perfeito-frasco-300ml"
+      },
+      "b": {
+        "id": "6aad0a51429c642b086c3b8a",
+        "productId": "4238",
+        "name": "Creme Para Pentear Seda Liso Perfeito 300ml",
+        "department": "Perfumaria e higiene",
+        "priceBasis": "unit",
+        "priceNumber": 10.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:03:52.753Z",
+        "url": "https://www.supersanmichel.com.br/produto/4238/creme-para-pentear-seda-liso-perfeito-300ml"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2a6f429c642b086d1ea7",
+        "productId": "leite-longa-vida-semidesnatado-quata-zero-lactose-1l",
+        "name": "Leite Longa Vida Semidesnatado Quatá Zero Lactose 1L",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 7.45,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:12:14.903Z",
+        "url": "https://www.pedrilho.com.br/p/leite-longa-vida-semidesnatado-quata-zero-lactose-1l"
+      },
+      "b": {
+        "id": "6aad0c95429c642b086c508b",
+        "productId": "1252",
+        "name": "Leite Longa Vida Quata Semidesnatado Zero Lactose 1litro",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 6.9,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.789Z",
+        "url": "https://www.supersanmichel.com.br/produto/1252/leite-longa-vida-quata-semidesnatado-zero-lactose-1litro"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad36cc429c642b086d60b1",
+        "productId": "achocolatado-flocos-crocantes-ovomaltine-pacote-190g",
+        "name": "Achocolatado Flocos Crocantes Ovomaltine Pacote 190g",
+        "department": "Matinais e Sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 15.89,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T13:06:12.385Z",
+        "url": "https://www.pedrilho.com.br/p/achocolatado-flocos-crocantes-ovomaltine-pacote-190g"
+      },
+      "b": {
+        "id": "6aad044d429c642b086c0cf6",
+        "productId": "4118",
+        "name": "Achocolatado Ovomaltine Flocos Crocantes 190g",
+        "department": "Matinais e sobremesas",
+        "priceBasis": "unit",
+        "priceNumber": 19.99,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T09:35:27.473Z",
+        "url": "https://www.supersanmichel.com.br/produto/4118/achocolatado-ovomaltine-flocos-crocantes-190g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aab63861f0a938d66722375",
+        "productId": "iogurte-morango-danoninho-frasco-100g",
+        "name": "Iogurte Morango Danoninho Frasco 100g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 3.29,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:09:00.826Z",
+        "url": "https://www.pedrilho.com.br/p/iogurte-morango-danoninho-frasco-100g"
+      },
+      "b": {
+        "id": "6aad0d49429c642b086c575c",
+        "productId": "5428",
+        "name": "Iogurte Danoninho Morango 100g",
+        "department": "Frios e laticínios",
+        "priceBasis": "unit",
+        "priceNumber": 3.09,
+        "gtin": null,
+        "supermercado": "sanmichel",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T10:09:53.790Z",
+        "url": "https://www.supersanmichel.com.br/produto/5428/iogurte-danoninho-morango-100g"
+      },
+      "expected": "equivalent"
+    },
+    {
+      "a": {
+        "id": "6aad2d4b429c642b086d279a",
+        "productId": "amendoim-torrado-s-sal-junita-400gr",
+        "name": "Amendoim Torrado S/Sal Junita 400Gr",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 12.49,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T12:24:38.912Z",
+        "url": "https://www.pedrilho.com.br/p/amendoim-torrado-s-sal-junita-400gr"
+      },
+      "b": {
+        "id": "6aacb6f7bacdf345ed5084eb",
+        "productId": "2124",
+        "name": "Amendoim Torrado Com Sal Junita 400gr",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 14.9,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:59:22.585Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/2124/amendoim-torrado-com-sal-junita-400gr"
+      },
+      "expected": "similar"
+    },
+    {
+      "a": {
+        "id": "6aad2d61429c642b086d283b",
+        "productId": "amendoim-torrado-c-sal-junita-400gr",
+        "name": "Amendoim Torrado C/Sal Junita 400Gr",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 12.49,
+        "gtin": null,
+        "supermercado": "pedrilho",
+        "disponivel": false,
+        "ultimaAtualizacao": "2026-09-18T12:24:38.912Z",
+        "url": "https://www.pedrilho.com.br/p/amendoim-torrado-c-sal-junita-400gr"
+      },
+      "b": {
+        "id": "6aacb6f7bacdf345ed5084eb",
+        "productId": "2124",
+        "name": "Amendoim Torrado Com Sal Junita 400gr",
+        "department": "Cereais e farináceos",
+        "priceBasis": "unit",
+        "priceNumber": 14.9,
+        "gtin": null,
+        "supermercado": "supervale",
+        "disponivel": true,
+        "ultimaAtualizacao": "2026-09-18T03:59:22.585Z",
+        "url": "https://www.supervalesupermercados.com.br/produto/2124/amendoim-torrado-com-sal-junita-400gr"
+      },
+      "expected": "equivalent"
+    }
+  ]
+}

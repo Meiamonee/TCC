@@ -6,16 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "test": "node --check server.js",
+    "test": "node --check server.js && node --check scheduler.js && node --check services/collectionRunner.js && node --check services/adminAuth.js",
     "scheduler": "node scheduler.js",
     "scheduler:now": "node scheduler.js --run-now",
-    "atualizar": "node scripts/atualizarTodos.js",
-    "atualizar:supervale": "node scripts/atualizarSuperVale.js",
-    "atualizar:fonseca": "node scripts/atualizarFonseca.js",
-    "importar": "node scripts/importSuperVale.js",
-    "importar:supervale": "node scripts/importSuperVale.js",
-    "importar:fonseca": "node scripts/importFonseca.js",
-    "testar": "node scripts/testarComparacao.js"
+    "atualizar": "node scripts/atualizarTodos.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +18,8 @@
     "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
     "mongoose": "^9.0.0",
     "node-cron": "^4.2.1"
   }

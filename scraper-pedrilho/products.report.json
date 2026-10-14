@@ -1,0 +1,350 @@
+{
+  "supermercado": "pedrilho",
+  "complete": true,
+  "categories": [
+    {
+      "name": "Hortifruti",
+      "url": "https://www.pedrilho.com.br/cat/frutas-legumes-e-verduras",
+      "products": 107,
+      "batches": 7,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/frutas-legumes-e-verduras/frutas",
+        "https://www.pedrilho.com.br/sub/frutas-legumes-e-verduras/frutas-secas-e-cristalizadas",
+        "https://www.pedrilho.com.br/sub/frutas-legumes-e-verduras/legumes",
+        "https://www.pedrilho.com.br/sub/frutas-legumes-e-verduras/ovos",
+        "https://www.pedrilho.com.br/sub/frutas-legumes-e-verduras/verduras"
+      ]
+    },
+    {
+      "name": "Carnes",
+      "url": "https://www.pedrilho.com.br/cat/acougue-aves-e-peixaria",
+      "products": 109,
+      "batches": 9,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/aves-e-cortes-resfriados",
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/bacon-e-embutidos",
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/carne-bovina",
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/carne-suina",
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/linguicas",
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/peixes-e-frutos-do-mar",
+        "https://www.pedrilho.com.br/sub/acougue-aves-e-peixaria/salsichas"
+      ]
+    },
+    {
+      "name": "Frios e Laticínios",
+      "url": "https://www.pedrilho.com.br/cat/laticinios",
+      "products": 486,
+      "batches": 30,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/laticinios/iogurtes-e-bebidas-lacteas",
+        "https://www.pedrilho.com.br/sub/laticinios/leite-fermentado",
+        "https://www.pedrilho.com.br/sub/laticinios/leites",
+        "https://www.pedrilho.com.br/sub/laticinios/manteigas",
+        "https://www.pedrilho.com.br/sub/laticinios/margarina-e-gordura-vegetal",
+        "https://www.pedrilho.com.br/sub/laticinios/massa-fresca",
+        "https://www.pedrilho.com.br/sub/laticinios/mortadela-e-salame",
+        "https://www.pedrilho.com.br/sub/laticinios/petit-suisse",
+        "https://www.pedrilho.com.br/sub/laticinios/presunto-e-derivados",
+        "https://www.pedrilho.com.br/sub/laticinios/queijos",
+        "https://www.pedrilho.com.br/sub/laticinios/requeijao",
+        "https://www.pedrilho.com.br/sub/laticinios/sobremesa-cremosa"
+      ]
+    },
+    {
+      "name": "Cereais e Farináceos",
+      "url": "https://www.pedrilho.com.br/cat/alimentos-basicos",
+      "products": 199,
+      "batches": 17,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/amendoim-e-canjica",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/arroz",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/farinha-de-mandioca-e-derivados",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/farinha-de-rosca-e-empanar",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/farinha-de-trigo-e-cia",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/farinha-e-creme-de-milho",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/feijao",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/fuba-e-canjiquinha",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/graos-e-sementes-especiais",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/milho-pipoca",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/polvilho",
+        "https://www.pedrilho.com.br/sub/alimentos-basicos/trigo-para-quibe-e-grao-de-bico"
+      ]
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.pedrilho.com.br/cat/bebidas-alcoolicas",
+      "products": 1148,
+      "batches": 65,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/aguardente-e-cachaca",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/bebida-a-base-de-soja",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/cerveja-importada-e-especial",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/cervejas",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/conhaque-e-licor",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/drink-e-rum",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/energetico-e-ice",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/isotonico-e-hidrotonico",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/refresco-em-po",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/refrigerantes",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/suco-e-bebida-pronta",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/vinhos",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/vodka-e-whisky",
+        "https://www.pedrilho.com.br/sub/bebidas-alcoolicas/agua-mineral-e-agua-de-coco"
+      ]
+    },
+    {
+      "name": "Matinais e Sobremesas",
+      "url": "https://www.pedrilho.com.br/cat/matinais",
+      "products": 1140,
+      "batches": 66,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/matinais/achocolatados-em-po",
+        "https://www.pedrilho.com.br/sub/matinais/adocantes",
+        "https://www.pedrilho.com.br/sub/matinais/alimento-infantil",
+        "https://www.pedrilho.com.br/sub/matinais/aveia-e-mingau",
+        "https://www.pedrilho.com.br/sub/matinais/acucar",
+        "https://www.pedrilho.com.br/sub/matinais/barra-de-cereal",
+        "https://www.pedrilho.com.br/sub/matinais/biscoitos",
+        "https://www.pedrilho.com.br/sub/matinais/cafes-e-cappuccino",
+        "https://www.pedrilho.com.br/sub/matinais/chas",
+        "https://www.pedrilho.com.br/sub/matinais/cobertura",
+        "https://www.pedrilho.com.br/sub/matinais/derivados-de-coco",
+        "https://www.pedrilho.com.br/sub/matinais/doce-e-geleia",
+        "https://www.pedrilho.com.br/sub/matinais/fermento",
+        "https://www.pedrilho.com.br/sub/matinais/filtro-cafe-e-coador",
+        "https://www.pedrilho.com.br/sub/matinais/gelatina-e-sobremesa-em-po",
+        "https://www.pedrilho.com.br/sub/matinais/leite-condensado-e-creme-de-leite",
+        "https://www.pedrilho.com.br/sub/matinais/leites-em-po",
+        "https://www.pedrilho.com.br/sub/matinais/mistura-pronta",
+        "https://www.pedrilho.com.br/sub/matinais/suplemento-alimentar",
+        "https://www.pedrilho.com.br/sub/matinais/torradas"
+      ]
+    },
+    {
+      "name": "Mercearia",
+      "url": "https://www.pedrilho.com.br/cat/mercearia",
+      "products": 818,
+      "batches": 51,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/mercearia/atomatado",
+        "https://www.pedrilho.com.br/sub/mercearia/azeite-e-oleo-composto",
+        "https://www.pedrilho.com.br/sub/mercearia/azeitonas",
+        "https://www.pedrilho.com.br/sub/mercearia/condimento",
+        "https://www.pedrilho.com.br/sub/mercearia/enlatados-e-conservas",
+        "https://www.pedrilho.com.br/sub/mercearia/ketchup-e-mostarda",
+        "https://www.pedrilho.com.br/sub/mercearia/lasanha-e-grano-duro",
+        "https://www.pedrilho.com.br/sub/mercearia/macarrao-instantaneo",
+        "https://www.pedrilho.com.br/sub/mercearia/macarrao-integral-e-soja",
+        "https://www.pedrilho.com.br/sub/mercearia/macarrao-semola",
+        "https://www.pedrilho.com.br/sub/mercearia/macarrao-com-ovos",
+        "https://www.pedrilho.com.br/sub/mercearia/macarrao-e-massa-especial",
+        "https://www.pedrilho.com.br/sub/mercearia/maionese-e-batata-palha",
+        "https://www.pedrilho.com.br/sub/mercearia/molho-especial",
+        "https://www.pedrilho.com.br/sub/mercearia/palmito-e-champignon",
+        "https://www.pedrilho.com.br/sub/mercearia/sardinha-atum-e-cia",
+        "https://www.pedrilho.com.br/sub/mercearia/sopas-e-creme",
+        "https://www.pedrilho.com.br/sub/mercearia/tempero-e-caldo",
+        "https://www.pedrilho.com.br/sub/mercearia/vinagre-e-agrin",
+        "https://www.pedrilho.com.br/sub/mercearia/oleo"
+      ]
+    },
+    {
+      "name": "Biscoitos e Chocolates",
+      "url": "https://www.pedrilho.com.br/cat/biscoitos-e-chocolates",
+      "products": 1069,
+      "batches": 57,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/balas-chicletes-e-afins",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/barra-de-chocolate",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/biscoito-doce",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/bombom",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/lanche",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/maizena",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/recheado",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/salgadinho",
+        "https://www.pedrilho.com.br/sub/biscoitos-e-chocolates/wafer"
+      ]
+    },
+    {
+      "name": "Padaria",
+      "url": "https://www.pedrilho.com.br/cat/padaria",
+      "products": 128,
+      "batches": 9,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/padaria/biscoito-e-pao-de-queijo",
+        "https://www.pedrilho.com.br/sub/padaria/bolos-e-doces",
+        "https://www.pedrilho.com.br/sub/padaria/panetone-e-chocotone",
+        "https://www.pedrilho.com.br/sub/padaria/pao",
+        "https://www.pedrilho.com.br/sub/padaria/pao-de-forma"
+      ]
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.pedrilho.com.br/cat/congelados",
+      "products": 265,
+      "batches": 17,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/congelados/empanados",
+        "https://www.pedrilho.com.br/sub/congelados/gelo",
+        "https://www.pedrilho.com.br/sub/congelados/hamburguer",
+        "https://www.pedrilho.com.br/sub/congelados/lasanha-e-prato-pronto",
+        "https://www.pedrilho.com.br/sub/congelados/pizza",
+        "https://www.pedrilho.com.br/sub/congelados/salgadinho-congelado",
+        "https://www.pedrilho.com.br/sub/congelados/sorvete-e-picole",
+        "https://www.pedrilho.com.br/sub/congelados/vegetal-congelado"
+      ]
+    },
+    {
+      "name": "Perfumaria e Higiene",
+      "url": "https://www.pedrilho.com.br/cat/higiene-e-perfumaria",
+      "products": 1807,
+      "batches": 102,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/absorventes",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/barba-e-depilacao",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/cabelo",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/condicionador",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/creme-para-cabelo",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/creme-para-pele",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/desodorantes",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/escova-dental-e-fio-dental",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/esmalte-e-unha",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/esponja-para-banho-e-touca",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/farmacia",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/fralda-descartavel-e-lenco-umedecido",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/linha-infantil",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/papel-higienico",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/preservativo-e-lubrificante",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/sabonete-liquido",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/sabonetes",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/shampoo",
+        "https://www.pedrilho.com.br/sub/higiene-e-perfumaria/oleo-para-cabelo-e-pele"
+      ]
+    },
+    {
+      "name": "Animais",
+      "url": "https://www.pedrilho.com.br/cat/pet-shop",
+      "products": 104,
+      "batches": 6,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/pet-shop/alimento-para-caes",
+        "https://www.pedrilho.com.br/sub/pet-shop/alimento-para-gatos"
+      ]
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.pedrilho.com.br/cat/lavagem-de-roupas",
+      "products": 986,
+      "batches": 54,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/alvejante-e-sanitaria",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/amaciante-e-cia",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/desinfetante",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/desodorizador",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/detergente-liquido",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/detergente-em-po",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/inseticida-e-raticida",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/la-de-aco-e-esponja",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/multiuso-e-limpador",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/sabao-em-barra-e-liquido",
+        "https://www.pedrilho.com.br/sub/lavagem-de-roupas/alcool-e-removedor"
+      ]
+    },
+    {
+      "name": "Bazar e Utilidades",
+      "url": "https://www.pedrilho.com.br/cat/bazar-e-utilidades",
+      "products": 1097,
+      "batches": 59,
+      "complete": true,
+      "listings": [
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/artigos-para-churrasco",
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/descartaveis",
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/lampadas-e-pilhas",
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/papelaria",
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/produtos-automotivos",
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/utilidades-para-casa",
+        "https://www.pedrilho.com.br/sub/bazar-e-utilidades/utilidades-para-cozinha"
+      ]
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-09-23T16:39:12.143Z",
+  "discoveredDepartments": [
+    {
+      "name": "Hortifruti",
+      "url": "https://www.pedrilho.com.br/cat/frutas-legumes-e-verduras"
+    },
+    {
+      "name": "Carnes",
+      "url": "https://www.pedrilho.com.br/cat/acougue-aves-e-peixaria"
+    },
+    {
+      "name": "Frios e Laticínios",
+      "url": "https://www.pedrilho.com.br/cat/laticinios"
+    },
+    {
+      "name": "Cereais e Farináceos",
+      "url": "https://www.pedrilho.com.br/cat/alimentos-basicos"
+    },
+    {
+      "name": "Bebidas",
+      "url": "https://www.pedrilho.com.br/cat/bebidas-alcoolicas"
+    },
+    {
+      "name": "Matinais e Sobremesas",
+      "url": "https://www.pedrilho.com.br/cat/matinais"
+    },
+    {
+      "name": "Mercearia",
+      "url": "https://www.pedrilho.com.br/cat/mercearia"
+    },
+    {
+      "name": "Biscoitos e Chocolates",
+      "url": "https://www.pedrilho.com.br/cat/biscoitos-e-chocolates"
+    },
+    {
+      "name": "Padaria",
+      "url": "https://www.pedrilho.com.br/cat/padaria"
+    },
+    {
+      "name": "Congelados",
+      "url": "https://www.pedrilho.com.br/cat/congelados"
+    },
+    {
+      "name": "Perfumaria e Higiene",
+      "url": "https://www.pedrilho.com.br/cat/higiene-e-perfumaria"
+    },
+    {
+      "name": "Animais",
+      "url": "https://www.pedrilho.com.br/cat/pet-shop"
+    },
+    {
+      "name": "Limpeza",
+      "url": "https://www.pedrilho.com.br/cat/lavagem-de-roupas"
+    },
+    {
+      "name": "Bazar e Utilidades",
+      "url": "https://www.pedrilho.com.br/cat/bazar-e-utilidades"
+    }
+  ],
+  "store": {
+    "city": "Poços de Caldas",
+    "address": "R. José Augusto de Carvalho, 55"
+  },
+  "products": 9463,
+  "finishedAt": "2026-09-23T17:48:51.110Z",
+  "resumedAcrossDays": false
+}

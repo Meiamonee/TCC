@@ -1,0 +1,37 @@
+{
+  "startedAt": "2026-09-23T16:39:12.137Z",
+  "status": "complete",
+  "mercados": [
+    "pedrilho"
+  ],
+  "resultados": [
+    {
+      "supermercado": "pedrilho",
+      "arquivo": "C:\\Users\\pedro\\Downloads\\TCC-main\\TCC-main\\scraper-pedrilho\\products.json",
+      "encontrados": 9463,
+      "processados": 9463,
+      "novos": 0,
+      "atualizados": 9463,
+      "precosMudaram": 0,
+      "indisponiveis": 0,
+      "erros": 0
+    }
+  ],
+  "errors": [],
+  "progress": {
+    "pedrilho": {
+      "batches": 549,
+      "processed": 9463,
+      "new": 19,
+      "updated": 9444,
+      "lastImportedAt": "2026-09-23T17:48:32.146Z",
+      "canonical": {
+        "products": 9384,
+        "changed": 19
+      },
+      "complete": true
+    }
+  },
+  "currentMarket": "pedrilho",
+  "finishedAt": "2026-09-23T17:49:02.869Z"
+}

@@ -1,0 +1,4232 @@
+{
+  "generatedAt": "2026-09-22T23:43:16.035Z",
+  "summary": {
+    "offers": 32189,
+    "available": 24796,
+    "recognizedBrands": 11110,
+    "unknownBrands": 21079,
+    "brandCoveragePercent": 34.5,
+    "canonicalReferences": 25260,
+    "candidateBuckets": 24004,
+    "sameTitleSeparated": 0,
+    "sameTitleMissingQuantity": 16,
+    "canonicalConflicts": 0,
+    "equivalentWithoutReference": 193
+  },
+  "brandCoverageByCategory": [
+    {
+      "category": "Hortifruti",
+      "offers": 655,
+      "recognized": 7,
+      "coveragePercent": 1.1
+    },
+    {
+      "category": "Bazar e utilidades",
+      "offers": 2481,
+      "recognized": 113,
+      "coveragePercent": 4.6
+    },
+    {
+      "category": "Saude e bem estar",
+      "offers": 462,
+      "recognized": 67,
+      "coveragePercent": 14.5
+    },
+    {
+      "category": "Bebidas",
+      "offers": 3635,
+      "recognized": 727,
+      "coveragePercent": 20
+    },
+    {
+      "category": "Limpeza",
+      "offers": 3552,
+      "recognized": 894,
+      "coveragePercent": 25.2
+    },
+    {
+      "category": "Padaria",
+      "offers": 677,
+      "recognized": 188,
+      "coveragePercent": 27.8
+    },
+    {
+      "category": "Mercearia",
+      "offers": 3835,
+      "recognized": 1239,
+      "coveragePercent": 32.3
+    },
+    {
+      "category": "Biscoitos e chocolates",
+      "offers": 3521,
+      "recognized": 1268,
+      "coveragePercent": 36
+    },
+    {
+      "category": "Carnes",
+      "offers": 680,
+      "recognized": 257,
+      "coveragePercent": 37.8
+    },
+    {
+      "category": "Cereais e farináceos",
+      "offers": 414,
+      "recognized": 173,
+      "coveragePercent": 41.8
+    },
+    {
+      "category": "Frios e laticínios",
+      "offers": 2242,
+      "recognized": 1051,
+      "coveragePercent": 46.9
+    },
+    {
+      "category": "Matinais e sobremesas",
+      "offers": 3144,
+      "recognized": 1520,
+      "coveragePercent": 48.3
+    },
+    {
+      "category": "Perfumaria e higiene",
+      "offers": 5417,
+      "recognized": 2670,
+      "coveragePercent": 49.3
+    },
+    {
+      "category": "Congelados",
+      "offers": 953,
+      "recognized": 549,
+      "coveragePercent": 57.6
+    },
+    {
+      "category": "Animais",
+      "offers": 521,
+      "recognized": 387,
+      "coveragePercent": 74.3
+    }
+  ],
+  "brandSuggestions": [
+    {
+      "candidate": "escova",
+      "occurrences": 161,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Escova Anatômica Bettajeans Noviça",
+        "Escova Longo Alcance Noviça",
+        "Escova para Cabelo Vazada Joy Condor",
+        "Escova para Cabelo Médio ou Grosso Condor Eco"
+      ]
+    },
+    {
+      "candidate": "junita",
+      "occurrences": 161,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Canjica Branca Junita 500Gr",
+        "Amendoim Junita 500Gr",
+        "Amendoim Torrado S/Sal Junita 400Gr",
+        "Amendoim Torrado C/Sal Junita 400Gr"
+      ]
+    },
+    {
+      "candidate": "refil",
+      "occurrences": 153,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Achocolatado Chocolatto Refil 700G",
+        "Adaptador de Garrafa Térmica para filtro Erca Refil",
+        "Realçador de Sabor Umami Ajinomoto Caixa 100g Refil",
+        "Lenços Umedecidos Clin Off 75Un Refil"
+      ]
+    },
+    {
+      "candidate": "extra",
+      "occurrences": 149,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Manteiga Extra com Sal Aviação 100g",
+        "Manteiga Extra com Sal Aviação 200g",
+        "Manteiga Extra com Sal Catupiry 200g",
+        "Cerveja Corona Extra 473ml Lata"
+      ]
+    },
+    {
+      "candidate": "tozzi",
+      "occurrences": 149,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Uva Passa Preta  S/Semente Sache Tozzi 70G",
+        "Ameixa Tozzi 70g Seca Sem Caroço Sachê",
+        "Mix De Frutas 70G Tozzi Sh",
+        "Castanha De Caju 70G Tozzi Sh"
+      ]
+    },
+    {
+      "candidate": "multiuso",
+      "occurrences": 146,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Desinfetante Multiuso Cif + Antibac Squeeze Leve 500ml Pague 425ml",
+        "Desinfetante Multiuso Bactericida Lavanda Búfalo Frasco 2l",
+        "Kit Desinfetante Multiuso Troppinho Pinho 3 Unidades",
+        "Pack Desinfetante Multiuso Cif Ultra Rápido Squeeze 500ml Cada Leve 3 Pague 2 Unidades"
+      ]
+    },
+    {
+      "candidate": "spray",
+      "occurrences": 144,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Hair Spray Extraforte Karina Controle & Volume Frasco 400ml",
+        "Antitranspirante Aerossol Alecrim e Cedro Axe Black 150ml Spray",
+        "Antitranspirante Aerossol Musk Axe 152ml Spray",
+        "Antitranspirante Aerossol Chocolate Axe 150ml Spray"
+      ]
+    },
+    {
+      "candidate": "leve",
+      "occurrences": 141,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Leite Fermentado Parcialmente Desnatado Morango Activia Garrafa Leve 800g Pague 750g",
+        "Leite Fermentado Parcialmente Desnatado Ameixa Activia Garrafa Leve 800g Pague 750g",
+        "Leite Fermentado Parcialmente Desnatado Aveia Activia Garrafa Leve 800g Pague 750g",
+        "Nhoque de Batata Massa Leve Bandeja 500g"
+      ]
+    },
+    {
+      "candidate": "fini",
+      "occurrences": 137,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Guloseimas Fini 15G Beijo de Morango",
+        "Bgel Fini Tubes Gigante Framboesa Citrico 27G",
+        "Bala Fini 15G Tubes Acido Morango",
+        "Bala de Gelatina Fini Minhocas Cítricas Pacote 15g"
+      ]
+    },
+    {
+      "candidate": "porto",
+      "occurrences": 137,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Beb.Porto Rico Licor Coco 940Ml",
+        "Beb.Porto Rico Licor Menta 940Ml",
+        "Biscoito PORTO ALEGRE Champagne 150g",
+        "Azeite Porto Oliva Ex Virgem Vd 500Ml"
+      ]
+    },
+    {
+      "candidate": "reserva",
+      "occurrences": 137,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Carnes",
+        "Congelados",
+        "Frios e laticínios",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Cachaça Envelhecida Ypióca Reserva Garrafa 965ml",
+        "Cerveja 1906 Reserva 355Ml",
+        "Vinho Chileno Tinto Meio Seco Reserva Especial Caballo Cabernet Sauvignon Valle Central Garrafa 750ml",
+        "Geleia Reserva De Minas 240G Goiaba"
+      ]
+    },
+    {
+      "candidate": "frutti",
+      "occurrences": 135,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Coquetel Alcoólico Tutti Frutti Corote Garrafa 500ml",
+        "Refrigerante Tutti Frutti Itubaína Original Garrafa 355ml",
+        "Refrigerante Tutti Frutti Itubaína Retrô Lata 350ml",
+        "Refrigerante Tutti Frutti Itubaína Original Garrafa 500ml"
+      ]
+    },
+    {
+      "candidate": "minas",
+      "occurrences": 135,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria"
+      ],
+      "examples": [
+        "Queijo Minas Padrão Bandeira Lua",
+        "Queijo Fresco Artesanal Tipo Minas",
+        "Queijo Minas Meia Cura Canastra",
+        "Açucar Cristal De Minas 2Kg"
+      ]
+    },
+    {
+      "candidate": "lux",
+      "occurrences": 134,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Carnes",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Sabonete Líquido Rosas Francesas Lux Botanicals Sachê 200ml Refil Econômico",
+        "Sabonete Líquido Gardênia e Óleo de Amêndoas Lux Botanicals Sachê 200ml Refil Econômico",
+        "Sabonete Líquido Buquê de Jasmim Lux Botanicals Sachê 200ml Refil Econômico",
+        "Sabonete Líquido Lavanda Lux Botanicals Sachê 200ml Refil Econômico"
+      ]
+    },
+    {
+      "candidate": "vidro",
+      "occurrences": 134,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Vodka Bigloff Vidro 870ml Tradicional",
+        "Sopinha Carne, Legumes e Mandioquinha Naturnes Vidro 115g",
+        "Sopinha Macarrão, Carne e Legumes Naturnes Vidro 115g",
+        "Papinha Frutas Sortidas Naturnes Vidro 120g"
+      ]
+    },
+    {
+      "candidate": "super",
+      "occurrences": 133,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Cereais e farináceos",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+        "Arroz Polido Tipo 1 Super Ecco Pacote 2kg",
+        "Farinha de Trigo Tipo 1 Coamo Super Premium Pacote 1kg",
+        "Água de Coco Super Caixa 1l"
+      ]
+    },
+    {
+      "candidate": "ice",
+      "occurrences": 128,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Bebida Mista Alcoólica Gaseificada Limão Smirnoff Ice Garrafa 275ml",
+        "Bebida Mista Ice Leev Limão 275ml",
+        "Coquetel Alcoólico Lemon Ice Syn Garrafa 300ml",
+        "Ice Leev Original Maracuja 275Ml"
+      ]
+    },
+    {
+      "candidate": "maionese",
+      "occurrences": 128,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Mercearia"
+      ],
+      "examples": [
+        "Maionese Hellmann's Pote 500g",
+        "Maionese Arisco Pote 500g",
+        "Maionese Hellmanns Supreme 230G",
+        "Maionese Hellmann's Bacon Sinistro squeeze 335g"
+      ]
+    },
+    {
+      "candidate": "seco",
+      "occurrences": 126,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Vinho Brasileiro Tinto Seco Chalise Serra Gaúcha Garrafa 750ml",
+        "Vinho Chileno Branco Meio Seco Reservado Sauvignon Blanc Garrafa 750ml",
+        "Vinho Campino 750Ml Branco Seco",
+        "Vinho Argentino Rosé Meio Seco Toro Centenario Mendoza Garrafa 750ml"
+      ]
+    },
+    {
+      "candidate": "rosa",
+      "occurrences": 124,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Cereais e farináceos",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Pasta Polibras Soft Oficio C/Aba Rosa",
+        "Corante Arcolor Liquido Rosa 10Ml",
+        "Suporte para Filtro de Café Rosa Quartzo Plasútil 103",
+        "Sal Rosa do Himalaia Moído Natural Life Pacote 500g"
+      ]
+    },
+    {
+      "candidate": "esponja",
+      "occurrences": 121,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Frios e laticínios",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Iogurte Batavinho Surpresa Bob Esponja Morango 110G",
+        "Leite Fermentado Desnatado Uva Bob Esponja Batavo Caixa 80g",
+        "Leite Fermentado Desnatado Morango Bob Esponja Batavo Caixa 80g",
+        "Leite Fermentado Desnatado Laranja Bob Esponja Batavo Caixa 80g"
+      ]
+    },
+    {
+      "candidate": "preto",
+      "occurrences": 120,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Cereais e farináceos",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Feijao Preto Du Irineu 1Kg",
+        "Feijao Preto Junita 500G",
+        "Feijão Pronto Bordon 300G Preto  lata",
+        "Chá Preto Ice Tea Limão Leão Zero Garrafa 1,5l"
+      ]
+    },
+    {
+      "candidate": "whey",
+      "occurrences": 120,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Bebida Láctea UHT Chocolate Zero Lactose Verde Campo Natural Whey Lacfree Caixa 250ml",
+        "Bebida Láctea UHT Baunilha Zero Lactose Verde Campo Natural Whey Lacfree Caixa 250ml",
+        "Bebida Láctea Natural Whey 26g Verde Campo Cappuccino 250ML",
+        "Bebida Láctea +Mu Whey Cappuccino 250ml"
+      ]
+    },
+    {
+      "candidate": "limpeza",
+      "occurrences": 118,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Sabonete Barra Limpeza Profunda Albany Antibac Envoltório 85g",
+        "Sabonete Barra Antibacteriano Original Protex Limpeza Profunda Envoltório 200g",
+        "Sabonete Barra Limpeza Profunda Antibacteriano Protex Envoltório 85g",
+        "Shampoo Anticaspa Head & Shoulders Limpeza Eficaz Frasco 200ml"
+      ]
+    },
+    {
+      "candidate": "ralado",
+      "occurrences": 117,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Queijo Parmesão Ralado Galbani 50g",
+        "Queijo Ralado Tropical Nata De Minas 40G",
+        "Queijo Parmesão Ralado Kejão 40G",
+        "Queijo Parm.Ralado Bretuti 50Gr"
+      ]
+    },
+    {
+      "candidate": "bolo",
+      "occurrences": 113,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Matinais e sobremesas",
+        "Padaria",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Barra de Cereal Bolo de Chocolate Nutry Pacote 22g",
+        "Bolo Chocolate Recheio Creme de Avelã Cobertura Chocolate Ana Maria Especial Pacote 42g",
+        "Mistura Bolo Vilma Chocolate 400G",
+        "Bolo Cenoura Recheio Chocolate Ana Maria QD+ Pacote 35g"
+      ]
+    },
+    {
+      "candidate": "dori",
+      "occurrences": 112,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Matinais e sobremesas",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Amendoim Torrado Pimenta Tabasco Dori Pettiz Pacote 110g",
+        "Confeito Granulado Chocolate Dori Pacote 120g",
+        "Bala de Goma Frutas Sortidas Dori Gomets Pacote 200g",
+        "Bala de Goma Frutas Sortidas Jelly Beans Dori Deliket Pacote 150g"
+      ]
+    },
+    {
+      "candidate": "gelatina",
+      "occurrences": 110,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Gelatina em Pó Abacaxi Sol Pacote 25g",
+        "Gelatina Pó APTI Sem Sabor Incolor Sc 24g",
+        "Gelatina em Pó sem Sabor Bretzke Pacote 24g 2 Unidades",
+        "Bala de Gelatina Dip Loko Emoji -12g"
+      ]
+    },
+    {
+      "candidate": "bala",
+      "occurrences": 109,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Bala Fanta Laranja Mentos Pacote 37,5g 14 Unidades",
+        "Bala Framboesa com Creme de Leite Fruit-Tella Pacote 41g",
+        "Bala Morango com Creme de Leite Fruit-Tella Pacote 41g",
+        "Bala Chocolate Butter Toffees Pacote 500g"
+      ]
+    },
+    {
+      "candidate": "comfort",
+      "occurrences": 106,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Amaciante de Roupa Concentrado Frescor Intenso Comfort Frasco 500ml",
+        "Amaciante de Roupa Concentrado Energia Floral Comfort Frasco 500ml",
+        "Amaciante de Roupa Concentrado Puro Cuidado Comfort Frasco Leve 500ml Pague 400ml",
+        "Amaciante de Roupa Brisa Floral Comfort Frasco 1,8l"
+      ]
+    },
+    {
+      "candidate": "lactea",
+      "occurrences": 103,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Frios e laticínios",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Bebida Láctea UHT Chocolate Danette Caixa 200ml",
+        "Bebida Láctea UHT Morango Nesquik Caixa 180ml",
+        "Bebida Láctea UHT Chocolate Toddynho Caixa 200ml",
+        "Bebida Láctea UHT Chocolate Zero Lactose Yopro 15g High Protein Caixa 250ml"
+      ]
+    },
+    {
+      "candidate": "pague",
+      "occurrences": 103,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Frios e laticínios",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Leite Fermentado Parcialmente Desnatado Morango Activia Garrafa Leve 800g Pague 750g",
+        "Leite Fermentado Parcialmente Desnatado Ameixa Activia Garrafa Leve 800g Pague 750g",
+        "Leite Fermentado Parcialmente Desnatado Aveia Activia Garrafa Leve 800g Pague 750g",
+        "Absorvente com Abas Ultra Respirável Suave Sym Premium Pacote 16 Unidades Leve Mais Pague Menos"
+      ]
+    },
+    {
+      "candidate": "macia",
+      "occurrences": 101,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Escova Dental Dentil Carbox Macia com 2",
+        "Escova Dental Dentil Basic Com 3 Unidades Macia",
+        "Escova Dental Macia Condor Plus Cabeça M",
+        "Escova Dental Infantil Macia Dino Condor"
+      ]
+    },
+    {
+      "candidate": "perfume",
+      "occurrences": 100,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Protetor Diário Isacare sem Perfume c/20",
+        "Protetor Diário sem Abas com Perfume Always Pacote 15 Unidades",
+        "Protetor Diário sem Abas com Perfume Always Pacote 40 Unidades Leve Mais Pague Menos",
+        "Protetor Diário sem Abas Ultra Respirável com Perfume Sym Pacote 15 Unidades"
+      ]
+    },
+    {
+      "candidate": "neutro",
+      "occurrences": 95,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Animais",
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Desodorante Creme Antiperspirante Neutro Herbíssimo 55g",
+        "Toalhas Umedecidas Isababy Neutro *Leve 50, Pague 45*",
+        "Papel Higienico Familiar Folha Dupla Neutro 30Mts 12 Rolos",
+        "Papel Higiênico Mili Bianco Neutro 60 Metros 4 Rolos"
+      ]
+    },
+    {
+      "candidate": "pullman",
+      "occurrences": 95,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Matinais e sobremesas",
+        "Padaria"
+      ],
+      "examples": [
+        "Farinha de Rosca Pullman Pacote 500g",
+        "Bolo Laranja Pullman Pacote 250g",
+        "Bolo Baunilha com Gotas de Chocolate Pullman Pacote 250g",
+        "Bolo Chocolate Pullman Pacote 250g"
+      ]
+    },
+    {
+      "candidate": "requeijao",
+      "occurrences": 95,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Congelados",
+        "Frios e laticínios",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Queijo Recheado Com Requeijão/Azeitona",
+        "Requeijão Cremoso Tradicional Pif Paf Ladelli Copo 180g",
+        "Requeijão Cremoso Cheddar Catupiry Squeeze 250g",
+        "Requeijão Cremoso Tradicional Catupiry Copo 200g"
+      ]
+    },
+    {
+      "candidate": "ultra",
+      "occurrences": 95,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza",
+        "Padaria",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Cerveja Imperio Ultra Long Neck 275ml",
+        "Energético Ultra Paradise Zero Açúcar Monster Lata 473ml",
+        "Energético Ultra Fiesta Mango Zero Açúcar Monster Lata 473ml",
+        "Energético Monster Ultra Peachy Keen 473ml"
+      ]
+    },
+    {
+      "candidate": "life",
+      "occurrences": 94,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Granola Natural Life 300g Tradicional Light",
+        "Granola Natural Life Banana e Canela 300g",
+        "granola Natural Life diet 300g",
+        "Suco Goiaba Life 1,7L"
+      ]
+    },
+    {
+      "candidate": "maria",
+      "occurrences": 93,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Bolo Chocolate Recheio Creme de Avelã Cobertura Chocolate Ana Maria Especial Pacote 42g",
+        "Biscoito Maria Aymoré Pacote 200g",
+        "Macarrão de Sêmola Ave Maria Gallo Pacote 500g",
+        "Maionese Maria Sachê 196g"
+      ]
+    },
+    {
+      "candidate": "prato",
+      "occurrences": 91,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Frios e laticínios",
+        "Limpeza"
+      ],
+      "examples": [
+        "Queijo Prato Fatiado",
+        "Prato Descartável TotalPlast 14,8cm 10 Unidades",
+        "Prato Descartável Verde Escuro Forfest  C 10",
+        "Prato Descartável Totalplast 21cm Embalagem com 10 Unidades"
+      ]
+    },
+    {
+      "candidate": "cebola",
+      "occurrences": 90,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria"
+      ],
+      "examples": [
+        "Creme Ricota Bandeira 130 Gr Cebola",
+        "Amendoim Torrado e Salgado Cebola Amíndus Pacote 110g",
+        "Biscoito Troféu Salsa com Cebola 40g",
+        "Biscoito Salgado Club Social cebola com sour cream 141g"
+      ]
+    },
+    {
+      "candidate": "cobertura",
+      "occurrences": 90,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Congelados",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Amendoim Glaceado Crunchers Cobertura Chocolate ao Leite Hershey's Pouch 120g",
+        "Barra de Cereal Morango Cobertura Chocolate Nutry Pacote 22g",
+        "Barra de Cereal Castanhas Cobertura Chocolate ao Leite Allnutri Pacote 25g",
+        "Barra de Cereal Morango, Chia e Quinoa Cobertura Chocolate ao Leite Allnutri Pacote 25g"
+      ]
+    },
+    {
+      "candidate": "gas",
+      "occurrences": 90,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates"
+      ],
+      "examples": [
+        "Agua Daflora S Gas 500 Ml",
+        "Agua Daflora S Gas 1500 Ml",
+        "Água Mineral Sem Gás Petropolitana 510ml",
+        "Água Mineral Natural com Gás São Lourenço Garrafa 1,26l"
+      ]
+    },
+    {
+      "candidate": "maracuja",
+      "occurrences": 90,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Maracujá Azedo",
+        "Iogurte Integral Grego Morango + Maracujá Apreciare Bandeja 540g 6 Unidades",
+        "Aguardente COROTE Maracujá 500Ml",
+        "Cerveja IPA Puro Malte Maracujá Baden Baden Lata 473ml"
+      ]
+    },
+    {
+      "candidate": "cereal",
+      "occurrences": 89,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Iogurte Parcialmente Desnatado Mamão, Maçã, Banana com Cookie de Cereal Neston 3 Cereais Bandeja 130g",
+        "Iogurte Parcialmente Desnatado Morango com Confeito de Cereal Colorido Chamyto Bandeja 130g",
+        "Cereal Infantil Aveia e Ameixa Mucilon Pacote 180g",
+        "Cereal Infantil Aveia, Trigo & Leite Mucilon Pacote 180g"
+      ]
+    },
+    {
+      "candidate": "pilha",
+      "occurrences": 89,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades"
+      ],
+      "examples": [
+        "Pilha Starlux Energy Alcalina AA C/2",
+        "Pack Pilha Alcalina AA Duracell 6 Unidades",
+        "Pilha Starlux Energy Zinco AAA C/2",
+        "Pilha Starlux Energy Palito AAA4"
+      ]
+    },
+    {
+      "candidate": "flor",
+      "occurrences": 88,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Cereais e farináceos",
+        "Congelados",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Couve Flor",
+        "Loção Corporal Deo-Hidratante Flor de Baunilha Paixão Frasco 200ml",
+        "Desodorante Ae Mood My Healt 150ml 72h f Flor Lavanda",
+        "Sabonete Líquido Flor de Cerejeira e Vanilla Farnese Sachê 220ml"
+      ]
+    },
+    {
+      "candidate": "geleia",
+      "occurrences": 88,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Doce Em Pedaco Geleia De Mocoto",
+        "Geleia R.Minas 240G Amora",
+        "Geleia Morango Queensberry Classic Vidro 320g",
+        "Geleia Agridoce Pimenta-Vermelha Queensberry Gourmet Vidro 320g"
+      ]
+    },
+    {
+      "candidate": "tres",
+      "occurrences": 88,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Cereais e farináceos",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Farinha de Trigo Três Coroas 1kg",
+        "Café em Cápsula Torrado e Moído Espresso Pleno Tres Caixa 80g 10 Unidades",
+        "Café com Leite em Cápsula Latte Macchiato Tres Caixa 110g 10 Unidades",
+        "Café em Cápsula Torrado e Moído Espresso Supremo Tres Caixa 80g 10 Unidades"
+      ]
+    },
+    {
+      "candidate": "protecao",
+      "occurrences": 87,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Frios e laticínios",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Absorvente com Abas Extra Suave Intimus Tripla Proteção Pacote 8 Unidades",
+        "Absorvente sem Abas Extra Suave Intimus Tripla Proteção Pacote 8 Unidades",
+        "Protetor Diário sem Abas Carefree Proteção Pacote 15 Unidades",
+        "Absorvente com Abas Seca Intimus Tripla Proteção Pacote 8 Unidades"
+      ]
+    },
+    {
+      "candidate": "trigo",
+      "occurrences": 87,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Farinha de Trigo Tipo 1 Tradicional Coamo Pacote 1kg",
+        "Farinha de Trigo Originale 1Kg Purissima",
+        "Farinha de Trigo Três Coroas 1kg",
+        "Farinha de Trigo Tipo 1 Tradicional Anniela Pacote 1kg"
+      ]
+    },
+    {
+      "candidate": "bom",
+      "occurrences": 86,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Leite Coco Bom Coco 200Ml",
+        "Bisc.Minas Bom Sequilho L Cond 300G",
+        "Máscara Condicionante Coco Bom Kanechom Pote 1kg",
+        "Neutralizador de Odores Cheirinho de Talco Air Wick Bom Ar Frasco 360ml"
+      ]
+    },
+    {
+      "candidate": "lixo",
+      "occurrences": 86,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza"
+      ],
+      "examples": [
+        "Pá de Lixo COA FÁCIL",
+        "Pa Lixo Plastica Click",
+        "Pa P/Lixo Coa Facil Gde.C/Cabo 60Cm",
+        "Pa Lixo Plastico Arqplast"
+      ]
+    },
+    {
+      "candidate": "mini",
+      "occurrences": 86,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Massas Lott Pizza Mini C10Un 230G",
+        "Massa A.Do Sabor 10Un P/Pizza Mini",
+        "Refrigerante Limão Adventure Time Viva Schin Mini Garrafa 250ml",
+        "Refrigerante Uva Viva Schin Mini Garrafa 250ml"
+      ]
+    },
+    {
+      "candidate": "mais",
+      "occurrences": 84,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Água de Coco Esterilizada Mais Coco Caixa 1l",
+        "Coco Ralado Úmido Adoçado Mais Coco Pacote 100g",
+        "Leite de Coco Mais Coco Vidro 200ml",
+        "Choco Wheyfer Mais Mu Chocolate Branco 25g"
+      ]
+    },
+    {
+      "candidate": "rose",
+      "occurrences": 84,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Filtrado Doce Rosé Espuma de Prata Garrafa 660ml",
+        "Água Tônica Rosé Frutas Vermelhas Schweppes Lata 220ml",
+        "Vinho Brasileiro Rosé Suave Chalise Serra Gaúcha Garrafa 750ml",
+        "Vinho Argentino Rosé Meio Seco Toro Centenario Mendoza Garrafa 750ml"
+      ]
+    },
+    {
+      "candidate": "folha",
+      "occurrences": 83,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Hortifruti",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Couve Folha Maço",
+        "Toalha de Papel Folha Dupla Snack Pacote 2 Unidades",
+        "Papel Higienico Familiar Folha Dupla Neutro 30Mts 12 Rolos",
+        "Papel Higienico Mimmo Folha Dupla 30m x 10cm c/12"
+      ]
+    },
+    {
+      "candidate": "menta",
+      "occurrences": 83,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Licor Creme Menta Stock Garrafa 720ml",
+        "Beb.Porto Rico Licor Menta 940Ml",
+        "Coquetel Alcoólico de Menta Corote 500ml",
+        "Bala Halls Menta Pacote 28g"
+      ]
+    },
+    {
+      "candidate": "casa",
+      "occurrences": 82,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria"
+      ],
+      "examples": [
+        "Vinho Brasileiro Casa Geraldo Origens Tinto Cabernet Sauvignon  750ml",
+        "Biscoito Sequilho Tradicional Seven Boys Casa de Vó Pacote 400g",
+        "Biscoito Rosquinha Leite Seven Boys Casa de Vó Pacote 400g",
+        "Bolinho Cenoura Recheio Chocolate Turma da Mônica Casa Suíça Pacote 40g"
+      ]
+    },
+    {
+      "candidate": "multi",
+      "occurrences": 82,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Carnes",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Peixe File De Mapara Multi Fish 800g",
+        "File Merluza Multi Fish Pct 400G",
+        "Multi Fish Tilapia File 400G",
+        "Corante Líquido Multi Festa Azul 10ml"
+      ]
+    },
+    {
+      "candidate": "campo",
+      "occurrences": 81,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Bebida Láctea UHT Chocolate Zero Lactose Verde Campo Natural Whey Lacfree Caixa 250ml",
+        "Bebida Láctea UHT Baunilha Zero Lactose Verde Campo Natural Whey Lacfree Caixa 250ml",
+        "Bebida Láctea Natural Whey 26g Verde Campo Cappuccino 250ML",
+        "Bebida Láctea UHT Caramelo Zero Lactose Verde Campo Natural Whey 250ml"
+      ]
+    },
+    {
+      "candidate": "fanta",
+      "occurrences": 79,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Kit Coca E Fanta  2L",
+        "Refrigerante Laranja Fanta Lata 350ml",
+        "Refrigerante Uva Fanta Garrafa 600ml",
+        "Refrigerante Laranja Fanta Garrafa 200ml"
+      ]
+    },
+    {
+      "candidate": "cif",
+      "occurrences": 78,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Desinfetante Multiuso Cif + Antibac Squeeze Leve 500ml Pague 425ml",
+        "Limpador Banheiro Cif Sachê 450ml Refil Econômico",
+        "Pack Desinfetante Multiuso Cif Ultra Rápido Squeeze 500ml Cada Leve 3 Pague 2 Unidades",
+        "Saponáceo Cremoso Multiuso Original Cif Squeeze Leve 450ml Pague 360ml"
+      ]
+    },
+    {
+      "candidate": "difusor",
+      "occurrences": 78,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Difusor de Aromas Frutas e Flores Vibrantes Glade Caixa 100ml",
+        "Difusor de Aromas Lembranças de Infância Glade Caixa 100ml",
+        "Difusor de Aromas Lavanda Glade Caixa 100ml",
+        "Difusor Ambiente Secar 100ml Baunilha"
+      ]
+    },
+    {
+      "candidate": "infantil",
+      "occurrences": 77,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Cereal Infantil Aveia e Ameixa Mucilon Pacote 180g",
+        "Cereal Infantil Aveia, Trigo & Leite Mucilon Pacote 180g",
+        "Cereal Infantil Arroz & Aveia Mucilon Pacote 230g Grátis 20g",
+        "Cereal Infantil Arroz Mucilon Pacote 230g"
+      ]
+    },
+    {
+      "candidate": "ouro",
+      "occurrences": 77,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Aguardente Composta Ouro 51 Garrafa 965ml",
+        "Cachaça Ouro Cabaré Garrafa 700ml",
+        "Cachaça Ouro Ypióca Garrafa 965ml",
+        "Rum Brasileiro Carta Ouro Montilla Garrafa 1l"
+      ]
+    },
+    {
+      "candidate": "sauvignon",
+      "occurrences": 77,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Vinho Chileno Branco Meio Seco Reservado Sauvignon Blanc Garrafa 750ml",
+        "Vinho Chileno Tinto Meio Seco Reservado Cabernet Sauvignon Valle Central Garrafa 750ml",
+        "Vinho Chileno Tinto Meio Seco Reservado Santa Carolina Cabernet Sauvignon Merlot Valle Central Garrafa 750ml",
+        "Vinho Chileno Tinto Meio Seco Reserva Especial Caballo Cabernet Sauvignon Valle Central Garrafa 750ml"
+      ]
+    },
+    {
+      "candidate": "vinagre",
+      "occurrences": 77,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Mercearia"
+      ],
+      "examples": [
+        "Vinagre De Álcool Fortaleza 750ml",
+        "Vinagre de Álcool Castelo Frasco 750ml",
+        "Vinagre de Vinho Tinto Castelo Frasco 750ml",
+        "Vinagre de Álcool Colorido Toscano Frasco 750ml"
+      ]
+    },
+    {
+      "candidate": "intimus",
+      "occurrences": 76,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Absorvente com Abas Extra Suave Intimus Tripla Proteção Pacote 8 Unidades",
+        "Absorvente Interno Intimus Médio Caixa 8 Unidades",
+        "Protetor Diário sem Abas Intimus Pacote 14 Unidades",
+        "Absorvente Interno Intimus Mini Caixa 8 Unidades"
+      ]
+    },
+    {
+      "candidate": "plastico",
+      "occurrences": 76,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Porta-Sabonete Líquido Plástico Preto e Prata UZ.",
+        "Balde Plástico Bordô 8l Arqplast",
+        "Pulverizador Plastico Guarany 500ml Borrifador",
+        "Balde Plástico Bordô 20l Arqplast"
+      ]
+    },
+    {
+      "candidate": "pinho",
+      "occurrences": 75,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Desinfetante PINHO TROP Lavanda 1L",
+        "Desinfetante Pinho Trop 500ml Lavanda Frasco",
+        "Desinfetante Pinho Trop 1l",
+        "Desinfetante Uso Geral Antibacteriano Pinho Trop Frasco 500ml"
+      ]
+    },
+    {
+      "candidate": "pizza",
+      "occurrences": 75,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Congelados",
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Padaria"
+      ],
+      "examples": [
+        "Massas Lott Pizza Mini C10Un 230G",
+        "Massa A.Do Sabor 10Un P/Pizza Mini",
+        "Massa A.Do Sabor 280Gr 2Un P/Pizza",
+        "Massas Lott Pizza C 2Un 240G"
+      ]
+    },
+    {
+      "candidate": "chileno",
+      "occurrences": 74,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas"
+      ],
+      "examples": [
+        "Vinho Chileno Branco Meio Seco Reservado Sauvignon Blanc Garrafa 750ml",
+        "Vinho Chileno Branco Doce Reservado Spritzer Moscato Garrafa 750ml",
+        "Vinho Chileno Rosé Suave Reservado Valle Central Garrafa 750ml",
+        "Vinho Chileno Tinto Meio Seco Reservado Cabernet Sauvignon Valle Central Garrafa 750ml"
+      ]
+    },
+    {
+      "candidate": "madeira",
+      "occurrences": 74,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Escova Madeira Multiuso Brilhus",
+        "Limpador para Pisos de Madeira Lavanda & Vanilla Destac Squeeze 750ml",
+        "Fósforo de Segurança Fiat Lux Pinheiro Caixa Madeira 10 Unidades",
+        "Cola Madeira Tekbond 100G"
+      ]
+    },
+    {
+      "candidate": "pessego",
+      "occurrences": 74,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Aguardente Corote Pêssego Garrafa 500ml",
+        "Askov Pessego 900Ml",
+        "Coquetel Alcoólico Pêssego Corote Garrafa 500ml",
+        "Energético Morango e Pêssego das Galáxias Baly Garrafa 2l"
+      ]
+    },
+    {
+      "candidate": "power",
+      "occurrences": 74,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Energético Extra Power Hits Garrafa 1l",
+        "Energético Extra Power Garrafa 2l",
+        "Suplemento Alimentar Uva Plant Power Jungle Low Carb Frasco 500ml",
+        "Suplemento Alimentar Morango e Limão Plant Power Jungle Low Carb Frasco 500ml"
+      ]
+    },
+    {
+      "candidate": "preta",
+      "occurrences": 74,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Limpeza",
+        "Mercearia",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Uva Passa Preta  S/Semente Sache Tozzi 70G",
+        "Uva Passa Preta Siarom 40g",
+        "Azeitona Preta Tozzi 170g Sache",
+        "Azeitona Tozzi Preta Com Caroço Azapa Vidro  200G"
+      ]
+    },
+    {
+      "candidate": "pilsen",
+      "occurrences": 73,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas"
+      ],
+      "examples": [
+        "Cerveja Pilsen Cristal Baden Baden Lata 350ml",
+        "Cerveja Pilsen Antarctica Original Garrafa 600ml",
+        "Cerveja Pilsen Puro Malte Império Lata 350ml",
+        "Cerveja Pilsen Puro Malte Império Lata 269ml"
+      ]
+    },
+    {
+      "candidate": "desinfetante",
+      "occurrences": 71,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Desinfetante Multiuso Cif + Antibac Squeeze Leve 500ml Pague 425ml",
+        "Desinfetante Uso Geral Antibacteriano Pinho Trop Frasco 500ml",
+        "Desinfetante Uso Geral Pinho Silvestre Pinho Bril Plus Squeeze 500ml",
+        "Desinfetante Búfalo Eucalipto 2L"
+      ]
+    },
+    {
+      "candidate": "goma",
+      "occurrences": 71,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Goma de Mascar Mentos Cool White Fresh Mint 8,5g",
+        "Goma Docile 18G Abobora",
+        "Goma de Mascar Menta Verde Zero Açúcar Mentos Pure Fresh Pote 56g 28 Unidades",
+        "Goma de Mascar Spearmint Zero Açúcar Mentos Pure Fresh Envelope 8,5g 5 Unidades"
+      ]
+    },
+    {
+      "candidate": "red",
+      "occurrences": 71,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Coquetel STEMPEL Red 275ml",
+        "Skol Beats 269Ml Red Mix Long Neck",
+        "Bebida Mista Skol Beats Red Mix Lt 269ml",
+        "Coquetel Alcoólico Gaseificado Red Fruits Kislla Ice Garrafa 275ml"
+      ]
+    },
+    {
+      "candidate": "copo",
+      "occurrences": 70,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Frios e laticínios",
+        "Mercearia"
+      ],
+      "examples": [
+        "Iogurte Desnatado Zero Lactose Paulista Copo 170g",
+        "Iogurte Desnatado Frutas Vermelhas, Aveia e Hibisco Zero Lactose Nesfit Copo 150g",
+        "Iogurte Desnatado Morango, Aveia e Baunilha Zero Lactose Nesfit Copo 150g",
+        "Coalhada Parcialmente Desnatada Adoçada com Granola Apreciare Copo 130g"
+      ]
+    },
+    {
+      "candidate": "salada",
+      "occurrences": 70,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Animais",
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Mercearia",
+        "Padaria"
+      ],
+      "examples": [
+        "Bebida Láctea Cooper Rita Salada De Frutas 1LT",
+        "Molho Tozzi para Salada 380G 3 Em 1",
+        "Molho para Salada Limão Liza Squeeze 234ml",
+        "Molho para Salada Rosé Liza Squeeze 234ml"
+      ]
+    },
+    {
+      "candidate": "tampa",
+      "occurrences": 70,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Lasanheira Retangular Vidro com Tampa Vermelha Funda 5l Marinex",
+        "Porta-Escova e Creme Dental com Tampa Rosa Quartzo Plasútil",
+        "Porta-Escova e Creme Dental com Tampa Plasútil Decora",
+        "Porta Escova Com Tampa Nitron"
+      ]
+    },
+    {
+      "candidate": "vodka",
+      "occurrences": 70,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas"
+      ],
+      "examples": [
+        "Vodka 5x Destilada Orloff Garrafa 1l",
+        "Vodka Tridestilada Balalaika Garrafa 1l",
+        "Vodka Destilada Skyy Garrafa 750ml",
+        "Bebida Mista Alcoólica Gaseificada Vodka & Citrus Schweppes Premium Drink Lata 310ml"
+      ]
+    },
+    {
+      "candidate": "tang",
+      "occurrences": 68,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas"
+      ],
+      "examples": [
+        "Refresco em Pó Uva Tang Pacote 18g",
+        "Refresco em Pó Maracujá Tang Pacote 18g",
+        "Refresco em Pó Morango Tang Pacote 18g",
+        "Refresco em Pó Laranja Tang Pacote 18g"
+      ]
+    },
+    {
+      "candidate": "vermelho",
+      "occurrences": 68,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Animais",
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Hortifruti",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Pimentão Vermelho",
+        "Corante Líquido Vermelho Multi Festa",
+        "Kit Coloração Creme 4.66 Vermelho Profundo Beautycolor",
+        "Kit Viagem Dentil Gel Dental+Fio Dental 25M+Escova Dental Vermelho"
+      ]
+    },
+    {
+      "candidate": "fermentado",
+      "occurrences": 67,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Frios e laticínios"
+      ],
+      "examples": [
+        "Leite Fermentado Parcialmente Desnatado Tradicional Actimel Frasco 100g",
+        "Leite Fermentado Tradicional Zero Lactose Activia Shot Diário Frasco 100g",
+        "Leite Fermentado Integral Ameixa Activia Bandeja 340g 4 Unidades",
+        "Leite Fermentado Batavinho Shrek Uva Tp 80g"
+      ]
+    },
+    {
+      "candidate": "baunilha",
+      "occurrences": 66,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Padaria",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Iogurte Desnatado Morango, Aveia e Baunilha Zero Lactose Nesfit Copo 150g",
+        "Iogurte Morango, Aveia e Baunilha Zero Lactose Nesfit Bandeja 720g 8 Unidades Tamanho Família",
+        "Iogurte Desnatado Morango, Aveia e Baunilha Zero Lactose Nesfit Garrafa 850g",
+        "Iogurte Desnatado Morango, Aveia e Baunilha Zero Lactose Nesfit Squeeze 150g"
+      ]
+    },
+    {
+      "candidate": "guarana",
+      "occurrences": 66,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Congelados",
+        "Matinais e sobremesas",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Bebida Mista Xeque Mate - Mate, Rum, Guaraná e Limão 355ml",
+        "Energético Açaí com Guaraná Zero Açúcar TNT Lata 473ml",
+        "Energético TNT Zero Açúcares Açaí com Guaraná Lata 473ml",
+        "Energético Açaí com Guaraná TNT Lata 269ml"
+      ]
+    },
+    {
+      "candidate": "detergente",
+      "occurrences": 65,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza"
+      ],
+      "examples": [
+        "Detergente Sanitário Gel Adesivo com Aplicador Flor de Lavanda Aplik 28g 4 Unidades",
+        "Detergente Sanitario Azulim Pastilha Adesiva Lavanda 3Un",
+        "Detergente Sanitário Gel Adesivo com Aplicador Marine Pato 12g Refil",
+        "Detergente Sanitário Pastilha Adesiva Lavanda Harpic 3 Unidades Embalagem Econômica"
+      ]
+    },
+    {
+      "candidate": "glade",
+      "occurrences": 65,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Odorizador de Ambiente Aerossol Lembranças de Infância Glade Frasco 360ml Spray Oferta Especial",
+        "Odorizador de Ambiente Aerossol Frescor de Águas Florais Glade Frasco 360ml Spray",
+        "Odorizador de Ambiente Aerossol Toque de Maciez Glade Frasco 360ml Oferta Especial",
+        "Odorizador de Ambiente Frescor de Águas Florais Glade Automatic Frasco 269ml Refil"
+      ]
+    },
+    {
+      "candidate": "limpa",
+      "occurrences": 65,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza"
+      ],
+      "examples": [
+        "Limpa Cerâmicas Azulim Citrus 1L",
+        "Limpa Aluminio Inox Azulim 500Ml",
+        "Limpa Porcelanato Lavanda Azulim 750ml",
+        "Essencia Nogueira Casa Limpa 125Ml"
+      ]
+    },
+    {
+      "candidate": "mista",
+      "occurrences": 65,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Congelados"
+      ],
+      "examples": [
+        "Bebida Mista Alcoólica Gaseificada Spritz Schweppes Mixed Garrafa 250ml",
+        "Bebida Mista Alcoólica Gaseificada Limão Smirnoff Ice Garrafa 275ml",
+        "Bebida Mista Ice Leev Limão 275ml",
+        "Bebida Mista Xeque Mate - Mate, Rum, Guaraná e Limão 355ml"
+      ]
+    },
+    {
+      "candidate": "palito",
+      "occurrences": 65,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Biscoito Palito Hipopó Cory Duplo Choco 68g",
+        "Biscoito Palito Cory Torta de Morango - 68g",
+        "Palito P/Picole New Fest 50Un",
+        "Batata Palito Do Chef Tradicional Congelada - 400g"
+      ]
+    },
+    {
+      "candidate": "protex",
+      "occurrences": 64,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Sabonete Líquido Antibacteriano Protex Cream Frasco 250ml",
+        "Sabonete Líquido Antibacteriano Protex Vitamina E Sachê 120ml Refil",
+        "Sabonete Líquido Antibacteriano Erva-Doce Protex Sachê 200ml Refil Embalagem Econômica",
+        "Sabonete Líquido Protex Carvão Detox 250ml"
+      ]
+    },
+    {
+      "candidate": "seca",
+      "occurrences": 64,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Padaria",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Ameixa Tozzi 70g Seca Sem Caroço Sachê",
+        "ameixa seca La Violetera com caroço 200g",
+        "ameixa seca La Violetera com caroço 100g",
+        "Ameixa Seca sem Caroço La Violetera Pacote 100g"
+      ]
+    },
+    {
+      "candidate": "vermelhas",
+      "occurrences": 64,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Iogurte Integral Grego Calda Frutas Vermelhas Apreciare Pote 100g",
+        "Leite Fermentado Integral Quinoa & Frutas Vermelhas Activia Café da Manhã Pote 170g",
+        "Cerveja Golden Ale Canela e Frutas Vermelhas Baden Baden Lata 350ml",
+        "Bebida Mista Alcoólica Frutas Vermelhas Cabaré Ice Garrafa 275ml"
+      ]
+    },
+    {
+      "candidate": "max",
+      "occurrences": 63,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Absorvente Ladysoft Max Protect Cobertura Suave Com Abas Pacote Com 8 Unidades",
+        "Acetona Popy Max Blue 80Ml",
+        "Papel Higiênico MAX PURE Folha Dupla 30mX10cm Com 12 Unidades",
+        "Papel Higiênico MAX PURE Folha Dupla 4 Unidades"
+      ]
+    },
+    {
+      "candidate": "moido",
+      "occurrences": 63,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Carnes",
+        "Cereais e farináceos",
+        "Congelados",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Amendoim Pacha Torrado Moido 500GR",
+        "Café Torrado e Moído Tradicional Evolutto Pacote 500g",
+        "Café Torrado e Moído Fort Pacote 500g",
+        "Café em Cápsula Torrado e Moído Espresso Onyx L'or Caixa 52g 10 Unidades"
+      ]
+    },
+    {
+      "candidate": "pano",
+      "occurrences": 62,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Coador Cafe Novo Mundo Pano Tam G C1",
+        "Pano Umedecido Banheiro Pinho Esfrebom Wipes Pacote 20 Unidades",
+        "Pano Multiuso Alta Absorção Azul Esfrebom 5 Unidades",
+        "Pano Multiuso Amarelo Alklin 2 Unidades"
+      ]
+    },
+    {
+      "candidate": "palmito",
+      "occurrences": 61,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Mercearia"
+      ],
+      "examples": [
+        "Palmito Tozzi Acai Inteiro Vd 300G",
+        "Palmito Pupunha em Conserva Inteiro Tío Paco Vidro 300g",
+        "Palmito Pupunha em Conserva Picado Tío Paco Vidro 300g",
+        "Palmito Açaí em Conserva Inteiro Cristalina Vidro 300g"
+      ]
+    },
+    {
+      "candidate": "total",
+      "occurrences": 61,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Absorvente com Abas Noite e Dia Total Protect Suave Sym Pacote 8 Unidades",
+        "Absorvente com Abas Total Protect Suave Sym Pacote 8 Unidades",
+        "Absorvente com Abas Total Protect Seca Sym Pacote 8 Unidades",
+        "Absorvente com Abas Total Protect Seca Sym Pacote 16 Unidades Leve Mais Pague Menos"
+      ]
+    },
+    {
+      "candidate": "whisky",
+      "occurrences": 61,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas"
+      ],
+      "examples": [
+        "Aperitivo de Whisky Brasileiro Blended Natu Nobilis Garrafa 1l",
+        "Whisky Brasileiro Blended Drury's Garrafa 900ml",
+        "Whisky Escocês Blended Passport Garrafa 670ml",
+        "Whisky Brasileiro Blended Old Eight Garrafa 900ml"
+      ]
+    },
+    {
+      "candidate": "gourmet",
+      "occurrences": 60,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Cereais e farináceos",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Rosca com Calda Ninfa sabor Cappuccino Gourmet 250g",
+        "Café em Cápsula Torrado e Moído Filtrado Tres Gourmet Caixa 75g 10 Unidades",
+        "Café Torrado e Moído Prima Qualità Gourmet Pacote 250g",
+        "Geleia Tozzi 250G Gourmet Goiaba"
+      ]
+    },
+    {
+      "candidate": "scotch",
+      "occurrences": 60,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza"
+      ],
+      "examples": [
+        "Esponja Não Risca Cozinha Scotch-Brite Azul",
+        "Esponja Limpeza Extrema Scotch-Brite Antibac Leve 4 Pague 3 Unidades",
+        "Esponja Limpeza Pesada Scotch-Brite Leve 4 Pague 3 Unidades",
+        "Esponja Limpeza Pesada Scotch-Brite Antibac"
+      ]
+    },
+    {
+      "candidate": "sol",
+      "occurrences": 60,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Gelatina em Pó Abacaxi Sol Pacote 25g",
+        "Desinfetante Uso Geral Original Pinho Sol Frasco 500ml",
+        "Desinfetante Uso Geral Original Pinho Sol Frasco 1l",
+        "Desinfetante Perfumado Lavanda Pinho Sol Frasco 500ml"
+      ]
+    },
+    {
+      "candidate": "largo",
+      "occurrences": 59,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Suco Integral Uva Tinto Campo Largo Garrafa 900ml",
+        "Suco Integral Maçã Campo Largo Garrafa 900ml",
+        "Suco Integral Uva Tinto Campo Largo Garrafa 1,35l",
+        "Chá Verde Gengibre e Limão Campo Largo Garrafa 900ml"
+      ]
+    },
+    {
+      "candidate": "mostarda",
+      "occurrences": 59,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Mercearia"
+      ],
+      "examples": [
+        "Mostarda Amarela Americana Hemmer Squeeze 200g",
+        "Mostarda Amarela Cepêra Squeeze 200g",
+        "Mostarda Amarela Tradicional Hellmann's Squeeze 170g",
+        "Mostarda Amarela Heinz Squeeze 255g"
+      ]
+    },
+    {
+      "candidate": "sbp",
+      "occurrences": 59,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Kit Aparelho Elétrico + Refil Repelente Líquido SBP 32,9ml",
+        "Multi-Inseticida Aerossol à Base de Água Óleo de Citronela SBP Frasco 380ml Spray Embalagem Econômica",
+        "Inseticida Aerossol à Base de Água SBP Ultra Frasco 360ml Spray",
+        "Repelente Líquido Elétrico SBP Caixa 32,9ml Refil"
+      ]
+    },
+    {
+      "candidate": "tira",
+      "occurrences": 59,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Desinfetante Banheiro Tira-Limo Mr Músculo Squeeze 500ml Grátis 20% de Desconto",
+        "Limpador Banheiro Tira-Limo Rejuntes e Louças Azulim Squeeze 500ml",
+        "Sabão Barra Tira-Manchas Roupas Brancas e Coloridas Assim Flow Pack 80g",
+        "Tira Ferrugem Pratik - 50ml"
+      ]
+    },
+    {
+      "candidate": "toalha",
+      "occurrences": 59,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Toalha de Papel Folha Dupla Snack Pacote 2 Unidades",
+        "Toalha Umed Starlux Lim Multiuso 3Em1 C/30",
+        "Toalha Umedecida Isababy Hora de Ninar Flip Leve 100 Pague 90",
+        "Toalha Umedecida Infantil Piquitucho Pratic Pacote 48 Unidades"
+      ]
+    },
+    {
+      "candidate": "cup",
+      "occurrences": 58,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Mercearia"
+      ],
+      "examples": [
+        "Macarrão Instantâneo Curry Cup Noodles Copo 70g",
+        "Macarrão Instantâneo Cup Noodles Parmegiana de Carne 68g",
+        "Macarrão Instantâneo Queijo Nacho Cup Noodles Copo 68g",
+        "Macarrão Instantâneo Galinha Caipira Picante Cup Noodles Copo 68g"
+      ]
+    },
+    {
+      "candidate": "forma",
+      "occurrences": 58,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Padaria"
+      ],
+      "examples": [
+        "Pão de Forma Poços De Caldas Tradicional 400g",
+        "Pão de Forma Original Pullman Artesano Pacote 500g",
+        "Pão de Forma Seven Boys Pacote 450g",
+        "Pão de Forma sem Casca Tradicional Pullman Pacote 450g"
+      ]
+    },
+    {
+      "candidate": "knorr",
+      "occurrences": 58,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Mercearia"
+      ],
+      "examples": [
+        "Ervilha em Conserva Knorr Lata 170g",
+        "Milho Verde em Conserva Knorr Lata 170g",
+        "Creme de Cebola Knorr Sachê 60g",
+        "Sopa Cebola Knorr Sachê 38g"
+      ]
+    },
+    {
+      "candidate": "removedor",
+      "occurrences": 58,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Removedor Esmalte Marcia 100ml",
+        "Removedor de Esmalte Fashion Zulu Frasco 90ml",
+        "Removedor Isacare 100ml Esmalte Base Acetona",
+        "Removedor Multiuso Suprema 1L"
+      ]
+    },
+    {
+      "candidate": "stella",
+      "occurrences": 58,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Cerveja Stella Artois Pure Gold Sem Glúten 473ml Lata",
+        "Cerveja Puro Malte Pure Gold Stella Artois Lata 350ml",
+        "Cerveja Stella Artois Pure Gold Long Neck 330Ml",
+        "Cerveja Lager Stella Artois Lata 350ml"
+      ]
+    },
+    {
+      "candidate": "torrado",
+      "occurrences": 58,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Amendoim Torrado e Salgado Cebola Amíndus Pacote 110g",
+        "Amendoim Torrado S/Sal Junita 400Gr",
+        "Amendoim Torrado AMINDUS Sem Sal Pacote 100g",
+        "Amendoim Pacha Torrado Moido 500GR"
+      ]
+    },
+    {
+      "candidate": "cream",
+      "occurrences": 56,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Cream Cheese Catupiry Squeeze 250g",
+        "Cream Cheese Catupiry Pote 150g",
+        "Cream Cheese Tradicional Danubio Pote 150g",
+        "Cream Cheese Philadelphia Pote 150g"
+      ]
+    },
+    {
+      "candidate": "pure",
+      "occurrences": 56,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Limpeza",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Cerveja Stella Artois Pure Gold Sem Glúten 473ml Lata",
+        "Cerveja Puro Malte Pure Gold Stella Artois Lata 350ml",
+        "Cerveja Stella Artois Pure Gold Long Neck 330Ml",
+        "Goma de Mascar Menta Verde Zero Açúcar Mentos Pure Fresh Pote 56g 28 Unidades"
+      ]
+    },
+    {
+      "candidate": "gold",
+      "occurrences": 55,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Matinais e sobremesas",
+        "Padaria",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Cerveja Lager Premium Gold Therezópolis Garrafa 355ml",
+        "Cerveja Lager Puro Malte Gold Therezópolis Lata 350ml",
+        "Cerveja Lager Puro Malte Gold Therezópolis Lata 473ml",
+        "Cerveja Stella Artois Pure Gold Sem Glúten 473ml Lata"
+      ]
+    },
+    {
+      "candidate": "virgem",
+      "occurrences": 55,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia"
+      ],
+      "examples": [
+        "Azeite de Oliva Extra Virgem Português Andorinha Clássicos Vidro 500ml",
+        "Azeite de Oliva Extra Virgem Clássico Português Gallo Vidro 500ml",
+        "Azeite de Oliva Extra Virgem Português Terrano Vidro 250ml",
+        "Azeite de Oliva Extra Virgem Português Andorinha Clássicos Vidro 250ml"
+      ]
+    },
+    {
+      "candidate": "alegre",
+      "occurrences": 54,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Frios e laticínios",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Açúcar Demerara Alto Alegre Pacote 1kg",
+        "Açúcar Monte Alegre 1kg Demerara",
+        "Alcool Monte Alegre 1 Litro 70 Saneante",
+        "Açúcar Cristal Monte Alegre 5kg"
+      ]
+    },
+    {
+      "candidate": "prata",
+      "occurrences": 54,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Hortifruti",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Banana Prata Grauda",
+        "Alho Dente De Prata 200Gr",
+        "Aguardente de Cana Prata Ypióca Garrafa 965ml",
+        "Cachaça Prata Cabaré Garrafa 700ml"
+      ]
+    },
+    {
+      "candidate": "protetor",
+      "occurrences": 54,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Protetor Diário sem Abas Intimus Pacote 14 Unidades",
+        "Protetor Diário Isacare sem Perfume c/20",
+        "Protetor Diário sem Abas Carefree TodoDia Pacote 15 Unidades",
+        "Protetor Diário sem Abas Antibacteriano Intimus Pacote 15 Unidades"
+      ]
+    },
+    {
+      "candidate": "ketchup",
+      "occurrences": 53,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Biscoitos e chocolates",
+        "Mercearia"
+      ],
+      "examples": [
+        "Ketchup Picles Heinz Squeeze 397g",
+        "Ketchup Tradicional Cepêra Squeeze 400g",
+        "Ketchup Jalapeño Heinz Squeeze 397g",
+        "Ketchup Hellmann's Supreme Squeeze 390g"
+      ]
+    },
+    {
+      "candidate": "lampada",
+      "occurrences": 53,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Lâmpada OUROLUX Superled 15W Bivolt",
+        "Lampada Ourolux Superled Bivolt 30W",
+        "Lampada Ourolux Superled Bulbo 20W Alta Potencia",
+        "Lampada Kian Fluor 3U Branca 127V 20W"
+      ]
+    },
+    {
+      "candidate": "palha",
+      "occurrences": 53,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Batata Palha Tradicional Mr. Crisp'S 350GR",
+        "Batata Palha Tradicional Mr. Crisp'S 120GR",
+        "Batata Palha Tum Tum  500Gr",
+        "Batata Palha Tradicional Pratic Leve 101g Premium"
+      ]
+    },
+    {
+      "candidate": "sweet",
+      "occurrences": 53,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Vinho Chileno Branco Suave Sweet Reservado Garrafa 750ml",
+        "Vinho Chileno Tinto Suave Sweet Red Reservado Garrafa 750ml",
+        "Adoçante em Pó Stevia Gold Premium Sweet Caixa 30g 50 Unidades",
+        "Coco Ralado Úmido Adoçado em Flocos Sococo Sweet Floco Pacote 100g"
+      ]
+    },
+    {
+      "candidate": "castelo",
+      "occurrences": 52,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza",
+        "Mercearia"
+      ],
+      "examples": [
+        "Vinagre de Álcool Castelo Frasco 750ml",
+        "Vinagre de Maçã Castelo Frasco 750ml",
+        "Vinagre de Álcool Composto e Aromatizado Limão Castelo Frasco 750ml",
+        "Vinagre de Álcool Colorido Castelo Frasco 750ml"
+      ]
+    },
+    {
+      "candidate": "salsa",
+      "occurrences": 52,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Cereais e farináceos",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Biscoito Troféu Salsa com Cebola 40g",
+        "Biscoito Tuc's Cebola e Salsa 100g",
+        "Batata Palha Cebola e Salsa Visconti Sachê 105g",
+        "Sopa Individual Cremosa Mandioquinha com Cebola e Salsa Vono Pacote 17g"
+      ]
+    },
+    {
+      "candidate": "castanha",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Cereais e farináceos",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Padaria",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Castanha De Caju 70G Tozzi Sh",
+        "Castanha De Caju Siarom 50Gr",
+        "Possible  Castanha De Caju, Aveia E Morango-1L",
+        "Bebida à Base de Castanha-de-Caju e Cacau Orgânica Chocolate Possible Caixa 1l"
+      ]
+    },
+    {
+      "candidate": "diario",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Frios e laticínios",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Leite Fermentado Tradicional Zero Lactose Activia Shot Diário Frasco 100g",
+        "Leite Fermentado Framboesa e Hibisco Zero Lactose Activia Shot Diário Frasco 100g",
+        "Protetor Diário sem Abas Intimus Pacote 14 Unidades",
+        "Protetor Diário sem Abas Carefree TodoDia Pacote 15 Unidades"
+      ]
+    },
+    {
+      "candidate": "floral",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Sabonete Barra Tentação Floral Lux Envoltório 85g",
+        "Amaciante de Roupa Concentrado Energia Floral Comfort Frasco 500ml",
+        "Amaciante de Roupa Brisa Floral Comfort Frasco 1,8l",
+        "Desinfetante Búfalo Floral 2L"
+      ]
+    },
+    {
+      "candidate": "meio",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Carnes",
+        "Frios e laticínios",
+        "Matinais e sobremesas",
+        "Padaria",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Sobremesa Láctea Chocolate Meio Amargo Chandelle Bandeja 180g 2 Unidades",
+        "Sobremesa Láctea Chocolate Branco e Meio Amargo Chandelle Duo Bandeja 180g 2 Unidades",
+        "Sobremesa Láctea Chocolate Meio Amargo Calda Caramelo Chandelle Experience Bandeja 180g 2 Unidades",
+        "Vinho Chileno Branco Meio Seco Reservado Sauvignon Blanc Garrafa 750ml"
+      ]
+    },
+    {
+      "candidate": "negra",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Biscoito Palitos Look 55G Floresta Negra",
+        "Biscoito Wafer Itamaraty 110g Floresta Negra",
+        "Loção Corporal Deo-Hidratante Framboesa Negra Paixão Frasco 200ml",
+        "Óleo Deo Corporal Framboesa Negra Paixão Frasco 100ml"
+      ]
+    },
+    {
+      "candidate": "sanitaria",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Limpeza"
+      ],
+      "examples": [
+        "Água Sanitária Suprema 2L",
+        "Água Sanitária Qboa Frasco 2l",
+        "Água Sanitária Qboa Frasco 1l",
+        "Água Sanitária Qboa Galão 5l"
+      ]
+    },
+    {
+      "candidate": "sao",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Cachaça Envelhecida São Francisco Garrafa 970ml",
+        "Água Mineral Natural com Gás São Lourenço Garrafa 1,26l",
+        "Água Mineral Natural com Gás São Lourenço Garrafa 510ml",
+        "Biscoito Polvilho Sao Caetano 200g"
+      ]
+    },
+    {
+      "candidate": "snack",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Hortifruti",
+        "Mercearia",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Snack Pimenta Mexicana 40G Keleck",
+        "Snack de Trigo Queijo Suave Eqlibri Panetini Pacote 40g",
+        "Snack de Trigo Salaminho com Limão Crocantíssimo Original Pacote 40g",
+        "Snack de Trigo Churrasco Crocantíssimo Original Pacote 40g"
+      ]
+    },
+    {
+      "candidate": "vassoura",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza"
+      ],
+      "examples": [
+        "Vassoura Cerdas Médias com Cabo Phenix Santa Maria",
+        "Vassoura Juliana Piacava N5 1Un",
+        "Vassoura Gran Mestre",
+        "Bala Frutas Vermelhas Azedinha Canudinho Docile Cabo da Vassoura da Bruxa Pacote 15g"
+      ]
+    },
+    {
+      "candidate": "white",
+      "occurrences": 51,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Limpeza",
+        "Matinais e sobremesas",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Goma de Mascar Mentos Cool White Fresh Mint 8,5g",
+        "Goma de Mascar Tutti Fresh Zero Açúcar Mentos White Envelope 8,5g 5 Unidades",
+        "Goma de Mascar Fresh Mint Zero Açúcar Mentos Cool White Envelope 8,5g",
+        "Goma de Mascar Blue Raspberry Zero Açúcar Mentos Cool White Envelope 8,5g"
+      ]
+    },
+    {
+      "candidate": "antarctica",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas"
+      ],
+      "examples": [
+        "Refrigerante Limonada Zero Açúcar Soda Antarctica Garrafa 2l",
+        "Refrigerante Limonada Soda Antarctica Garrafa 2l",
+        "Água Tônica Baixa Caloria Antarctica Garrafa 1l",
+        "Água Tônica Antarctica Lata 350ml"
+      ]
+    },
+    {
+      "candidate": "cacau",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Perfumaria e higiene",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Amêndoa com Cacau 50% Nature's Heart Pouch 50g",
+        "Bebida à Base de Castanha-de-Caju e Cacau Orgânica Chocolate Possible Caixa 1l",
+        "Biscoito Integral Cacau & Avelã Nesfit Delice Pacote 140g",
+        "Biscoito Integral Cacau & Cereais Nesfit Pacote 160g"
+      ]
+    },
+    {
+      "candidate": "clear",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Pastilha Peppermint Zero Açúcar Mentos Clear Breath Lata 21g 30 Unidades",
+        "Shampoo Anticaspa Ice Cool Menthol Clear Men Frasco 200ml",
+        "Shampoo Anticaspa Erling Haaland Clear Men Controle e Alívio da Coceira Frasco 200ml",
+        "Shampoo Anticaspa Clear Men Sports Frasco 200ml"
+      ]
+    },
+    {
+      "candidate": "flocos",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Biscoitos e chocolates",
+        "Congelados",
+        "Frios e laticínios",
+        "Hortifruti",
+        "Matinais e sobremesas",
+        "Mercearia",
+        "Saude e bem estar"
+      ],
+      "examples": [
+        "Iogurte Integral Grego Flocos Apreciare Pote 100g",
+        "Aveia em Flocos APTI 200g",
+        "Aveia em Flocos Mãe Terra Pacote 200g",
+        "Aveia em Flocos Natural Life 170g"
+      ]
+    },
+    {
+      "candidate": "monster",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bebidas",
+        "Biscoitos e chocolates"
+      ],
+      "examples": [
+        "Bebida Energetica Monster 473ml Lata Energy",
+        "Energético Ultra Paradise Zero Açúcar Monster Lata 473ml",
+        "Energético Ultra Fiesta Mango Zero Açúcar Monster Lata 473ml",
+        "Energético Zero Açúcar Monster Lata 473ml"
+      ]
+    },
+    {
+      "candidate": "polpa",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Congelados",
+        "Frios e laticínios",
+        "Mercearia"
+      ],
+      "examples": [
+        "Polpa De Goiaba Demarchi 100g",
+        "Polpa de Fruta Acerola e Laranja De Marchi Pacote 100g",
+        "Polpa de Fruta Demarchi Sabor Pêssego 100gr",
+        "Polpa de Fruta Limão De Marchi 100g"
+      ]
+    },
+    {
+      "candidate": "sorvete",
+      "occurrences": 50,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Congelados",
+        "Matinais e sobremesas"
+      ],
+      "examples": [
+        "Biscoito Sorvete de Morango Negresco Pacote 140g",
+        "Cobertura para Sorvete Chocolate Kenko Squeeze 250g",
+        "Sorvete Oreo Pote 1l",
+        "Sorvete Grego Calda Frutas Silvestres Nobrelli Tentazione Pote 1,5l"
+      ]
+    },
+    {
+      "candidate": "aco",
+      "occurrences": 49,
+      "markets": [
+        "pedrilho",
+        "sanmichel",
+        "supervale",
+        "vilasul",
+        "vn"
+      ],
+      "categories": [
+        "Bazar e utilidades",
+        "Limpeza",
+        "Perfumaria e higiene"
+      ],
+      "examples": [
+        "Palha De Aco Acobom N 2",
+        "Palha de Aço Aço Bom Nº 1",
+        "Palha de Aço Aço Bom Nº 0",
+        "Palha de Aço ASSOLAN Nº0 Pacote 25g"
+      ]
+    }
+  ],
+  "issues": {
+    "sameTitleSeparated": [],
+    "sameTitleMissingQuantity": [
+      {
+        "left": "Refrigerante Guarana Antarctica Zero",
+        "right": "Refrigerante Guarana Antarctica Zero",
+        "markets": [
+          "sanmichel",
+          "vilasul"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Refrigerante Guarana Antarctica Zero",
+        "right": "Refrigerante Guarana Antarctica Zero",
+        "markets": [
+          "sanmichel",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Leite Ninho Integrall",
+        "right": "Leite Ninho Integrall",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Ervilha Congelada Sadia",
+        "right": "Ervilha Congelada Sadia",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Cookies Renata Chocolate",
+        "right": "Cookies Renata Chocolate",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Maionese Vigor",
+        "right": "Maionese Vigor",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Ervilha Fugini Sachetr",
+        "right": "Ervilha Fugini Sachetr",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Bicarbonato De Sódio Kodilar",
+        "right": "Bicarbonato De Sódio Kodilar",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Adocante Sucralose Uniao",
+        "right": "Adocante Sucralose Uniao",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Pão Francês",
+        "right": "Pão Francês",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Osso Baw Waw Nº 2/3",
+        "right": "Osso Baw Waw Nº 2/3",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Fósforo Gaboardi",
+        "right": "Fósforo Gaboardi",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Filtro Melitta Colher-",
+        "right": "Filtro Melitta Colher-",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Avental Cca",
+        "right": "Avental Cca",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Rodinho Plasutil M",
+        "right": "Rodinho Plasutil M",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      },
+      {
+        "left": "Talheres Plasutil",
+        "right": "Talheres Plasutil",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "none",
+          "reason": "Quantidade ou embalagem não confirmada",
+          "score": 0
+        }
+      }
+    ],
+    "canonicalConflicts": [],
+    "equivalentWithoutReference": [
+      {
+        "left": "Manteiga Extra com Sal Aviação 200g",
+        "right": "Manteiga Extra Aviação Com Sal 200g",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra com Sal Aviação 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra com Sal Aviação 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "pedrilho",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra com Sal Aviação 200g",
+        "right": "Manteiga Aviação Extra Com Sal Lata 200g",
+        "markets": [
+          "pedrilho",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra com Sal Aviação 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "pedrilho",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra Aviação Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "sanmichel",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra Aviação Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal Lata 200g",
+        "markets": [
+          "sanmichel",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Extra Aviação Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "sanmichel",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Aviação Extra Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "sanmichel",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Mesma descrição e quantidade; identidade não confirmada por código de barras",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Aviação Extra Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal Lata 200g",
+        "markets": [
+          "sanmichel",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Aviação Extra Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "sanmichel",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Mesma descrição e quantidade; identidade não confirmada por código de barras",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Aviação Extra Com Sal 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Mesma descrição e quantidade; identidade não confirmada por código de barras",
+          "score": 90
+        }
+      },
+      {
+        "left": "Manteiga Aviação Extra Com Sal Lata 200g",
+        "right": "Manteiga Aviação Extra Com Sal 200g",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Polvilho AMAFIL Azedo 1Kg",
+        "right": "Polvilho Azedo Amafil 1kg",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Polvilho AMAFIL Azedo 1Kg",
+        "right": "Polvilho Azedo Amafil 1kg",
+        "markets": [
+          "pedrilho",
+          "supervale"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Polvilho Azedo Amafil 1kg",
+        "right": "Polvilho Azedo Amafil 1kg",
+        "markets": [
+          "sanmichel",
+          "supervale"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Mesma descrição e quantidade; identidade não confirmada por código de barras",
+          "score": 90
+        }
+      },
+      {
+        "left": "Polvilho Azedo Amafil 1kg",
+        "right": "Polvilho Azedo Amafil 1kg",
+        "markets": [
+          "vilasul",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Mesma descrição e quantidade; identidade não confirmada por código de barras",
+          "score": 90
+        }
+      },
+      {
+        "left": "Cerveja Malzbier Brahma Lata 350ml",
+        "right": "Cerveja Malzbier Brahma 350ml",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 100
+        }
+      },
+      {
+        "left": "Cerveja Malzbier Brahma Lata 350ml",
+        "right": "Cerveja Brahma Malzbier 350ml",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 100
+        }
+      },
+      {
+        "left": "Cerveja Malzbier Brahma Lata 350ml",
+        "right": "Cerveja Brahma Malzbier 350ml",
+        "markets": [
+          "pedrilho",
+          "supervale"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 100
+        }
+      },
+      {
+        "left": "Cerveja Malzbier Brahma 350ml",
+        "right": "Cerveja Brahma Malzbier 350ml",
+        "markets": [
+          "sanmichel",
+          "supervale"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 100
+        }
+      },
+      {
+        "left": "Cerveja Brahma Malzbier 350ml",
+        "right": "Cerveja Brahma Malzbier 350ml",
+        "markets": [
+          "sanmichel",
+          "supervale"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Mesma descrição e quantidade; identidade não confirmada por código de barras",
+          "score": 100
+        }
+      },
+      {
+        "left": "Achocolatado Pó Nescau Lata 200g",
+        "right": "Achoc Em Po Nescau 200g Cilindrico",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 100
+        }
+      },
+      {
+        "left": "Extrato de Tomate Elefante Pote 300g",
+        "right": "Extrato Tomate Elefante Pote 300g",
+        "markets": [
+          "pedrilho",
+          "sanmichel"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Extrato de Tomate Elefante Pote 300g",
+        "right": "Extrato De Tomate Elefante 300g",
+        "markets": [
+          "pedrilho",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Extrato de Tomate Elefante Pote 300g",
+        "right": "Extrato De Tomate Elefante 300g",
+        "markets": [
+          "pedrilho",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Extrato Tomate Elefante Pote 300g",
+        "right": "Extrato De Tomate Elefante 300g",
+        "markets": [
+          "sanmichel",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Extrato Tomate Elefante Pote 300g",
+        "right": "Extrato De Tomate Elefante 300g",
+        "markets": [
+          "sanmichel",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Extrato Tomate Elefante Sache 300g",
+        "right": "Extrato De Tomate Elefante 300g",
+        "markets": [
+          "supervale",
+          "vilasul"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      },
+      {
+        "left": "Extrato Tomate Elefante Sache 300g",
+        "right": "Extrato De Tomate Elefante 300g",
+        "markets": [
+          "supervale",
+          "vn"
+        ],
+        "match": {
+          "type": "equivalent",
+          "reason": "Descrição e quantidade compatíveis; uma loja pode omitir detalhes da embalagem",
+          "score": 90
+        }
+      }
+    ]
+  }
+}
