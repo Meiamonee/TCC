@@ -5,6 +5,8 @@ const connectDB = require('../config/database');
 const Supermercado = require('../models/Supermercado');
 const Categoria = require('../models/Categoria');
 const Produto = require('../models/Produto');
+const HistoricoPreco = require('../models/HistoricoPreco');
+const { normalizarProduto } = require('./normalizacao');
 
 const { MERCADOS } = require('../../scraper/mercados');
 
@@ -24,7 +26,7 @@ function slugify(value) {
     return String(value || 'sem-categoria')
         .toLowerCase()
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[̀-ͯ]/g, '')
         .replace(/[^\w\s-]/g, '')
         .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
@@ -100,6 +102,79 @@ async function garantirConexao() {
     }
 }
 
+// Converte um produto coletado pelo scraper no documento gravado no MongoDB.
+function montarDocumento(product, config, supermercadoId, now) {
+    const preco = extrairPreco(product.price);
+    const nome = product.name || 'Produto sem nome';
+    const precoAnterior = product.originalPrice ? extrairPreco(product.originalPrice) : null;
+    const departamento = product.department || 'Sem categoria';
+    const normalizado = normalizarProduto({
+        nome,
+        preco,
+        unidadeVenda: product.unit,
+        departamento
+    });
+
+    return {
+        nome,
+        nomeNormalizado: Produto.normalizarNome(nome),
+        supermercado: config.slug,
+        supermercadoId,
+        categoria: normalizado.categoriaPadrao,
+        departamentoOriginal: departamento,
+        subcategoria: product.subcategory || null,
+        alimento: normalizado.alimento,
+        preco,
+        precoOriginal: product.price || formatarPreco(preco),
+        precoAnterior: precoAnterior && precoAnterior > preco ? precoAnterior : null,
+        unidade: product.unit || null,
+        etiqueta: product.tag || null,
+        tokens: normalizado.tokens,
+        variantes: normalizado.variantes,
+        medida: normalizado.medida,
+        quantidadeBase: normalizado.quantidadeBase,
+        precoPorUnidade: normalizado.precoPorUnidade,
+        unidadeMedida: normalizado.unidadeMedida,
+        imagem: product.image || null,
+        url: product.url || config.url,
+        produtoId: product.produtoId,
+        disponivel: true,
+        dataColeta: product.collectedAt ? new Date(product.collectedAt) : now,
+        ultimaAtualizacao: now
+    };
+}
+
+// Garante a categoria padronizada e registra de qual departamento de cada mercado ela veio.
+async function registrarCategorias(documentos, slugMercado) {
+    const mapa = new Map();
+    for (const doc of documentos) {
+        if (!mapa.has(doc.categoria)) mapa.set(doc.categoria, new Set());
+        mapa.get(doc.categoria).add(doc.departamentoOriginal);
+    }
+
+    const ids = {};
+    for (const [nomeCategoria, departamentos] of mapa) {
+        const slug = slugify(nomeCategoria);
+        const categoria = await Categoria.findOneAndUpdate(
+            { slug },
+            {
+                $set: { nome: nomeCategoria, slug },
+                $addToSet: {
+                    mapeamentos: {
+                        $each: [...departamentos].map(nomeOriginal => ({ supermercado: slugMercado, nomeOriginal }))
+                    }
+                }
+            },
+            { upsert: true, new: true, setDefaultsOnInsert: true }
+        );
+        ids[nomeCategoria] = categoria._id;
+    }
+
+    return ids;
+}
+
+// Importa os produtos coletados de um mercado: insere novos, atualiza existentes,
+// registra mudancas de preco no historico e marca como indisponiveis os que sumiram do site.
 async function importarProdutosDoJson(supermercadoSlug, options = {}) {
     const config = SUPERMARKETS[supermercadoSlug];
     if (!config) {
@@ -111,9 +186,9 @@ async function importarProdutosDoJson(supermercadoSlug, options = {}) {
     }
 
     const productsPath = options.productsPath || config.productsPath;
-    const productsData = carregarProdutos(productsPath);
+    const productsData = options.produtos || carregarProdutos(productsPath);
     const { produtos, ignorados } = deduplicarProdutos(productsData);
-    const now = new Date();
+    const now = options.agora || new Date();
 
     const supermercado = await Supermercado.findOneAndUpdate(
         { slug: config.slug },
@@ -127,116 +202,69 @@ async function importarProdutosDoJson(supermercadoSlug, options = {}) {
         { upsert: true, new: true, setDefaultsOnInsert: true }
     );
 
-    const categoriasUnicas = [...new Set(produtos.map(p => p.department || 'Sem categoria'))];
-    const categoriasMap = {};
+    const produtosValidos = produtos.filter(p => p.produtoId && extrairPreco(p.price) > 0);
+    const documentos = produtosValidos.map(p => montarDocumento(p, config, supermercado._id, now));
+    const categoriasIds = await registrarCategorias(documentos, config.slug);
 
-    for (const nomeCategoria of categoriasUnicas) {
-        const slug = slugify(nomeCategoria);
-        const categoria = await Categoria.findOneAndUpdate(
-            { slug },
-            {
-                nome: nomeCategoria,
-                slug,
-                $addToSet: {
-                    mapeamentos: {
-                        supermercado: config.slug,
-                        nomeOriginal: nomeCategoria
-                    }
-                }
-            },
-            { upsert: true, new: true, setDefaultsOnInsert: true }
-        );
-
-        categoriasMap[nomeCategoria] = categoria._id;
-    }
-
-    const produtosValidos = produtos.filter(p => p.produtoId);
-    const idsNoScraper = produtosValidos.map(p => p.produtoId);
+    const idsNoScraper = documentos.map(doc => doc.produtoId);
     const existentes = await Produto.find({
         supermercado: config.slug,
         produtoId: { $in: idsNoScraper }
-    }).select('_id produtoId preco').lean();
+    }).select('_id produtoId preco disponivel').lean();
 
     const existentesMap = new Map(existentes.map(p => [p.produtoId, p]));
     const bulkOps = [];
+    const historicoPendente = [];
     let novos = 0;
     let atualizados = 0;
     let precosMudaram = 0;
-    let erros = produtos.length - produtosValidos.length + ignorados;
+    const erros = produtos.length - produtosValidos.length + ignorados;
 
-    for (const product of produtosValidos) {
-        const categoriaNome = product.department || 'Sem categoria';
-        const preco = extrairPreco(product.price);
-        const nome = product.name || 'Produto sem nome';
-        const nomeNormalizado = Produto.normalizarNome(nome);
-        const existente = existentesMap.get(product.produtoId);
-
-        const precoAnterior = product.originalPrice ? extrairPreco(product.originalPrice) : null;
-        const dataColeta = product.collectedAt ? new Date(product.collectedAt) : now;
-
-        const base = {
-            nome,
-            nomeNormalizado,
-            supermercado: config.slug,
-            supermercadoId: supermercado._id,
-            categoria: categoriaNome,
-            categoriaId: categoriasMap[categoriaNome],
-            subcategoria: product.subcategory || null,
-            preco,
-            precoOriginal: product.price || formatarPreco(preco),
-            precoAnterior: precoAnterior && precoAnterior > preco ? precoAnterior : null,
-            unidade: product.unit || null,
-            etiqueta: product.tag || null,
-            imagem: product.image || null,
-            url: product.url || config.url,
-            produtoId: product.produtoId,
-            disponivel: true,
-            dataColeta,
-            ultimaAtualizacao: now
-        };
+    for (const documento of documentos) {
+        documento.categoriaId = categoriasIds[documento.categoria];
+        const existente = existentesMap.get(documento.produtoId);
 
         if (existente) {
-            const precoMudou = Number(existente.preco) !== preco;
-            const update = {
-                $set: base
-            };
-
-            if (precoMudou) {
-                update.$push = {
-                    historico: {
-                        preco,
-                        data: now
-                    }
-                };
-                precosMudaram++;
+            if (Number(existente.preco) !== documento.preco || !existente.disponivel) {
+                historicoPendente.push({ produtoId: documento.produtoId, preco: documento.preco });
+                if (Number(existente.preco) !== documento.preco) precosMudaram++;
             }
 
             bulkOps.push({
                 updateOne: {
                     filter: { _id: existente._id },
-                    update
+                    update: { $set: documento }
                 }
             });
             atualizados++;
         } else {
             bulkOps.push({
                 insertOne: {
-                    document: {
-                        ...base,
-                        dataCaptura: now,
-                        historico: [{
-                            preco,
-                            data: now
-                        }]
-                    }
+                    document: { ...documento, dataCaptura: now }
                 }
             });
+            historicoPendente.push({ produtoId: documento.produtoId, preco: documento.preco });
             novos++;
         }
     }
 
     if (bulkOps.length > 0) {
         await Produto.bulkWrite(bulkOps, { ordered: false });
+    }
+
+    if (historicoPendente.length > 0) {
+        const ids = await Produto.find({
+            supermercado: config.slug,
+            produtoId: { $in: historicoPendente.map(item => item.produtoId) }
+        }).select('_id produtoId').lean();
+        const idPorProduto = new Map(ids.map(p => [p.produtoId, p._id]));
+
+        await HistoricoPreco.insertMany(historicoPendente.map(item => ({
+            produto: idPorProduto.get(item.produtoId),
+            supermercado: config.slug,
+            preco: item.preco,
+            data: now
+        })), { ordered: false });
     }
 
     const indisponiveis = await Produto.updateMany(
@@ -260,7 +288,7 @@ async function importarProdutosDoJson(supermercadoSlug, options = {}) {
 
     return {
         supermercado: config.slug,
-        arquivo: productsPath,
+        arquivo: options.produtos ? null : productsPath,
         encontrados: productsData.length,
         processados: produtosValidos.length,
         novos,

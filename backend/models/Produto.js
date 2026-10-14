@@ -6,7 +6,7 @@ const produtoSchema = new mongoose.Schema({
         required: true,
         index: true
     },
-    // Nome normalizado para comparação entre supermercados
+    // Nome sem acentos e em minusculas, usado na busca textual
     nomeNormalizado: {
         type: String,
         required: true,
@@ -23,6 +23,7 @@ const produtoSchema = new mongoose.Schema({
         ref: 'Supermercado',
         required: true
     },
+    // Categoria padronizada entre os mercados (ex: "Carnes e Peixes")
     categoria: {
         type: String,
         required: true,
@@ -31,6 +32,17 @@ const produtoSchema = new mongoose.Schema({
     categoriaId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Categoria'
+    },
+    // Departamento como aparece no site do mercado (ex: "Açougue")
+    departamentoOriginal: String,
+    subcategoria: {
+        type: String,
+        default: null
+    },
+    alimento: {
+        type: Boolean,
+        default: true,
+        index: true
     },
     preco: {
         type: Number,
@@ -45,7 +57,7 @@ const produtoSchema = new mongoose.Schema({
         type: Number,
         default: null
     },
-    // Unidade de venda exibida pelo site (ex: "un", "kg")
+    // Unidade de venda exibida pelo site (ex: "un", "kg", "pt")
     unidade: {
         type: String,
         default: null
@@ -55,7 +67,26 @@ const produtoSchema = new mongoose.Schema({
         type: String,
         default: null
     },
-    subcategoria: {
+    // Campos derivados para comparacao (ver services/normalizacao.js)
+    tokens: {
+        type: [String],
+        index: true
+    },
+    variantes: [String],
+    medida: {
+        type: String,
+        enum: ['massa', 'volume', 'comprimento', 'unidade', null],
+        default: null
+    },
+    quantidadeBase: {
+        type: Number,
+        default: null
+    },
+    precoPorUnidade: {
+        type: Number,
+        default: null
+    },
+    unidadeMedida: {
         type: String,
         default: null
     },
@@ -70,8 +101,10 @@ const produtoSchema = new mongoose.Schema({
     },
     disponivel: {
         type: Boolean,
-        default: true
+        default: true,
+        index: true
     },
+    // Primeira vez em que o produto foi coletado
     dataCaptura: {
         type: Date,
         default: Date.now,
@@ -85,46 +118,24 @@ const produtoSchema = new mongoose.Schema({
     ultimaAtualizacao: {
         type: Date,
         default: Date.now
-    },
-    // Histórico de preços para rastrear variações
-    historico: [{
-        preco: Number,
-        data: {
-            type: Date,
-            default: Date.now
-        }
-    }]
+    }
 }, {
     timestamps: true
 });
 
-// Índice composto para busca eficiente por categoria e preço
-produtoSchema.index({ categoriaId: 1, preco: 1 });
+produtoSchema.index({ supermercado: 1, produtoId: 1 }, { unique: true });
 produtoSchema.index({ supermercado: 1, categoria: 1 });
+produtoSchema.index({ disponivel: 1, categoria: 1, preco: 1 });
 
-// Índice de texto para busca por nome
-produtoSchema.index({ nomeNormalizado: 'text', nome: 'text' });
-
-// Método para normalizar nome do produto
+// Nome sem acentos, pontuacao e espacos extras, para busca
 produtoSchema.statics.normalizarNome = function (nome) {
-    return nome
+    return String(nome || '')
         .toLowerCase()
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-        .replace(/[^\w\s]/g, '') // Remove caracteres especiais
-        .replace(/\s+/g, ' ') // Remove espaços extras
+        .replace(/[̀-ͯ]/g, '')
+        .replace(/[^\w\s]/g, ' ')
+        .replace(/\s+/g, ' ')
         .trim();
-};
-
-// Método para comparar preços de produtos similares
-produtoSchema.statics.compararPrecos = async function (nomeNormalizado) {
-    return this.find({
-        nomeNormalizado: new RegExp(nomeNormalizado, 'i'),
-        disponivel: true
-    })
-        .sort({ preco: 1 })
-        .populate('supermercadoId')
-        .exec();
 };
 
 module.exports = mongoose.model('Produto', produtoSchema);
