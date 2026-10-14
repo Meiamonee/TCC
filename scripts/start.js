@@ -8,7 +8,9 @@ const services = [
         name: 'backend',
         cwd: path.join(rootDir, 'backend'),
         args: ['run', 'dev'],
-        url: 'http://localhost:3001'
+        url: 'http://localhost:3001',
+        // O proxy do Vite espera a API na 3001; um PORT herdado do ambiente nao pode mudar isso.
+        env: { PORT: process.env.BACKEND_PORT || '3001' }
     },
     {
         name: 'frontend',
@@ -91,7 +93,7 @@ function startService(service) {
 
     const child = spawn(command, args, {
         cwd: service.cwd,
-        env: process.env,
+        env: { ...process.env, ...service.env },
         stdio: ['ignore', 'pipe', 'pipe'],
         detached: process.platform !== 'win32',
         windowsHide: true
