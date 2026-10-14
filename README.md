@@ -64,13 +64,13 @@ npm --prefix backend run atualizar
 npm --prefix backend run atualizar -- pedrilho
 ```
 
-Rodar os testes (backend com `node:test` + lint do frontend):
+Rodar os testes (backend e scraper com `node:test` + lint do frontend):
 
 ```bash
 npm test
 ```
 
-Os testes de integração usam o banco `SuperPreco_test` no MongoDB local (configurável em `MONGODB_TEST_URI`) e são pulados se o MongoDB não estiver rodando.
+Os testes de integração usam o banco `SuperPreco_test` no MongoDB local (configurável em `MONGODB_TEST_URI`) e são pulados se o MongoDB não estiver rodando. Os testes do scraper abrem o Chrome headless (Selenium) em páginas de exemplo de `scraper/test/fixtures`, com cards copiados do DOM dos sites e servidas localmente, então não dependem dos sites estarem no ar. Só o scraper: `npm --prefix scraper test`.
 
 Atualizar um banco criado por versões anteriores (move o histórico, recalcula os campos de comparação e as categorias):
 

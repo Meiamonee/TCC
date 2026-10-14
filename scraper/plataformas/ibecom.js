@@ -172,5 +172,8 @@ async function raspar(driver, mercado, opcoes) {
 }
 
 module.exports = {
+    descobrirCategorias,
+    descobrirSubcategorias,
+    extrairProdutosDaPagina,
     raspar
 };

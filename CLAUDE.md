@@ -25,6 +25,6 @@ TCC de Pedro Lucas de Souza Faria (orientador: Douglas Fabiano de Sousa Nunes), 
 ## Comandos
 
 - `npm start` (raiz): API em 3001 + frontend em 5173.
-- `npm test` (raiz): testes do backend + lint do frontend. Integração usa o banco `SuperPreco_test`.
+- `npm test` (raiz): testes do backend, do scraper e lint do frontend. Integração usa o banco `SuperPreco_test`; os testes do scraper abrem o Chrome headless em páginas de `scraper/test/fixtures` (servidas localmente, sem internet).
 - `npm --prefix backend run atualizar [-- <slug>]`: coleta + importação.
 - `npm --prefix backend run migrar`: atualiza bancos de versões anteriores.

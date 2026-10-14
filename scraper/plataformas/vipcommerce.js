@@ -67,11 +67,24 @@ async function extrairProdutosDaPagina(driver) {
             const nome = textoDe(card.querySelector('.vip-card-produto-descricao')) || link.getAttribute('title') || '';
             const imagem = card.querySelector('vip-image img, img');
 
+            // Produtos a peso em embalagem fechada mostram o preco por kg e o da embalagem
+            // (ex: "R$ 3,99/kg" e "R$ 11,17 /2,8kg"), mas o preco antigo e o da embalagem.
+            // Nesse caso o preco antigo e convertido para kg, como o preco atual.
+            let precoAntigo = textoDe(precoAnterior) || null;
+            const pesoEmbalagem = textoDe(card.querySelector('[data-cy="unidade"]')).match(/^\/\s*([\d.,]+)\s*kg$/i);
+            if (precoAntigo && unidadeNoPreco && pesoEmbalagem) {
+                const peso = Number.parseFloat(pesoEmbalagem[1].replace(',', '.'));
+                const valor = Number.parseFloat(precoAntigo.replace(/[^\d,]/g, '').replace(',', '.'));
+                if (peso > 0 && Number.isFinite(valor)) {
+                    precoAntigo = `R$ ${(valor / peso).toFixed(2).replace('.', ',')}`;
+                }
+            }
+
             return {
                 id: idMatch ? idMatch[1] : null,
                 name: nome,
                 price: textoDe(precoAtual).replace(/\/\s*[a-z]+$/i, '').trim() || null,
-                originalPrice: textoDe(precoAnterior) || null,
+                originalPrice: precoAntigo,
                 unit: unidade
                     ? textoDe(unidade).replace('/', '').trim().toLowerCase()
                     : (unidadeNoPreco ? unidadeNoPreco[1].toLowerCase() : null),
@@ -148,5 +161,7 @@ async function raspar(driver, mercado, opcoes) {
 }
 
 module.exports = {
+    descobrirDepartamentos,
+    extrairProdutosDaPagina,
     raspar
 };

@@ -43,7 +43,7 @@ async function aguardarEntrePaginas(delayConfig) {
 
 // Executa uma etapa de navegacao com novas tentativas, para que uma lentidao passageira
 // do site nao faca o scraper pular um departamento inteiro.
-async function comTentativas(descricao, acao, tentativas = 3) {
+async function comTentativas(descricao, acao, tentativas = 3, esperaBaseMs = 5000) {
     for (let tentativa = 1; tentativa <= tentativas; tentativa++) {
         try {
             return await acao();
@@ -52,7 +52,7 @@ async function comTentativas(descricao, acao, tentativas = 3) {
                 throw error;
             }
             console.log(`  ${descricao}: falhou (tentativa ${tentativa}/${tentativas}), tentando de novo...`);
-            await sleep(5000 * tentativa);
+            await sleep(esperaBaseMs * tentativa);
         }
     }
     return undefined;

@@ -13,13 +13,14 @@ function normalizar(texto) {
 
 const TEMPO_MAXIMO_MS = 20000;
 
-async function confirmarUnidade(driver, mercado) {
+// tempoMaximoMs pode ser reduzido nos testes.
+async function confirmarUnidade(driver, mercado, { tempoMaximoMs = TEMPO_MAXIMO_MS } = {}) {
     if (!mercado.enderecoLoja) {
         return;
     }
 
     const esperado = normalizar(mercado.enderecoLoja);
-    const limite = Date.now() + TEMPO_MAXIMO_MS;
+    const limite = Date.now() + tempoMaximoMs;
     let encontrado = false;
 
     // O endereco da loja e carregado depois do restante da pagina.
@@ -27,7 +28,7 @@ async function confirmarUnidade(driver, mercado) {
         const textoPagina = await driver.executeScript(() => document.body.innerText);
         encontrado = normalizar(textoPagina).includes(esperado);
         if (!encontrado) {
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            await new Promise(resolve => setTimeout(resolve, Math.min(1000, tempoMaximoMs)));
         }
     }
 
@@ -42,5 +43,6 @@ async function confirmarUnidade(driver, mercado) {
 }
 
 module.exports = {
-    confirmarUnidade
+    confirmarUnidade,
+    normalizar
 };

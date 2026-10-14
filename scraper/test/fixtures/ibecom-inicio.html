@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Inicio iBecom</title></head>
+<body>
+<!-- Pagina inicial simplificada de uma loja iBecom (fixture de teste). -->
+<header id="loja">Carregando loja...</header>
+<nav>
+    <a href="/cat/frutas-legumes-e-verduras"><img src="" alt=""></a>
+    <a href="/cat/frutas-legumes-e-verduras">Hortifruti</a>
+    <a href="/cat/bebidas?origem=menu">Bebidas</a>
+    <a href="/cat/so-icone"><img src="" alt=""></a>
+</nav>
+<script>
+    // Como no site real, o endereco da loja aparece depois do restante da pagina.
+    setTimeout(() => {
+        document.getElementById('loja').textContent = 'Retirada: R. José Augusto de Carvalho, 55, Poços de Caldas - MG';
+    }, 400);
+</script>
+</body>
+</html>
