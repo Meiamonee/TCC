@@ -6,6 +6,7 @@ import { useDispositivo } from '../useDispositivo';
 import { formatarDataColeta, formatarMoeda, formatarPrecoUnidade } from '../formatar';
 import { corBarraDoSupermercado } from '../supermercados';
 import Preco from './Preco';
+import ImagemProduto from './ImagemProduto';
 
 const Diferenca = ({ item, percentual, ehMaisBarato, haComparacao }) => {
     if (!haComparacao) return <span className="font-normal text-tinta-400">só neste mercado</span>;
@@ -34,20 +35,24 @@ const LinhaMercado = ({ item, posicao, idAtual, menorPreco, haComparacao }) => {
         : <Link to={`/produto/${item.id}`} className="underline-offset-2 hover:text-feira-700 hover:underline">{item.name}</Link>;
 
     return (
-        <li className={`grid grid-cols-[2rem_minmax(0,1fr)_auto_auto] items-center gap-x-3 rounded-2xl px-3 py-4 sm:grid-cols-[3rem_minmax(0,1fr)_auto_6.5rem_auto] sm:gap-x-5 sm:px-5 ${ehMaisBarato ? 'bg-etiqueta-100' : ''}`}>
-            <span className={`font-preco text-[2rem] font-bold leading-none sm:text-[2.75rem] ${ehMaisBarato ? 'text-oferta-500' : 'text-tinta-400/45'}`}>
+        <li className={`grid grid-cols-[1.4rem_minmax(0,1fr)_auto_auto] items-center gap-x-2 rounded-2xl px-2.5 py-3.5 sm:grid-cols-[3rem_minmax(0,1fr)_auto_6.5rem_auto] sm:gap-x-5 sm:px-5 ${ehMaisBarato ? 'bg-etiqueta-100' : ''}`}>
+            <span className={`font-preco text-[1.6rem] font-bold leading-none sm:text-[2.75rem] ${ehMaisBarato ? 'text-oferta-500' : 'text-tinta-400/45'}`}>
                 {posicao}º
             </span>
 
-            <div className="flex min-w-0 items-center gap-4">
+            <div className="flex min-w-0 items-center gap-2.5 sm:gap-4">
+                {/* A foto ajuda a conferir que e a mesma embalagem em cada mercado. */}
+                <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-papel-300 bg-white sm:h-16 sm:w-16">
+                    <ImagemProduto src={item.image} alt={item.name} className="h-full w-full object-contain p-1" tamanhoIcone={20} />
+                </div>
                 <div className="min-w-0">
-                    <p className="flex items-center gap-2 font-display text-base font-bold leading-tight text-tinta-900 sm:text-lg">
+                    <p className="flex items-center gap-2 font-display text-[15px] font-bold leading-tight text-tinta-900 sm:text-lg">
                         <span className="h-3 w-3 shrink-0 rounded-[4px]" style={{ background: corBarraDoSupermercado(item.supermercado) }} />
                         <span className="truncate">{item.supermercadoNome}</span>
                     </p>
                     <p className="mt-0.5 truncate text-[13px] text-tinta-700">{nome}</p>
                     <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[11px] text-tinta-400">
-                        <span>{precoUnidade ? `${precoUnidade} · ` : ''}coletado {formatarDataColeta(item.dataColeta)}</span>
+                        <span>{precoUnidade ? `${precoUnidade} · ` : ''}<span className="hidden sm:inline">coletado </span>{formatarDataColeta(item.dataColeta)}</span>
                         {ehAtual && <span className="flex items-center gap-1 font-semibold text-feira-600"><Eye size={12} /> você está vendo</span>}
                     </p>
                 </div>
@@ -67,7 +72,7 @@ const LinhaMercado = ({ item, posicao, idAtual, menorPreco, haComparacao }) => {
             <div className="flex items-center gap-1">
                 <button
                     onClick={() => adicionarNaLista(item)}
-                    className="flex h-10 min-w-10 items-center justify-center gap-1 rounded-full bg-feira-600 px-2.5 text-sm font-bold text-white transition hover:bg-feira-700 active:scale-95 sm:px-4"
+                    className="flex h-9 min-w-9 items-center sm:h-10 sm:min-w-10 justify-center gap-1 rounded-full bg-feira-600 px-2.5 text-sm font-bold text-white transition hover:bg-feira-700 active:scale-95 sm:px-4"
                     aria-label={`Adicionar ${item.name} do ${item.supermercadoNome} à lista`}
                 >
                     <Plus size={16} strokeWidth={2.75} /><span className="hidden sm:inline">Lista</span>
