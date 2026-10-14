@@ -9,7 +9,7 @@ import { formatarDataColeta } from '../formatar';
 import { corBarraDoSupermercado } from '../supermercados';
 import ProductList from '../components/ProductList';
 import CestaBasica from '../components/CestaBasica';
-import FachadaMercado from '../components/FachadaMercado';
+import PrateleiraMercados from '../components/PrateleiraMercados';
 import Preco from '../components/Preco';
 
 // Quantas ofertas cabem na vitrine de cada dispositivo (linhas completas na grade).
@@ -302,11 +302,7 @@ const Inicio = () => {
 
                 <section>
                     <Cabecalho sobretitulo="Quem participa" titulo="Os supermercados" compacto={mobile} />
-                    <div className={mobile ? '-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-1 scrollbar-hide' : `grid gap-4 ${tablet ? 'grid-cols-2' : 'grid-cols-4'}`}>
-                        {supermercados.map(mercado => (
-                            <FachadaMercado key={mercado.slug} mercado={mercado} className={mobile ? 'w-[70vw] max-w-[280px] shrink-0 snap-start' : ''} />
-                        ))}
-                    </div>
+                    <PrateleiraMercados supermercados={supermercados} compacto={mobile} />
                 </section>
 
                 <section className={`fundo-feira relative overflow-hidden text-papel-50 ${mobile ? '-mx-4 px-5 py-8' : 'rounded-[2rem] px-8 py-10 lg:px-10'}`}>
