@@ -12,9 +12,9 @@ const numero = valor => (valor ?? 0).toLocaleString('pt-BR');
 const semAno = data => formatarDataCompleta(data).replace(/\/\d{4}/, '');
 
 const Numero = ({ rotulo, valor, detalhe, destaque }) => (
-    <div className={`p-5 ${destaque ? 'bg-etiqueta-100' : ''}`}>
-        <dt className="font-preco text-[13px] font-bold uppercase tracking-[0.16em] text-tinta-500">{rotulo}</dt>
-        <dd className="mt-1 font-preco text-[2.4rem] font-bold leading-none text-feira-900">{valor}</dd>
+    <div className={`p-4 sm:p-5 ${destaque ? 'bg-etiqueta-100' : ''}`}>
+        <dt className="font-preco text-[12px] font-bold uppercase tracking-[0.14em] text-tinta-500 sm:text-[13px] sm:tracking-[0.16em]">{rotulo}</dt>
+        <dd className="mt-1 font-preco text-[1.7rem] font-bold leading-none text-feira-900 sm:text-[2.4rem]">{valor}</dd>
         {detalhe && <dd className="mt-1.5 text-xs text-tinta-500">{detalhe}</dd>}
     </div>
 );
@@ -103,7 +103,7 @@ const Painel = () => {
                             <p className="font-preco text-sm font-bold uppercase tracking-[0.25em] text-oferta-500">Painel de preços</p>
                             <h1 className="text-4xl font-extrabold text-feira-900 sm:text-6xl">Boletim do SuperPreço</h1>
                         </div>
-                        <div className="text-right text-sm text-tinta-500">
+                        <div className="text-sm text-tinta-500 sm:text-right">
                             <p>Edição de {formatarDataCompleta(dados.geradoEm)}</p>
                             <button
                                 onClick={() => setRecarregar(v => v + 1)}

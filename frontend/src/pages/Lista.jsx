@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Minus, Plus, Receipt, Split, Trash2, Trophy } from 'lucide-react';
 import { useApp } from '../AppContext';
@@ -7,6 +7,7 @@ import { formatarMoeda } from '../formatar';
 import { corBarraDoSupermercado } from '../supermercados';
 import SeloMercado from '../components/SeloMercado';
 import Preco from '../components/Preco';
+import { useDispositivo } from '../useDispositivo';
 
 const valorCupom = valor => valor.toFixed(2).replace('.', ',');
 
@@ -17,6 +18,8 @@ const Lista = () => {
     const [carregando, setCarregando] = useState(false);
     const [erro, setErro] = useState(null);
     const [hoje] = useState(() => new Date().toLocaleDateString('pt-BR'));
+    const mobile = useDispositivo() === 'mobile';
+    const resultadoRef = useRef(null);
 
     const totalEstimado = itens.reduce((soma, item) => soma + item.preco * item.quantidade, 0);
     const quantidadeItens = itens.reduce((soma, item) => soma + item.quantidade, 0);
@@ -26,6 +29,8 @@ const Lista = () => {
         setErro(null);
         try {
             setCotacao(await cotarLista(itens.map(item => ({ id: item.id, quantidade: item.quantidade }))));
+            // No celular o resultado fica abaixo do cupom; leva o usuario ate ele.
+            if (mobile) window.setTimeout(() => resultadoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
         } catch (error) {
             setErro(error.message);
         } finally {
@@ -70,15 +75,15 @@ const Lista = () => {
         : [];
 
     return (
-        <div className="fundo-encarte min-h-[70vh]">
-            <div className="mx-auto max-w-7xl px-4 py-10">
-                <div className="mb-8">
+        <div className={`fundo-encarte min-h-[70vh] ${mobile ? 'pb-[76px]' : ''}`}>
+            <div className={`mx-auto max-w-7xl ${mobile ? 'px-3 py-6' : 'px-6 py-10'}`}>
+                <div className={mobile ? 'mb-5 px-1' : 'mb-8'}>
                     <p className="font-preco text-sm font-bold uppercase tracking-[0.2em] text-oferta-500">Minha lista</p>
-                    <h1 className="text-3xl font-extrabold text-feira-900 sm:text-4xl">Onde sua compra sai mais barata?</h1>
+                    <h1 className={`font-extrabold text-feira-900 ${mobile ? 'text-[1.7rem] leading-tight' : 'text-4xl'}`}>Onde sua compra sai mais barata?</h1>
                     <p className="mt-1 text-sm text-tinta-500">A lista fica salva neste navegador.</p>
                 </div>
 
-                <div className="grid gap-8 lg:grid-cols-[minmax(0,440px)_1fr] lg:items-start">
+                <div className="grid gap-8 md:grid-cols-[minmax(0,360px)_1fr] md:items-start lg:grid-cols-[minmax(0,440px)_1fr]">
                     <section className="serrilhado-baixo rounded-t-2xl bg-white px-5 pt-6 font-cupom text-[13px] text-tinta-900 shadow-cartao sm:px-7">
                         <div className="text-center">
                             <p className="text-base font-semibold tracking-[0.3em]">SUPERPREÇO</p>
@@ -124,8 +129,8 @@ const Lista = () => {
                         </button>
                     </section>
 
-                    <section className="space-y-5">
-                        <div className="fundo-feira rounded-[1.75rem] p-6 text-papel-50 shadow-cartao sm:p-7">
+                    <section ref={resultadoRef} className="scroll-mt-[140px] space-y-5">
+                        <div className={`fundo-feira rounded-[1.75rem] p-6 text-papel-50 shadow-cartao sm:p-7 ${mobile ? 'hidden' : ''}`}>
                             <h2 className="text-2xl font-extrabold">Comparar nos {cotacao?.porMercado.length || 4} supermercados</h2>
                             <p className="mt-1 text-sm text-feira-100">Procuramos cada item da lista nos outros mercados, considerando marca e tamanho.</p>
                             <button
@@ -206,6 +211,22 @@ const Lista = () => {
                     </section>
                 </div>
             </div>
+
+            {mobile && (
+                <div className="fixed inset-x-0 bottom-[calc(64px+env(safe-area-inset-bottom))] z-30 flex items-center gap-3 border-t border-papel-300 bg-papel-50/95 px-4 py-2.5 shadow-[0_-8px_20px_-12px_rgba(29,27,22,.35)] backdrop-blur">
+                    <div className="min-w-0 flex-1 leading-tight">
+                        <p className="text-[11px] text-tinta-500">{quantidadeItens} itens na lista</p>
+                        <p className="font-preco text-xl font-bold text-feira-900">{formatarMoeda(totalEstimado)}</p>
+                    </div>
+                    <button
+                        onClick={cotar}
+                        disabled={carregando}
+                        className="h-11 shrink-0 rounded-xl bg-etiqueta-400 px-5 font-display text-sm font-extrabold text-feira-900 active:scale-95 disabled:opacity-60"
+                    >
+                        {carregando ? 'Comparando...' : cotacao ? 'Comparar de novo' : 'Onde é mais barato?'}
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

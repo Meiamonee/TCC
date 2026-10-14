@@ -5,6 +5,7 @@ import Produtos from './pages/Produtos'
 import Produto from './pages/Produto'
 import Lista from './pages/Lista'
 import Painel from './pages/Painel'
+import Corredores from './pages/Corredores'
 
 const NaoEncontrada = () => (
   <div className="fundo-encarte">
@@ -28,6 +29,7 @@ function App() {
         <Route path="produto/:id" element={<Produto />} />
         <Route path="lista" element={<Lista />} />
         <Route path="painel" element={<Painel />} />
+        <Route path="corredores" element={<Corredores />} />
         <Route path="*" element={<NaoEncontrada />} />
       </Route>
     </Routes>

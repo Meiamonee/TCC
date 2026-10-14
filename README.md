@@ -20,6 +20,15 @@ Supermercados monitorados: **SuperVale, Vila Sul, San Michel e Pedrilho** (unida
 | Produto | `/produto/:id` | Preço, comparação nos outros supermercados e histórico de preço |
 | Lista de compras | `/lista` | Itens escolhidos, total em cada supermercado e compra dividida |
 | Painel de preços | `/painel` | Produtos coletados, data e hora da última e da próxima coleta, cesta básica, variações de preço e números por supermercado |
+| Corredores | `/corredores` | Todos os departamentos e supermercados (aba de navegação do celular) |
+
+O site tem três versões, escolhidas pela largura da tela (`frontend/src/useDispositivo.js`):
+
+- **Celular** (até 639 px): barra de navegação inferior, carrosséis com deslize, filtros e ordenação em painéis que sobem da parte de baixo e barras fixas com a ação principal (adicionar à lista, comparar a lista).
+- **Tablet** (640 a 1023 px): barra lateral de ícones, grades de 2 a 3 colunas e filtros em gaveta lateral.
+- **Computador** (1024 px ou mais): cabeçalho completo e filtros fixos ao lado dos produtos.
+
+Para abrir o site no celular ou tablet pela mesma rede Wi-Fi durante o desenvolvimento, inicie com a variável `EXPOR_NA_REDE=1` (no PowerShell: `$env:EXPOR_NA_REDE = '1'; npm start`) e acesse o endereço "Network" mostrado pelo Vite.
 
 ## Funcionalidades
 
