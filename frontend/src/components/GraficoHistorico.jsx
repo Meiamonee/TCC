@@ -7,7 +7,7 @@ const GraficoHistorico = ({ historico }) => {
 
     if (pontos.length < 2) {
         return (
-            <p className="rounded-xl bg-zinc-50 p-4 text-sm text-zinc-500">
+            <p className="rounded-xl border border-dashed border-papel-300 p-5 text-sm text-tinta-500">
                 Ainda não houve mudança de preço registrada. O histórico é montado a cada coleta automática.
             </p>
         );
@@ -31,14 +31,14 @@ const GraficoHistorico = ({ historico }) => {
     return (
         <div>
             <svg viewBox={`0 0 ${largura} ${altura}`} className="h-40 w-full" role="img" aria-label="Histórico de preço">
-                <path d={`${caminho} V${altura - margem} H${x(tMin)} Z`} fill="#dcfce7" />
-                <path d={caminho} fill="none" stroke="#15803d" strokeWidth="2.5" />
+                <path d={`${caminho} V${altura - margem} H${x(tMin)} Z`} fill="#d5eadb" />
+                <path d={caminho} fill="none" stroke="#1f7a45" strokeWidth="3" strokeLinejoin="round" />
             </svg>
-            <div className="mt-2 flex flex-wrap justify-between gap-2 text-xs text-zinc-500">
+            <div className="mt-2 flex flex-wrap justify-between gap-2 text-xs text-tinta-500">
                 <span>{new Date(tMin).toLocaleDateString('pt-BR')}</span>
                 <span>
-                    Menor: <strong className="text-green-700">{formatarMoeda(historico.menorPreco)}</strong>
-                    {' · '}Maior: <strong className="text-zinc-800">{formatarMoeda(historico.maiorPreco)}</strong>
+                    Menor: <strong className="text-feira-600">{formatarMoeda(historico.menorPreco)}</strong>
+                    {' · '}Maior: <strong className="text-tinta-900">{formatarMoeda(historico.maiorPreco)}</strong>
                 </span>
                 <span>Hoje</span>
             </div>

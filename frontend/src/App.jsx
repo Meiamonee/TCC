@@ -7,13 +7,15 @@ import Lista from './pages/Lista'
 import Painel from './pages/Painel'
 
 const NaoEncontrada = () => (
-  <div className="mx-auto max-w-xl px-4 py-24 text-center">
-    <p className="text-6xl font-extrabold text-green-600">404</p>
-    <h1 className="mt-2 text-2xl font-extrabold">Página não encontrada</h1>
-    <p className="mt-2 text-zinc-500">O endereço pode estar errado ou a página foi removida.</p>
-    <Link to="/" className="mt-6 inline-block rounded-full bg-green-600 px-6 py-3 text-sm font-bold text-white hover:bg-green-700">
-      Voltar ao início
-    </Link>
+  <div className="fundo-encarte">
+    <div className="mx-auto max-w-xl px-4 py-24 text-center">
+      <span className="etiqueta inline-block rotate-[-4deg] py-2 pr-6 font-preco text-6xl font-extrabold">404</span>
+      <h1 className="mt-6 text-3xl font-extrabold text-feira-900">Essa prateleira está vazia</h1>
+      <p className="mt-2 text-tinta-500">O endereço pode estar errado ou a página foi removida.</p>
+      <Link to="/" className="mt-8 inline-block rounded-xl bg-feira-700 px-6 py-3.5 font-display font-bold text-papel-50 hover:bg-feira-800">
+        Voltar ao início
+      </Link>
+    </div>
   </div>
 )
 

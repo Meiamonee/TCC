@@ -1,9 +1,9 @@
-// Identidade visual de cada supermercado: logo (quando houver em /public/logos) e cor do selo.
+// Identidade visual de cada supermercado: logo (quando houver em /public/logos) e cores.
 const MERCADOS = {
-    supervale: { logo: '/logos/supervale.png', cor: 'bg-red-600 text-white' },
-    vilasul: { logo: null, cor: 'bg-blue-700 text-white' },
-    sanmichel: { logo: null, cor: 'bg-orange-500 text-white' },
-    pedrilho: { logo: null, cor: 'bg-emerald-700 text-white' }
+    supervale: { logo: '/logos/supervale.png', cor: 'bg-[#fde8e6] text-[#b42318]', barra: '#d6402f' },
+    vilasul: { logo: null, cor: 'bg-[#e3ecfb] text-[#1f4fa3]', barra: '#2f62c4' },
+    sanmichel: { logo: null, cor: 'bg-[#fff0dc] text-[#b54708]', barra: '#e07b12' },
+    pedrilho: { logo: null, cor: 'bg-feira-100 text-feira-700', barra: '#1f7a45' }
 }
 
 export function logoDoSupermercado(slug) {
@@ -11,7 +11,12 @@ export function logoDoSupermercado(slug) {
 }
 
 export function corDoSupermercado(slug) {
-    return MERCADOS[slug]?.cor || 'bg-zinc-700 text-white'
+    return MERCADOS[slug]?.cor || 'bg-papel-200 text-tinta-700'
+}
+
+// Cor solida usada em barras e marcadores de graficos.
+export function corBarraDoSupermercado(slug) {
+    return MERCADOS[slug]?.barra || '#6b665b'
 }
 
 export function iniciais(nome = '') {

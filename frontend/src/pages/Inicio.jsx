@@ -1,32 +1,93 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BadgePercent, ChevronRight, ListChecks, MapPin, Scale, Search, Store } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { useApp } from '../AppContext';
-import { fetchProducts } from '../services/api';
+import { fetchCestaBasica, fetchProducts } from '../services/api';
 import { estiloDepartamento } from '../departamentos';
 import { formatarDataColeta } from '../formatar';
+import { corBarraDoSupermercado } from '../supermercados';
 import ProductList from '../components/ProductList';
 import CestaBasica from '../components/CestaBasica';
-import SeloMercado from '../components/SeloMercado';
+import Preco from '../components/Preco';
 
-const TituloSecao = ({ titulo, subtitulo, link, textoLink }) => (
-    <div className="mb-4 flex items-end justify-between gap-4">
+const Cabecalho = ({ sobretitulo, titulo, link, textoLink }) => (
+    <div className="mb-6 flex items-end justify-between gap-4">
         <div>
-            <h2 className="text-xl font-extrabold text-zinc-900 sm:text-2xl">{titulo}</h2>
-            {subtitulo && <p className="text-sm text-zinc-500">{subtitulo}</p>}
+            {sobretitulo && <p className="mb-1 font-preco text-sm font-bold uppercase tracking-[0.2em] text-oferta-500">{sobretitulo}</p>}
+            <h2 className="text-2xl font-extrabold text-feira-900 sm:text-[2rem]">{titulo}</h2>
         </div>
         {link && (
-            <Link to={link} className="flex shrink-0 items-center gap-0.5 text-sm font-bold text-green-700 hover:text-green-900">
-                {textoLink} <ChevronRight size={16} />
+            <Link to={link} className="group flex shrink-0 items-center gap-1 text-sm font-bold text-feira-600 hover:text-feira-800">
+                {textoLink} <ArrowRight size={16} className="transition group-hover:translate-x-0.5" />
             </Link>
         )}
     </div>
 );
 
+// Etiquetas com o custo da cesta basica de cada mercado, usadas no destaque da pagina inicial.
+const EtiquetasCesta = () => {
+    const [cesta, setCesta] = useState(null);
+
+    useEffect(() => {
+        let cancelado = false;
+        fetchCestaBasica()
+            .then(dados => { if (!cancelado) setCesta(dados); })
+            .catch(() => {});
+        return () => { cancelado = true; };
+    }, []);
+
+    if (!cesta) {
+        return <div className="h-[340px] animate-pulse rounded-3xl bg-white/40" />;
+    }
+
+    const completa = item => item.itensEncontrados === item.itensTotal;
+    const mercados = [...cesta.porMercado].sort((a, b) => completa(b) - completa(a) || a.total - b.total);
+    const rotacoes = ['-rotate-2', 'rotate-1', '-rotate-1', 'rotate-2'];
+
+    return (
+        <div className="relative">
+            <div className="absolute -inset-4 rotate-2 rounded-[2rem] bg-feira-700/90" aria-hidden="true" />
+            <div className="relative rounded-[1.75rem] bg-feira-800 p-5 text-papel-50 shadow-2xl sm:p-6" style={{ '--furo': '#0c3d24' }}>
+                <div className="mb-4 flex items-baseline justify-between gap-2">
+                    <p className="font-display text-lg font-extrabold">Cesta básica hoje</p>
+                    <p className="text-xs text-feira-200">13 itens · DIEESE</p>
+                </div>
+                <ul className="space-y-3">
+                    {mercados.map((mercado, indice) => {
+                        const maisBarata = cesta.maisBarato?.supermercado === mercado.supermercado;
+                        return (
+                            <li key={mercado.supermercado} className={`relative ${rotacoes[indice % rotacoes.length]} transition hover:rotate-0`}>
+                                <div className={`etiqueta flex items-center justify-between gap-3 py-2.5 pr-4 ${maisBarata ? '' : '!bg-papel-50'}`}>
+                                    <span className="flex items-center gap-2">
+                                        <span className="h-3 w-3 rounded-sm" style={{ background: corBarraDoSupermercado(mercado.supermercado) }} />
+                                        <span className="font-display text-base font-bold">{mercado.supermercadoNome}</span>
+                                    </span>
+                                    <span className="text-right">
+                                        <Preco valor={mercado.total} tamanho="m" />
+                                        {!completa(mercado) && <span className="block text-[10px] font-semibold text-tinta-500">faltam itens no site</span>}
+                                    </span>
+                                </div>
+                                {maisBarata && (
+                                    <span className="absolute -right-2 -top-3 rotate-6 rounded-md border-2 border-oferta-500 bg-papel-50 px-2 py-0.5 font-preco text-xs font-extrabold uppercase tracking-wider text-oferta-500 shadow">
+                                        Mais barata
+                                    </span>
+                                )}
+                            </li>
+                        );
+                    })}
+                </ul>
+                <Link to="/painel" className="mt-5 flex items-center gap-1 text-xs font-bold text-etiqueta-300 hover:text-etiqueta-200">
+                    Como calculamos <ArrowRight size={13} />
+                </Link>
+            </div>
+        </div>
+    );
+};
+
 const PASSOS = [
-    { icone: Search, titulo: 'Busque o produto', texto: 'Procure pelo nome, marca ou tamanho, ou navegue pelos departamentos.' },
-    { icone: Scale, titulo: 'Compare os preços', texto: 'Veja o mesmo produto nos supermercados de Poços de Caldas, com o preço por kg ou litro.' },
-    { icone: ListChecks, titulo: 'Monte sua lista', texto: 'Descubra em qual mercado sua compra sai mais barata e quanto você economiza.' }
+    { titulo: 'Procure', texto: 'Busque pelo nome, marca ou tamanho, ou passeie pelos corredores.' },
+    { titulo: 'Compare', texto: 'Veja o mesmo produto em cada mercado, com o preço por kg ou litro.' },
+    { titulo: 'Economize', texto: 'Monte sua lista e descubra onde a compra inteira sai mais barata.' }
 ];
 
 const Inicio = () => {
@@ -35,7 +96,7 @@ const Inicio = () => {
 
     useEffect(() => {
         let cancelado = false;
-        fetchProducts({ ofertas: true, alimentos: true, ordenar: 'menor-preco', limit: 10 })
+        fetchProducts({ ofertas: true, alimentos: true, ordenar: 'menor-preco', limit: 8 })
             .then(resposta => { if (!cancelado) setOfertas({ carregando: false, itens: resposta.data }); })
             .catch(() => { if (!cancelado) setOfertas({ carregando: false, itens: [] }); });
         return () => { cancelado = true; };
@@ -43,62 +104,67 @@ const Inicio = () => {
 
     return (
         <div>
-            <section className="bg-gradient-to-br from-green-700 via-green-700 to-green-800 text-white">
-                <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:py-14 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+            <section className="fundo-encarte overflow-hidden border-b border-papel-300">
+                <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-12 sm:py-16 lg:grid-cols-[1.15fr_1fr]">
                     <div>
-                        <span className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-yellow-400 px-3 py-1 text-xs font-extrabold uppercase text-green-950">
-                            <MapPin size={13} /> Poços de Caldas
-                        </span>
-                        <h1 className="text-3xl font-extrabold leading-tight sm:text-5xl">
-                            Compare preços e economize nas compras do mês
-                        </h1>
-                        <p className="mt-4 max-w-xl text-base text-green-50 sm:text-lg">
-                            Os preços de {supermercados.length || 4} supermercados da cidade em um só lugar, atualizados automaticamente todos os dias.
+                        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-feira-200 bg-papel-50 px-3 py-1 text-xs font-bold text-feira-700">
+                            <MapPin size={13} /> Supermercados de Poços de Caldas
                         </p>
-                        <div className="mt-6 flex flex-wrap gap-3">
-                            <Link to="/produtos" className="rounded-full bg-yellow-400 px-6 py-3 text-sm font-extrabold text-green-950 shadow transition hover:bg-yellow-300">
-                                Ver todos os produtos
+                        <h1 className="text-[2.75rem] font-extrabold leading-[0.98] text-feira-900 sm:text-7xl">
+                            Quem compara,<br /><span className="marcador">economiza.</span>
+                        </h1>
+                        <p className="mt-6 max-w-lg text-lg leading-relaxed text-tinta-700">
+                            O SuperPreço junta os preços de {supermercados.length || 4} supermercados da cidade num só lugar e mostra onde cada produto — e a sua compra inteira — sai mais barato.
+                        </p>
+                        <div className="mt-8 flex flex-wrap gap-3">
+                            <Link to="/produtos" className="rounded-xl bg-feira-700 px-6 py-3.5 font-display text-[15px] font-bold text-papel-50 shadow-cartao transition hover:bg-feira-800">
+                                Ver os produtos
                             </Link>
-                            <Link to="/lista" className="rounded-full border-2 border-white/70 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10">
-                                Minha lista de compras
+                            <Link to="/lista" className="rounded-xl border-2 border-feira-700 px-6 py-3 font-display text-[15px] font-bold text-feira-700 transition hover:bg-feira-50">
+                                Montar minha lista
                             </Link>
                         </div>
+                        <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-dashed border-tinta-400/40 pt-6">
+                            <div>
+                                <dt className="text-xs font-semibold uppercase tracking-wider text-tinta-500">Preços</dt>
+                                <dd className="font-preco text-3xl font-bold text-feira-800">{totalProdutos.toLocaleString('pt-BR')}</dd>
+                            </div>
+                            <div>
+                                <dt className="text-xs font-semibold uppercase tracking-wider text-tinta-500">Mercados</dt>
+                                <dd className="font-preco text-3xl font-bold text-feira-800">{supermercados.length}</dd>
+                            </div>
+                            <div>
+                                <dt className="text-xs font-semibold uppercase tracking-wider text-tinta-500">Atualizado</dt>
+                                <dd className="font-preco text-3xl font-bold text-feira-800">{ultimaColeta ? formatarDataColeta(ultimaColeta) : '--'}</dd>
+                            </div>
+                        </dl>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3">
-                        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
-                            <div className="text-3xl font-extrabold">{totalProdutos.toLocaleString('pt-BR')}</div>
-                            <div className="text-sm text-green-100">preços monitorados</div>
-                        </div>
-                        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
-                            <div className="text-3xl font-extrabold">{supermercados.length}</div>
-                            <div className="text-sm text-green-100">supermercados</div>
-                        </div>
-                        <div className="col-span-2 rounded-2xl bg-white/10 p-5 backdrop-blur">
-                            <div className="text-sm text-green-100">Última atualização dos preços</div>
-                            <div className="text-xl font-extrabold">{ultimaColeta ? formatarDataColeta(ultimaColeta) : '--'}</div>
-                        </div>
-                    </div>
+                    <EtiquetasCesta />
                 </div>
             </section>
 
-            <div className="mx-auto max-w-7xl space-y-12 px-4 py-10">
+            <div className="mx-auto max-w-7xl space-y-16 px-4 py-14">
                 <section>
-                    <TituloSecao titulo="Departamentos" subtitulo="Navegue pelos produtos de cada seção" link="/produtos" textoLink="Ver tudo" />
-                    <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7">
-                        {departamentos.map(departamento => {
-                            const { icone: Icone, cor } = estiloDepartamento(departamento.nome);
+                    <Cabecalho sobretitulo="Corredores" titulo="Passeie pelos departamentos" link="/produtos" textoLink="Ver tudo" />
+                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
+                        {departamentos.map((departamento, indice) => {
+                            const { icone: Icone, cor, tom } = estiloDepartamento(departamento.nome);
                             return (
                                 <Link
                                     key={departamento.nome}
                                     to={`/produtos?departamento=${encodeURIComponent(departamento.nome)}`}
-                                    className="flex flex-col items-center gap-2 rounded-2xl border border-zinc-200 bg-white p-4 text-center transition hover:-translate-y-0.5 hover:border-green-300 hover:shadow-md"
+                                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-papel-300 bg-papel-50 p-4 transition hover:-translate-y-1 hover:shadow-cartao"
                                 >
-                                    <span className={`flex h-12 w-12 items-center justify-center rounded-full ${cor}`}>
+                                    <span className="absolute inset-x-0 top-0 h-1.5" style={{ background: tom }} aria-hidden="true" />
+                                    <span className="font-preco text-xs font-bold uppercase tracking-[0.15em] text-tinta-400">
+                                        Corredor {String(indice + 1).padStart(2, '0')}
+                                    </span>
+                                    <span className={`mt-3 flex h-12 w-12 items-center justify-center rounded-xl ${cor} transition group-hover:scale-110`}>
                                         <Icone size={24} />
                                     </span>
-                                    <span className="text-xs font-bold leading-tight text-zinc-800 sm:text-sm">{departamento.nome}</span>
-                                    <span className="text-[11px] text-zinc-400">{departamento.total.toLocaleString('pt-BR')} itens</span>
+                                    <span className="mt-3 font-display text-[15px] font-bold leading-tight text-feira-900">{departamento.nome}</span>
+                                    <span className="mt-1 text-xs text-tinta-500">{departamento.total.toLocaleString('pt-BR')} produtos</span>
                                 </Link>
                             );
                         })}
@@ -106,58 +172,59 @@ const Inicio = () => {
                 </section>
 
                 {(ofertas.carregando || ofertas.itens.length > 0) && (
-                    <section>
-                        <TituloSecao
-                            titulo={<span className="flex items-center gap-2"><BadgePercent className="text-red-600" /> Ofertas nos supermercados</span>}
-                            subtitulo="Produtos com preço promocional nos sites dos mercados"
-                            link="/produtos?ofertas=1"
-                            textoLink="Ver todas as ofertas"
-                        />
-                        <ProductList products={ofertas.itens} carregando={ofertas.carregando} quantidadeEsqueleto={5} />
+                    <section className="overflow-hidden rounded-[2rem] border-2 border-oferta-500/20 bg-papel-50">
+                        <div className="faixa-listrada flex items-center justify-between gap-4 px-5 py-3 sm:px-7">
+                            <h2 className="font-preco text-2xl font-extrabold uppercase tracking-wide text-white sm:text-3xl">Ofertas nos sites</h2>
+                            <Link to="/produtos?ofertas=1" className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-extrabold uppercase text-oferta-600 hover:bg-oferta-100">
+                                Ver todas
+                            </Link>
+                        </div>
+                        <div className="p-4 sm:p-6">
+                            <p className="mb-5 text-sm text-tinta-500">Produtos com preço “de/por” nos sites dos supermercados, do mais barato ao mais caro.</p>
+                            <ProductList products={ofertas.itens} carregando={ofertas.carregando} quantidadeEsqueleto={4} />
+                        </div>
                     </section>
                 )}
 
                 <CestaBasica />
 
                 <section>
-                    <TituloSecao titulo="Supermercados participantes" subtitulo="Preços das unidades de Poços de Caldas" />
+                    <Cabecalho sobretitulo="Quem participa" titulo="Os supermercados" />
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         {supermercados.map(mercado => (
                             <Link
                                 key={mercado.slug}
                                 to={`/produtos?mercado=${mercado.slug}`}
-                                className="flex flex-col rounded-2xl border border-zinc-200 bg-white p-5 transition hover:border-green-300 hover:shadow-md"
+                                className="group relative overflow-hidden rounded-2xl border border-papel-300 bg-papel-50 p-5 transition hover:-translate-y-1 hover:shadow-cartao"
                             >
-                                <div className="mb-3 flex items-center gap-2">
-                                    <Store size={20} className="text-zinc-400" />
-                                    <SeloMercado slug={mercado.slug} nome={mercado.nome} tamanho="grande" />
-                                </div>
+                                <span className="absolute inset-y-0 left-0 w-1.5" style={{ background: corBarraDoSupermercado(mercado.slug) }} aria-hidden="true" />
+                                <h3 className="font-display text-xl font-extrabold text-feira-900">{mercado.nome}</h3>
                                 {mercado.endereco && (
-                                    <p className="text-sm text-zinc-600">{mercado.endereco.replace(/,\s*Po[cç]os de Caldas$/i, '')}</p>
+                                    <p className="mt-1 flex items-start gap-1 text-sm text-tinta-500">
+                                        <MapPin size={14} className="mt-0.5 shrink-0" />
+                                        {mercado.endereco.replace(/,\s*Po[cç]os de Caldas$/i, '')}
+                                    </p>
                                 )}
-                                <p className="mt-3 text-2xl font-extrabold text-zinc-900">{mercado.totalProdutos.toLocaleString('pt-BR')}</p>
-                                <p className="text-xs text-zinc-500">produtos · coletado em {formatarDataColeta(mercado.ultimaColeta)}</p>
-                                <span className="mt-4 text-sm font-bold text-green-700">Ver produtos →</span>
+                                <p className="mt-5 font-preco text-4xl font-bold text-feira-800">{mercado.totalProdutos.toLocaleString('pt-BR')}</p>
+                                <p className="text-xs text-tinta-500">produtos · coletado em {formatarDataColeta(mercado.ultimaColeta)}</p>
+                                <span className="mt-4 flex items-center gap-1 text-sm font-bold text-feira-600 group-hover:text-feira-800">
+                                    Ver produtos <ArrowRight size={15} />
+                                </span>
                             </Link>
                         ))}
                     </div>
                 </section>
 
-                <section className="rounded-3xl bg-yellow-50 p-6 sm:p-10">
-                    <h2 className="mb-6 text-center text-xl font-extrabold text-zinc-900 sm:text-2xl">Como funciona</h2>
-                    <div className="grid gap-6 sm:grid-cols-3">
-                        {PASSOS.map((passo, indice) => {
-                            const Icone = passo.icone;
-                            return (
-                                <div key={passo.titulo} className="text-center">
-                                    <span className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white">
-                                        <Icone size={26} />
-                                    </span>
-                                    <h3 className="font-extrabold text-zinc-900">{indice + 1}. {passo.titulo}</h3>
-                                    <p className="mt-1 text-sm text-zinc-600">{passo.texto}</p>
-                                </div>
-                            );
-                        })}
+                <section className="fundo-feira relative overflow-hidden rounded-[2rem] px-6 py-10 text-papel-50 sm:px-10">
+                    <h2 className="text-3xl font-extrabold sm:text-4xl">Como funciona</h2>
+                    <div className="mt-8 grid gap-8 sm:grid-cols-3">
+                        {PASSOS.map((passo, indice) => (
+                            <div key={passo.titulo}>
+                                <span className="font-preco text-6xl font-extrabold leading-none text-etiqueta-400">0{indice + 1}</span>
+                                <h3 className="mt-2 text-xl font-extrabold">{passo.titulo}</h3>
+                                <p className="mt-1 text-sm leading-6 text-feira-100">{passo.texto}</p>
+                            </div>
+                        ))}
                     </div>
                 </section>
             </div>

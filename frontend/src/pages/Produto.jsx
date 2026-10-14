@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ChevronRight, ExternalLink, Info, LineChart, Plus, Scale, TrendingDown, Trophy } from 'lucide-react';
+import { ChevronRight, ExternalLink, Info, Plus } from 'lucide-react';
 import { useApp } from '../AppContext';
 import { fetchComparacao, fetchHistorico, fetchProduto } from '../services/api';
 import { formatarDataColeta, formatarMoeda, formatarPrecoUnidade } from '../formatar';
+import { corBarraDoSupermercado } from '../supermercados';
 import SeloMercado from '../components/SeloMercado';
+import Preco from '../components/Preco';
 import GraficoHistorico from '../components/GraficoHistorico';
+import ImagemProduto from '../components/ImagemProduto';
 
 const Produto = () => {
     const { id } = useParams();
@@ -32,12 +35,12 @@ const Produto = () => {
 
     if (carregando && !produto) {
         return (
-            <div className="mx-auto grid max-w-7xl animate-pulse gap-8 px-4 py-8 md:grid-cols-2">
-                <div className="aspect-square rounded-3xl bg-zinc-100" />
+            <div className="mx-auto grid max-w-7xl animate-pulse gap-10 px-4 py-10 md:grid-cols-2">
+                <div className="aspect-square rounded-3xl bg-papel-200" />
                 <div className="space-y-4">
-                    <div className="h-6 w-24 rounded-full bg-zinc-100" />
-                    <div className="h-8 rounded bg-zinc-100" />
-                    <div className="h-12 w-40 rounded bg-zinc-100" />
+                    <div className="h-6 w-24 rounded bg-papel-200" />
+                    <div className="h-10 rounded bg-papel-200" />
+                    <div className="h-20 w-56 rounded bg-papel-200" />
                 </div>
             </div>
         );
@@ -45,10 +48,10 @@ const Produto = () => {
 
     if (erro || !produto) {
         return (
-            <div className="mx-auto max-w-xl px-4 py-20 text-center">
-                <h1 className="text-2xl font-extrabold">Produto não encontrado</h1>
-                <p className="mt-2 text-zinc-500">{erro || 'Ele pode ter saído do site do supermercado.'}</p>
-                <Link to="/produtos" className="mt-6 inline-block rounded-full bg-green-600 px-6 py-3 text-sm font-bold text-white">Ver produtos</Link>
+            <div className="mx-auto max-w-xl px-4 py-24 text-center">
+                <h1 className="text-3xl font-extrabold text-feira-900">Produto não encontrado</h1>
+                <p className="mt-2 text-tinta-500">{erro || 'Ele pode ter saído do site do supermercado.'}</p>
+                <Link to="/produtos" className="mt-6 inline-block rounded-xl bg-feira-700 px-6 py-3 text-sm font-bold text-papel-50">Ver produtos</Link>
             </div>
         );
     }
@@ -58,148 +61,165 @@ const Produto = () => {
     const maisBarato = opcoes.find(item => item.maisBarato);
     const esteEhMaisBarato = maisBarato?.id === produto.id;
     const vendidoAPeso = produto.unit === 'kg';
+    const maiorPreco = Math.max(...opcoes.map(item => item.priceNumber), produto.priceNumber);
+    const emOferta = produto.originalPriceNumber && produto.originalPriceNumber > produto.priceNumber;
 
     return (
-        <div className="mx-auto max-w-7xl px-4 py-6">
-            <nav className="mb-6 flex flex-wrap items-center gap-1 text-sm text-zinc-500" aria-label="Você está em">
-                <Link to="/" className="hover:text-green-700">Início</Link>
-                <ChevronRight size={14} />
-                <Link to={`/produtos?departamento=${encodeURIComponent(produto.department)}`} className="hover:text-green-700">{produto.department}</Link>
-                <ChevronRight size={14} />
-                <span className="line-clamp-1 font-semibold text-zinc-800">{produto.name}</span>
-            </nav>
+        <div>
+            <div className="fundo-encarte border-b border-papel-300">
+                <div className="mx-auto max-w-7xl px-4 pb-12 pt-5">
+                    <nav className="mb-6 flex flex-wrap items-center gap-1 text-sm text-tinta-500" aria-label="Você está em">
+                        <Link to="/" className="hover:text-feira-700">Início</Link>
+                        <ChevronRight size={14} />
+                        <Link to={`/produtos?departamento=${encodeURIComponent(produto.department)}`} className="hover:text-feira-700">{produto.department}</Link>
+                        <ChevronRight size={14} />
+                        <span className="line-clamp-1 font-semibold text-tinta-700">{produto.name}</span>
+                    </nav>
 
-            <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex aspect-square items-center justify-center rounded-3xl border border-zinc-200 bg-white p-8">
-                    {produto.image
-                        ? <img src={produto.image} alt={produto.name} className="max-h-full max-w-full object-contain" />
-                        : <span className="text-zinc-300">Sem imagem</span>}
-                </div>
-
-                <div>
-                    <SeloMercado slug={produto.supermercado} nome={produto.supermercadoNome} tamanho="grande" />
-                    <h1 className="mt-3 text-2xl font-extrabold leading-tight text-zinc-900 sm:text-3xl">{produto.name}</h1>
-                    <p className="mt-1 text-sm text-zinc-500">{produto.department}{produto.subcategory ? ` · ${produto.subcategory}` : ''}</p>
-
-                    <div className="mt-6 rounded-2xl bg-zinc-50 p-5">
-                        {produto.originalPriceNumber && (
-                            <div className="text-sm text-zinc-400 line-through">{formatarMoeda(produto.originalPriceNumber)}</div>
-                        )}
-                        <div className="text-4xl font-extrabold text-zinc-900">
-                            {formatarMoeda(produto.priceNumber)}
-                            {vendidoAPeso && <span className="text-lg font-semibold text-zinc-500"> /kg</span>}
+                    <div className="grid gap-10 md:grid-cols-[1fr_1.1fr]">
+                        <div className="relative flex aspect-square items-center justify-center rounded-[2rem] border border-papel-300 bg-white p-10 shadow-cartao">
+                            <ImagemProduto src={produto.image} alt={produto.name} className="max-h-full max-w-full rounded-2xl object-contain" tamanhoIcone={64} />
+                            {emOferta && (
+                                <span className="absolute left-5 top-5 rotate-[-8deg] rounded-lg bg-oferta-500 px-3 py-1.5 font-preco text-xl font-extrabold uppercase text-white shadow-lg">
+                                    Oferta
+                                </span>
+                            )}
                         </div>
-                        {!vendidoAPeso && formatarPrecoUnidade(produto) && (
-                            <p className="mt-1 text-sm text-zinc-500">Equivale a {formatarPrecoUnidade(produto)}</p>
-                        )}
-                        {produto.tag && <span className="mt-2 inline-block rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-bold text-yellow-800">{produto.tag}</span>}
-                        <p className="mt-3 text-xs text-zinc-500">Preço coletado no site do {produto.supermercadoNome} em {formatarDataColeta(produto.dataColeta)}.</p>
-                    </div>
 
-                    {outros > 0 && (
-                        <div className={`mt-4 flex items-start gap-3 rounded-2xl p-4 text-sm ${esteEhMaisBarato ? 'bg-green-50 text-green-900' : 'bg-yellow-50 text-yellow-900'}`}>
-                            {esteEhMaisBarato ? <Trophy size={20} className="shrink-0" /> : <TrendingDown size={20} className="shrink-0" />}
-                            <span>
-                                {esteEhMaisBarato
-                                    ? <>Este é o <strong>menor preço</strong> entre {opcoes.length} supermercados.</>
-                                    : <>Encontramos mais barato no <strong>{maisBarato.supermercadoNome}</strong>: {formatarMoeda(maisBarato.priceNumber)} (economia de {formatarMoeda(produto.priceNumber - maisBarato.priceNumber)}).</>}
-                            </span>
+                        <div className="flex flex-col">
+                            <div className="flex items-center gap-2">
+                                <SeloMercado slug={produto.supermercado} nome={produto.supermercadoNome} tamanho="grande" />
+                                <span className="text-xs text-tinta-500">{produto.subcategory || produto.department}</span>
+                            </div>
+                            <h1 className="mt-3 text-3xl font-extrabold leading-[1.1] text-feira-900 sm:text-[2.6rem]">{produto.name}</h1>
+
+                            <div className="mt-7 flex flex-wrap items-end gap-x-6 gap-y-3">
+                                <div className={`etiqueta inline-block py-3 pr-6 ${emOferta ? 'etiqueta-oferta' : ''}`} style={{ '--furo': '#fbf7ef' }}>
+                                    <Preco valor={produto.priceNumber} tamanho="g" sufixo={vendidoAPeso ? 'kg' : undefined} />
+                                </div>
+                                <div className="pb-1 text-sm text-tinta-500">
+                                    {emOferta && <p>de <span className="line-through">{formatarMoeda(produto.originalPriceNumber)}</span></p>}
+                                    {!vendidoAPeso && formatarPrecoUnidade(produto) && <p>equivale a <strong className="text-tinta-900">{formatarPrecoUnidade(produto)}</strong></p>}
+                                    {produto.tag && <p className="font-bold text-feira-700">{produto.tag}</p>}
+                                </div>
+                            </div>
+                            <p className="mt-3 text-xs text-tinta-500">Preço coletado no site do {produto.supermercadoNome} em {formatarDataColeta(produto.dataColeta)}.</p>
+
+                            {outros > 0 && (
+                                <div className={`mt-6 rounded-2xl border-l-4 p-4 text-[15px] ${esteEhMaisBarato ? 'border-feira-500 bg-feira-50 text-feira-900' : 'border-etiqueta-500 bg-etiqueta-100 text-tinta-900'}`}>
+                                    {esteEhMaisBarato
+                                        ? <>Boa escolha: este é o <strong>menor preço</strong> entre os {opcoes.length} supermercados que vendem este produto.</>
+                                        : <>No <strong>{maisBarato.supermercadoNome}</strong> sai por <strong>{formatarMoeda(maisBarato.priceNumber)}</strong> — <span className="marcador font-bold">{formatarMoeda(produto.priceNumber - maisBarato.priceNumber)} a menos</span>.</>}
+                                </div>
+                            )}
+
+                            <div className="mt-8 flex flex-wrap gap-3">
+                                <button
+                                    onClick={() => adicionarNaLista(produto)}
+                                    className="flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-feira-700 px-6 font-display text-[15px] font-bold text-papel-50 shadow-cartao transition hover:bg-feira-800"
+                                >
+                                    <Plus size={19} strokeWidth={2.75} /> Adicionar à lista
+                                </button>
+                                <a
+                                    href={produto.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex h-12 items-center justify-center gap-2 rounded-xl border-2 border-papel-300 bg-papel-50 px-5 text-sm font-bold text-tinta-700 transition hover:border-feira-400 hover:text-feira-700"
+                                >
+                                    Site do mercado <ExternalLink size={15} />
+                                </a>
+                            </div>
                         </div>
-                    )}
-
-                    <div className="mt-6 flex flex-wrap gap-3">
-                        <button
-                            onClick={() => adicionarNaLista(produto)}
-                            className="flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-green-600 px-6 text-sm font-extrabold text-white shadow-sm hover:bg-green-700"
-                        >
-                            <Plus size={18} strokeWidth={2.5} /> Adicionar à lista
-                        </button>
-                        <a
-                            href={produto.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="flex h-12 items-center justify-center gap-2 rounded-full border-2 border-zinc-300 px-6 text-sm font-bold text-zinc-700 hover:border-green-500 hover:text-green-700"
-                        >
-                            Ver no site do mercado <ExternalLink size={16} />
-                        </a>
                     </div>
                 </div>
             </div>
 
-            <section className="mt-12 rounded-3xl border border-zinc-200 bg-white">
-                <div className="flex items-center gap-3 border-b border-zinc-100 p-5 sm:p-6">
-                    <Scale className="text-green-700" />
-                    <div>
-                        <h2 className="text-xl font-extrabold">Compare nos supermercados</h2>
-                        <p className="text-sm text-zinc-500">
-                            {outros > 0 ? `O mesmo produto em ${opcoes.length} supermercados, do mais barato para o mais caro.` : 'Não encontramos este produto nos outros supermercados.'}
-                        </p>
-                    </div>
-                </div>
+            <div className="mx-auto max-w-7xl space-y-10 px-4 py-12">
+                <section>
+                    <p className="font-preco text-sm font-bold uppercase tracking-[0.2em] text-oferta-500">Comparação</p>
+                    <h2 className="text-2xl font-extrabold text-feira-900 sm:text-[2rem]">
+                        {outros > 0 ? `Em ${opcoes.length} supermercados` : 'Só encontramos neste supermercado'}
+                    </h2>
+                    <p className="mt-1 text-sm text-tinta-500">
+                        {outros > 0 ? 'Do mais barato para o mais caro.' : 'Os outros mercados não vendem este produto pelo site, ou vendem outra marca ou tamanho.'}
+                    </p>
 
-                <ul className="divide-y divide-zinc-100">
-                    {opcoes.map((item, posicao) => {
-                        const ehEste = item.id === produto.id;
-                        return (
-                            <li key={item.id} className={`flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:gap-5 sm:px-6 ${item.maisBarato && outros > 0 ? 'bg-green-50/70' : ''}`}>
-                                <span className={`hidden h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-extrabold sm:flex ${posicao === 0 ? 'bg-green-600 text-white' : 'bg-zinc-100 text-zinc-500'}`}>
-                                    {posicao + 1}º
-                                </span>
-                                <div className="flex min-w-0 flex-1 items-center gap-3">
-                                    {item.image && <img src={item.image} alt="" className="h-14 w-14 shrink-0 rounded-lg bg-white object-contain" loading="lazy" />}
-                                    <div className="min-w-0">
-                                        <div className="flex flex-wrap items-center gap-2">
-                                            <SeloMercado slug={item.supermercado} nome={item.supermercadoNome} />
-                                            {ehEste && <span className="text-[11px] font-bold uppercase text-zinc-400">Produto atual</span>}
-                                            {item.maisBarato && outros > 0 && <span className="text-[11px] font-extrabold uppercase text-green-700">Melhor preço</span>}
+                    <ol className="mt-6 space-y-3">
+                        {opcoes.map((item, posicao) => {
+                            const ehEste = item.id === produto.id;
+                            const primeiro = posicao === 0 && outros > 0;
+                            return (
+                                <li
+                                    key={item.id}
+                                    className={`relative overflow-hidden rounded-2xl border bg-papel-50 p-4 sm:p-5 ${primeiro ? 'border-feira-300 shadow-cartao' : 'border-papel-300'}`}
+                                >
+                                    <span
+                                        className="absolute inset-y-0 left-0 opacity-[0.07]"
+                                        style={{ width: `${(item.priceNumber / maiorPreco) * 100}%`, background: corBarraDoSupermercado(item.supermercado) }}
+                                        aria-hidden="true"
+                                    />
+                                    <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center">
+                                        <span className={`font-preco text-5xl font-extrabold leading-none ${primeiro ? 'text-feira-600' : 'text-papel-300'}`}>
+                                            {posicao + 1}º
+                                        </span>
+                                        <div className="flex min-w-0 flex-1 items-center gap-4">
+                                            <span className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-white">
+                                                <ImagemProduto src={item.image} alt="" className="h-full w-full object-contain p-1" tamanhoIcone={22} />
+                                            </span>
+                                            <div className="min-w-0">
+                                                <div className="flex flex-wrap items-center gap-2">
+                                                    <SeloMercado slug={item.supermercado} nome={item.supermercadoNome} />
+                                                    {ehEste && <span className="text-[11px] font-bold uppercase tracking-wide text-tinta-400">você está vendo</span>}
+                                                </div>
+                                                {ehEste
+                                                    ? <p className="mt-1 line-clamp-1 text-sm text-tinta-700">{item.name}</p>
+                                                    : <Link to={`/produto/${item.id}`} className="mt-1 line-clamp-1 text-sm text-tinta-700 hover:text-feira-700">{item.name}</Link>}
+                                                <p className="text-[11px] text-tinta-400">coletado em {formatarDataColeta(item.dataColeta)}</p>
+                                            </div>
                                         </div>
-                                        {ehEste
-                                            ? <p className="mt-1 line-clamp-1 text-sm text-zinc-700">{item.name}</p>
-                                            : <Link to={`/produto/${item.id}`} className="mt-1 line-clamp-1 text-sm text-zinc-700 hover:text-green-700">{item.name}</Link>}
-                                        <p className="text-[11px] text-zinc-400">Coletado em {formatarDataColeta(item.dataColeta)}</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center justify-between gap-4 sm:justify-end">
-                                    <div className="text-right">
-                                        <div className={`text-xl font-extrabold ${item.maisBarato && outros > 0 ? 'text-green-700' : 'text-zinc-900'}`}>{formatarMoeda(item.priceNumber)}</div>
-                                        <div className="text-[11px] text-zinc-500">
-                                            {item.diferenca > 0 ? <span className="font-bold text-red-600">+{formatarMoeda(item.diferenca)} </span> : null}
-                                            {formatarPrecoUnidade(item) && item.unit !== 'kg' ? formatarPrecoUnidade(item) : ''}
+                                        <div className="flex items-center justify-between gap-5 sm:justify-end">
+                                            <div className="text-right">
+                                                <Preco valor={item.priceNumber} tamanho="m" className={primeiro ? 'text-feira-700' : ''} />
+                                                <div className="text-[11px] text-tinta-500">
+                                                    {item.diferenca > 0 && <span className="font-bold text-oferta-600">+{formatarMoeda(item.diferenca)} </span>}
+                                                    {item.unit !== 'kg' && formatarPrecoUnidade(item)}
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-2">
+                                                <button onClick={() => adicionarNaLista(item)} className="flex h-10 w-10 items-center justify-center rounded-xl bg-feira-600 text-white hover:bg-feira-700" aria-label={`Adicionar ${item.name} do ${item.supermercadoNome} à lista`}>
+                                                    <Plus size={18} strokeWidth={2.75} />
+                                                </button>
+                                                <a href={item.url} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-xl border border-papel-300 bg-white text-tinta-500 hover:text-feira-700" aria-label={`Abrir no site do ${item.supermercadoNome}`}>
+                                                    <ExternalLink size={16} />
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="flex gap-2">
-                                        <button onClick={() => adicionarNaLista(item)} className="flex h-10 w-10 items-center justify-center rounded-full bg-green-600 text-white hover:bg-green-700" aria-label={`Adicionar ${item.name} do ${item.supermercadoNome} à lista`}>
-                                            <Plus size={18} strokeWidth={2.5} />
-                                        </button>
-                                        <a href={item.url} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300 text-zinc-500 hover:text-green-700" aria-label={`Abrir no site do ${item.supermercadoNome}`}>
-                                            <ExternalLink size={16} />
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                        );
-                    })}
-                </ul>
+                                </li>
+                            );
+                        })}
+                    </ol>
 
-                <p className="flex items-start gap-2 border-t border-zinc-100 p-5 text-xs text-zinc-500 sm:px-6">
-                    <Info size={14} className="mt-0.5 shrink-0" />
-                    Consideramos o mesmo produto quando marca, versão (zero, integral, sabor...) e tamanho da embalagem coincidem.
-                </p>
-            </section>
+                    <p className="mt-4 flex items-start gap-2 text-xs text-tinta-500">
+                        <Info size={14} className="mt-0.5 shrink-0" />
+                        Consideramos o mesmo produto quando marca, versão (zero, integral, sabor...) e tamanho da embalagem coincidem.
+                    </p>
+                </section>
 
-            <section className="mt-8 rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6">
-                <div className="mb-4 flex items-center gap-3">
-                    <LineChart className="text-green-700" />
-                    <div>
-                        <h2 className="text-xl font-extrabold">Histórico de preço</h2>
-                        <p className="text-sm text-zinc-500">Variação no {produto.supermercadoNome} nos últimos {historico?.dias || 90} dias</p>
+                <section className="rounded-[2rem] border border-papel-300 bg-papel-50 p-5 sm:p-8">
+                    <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+                        <div>
+                            <p className="font-preco text-sm font-bold uppercase tracking-[0.2em] text-oferta-500">Histórico</p>
+                            <h2 className="text-2xl font-extrabold text-feira-900">Como o preço variou</h2>
+                            <p className="text-sm text-tinta-500">No {produto.supermercadoNome}, nos últimos {historico?.dias || 90} dias</p>
+                        </div>
+                        {historico?.menorPrecoDoPeriodo && (
+                            <span className="rounded-lg bg-feira-600 px-3 py-1.5 font-preco text-sm font-bold uppercase tracking-wide text-white">Menor preço do período</span>
+                        )}
                     </div>
-                </div>
-                {historico?.menorPrecoDoPeriodo && (
-                    <p className="mb-3 inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-800">Menor preço do período!</p>
-                )}
-                <GraficoHistorico historico={historico} />
-            </section>
+                    <GraficoHistorico historico={historico} />
+                </section>
+            </div>
         </div>
     );
 };

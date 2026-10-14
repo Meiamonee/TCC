@@ -8,43 +8,36 @@ function paginasVisiveis(atual, total) {
     return [1, '...', atual - 1, atual, atual + 1, '...', total];
 }
 
-const BOTAO = 'flex h-10 min-w-10 items-center justify-center rounded-full px-3 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-40';
+const BOTAO = 'flex h-10 min-w-10 items-center justify-center rounded-xl px-3 font-preco text-base font-bold transition disabled:cursor-not-allowed disabled:opacity-40';
+const NEUTRO = 'border border-papel-300 bg-papel-50 text-tinta-700 hover:border-feira-400 hover:text-feira-700';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     if (totalPages <= 1) return null;
 
     return (
         <nav className="flex flex-wrap items-center justify-center gap-1.5" aria-label="Paginação">
-            <button
-                onClick={() => onPageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className={`${BOTAO} gap-1 border border-zinc-300 bg-white text-zinc-700 hover:border-green-500 hover:text-green-700`}
-            >
+            <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} className={`${BOTAO} ${NEUTRO} gap-1`}>
                 <ChevronLeft size={18} />
-                <span className="hidden sm:inline">Anterior</span>
+                <span className="hidden font-sans text-sm sm:inline">Anterior</span>
             </button>
 
             {paginasVisiveis(currentPage, totalPages).map((pagina, indice) => (
                 pagina === '...' ? (
-                    <span key={`reticencias-${indice}`} className="px-1 text-zinc-400">…</span>
+                    <span key={`reticencias-${indice}`} className="px-1 text-tinta-400">…</span>
                 ) : (
                     <button
                         key={pagina}
                         onClick={() => onPageChange(pagina)}
                         aria-current={currentPage === pagina ? 'page' : undefined}
-                        className={`${BOTAO} ${currentPage === pagina ? 'bg-green-600 text-white' : 'border border-zinc-300 bg-white text-zinc-700 hover:border-green-500 hover:text-green-700'}`}
+                        className={`${BOTAO} ${currentPage === pagina ? 'bg-feira-700 text-papel-50' : NEUTRO}`}
                     >
                         {pagina}
                     </button>
                 )
             ))}
 
-            <button
-                onClick={() => onPageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className={`${BOTAO} gap-1 border border-zinc-300 bg-white text-zinc-700 hover:border-green-500 hover:text-green-700`}
-            >
-                <span className="hidden sm:inline">Próxima</span>
+            <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} className={`${BOTAO} ${NEUTRO} gap-1`}>
+                <span className="hidden font-sans text-sm sm:inline">Próxima</span>
                 <ChevronRight size={18} />
             </button>
         </nav>
