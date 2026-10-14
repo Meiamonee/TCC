@@ -74,31 +74,27 @@ function App() {
     return Object.keys(categoryStats).sort((a, b) => a.localeCompare(b, 'pt-BR'))
   }, [categoryStats])
 
-  const supermarkets = useMemo(() => {
-    const countsBySupermarket = products.reduce((acc, product) => {
+  const supermarketStats = useMemo(() => {
+    const bySlug = products.reduce((acc, product) => {
       if (!product.supermercado) return acc
-      acc[product.supermercado] = (acc[product.supermercado] || 0) + 1
+      if (!acc[product.supermercado]) {
+        acc[product.supermercado] = {
+          id: product.supermercado,
+          name: product.supermercadoNome || product.supermercado,
+          count: 0
+        }
+      }
+      acc[product.supermercado].count++
       return acc
     }, {})
 
-    return [
-      {
-        id: null,
-        name: 'Todos os Supermercados',
-        count: products.length
-      },
-      {
-        id: 'supervale',
-        name: 'SuperVale',
-        count: countsBySupermarket.supervale || 0
-      },
-      {
-        id: 'fonseca',
-        name: 'Supermercado Fonseca',
-        count: countsBySupermarket.fonseca || 0
-      }
-    ]
+    return Object.values(bySlug).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
   }, [products])
+
+  const supermarkets = useMemo(() => [
+    { id: null, name: 'Todos os Supermercados', count: products.length },
+    ...supermarketStats
+  ], [products.length, supermarketStats])
 
   const filteredProducts = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase()
@@ -188,7 +184,7 @@ function App() {
             </div>
             <div className="hidden min-w-0 sm:block">
               <div className="text-xl font-semibold leading-5">Preco Mercado</div>
-              <div className="text-xs font-medium text-white/70">SuperVale e Fonseca</div>
+              <div className="text-xs font-medium text-white/70">{supermarketStats.length} supermercados</div>
             </div>
           </div>
 
@@ -240,20 +236,16 @@ function App() {
             </div>
 
             <div className="grid grid-cols-2 gap-px bg-zinc-200">
-              <button
-                className={`bg-white p-5 text-left transition-colors hover:bg-zinc-50 ${selectedSupermarket === 'supervale' ? 'ring-1 ring-inset ring-violet-700' : ''}`}
-                onClick={() => setSelectedSupermarket('supervale')}
-              >
-                <div className="text-2xl font-semibold text-zinc-950">{supermarkets.find(item => item.id === 'supervale')?.count || 0}</div>
-                <div className="mt-1 text-sm font-semibold text-zinc-600">SuperVale</div>
-              </button>
-              <button
-                className={`bg-white p-5 text-left transition-colors hover:bg-zinc-50 ${selectedSupermarket === 'fonseca' ? 'ring-1 ring-inset ring-violet-700' : ''}`}
-                onClick={() => setSelectedSupermarket('fonseca')}
-              >
-                <div className="text-2xl font-semibold text-zinc-950">{supermarkets.find(item => item.id === 'fonseca')?.count || 0}</div>
-                <div className="mt-1 text-sm font-semibold text-zinc-600">Fonseca</div>
-              </button>
+              {supermarketStats.map(item => (
+                <button
+                  key={item.id}
+                  className={`bg-white p-5 text-left transition-colors hover:bg-zinc-50 ${selectedSupermarket === item.id ? 'ring-1 ring-inset ring-violet-700' : ''}`}
+                  onClick={() => setSelectedSupermarket(item.id)}
+                >
+                  <div className="text-2xl font-semibold text-zinc-950">{item.count}</div>
+                  <div className="mt-1 text-sm font-semibold text-zinc-600">{item.name}</div>
+                </button>
+              ))}
               <div className="col-span-2 bg-white p-5">
                 <div className="text-sm font-semibold text-zinc-950">Dados importados no MongoDB</div>
                 <div className="text-sm font-medium text-zinc-500">Ultima leitura: {lastUpdatedLabel}</div>

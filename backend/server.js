@@ -6,7 +6,7 @@ const connectDB = require('./config/database');
 const Produto = require('./models/Produto');
 const Categoria = require('./models/Categoria');
 const Supermercado = require('./models/Supermercado');
-const { formatarPreco } = require('./services/importProducts');
+const { formatarPreco, SUPERMARKETS } = require('./services/importProducts');
 const { executarPipelineScraping } = require('./services/scrapingPipeline');
 
 const app = express();
@@ -29,11 +29,17 @@ function formatarProduto(produto) {
         name: produto.nome,
         price: produto.precoOriginal || formatarPreco(produto.preco),
         priceNumber: produto.preco,
+        originalPriceNumber: produto.precoAnterior || null,
+        unit: produto.unidade || null,
+        tag: produto.etiqueta || null,
         image: produto.imagem,
         url: produto.url,
         department: produto.categoria,
+        subcategory: produto.subcategoria || null,
         supermercado: produto.supermercado,
+        supermercadoNome: SUPERMARKETS[produto.supermercado]?.nome || produto.supermercado,
         disponivel: produto.disponivel,
+        dataColeta: produto.dataColeta || produto.ultimaAtualizacao,
         ultimaAtualizacao: produto.ultimaAtualizacao
     };
 }

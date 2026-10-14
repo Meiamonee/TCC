@@ -118,9 +118,7 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
         return diff > 0 ? `+R$ ${diff.toFixed(2).replace('.', ',')}` : null;
     };
 
-    const getSupermarketName = (supermercado) => {
-        return supermercado === 'supervale' ? 'SuperVale' : 'Fonseca';
-    };
+    const getSupermarketName = (product) => product.supermercadoNome || product.supermercado;
 
     if (!isOpen) return null;
 
@@ -165,11 +163,8 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
                                     />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <div className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase mb-2 ${selectedProduct.supermercado === 'supervale'
-                                            ? 'bg-emerald-50 text-emerald-700'
-                                            : 'bg-blue-50 text-blue-700'
-                                        }`}>
-                                        {getSupermarketName(selectedProduct.supermercado)}
+                                    <div className="inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase mb-2 bg-violet-50 text-violet-700">
+                                        {getSupermarketName(selectedProduct)}
                                     </div>
                                     <h4 className="font-medium text-slate-900 text-sm line-clamp-2 mb-2">{selectedProduct.name}</h4>
                                     <div className="text-xl font-bold text-slate-900">{selectedProduct.price}</div>
@@ -198,11 +193,8 @@ const ComparisonSidebar = ({ isOpen, onClose, selectedProduct, allProducts }) =>
                                                     }`}
                                             >
                                                 <div className="flex justify-between items-start mb-3">
-                                                    <div className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase ${product.supermercado === 'supervale'
-                                                            ? 'bg-emerald-100 text-emerald-800'
-                                                            : 'bg-blue-100 text-blue-800'
-                                                        }`}>
-                                                        {getSupermarketName(product.supermercado)}
+                                                    <div className="inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-zinc-100 text-zinc-700">
+                                                        {getSupermarketName(product)}
                                                     </div>
                                                     {isCheapest && (
                                                         <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-white px-2 py-0.5 rounded-full shadow-sm border border-emerald-100">

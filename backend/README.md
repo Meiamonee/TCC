@@ -19,21 +19,20 @@ Inicia a API em `http://localhost:3001`.
 npm run atualizar
 ```
 
-Executa os scrapers de SuperVale e Fonseca e importa os dados para o MongoDB.
+Executa o scraper de todos os supermercados configurados em `scraper/mercados.js` e importa os dados para o MongoDB.
 
 ```bash
-npm run atualizar:supervale
-npm run atualizar:fonseca
+npm run atualizar -- pedrilho
 ```
 
-Executa o scraping e a importacao de apenas um mercado.
+Executa o scraping e a importacao de apenas um mercado (`supervale`, `vilasul`, `sanmichel` ou `pedrilho`).
 
 ```bash
-npm run importar:supervale
-npm run importar:fonseca
+npm run importar
+npm run importar -- supervale
 ```
 
-Importa os arquivos `products.json` ja existentes, sem executar scraping novo.
+Importa os arquivos ja coletados em `scraper/output/`, sem executar scraping novo.
 
 ```bash
 npm run scheduler
@@ -55,8 +54,8 @@ Variaveis de ambiente:
 - `MONGO_URI` ou `MONGO_URL`: nomes alternativos aceitos para a mesma conexao.
 - `PORT`: porta da API. Padrao: `3001`
 - `CORS_ORIGIN`: origens liberadas, separadas por virgula.
-- `SCRAPER_PAGE_DELAY_MS`: pausa base entre paginas do scraper. Padrao no `.env`: `8000`
-- `SCRAPER_PAGE_DELAY_JITTER_MS`: variacao aleatoria somada a pausa base. Padrao no `.env`: `4000`
+- `SCRAPER_PAGE_DELAY_MS`: pausa base entre paginas do scraper. Padrao: `4000`
+- `SCRAPER_PAGE_DELAY_JITTER_MS`: variacao aleatoria somada a pausa base. Padrao: `2000`
 - `CHROME_BINARY_PATH` ou `SELENIUM_CHROME_BINARY_PATH`: caminho do executavel do Chrome usado pelo Selenium.
 - `CHROMEDRIVER_PATH` ou `SELENIUM_CHROMEDRIVER_PATH`: caminho do ChromeDriver. Se nao for definido, o Selenium Manager resolve automaticamente.
 - `SE_MANAGER_PATH`: caminho de um Selenium Manager customizado.

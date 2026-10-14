@@ -1,13 +1,33 @@
 # TCC - Comparador de Precos
 
-Projeto de comparacao de precos entre SuperVale e Supermercado Fonseca.
+Projeto de comparacao de precos entre supermercados de Pocos de Caldas: SuperVale, Vila Sul, San Michel e Pedrilho.
 
 Fluxo atual:
 
-1. Os scrapers coletam produtos nos sites dos mercados.
-2. O backend importa os arquivos `products.json` gerados para o MongoDB.
+1. O scraper (`scraper/`) abre os sites com Selenium WebDriver, percorre departamentos e paginas e le os produtos exibidos.
+2. O backend importa os arquivos `scraper/output/<mercado>.json` para o MongoDB.
 3. A API Express consulta o MongoDB.
 4. O frontend React consome a API em tempo de execucao.
+
+## Supermercados e plataformas
+
+Os mercados ficam configurados em `scraper/mercados.js`. Cada um usa uma plataforma de e-commerce, e cada plataforma tem um extrator em `scraper/plataformas/`:
+
+| Mercado | Site | Plataforma |
+|---|---|---|
+| SuperVale | supervalesupermercados.com.br | VipCommerce |
+| Vila Sul | vilasul.com.br | VipCommerce |
+| San Michel | supersanmichel.com.br | VipCommerce |
+| Pedrilho | pedrilho.com.br | iBecom |
+
+Para incluir outro mercado de uma plataforma ja suportada, basta adicionar uma entrada em `scraper/mercados.js`.
+
+Rodar so o scraper, sem importar no banco:
+
+```bash
+cd scraper
+node index.js supervale
+```
 
 ## Comandos principais
 

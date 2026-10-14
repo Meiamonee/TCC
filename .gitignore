@@ -21,11 +21,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Artefatos de debug dos scrapers
+# Saida e artefatos de debug do scraper
+scraper/output/
 scraper/debug_*.html
 scraper/debug_*.png
-scraper-fonseca/debug_*.html
-scraper-fonseca/debug_*.png
 
 # Sistema/editor
 .DS_Store

@@ -1,30 +1,8 @@
 import React from 'react';
 import { LayoutGrid } from 'lucide-react';
+import { iniciais, logoDoSupermercado } from '../supermercados';
 
-const LOGOS_BY_SUPERMARKET = {
-    supervale: '/logos/supervale.png',
-    fonseca: '/logos/fonseca.png'
-};
-
-const DEFAULT_SUPERMARKETS = [
-    {
-        id: null,
-        name: 'Todos os Supermercados',
-        count: 0
-    },
-    {
-        id: 'supervale',
-        name: 'SuperVale',
-        count: 0
-    },
-    {
-        id: 'fonseca',
-        name: 'Supermercado Fonseca',
-        count: 0
-    }
-];
-
-const SupermarketMenu = ({ supermarkets = DEFAULT_SUPERMARKETS, selectedSupermarket, onSelectSupermarket }) => {
+const SupermarketMenu = ({ supermarkets = [], selectedSupermarket, onSelectSupermarket }) => {
     return (
         <div className="rounded border border-zinc-200 bg-white p-5">
             <h2 className="mb-5 text-xs font-semibold uppercase tracking-wide text-zinc-950">
@@ -34,7 +12,7 @@ const SupermarketMenu = ({ supermarkets = DEFAULT_SUPERMARKETS, selectedSupermar
             <div className="space-y-2">
                 {supermarkets.map((item) => {
                     const isSelected = selectedSupermarket === item.id;
-                    const logo = LOGOS_BY_SUPERMARKET[item.id];
+                    const logo = logoDoSupermercado(item.id);
 
                     return (
                         <button
@@ -48,6 +26,8 @@ const SupermarketMenu = ({ supermarkets = DEFAULT_SUPERMARKETS, selectedSupermar
                             <span className={`flex h-7 w-8 shrink-0 items-center justify-center rounded border ${isSelected ? 'border-white/20 bg-white' : 'border-zinc-200 bg-white'}`}>
                                 {logo ? (
                                     <img src={logo} alt={item.name} className="h-full w-full object-contain p-0.5" />
+                                ) : item.id ? (
+                                    <span className="text-[10px] font-bold text-violet-700">{iniciais(item.name)}</span>
                                 ) : (
                                     <LayoutGrid size={17} className={isSelected ? 'text-violet-700' : 'text-zinc-400'} />
                                 )}

@@ -1,15 +1,8 @@
 const path = require('path');
 const { spawn } = require('child_process');
-const { importarProdutosDoJson, SUPERMARKETS } = require('./importProducts');
+const { importarProdutosDoJson, sincronizarSupermercados, SUPERMARKETS } = require('./importProducts');
 
-const SCRAPERS = {
-    supervale: {
-        cwd: path.resolve(__dirname, '../../scraper')
-    },
-    fonseca: {
-        cwd: path.resolve(__dirname, '../../scraper-fonseca')
-    }
-};
+const SCRAPER_DIR = path.resolve(__dirname, '../../scraper');
 
 function executarComandoNode(cwd, args, label) {
     return new Promise((resolve, reject) => {
@@ -65,26 +58,30 @@ async function executarPipelineScraping(options = {}) {
     const startedAt = new Date();
     const mercados = resolverMercados(options.mercado);
     const resultados = [];
+    const falhas = [];
 
+    await sincronizarSupermercados();
+
+    // Uma falha em um mercado nao impede a atualizacao dos demais.
     for (const mercado of mercados) {
-        const scraper = SCRAPERS[mercado];
-        if (!scraper) {
-            throw new Error(`Scraper nao configurado para: ${mercado}`);
+        try {
+            console.log(`\n[${mercado}] Executando scraper...`);
+            await executarComandoNode(SCRAPER_DIR, ['index.js', mercado], `scraper:${mercado}`);
+
+            console.log(`[${mercado}] Importando produtos no MongoDB...`);
+            resultados.push(await importarProdutosDoJson(mercado));
+        } catch (error) {
+            console.error(`[${mercado}] Falha na atualizacao: ${error.message}`);
+            falhas.push({ supermercado: mercado, erro: error.message });
         }
-
-        console.log(`\n[${mercado}] Executando scraper...`);
-        await executarComandoNode(scraper.cwd, ['index.js'], `scraper:${mercado}`);
-
-        console.log(`[${mercado}] Importando produtos no MongoDB...`);
-        const importacao = await importarProdutosDoJson(mercado);
-        resultados.push(importacao);
     }
 
     return {
         startedAt,
         finishedAt: new Date(),
         mercados,
-        resultados
+        resultados,
+        falhas
     };
 }
 

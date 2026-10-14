@@ -40,6 +40,25 @@ const produtoSchema = new mongoose.Schema({
     precoOriginal: {
         type: String // Como veio do scraper (ex: "R$ 8,99")
     },
+    // Preco "de" exibido riscado quando o produto esta em oferta
+    precoAnterior: {
+        type: Number,
+        default: null
+    },
+    // Unidade de venda exibida pelo site (ex: "un", "kg")
+    unidade: {
+        type: String,
+        default: null
+    },
+    // Etiqueta promocional exibida no card (ex: "Clube SuperVale")
+    etiqueta: {
+        type: String,
+        default: null
+    },
+    subcategoria: {
+        type: String,
+        default: null
+    },
     imagem: String,
     url: {
         type: String,
@@ -57,6 +76,11 @@ const produtoSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
         index: true
+    },
+    // Momento da coleta mais recente do preco no site do supermercado
+    dataColeta: {
+        type: Date,
+        default: Date.now
     },
     ultimaAtualizacao: {
         type: Date,

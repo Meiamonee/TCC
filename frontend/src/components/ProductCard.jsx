@@ -1,12 +1,11 @@
 import React from 'react';
 import { AlertCircle, ExternalLink } from 'lucide-react';
+import { iniciais, logoDoSupermercado } from '../supermercados';
 
 const ProductCard = ({ product, onCompare }) => {
     const isDisponivel = product.disponivel !== false;
-    const supermarketName = product.supermercado === 'supervale' ? 'SuperVale' : 'Fonseca';
-    const supermarketLogo = product.supermercado === 'supervale'
-        ? '/logos/supervale.png'
-        : '/logos/fonseca.png';
+    const supermarketName = product.supermercadoNome || product.supermercado;
+    const supermarketLogo = logoDoSupermercado(product.supermercado);
 
     return (
         <article className={`flex h-full flex-col overflow-hidden rounded border bg-white transition-colors ${isDisponivel
@@ -27,11 +26,15 @@ const ProductCard = ({ product, onCompare }) => {
                         aria-label={supermarketName}
                         className="absolute left-3 top-3 flex h-9 w-12 items-center justify-center rounded border border-zinc-200 bg-white p-1"
                     >
-                        <img
-                            src={supermarketLogo}
-                            alt={supermarketName}
-                            className="h-full w-full object-contain"
-                        />
+                        {supermarketLogo ? (
+                            <img
+                                src={supermarketLogo}
+                                alt={supermarketName}
+                                className="h-full w-full object-contain"
+                            />
+                        ) : (
+                            <span className="text-xs font-bold text-violet-700">{iniciais(supermarketName)}</span>
+                        )}
                     </div>
                 )}
 
