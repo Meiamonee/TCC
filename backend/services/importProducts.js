@@ -18,6 +18,7 @@ const SUPERMARKETS = Object.fromEntries(MERCADOS.map(mercado => [
         nome: mercado.nome,
         slug: mercado.slug,
         url: mercado.url,
+        enderecoLoja: mercado.enderecoLoja || null,
         productsPath: path.join(SCRAPER_OUTPUT_DIR, `${mercado.slug}.json`)
     }
 ]));

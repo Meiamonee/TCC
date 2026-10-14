@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 const CHAVE = 'superpreco:lista-compras'
 
@@ -47,5 +47,8 @@ export function useListaCompras() {
 
     const limpar = useCallback(() => setItens([]), [])
 
-    return { itens, adicionar, alterarQuantidade, limpar }
+    return useMemo(
+        () => ({ itens, adicionar, alterarQuantidade, limpar }),
+        [itens, adicionar, alterarQuantidade, limpar]
+    )
 }

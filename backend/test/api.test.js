@@ -140,6 +140,20 @@ test('API e banco de dados', async (t) => {
         assert.equal(corpo.maisBarato, null, 'nenhum mercado tem a cesta completa nos dados de teste');
     });
 
+    await t.test('filtra ofertas e monta o painel de estatisticas', async () => {
+        const ofertas = await api('/api/produtos?ofertas=true');
+        assert.equal(ofertas.corpo.total, 0, 'nenhum produto de teste tem preco "de"');
+
+        const { status, corpo } = await api('/api/estatisticas');
+        assert.equal(status, 200);
+        assert.equal(corpo.resumo.produtosDisponiveis, 7);
+        assert.equal(corpo.resumo.supermercados, 4);
+        const supervaleResumo = corpo.porMercado.find(item => item.slug === 'supervale');
+        assert.equal(supervaleResumo.disponiveis, 4);
+        assert.equal(new Date(supervaleResumo.ultimaColeta).toISOString(), COLETA_1.toISOString());
+        assert.ok(corpo.categorias.some(item => item.nome === 'Bebidas' && item.total === 4));
+    });
+
     await t.test('registra historico e marca produtos que sumiram como indisponiveis', async () => {
         const novaColeta = supervale
             .filter(produto => produto.id !== '4')

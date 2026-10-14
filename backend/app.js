@@ -9,6 +9,7 @@ const { formatarPreco, SUPERMARKETS } = require('./services/importProducts');
 const { buscarEquivalentes, precoComparavel } = require('./services/comparacao');
 const { cotarLista } = require('./services/listaCompras');
 const { calcularCestaBasica } = require('./services/cestaBasica');
+const { obterEstatisticas } = require('./services/estatisticas');
 const { executarAtualizacao, obterEstado } = require('./services/agendador');
 
 const LIMITE_PADRAO = 40;
@@ -82,6 +83,10 @@ function montarFiltroProdutos(query) {
 
     if (query.alimentos === 'true') {
         filtro.alimento = true;
+    }
+
+    if (query.ofertas === 'true') {
+        filtro.precoAnterior = { $ne: null };
     }
 
     if (query.ordenar === 'menor-preco-unidade') {
@@ -220,6 +225,7 @@ function criarApp() {
             menorPreco: precos.length ? Math.min(...precos) : null,
             maiorPreco: precos.length ? Math.max(...precos) : null,
             precoAtual: produto.preco,
+            consultadoEm: new Date(),
             menorPrecoDoPeriodo: precos.length > 1 && produto.preco <= Math.min(...precos)
         });
     }));
@@ -256,6 +262,7 @@ function criarApp() {
             nome: item.nome,
             slug: item.slug,
             url: item.url,
+            endereco: SUPERMARKETS[item.slug]?.enderecoLoja || null,
             totalProdutos: porSlug.get(item.slug)?.total || 0,
             ultimaColeta: porSlug.get(item.slug)?.ultimaColeta || item.ultimaAtualizacao
         })));
@@ -273,6 +280,11 @@ function criarApp() {
     // Custo da cesta basica do DIEESE em cada supermercado.
     app.get('/api/cesta-basica', rota(async (_req, res) => {
         res.json(await calcularCestaBasica());
+    }));
+
+    // Painel com numeros da coleta: produtos, ultima atualizacao, cesta basica e variacoes de preco.
+    app.get('/api/estatisticas', rota(async (_req, res) => {
+        res.json(await obterEstatisticas());
     }));
 
     app.get('/api/scraping/status', (_req, res) => {

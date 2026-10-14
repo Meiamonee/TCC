@@ -59,13 +59,14 @@ Testes unitários (normalização e comparação) e de integração (API) com `n
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/api/health` | Situação da API |
-| GET | `/api/produtos` | Lista paginada. Parâmetros: `search`, `categoria`, `supermercado`, `alimentos=true`, `ordenar` (`menor-preco`, `maior-preco`, `menor-preco-unidade`, `nome`), `page`, `limit` (máx. 100) |
+| GET | `/api/produtos` | Lista paginada. Parâmetros: `search`, `categoria`, `supermercado`, `alimentos=true`, `ofertas=true`, `ordenar` (`menor-preco`, `maior-preco`, `menor-preco-unidade`, `nome`), `page`, `limit` (máx. 100) |
 | GET | `/api/produtos/:id` | Um produto |
 | GET | `/api/produtos/:id/comparacao` | O mesmo produto nos outros supermercados, do mais barato ao mais caro |
 | GET | `/api/produtos/:id/historico` | Histórico de preço (`dias`, padrão 90) |
 | GET | `/api/categorias` | Categorias padronizadas com total de produtos |
 | GET | `/api/supermercados` | Supermercados ativos, total de produtos e última coleta |
 | GET | `/api/cesta-basica` | Custo da cesta básica do DIEESE em cada supermercado |
+| GET | `/api/estatisticas` | Painel: produtos coletados, última e próxima coleta, números por mercado e departamento, cesta básica e maiores variações de preço |
 | POST | `/api/lista/cotacao` | Cota uma lista: `{ "itens": [{ "id": "...", "quantidade": 2 }] }` |
 | GET | `/api/scraping/status` | Situação da coleta |
 | POST | `/api/scraping/atualizar` | Dispara a coleta (requer `Authorization: Bearer <ADMIN_TOKEN>`) |

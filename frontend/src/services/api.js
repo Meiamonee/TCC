@@ -18,12 +18,13 @@ async function request(path, options = {}) {
     return response.json()
 }
 
-export function fetchProducts({ search, categoria, supermercado, alimentos, ordenar, page, limit = 40 } = {}) {
+export function fetchProducts({ search, categoria, supermercado, alimentos, ofertas, ordenar, page, limit = 40 } = {}) {
     const params = new URLSearchParams()
     if (search) params.set('search', search)
     if (categoria) params.set('categoria', categoria)
     if (supermercado) params.set('supermercado', supermercado)
     if (alimentos) params.set('alimentos', 'true')
+    if (ofertas) params.set('ofertas', 'true')
     if (ordenar) params.set('ordenar', ordenar)
     params.set('page', String(page || 1))
     params.set('limit', String(limit))
@@ -38,12 +39,20 @@ export function fetchSupermercados() {
     return request('/supermercados')
 }
 
+export function fetchProduto(id) {
+    return request(`/produtos/${id}`)
+}
+
 export function fetchComparacao(id) {
     return request(`/produtos/${id}/comparacao`)
 }
 
 export function fetchHistorico(id) {
     return request(`/produtos/${id}/historico`)
+}
+
+export function fetchEstatisticas() {
+    return request('/estatisticas')
 }
 
 export function fetchCestaBasica() {

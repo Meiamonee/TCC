@@ -11,6 +11,16 @@ Supermercados monitorados: **SuperVale, Vila Sul, San Michel e Pedrilho** (unida
 3. A coleta roda automaticamente com **node-cron** (padrão: 6h e 18h) junto com a API.
 4. O frontend (`frontend/`, **React + Tailwind CSS**) consome a API: busca, filtros, comparação entre mercados, lista de compras e cesta básica.
 
+## Páginas
+
+| Página | Endereço | Conteúdo |
+|---|---|---|
+| Início | `/` | Busca, departamentos, ofertas, cesta básica e supermercados participantes |
+| Produtos | `/produtos` | Busca e navegação com filtros (supermercado, departamento, alimentos, ofertas) e ordenação; os filtros ficam na URL |
+| Produto | `/produto/:id` | Preço, comparação nos outros supermercados e histórico de preço |
+| Lista de compras | `/lista` | Itens escolhidos, total em cada supermercado e compra dividida |
+| Painel de preços | `/painel` | Produtos coletados, data e hora da última e da próxima coleta, cesta básica, variações de preço e números por supermercado |
+
 ## Funcionalidades
 
 - Busca por nome (sem diferenciar acentos), filtros por supermercado, categoria padronizada e "apenas alimentos", paginação no servidor.
