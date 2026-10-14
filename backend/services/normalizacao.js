@@ -136,8 +136,9 @@ function extrairQuantidade(nome) {
 }
 
 // Calcula o preco por kg, litro, metro ou unidade.
-// Produtos vendidos a peso ja tem o preco expresso por kg no site.
-function calcularPrecoPorUnidade({ nome, preco, unidadeVenda }) {
+// Produtos vendidos a peso ja tem o preco expresso por kg no site. Quando o site informa o
+// tamanho da embalagem junto ao preco (ex: "/700g"), ele vale mais que o tamanho escrito no nome.
+function calcularPrecoPorUnidade({ nome, preco, unidadeVenda, embalagem }) {
     if (!(preco > 0)) {
         return { medida: null, quantidadeBase: null, precoPorUnidade: null, unidadeMedida: null };
     }
@@ -146,7 +147,8 @@ function calcularPrecoPorUnidade({ nome, preco, unidadeVenda }) {
         return { medida: 'massa', quantidadeBase: null, precoPorUnidade: preco, unidadeMedida: 'kg' };
     }
 
-    const { medida, quantidade } = extrairQuantidade(nome);
+    const daEmbalagem = embalagem ? extrairQuantidade(embalagem) : { medida: null };
+    const { medida, quantidade } = daEmbalagem.medida ? daEmbalagem : extrairQuantidade(nome);
     if (!medida) {
         return { medida: null, quantidadeBase: null, precoPorUnidade: null, unidadeMedida: null };
     }
@@ -206,9 +208,9 @@ function categoriaCanonica(departamento) {
 }
 
 // Campos derivados gravados junto com o produto no momento da importacao.
-function normalizarProduto({ nome, preco, unidadeVenda, departamento }) {
+function normalizarProduto({ nome, preco, unidadeVenda, embalagem, departamento }) {
     const { tokens, variantes } = gerarTokens(nome);
-    const precoUnitario = calcularPrecoPorUnidade({ nome, preco, unidadeVenda });
+    const precoUnitario = calcularPrecoPorUnidade({ nome, preco, unidadeVenda, embalagem });
     const categoria = categoriaCanonica(departamento);
 
     return {

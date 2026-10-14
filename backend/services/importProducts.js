@@ -113,6 +113,7 @@ function montarDocumento(product, config, supermercadoId, now) {
         nome,
         preco,
         unidadeVenda: product.unit,
+        embalagem: product.packageSize,
         departamento
     });
 
@@ -129,6 +130,7 @@ function montarDocumento(product, config, supermercadoId, now) {
         precoOriginal: product.price || formatarPreco(preco),
         precoAnterior: precoAnterior && precoAnterior > preco ? precoAnterior : null,
         unidade: product.unit || null,
+        embalagem: product.packageSize || null,
         etiqueta: product.tag || null,
         tokens: normalizado.tokens,
         variantes: normalizado.variantes,

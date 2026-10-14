@@ -46,7 +46,7 @@ async function recalcularCampos(colecao) {
 
     for await (const doc of cursor) {
         const departamento = doc.departamentoOriginal || doc.categoria;
-        const n = normalizarProduto({ nome: doc.nome, preco: doc.preco, unidadeVenda: doc.unidade, departamento });
+        const n = normalizarProduto({ nome: doc.nome, preco: doc.preco, unidadeVenda: doc.unidade, embalagem: doc.embalagem, departamento });
 
         operacoes.push({
             updateOne: {

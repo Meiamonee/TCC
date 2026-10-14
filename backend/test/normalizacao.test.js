@@ -43,6 +43,18 @@ test('produtos vendidos a peso ja tem o preco por kg', () => {
     assert.equal(resultado.unidadeMedida, 'kg');
 });
 
+test('embalagem informada pelo site define o preco por kg', () => {
+    // Vila Sul: "Salame Perdigão 700g" custa R$ 48,93 a peca (/700g), ou R$ 69,90/kg.
+    const salame = calcularPrecoPorUnidade({ nome: 'Salame Perdigão 700g', preco: 48.93, unidadeVenda: 'un', embalagem: '700g' });
+    assert.equal(salame.precoPorUnidade, 69.9);
+    assert.equal(salame.unidadeMedida, 'kg');
+
+    // Peso real da peca vale mais que o arredondado no nome.
+    const abobora = calcularPrecoPorUnidade({ nome: 'Abobora Cabotia 3kg', preco: 11.17, unidadeVenda: 'un', embalagem: '2,8kg' });
+    assert.equal(abobora.quantidadeBase, 2800);
+    assert.equal(abobora.precoPorUnidade, 3.99);
+});
+
 test('gerarTokens normaliza abreviacoes e separa variantes', () => {
     const vilaSul = gerarTokens('Refrig.coca Cola 2l S/acucar');
     const pedrilho = gerarTokens('Refrigerante sem Açúcar Coca-Cola Zero Garrafa 2l');

@@ -55,39 +55,42 @@ async function extrairProdutosDaPagina(driver) {
 
             const href = link.getAttribute('href');
             const idMatch = href.match(/\/produto\/(\d+)/);
-            const folhas = Array.from(card.querySelectorAll('span, div'))
-                .filter(el => el.children.length === 0 && textoDe(el));
-
-            const precos = folhas.filter(el => /^R\$/.test(textoDe(el)));
-            const precoAtual = precos.find(el => !el.className.includes('line-through'));
-            const precoAnterior = precos.find(el => el.className.includes('line-through'));
-            const unidade = folhas.find(el => /^\/\s*[a-z]+$/i.test(textoDe(el)));
-            // Alguns produtos a peso trazem preco e unidade juntos (ex: "R$ 39,90/kg").
-            const unidadeNoPreco = textoDe(precoAtual).match(/\/\s*([a-z]+)$/i);
             const nome = textoDe(card.querySelector('.vip-card-produto-descricao')) || link.getAttribute('title') || '';
             const imagem = card.querySelector('vip-image img, img');
 
-            // Produtos a peso em embalagem fechada mostram o preco por kg e o da embalagem
-            // (ex: "R$ 3,99/kg" e "R$ 11,17 /2,8kg"), mas o preco antigo e o da embalagem.
-            // Nesse caso o preco antigo e convertido para kg, como o preco atual.
-            let precoAntigo = textoDe(precoAnterior) || null;
-            const pesoEmbalagem = textoDe(card.querySelector('[data-cy="unidade"]')).match(/^\/\s*([\d.,]+)\s*kg$/i);
-            if (precoAntigo && unidadeNoPreco && pesoEmbalagem) {
-                const peso = Number.parseFloat(pesoEmbalagem[1].replace(',', '.'));
-                const valor = Number.parseFloat(precoAntigo.replace(/[^\d,]/g, '').replace(',', '.'));
-                if (peso > 0 && Number.isFinite(valor)) {
-                    precoAntigo = `R$ ${(valor / peso).toFixed(2).replace('.', ',')}`;
-                }
+            // O card marca cada valor com data-cy: "preco" e o valor cobrado, "unidade" diz a que
+            // ele se refere ("/un", "/kg" ou o tamanho da embalagem, ex. "/700g"), "preco-unidade"
+            // e so o preco por kg informativo e "preco-antigo" e o valor riscado da oferta.
+            // Ex.: Salame 700g mostra "R$ 48,93 /700g" (o que se paga) e "R$ 69,90/kg".
+            let preco = textoDe(card.querySelector('[data-cy="preco"]'));
+            let unidade = textoDe(card.querySelector('[data-cy="unidade"]')).replace('/', '').trim().toLowerCase();
+            let precoAntigo = textoDe(card.querySelector('[data-cy="preco-antigo"]'));
+
+            if (!preco) {
+                // Layout sem data-cy: primeiro preco nao riscado do card, com a unidade colada
+                // ("R$ 39,90/kg") ou em um elemento proprio ("/un").
+                const folhas = Array.from(card.querySelectorAll('span, div'))
+                    .filter(el => el.children.length === 0 && textoDe(el));
+                const precos = folhas.filter(el => /^R\$/.test(textoDe(el)));
+                const precoAtual = precos.find(el => !el.className.includes('line-through'));
+                const unidadeColada = textoDe(precoAtual).match(/\/\s*([a-z]+)$/i);
+                const elUnidade = folhas.find(el => /^\/\s*[a-z]+$/i.test(textoDe(el)));
+                preco = textoDe(precoAtual).replace(/\/\s*[a-z]+$/i, '').trim();
+                unidade = elUnidade ? textoDe(elUnidade).replace('/', '').trim().toLowerCase() : (unidadeColada ? unidadeColada[1].toLowerCase() : '');
+                precoAntigo = textoDe(precos.find(el => el.className.includes('line-through')));
             }
+
+            // "700g" ou "2,8kg" e o tamanho da embalagem: o produto e vendido por unidade e o
+            // backend calcula o preco por kg a partir desse tamanho.
+            const embalagem = /^\d/.test(unidade) ? unidade : null;
 
             return {
                 id: idMatch ? idMatch[1] : null,
                 name: nome,
-                price: textoDe(precoAtual).replace(/\/\s*[a-z]+$/i, '').trim() || null,
-                originalPrice: precoAntigo,
-                unit: unidade
-                    ? textoDe(unidade).replace('/', '').trim().toLowerCase()
-                    : (unidadeNoPreco ? unidadeNoPreco[1].toLowerCase() : null),
+                price: preco || null,
+                originalPrice: precoAntigo || null,
+                unit: embalagem ? 'un' : (unidade || null),
+                packageSize: embalagem,
                 tag: textoDe(card.querySelector('.vip-tag-text')) || null,
                 image: imagem ? imagem.src : null,
                 url: new URL(href, location.origin).href

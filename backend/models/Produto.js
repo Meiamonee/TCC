@@ -62,6 +62,11 @@ const produtoSchema = new mongoose.Schema({
         type: String,
         default: null
     },
+    // Tamanho da embalagem informado pelo site junto ao preco (ex: "700g" em "R$ 48,93 /700g")
+    embalagem: {
+        type: String,
+        default: null
+    },
     // Etiqueta promocional exibida no card (ex: "Clube SuperVale")
     etiqueta: {
         type: String,

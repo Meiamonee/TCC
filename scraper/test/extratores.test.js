@@ -61,14 +61,16 @@ test('VipCommerce: le nome, preco, unidade, oferta e URL de cada card', async ()
     assert.match(produtos['6173'].image, /^https:\/\//);
 });
 
-test('VipCommerce: em embalagem fechada a peso, o preco anterior tambem e convertido para kg', async () => {
+test('VipCommerce: em embalagem fechada a peso, guarda o preco cobrado pela embalagem', async () => {
     await driver.get(`${servidor.url}/vip/departamentos/hortifruti?page=1`);
     const abobora = porId(await vipcommerce.extrairProdutosDaPagina(driver))['5752'];
 
-    // O card mostra R$ 3,99/kg, R$ 11,17 pela embalagem de 2,8 kg e "de R$ 13,97" (da embalagem).
-    assert.equal(abobora.price, 'R$ 3,99');
-    assert.equal(abobora.unit, 'kg');
-    assert.equal(abobora.originalPrice, 'R$ 4,99');
+    // O card mostra "R$ 3,99/kg" (informativo), "R$ 11,17 /2,8kg" (o que se paga) e "de R$ 13,97".
+    // O preco por kg e recalculado no backend a partir do tamanho da embalagem.
+    assert.equal(abobora.price, 'R$ 11,17');
+    assert.equal(abobora.unit, 'un');
+    assert.equal(abobora.packageSize, '2,8kg');
+    assert.equal(abobora.originalPrice, 'R$ 13,97');
 });
 
 test('VipCommerce: percorre as paginas e para quando nao aparecem produtos novos', async () => {
