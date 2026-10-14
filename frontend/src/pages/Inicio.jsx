@@ -9,6 +9,7 @@ import { formatarDataColeta } from '../formatar';
 import { corBarraDoSupermercado } from '../supermercados';
 import ProductList from '../components/ProductList';
 import CestaBasica from '../components/CestaBasica';
+import FachadaMercado from '../components/FachadaMercado';
 import Preco from '../components/Preco';
 
 // Quantas ofertas cabem na vitrine de cada dispositivo (linhas completas na grade).
@@ -303,23 +304,7 @@ const Inicio = () => {
                     <Cabecalho sobretitulo="Quem participa" titulo="Os supermercados" compacto={mobile} />
                     <div className={mobile ? '-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-1 scrollbar-hide' : `grid gap-4 ${tablet ? 'grid-cols-2' : 'grid-cols-4'}`}>
                         {supermercados.map(mercado => (
-                            <Link
-                                key={mercado.slug}
-                                to={`/produtos?mercado=${mercado.slug}`}
-                                className={`group relative overflow-hidden rounded-2xl border border-papel-300 bg-papel-50 p-5 transition ${mobile ? 'w-[70vw] max-w-[280px] shrink-0 snap-start' : 'hover:-translate-y-1 hover:shadow-cartao'}`}
-                            >
-                                <span className="absolute inset-y-0 left-0 w-1.5" style={{ background: corBarraDoSupermercado(mercado.slug) }} aria-hidden="true" />
-                                <h3 className="font-display text-xl font-extrabold text-feira-900">{mercado.nome}</h3>
-                                {mercado.endereco && (
-                                    <p className="mt-1 flex items-start gap-1 text-sm text-tinta-500">
-                                        <MapPin size={14} className="mt-0.5 shrink-0" />
-                                        {mercado.endereco.replace(/,\s*Po[cç]os de Caldas$/i, '')}
-                                    </p>
-                                )}
-                                <p className="mt-5 font-preco text-4xl font-bold text-feira-800">{mercado.totalProdutos.toLocaleString('pt-BR')}</p>
-                                <p className="text-xs text-tinta-500">produtos · coletado em {formatarDataColeta(mercado.ultimaColeta)}</p>
-                                <span className="mt-4 flex items-center gap-1 text-sm font-bold text-feira-600 group-hover:text-feira-800">Ver produtos <ArrowRight size={15} /></span>
-                            </Link>
+                            <FachadaMercado key={mercado.slug} mercado={mercado} className={mobile ? 'w-[70vw] max-w-[280px] shrink-0 snap-start' : ''} />
                         ))}
                     </div>
                 </section>
