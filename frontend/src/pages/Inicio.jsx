@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, LayoutGrid, MapPin } from 'lucide-react';
 import { useApp } from '../AppContext';
 import { useDispositivo } from '../useDispositivo';
 import { fetchCestaBasica, fetchProducts } from '../services/api';
@@ -238,28 +238,38 @@ const Inicio = () => {
                             </Link>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-5 gap-3 xl:grid-cols-7">
-                            {departamentos.map((departamento, indice) => {
-                                const { icone: Icone, cor, tom } = estiloDepartamento(departamento.nome);
+                        // Prateleira: icones redondos apoiados numa gondola, com a faixa amarela de preco
+                        // mostrando quantos produtos ha em cada corredor. 14 itens: 1 prateleira (xl) ou 2 de 7.
+                        <div className="grid grid-cols-7 gap-y-10 xl:grid-cols-[repeat(14,minmax(0,1fr))]">
+                            {[
+                                ...departamentos.map(departamento => ({
+                                    chave: departamento.nome,
+                                    para: `/produtos?departamento=${encodeURIComponent(departamento.nome)}`,
+                                    nome: departamento.nome,
+                                    total: departamento.total,
+                                    ...estiloDepartamento(departamento.nome)
+                                })),
+                                { chave: 'todos', para: '/produtos', nome: 'Todos os produtos', total: totalProdutos, icone: LayoutGrid, cor: 'bg-feira-700 text-etiqueta-400', tom: '#0f4d2c' }
+                            ].map(item => {
+                                const Icone = item.icone;
                                 return (
-                                    <Link
-                                        key={departamento.nome}
-                                        to={`/produtos?departamento=${encodeURIComponent(departamento.nome)}`}
-                                        className="group relative flex flex-col overflow-hidden rounded-2xl border border-papel-300 bg-papel-50 p-4 transition hover:-translate-y-1 hover:shadow-cartao"
-                                    >
-                                        <span className="absolute inset-x-0 top-0 h-1.5" style={{ background: tom }} aria-hidden="true" />
-                                        <span className="font-preco text-xs font-bold uppercase tracking-[0.15em] text-tinta-400">Corredor {String(indice + 1).padStart(2, '0')}</span>
-                                        <span className={`mt-3 flex h-12 w-12 items-center justify-center rounded-xl ${cor} transition group-hover:scale-110`}><Icone size={24} /></span>
-                                        <span className="mt-3 font-display text-[15px] font-bold leading-tight text-feira-900">{departamento.nome}</span>
-                                        <span className="mt-1 text-xs text-tinta-500">{departamento.total.toLocaleString('pt-BR')} produtos</span>
+                                    <Link key={item.chave} to={item.para} className="group flex flex-col items-center text-center">
+                                        <span
+                                            className={`flex h-[76px] w-[76px] items-center justify-center rounded-full xl:h-[64px] xl:w-[64px] border-4 border-papel-50 shadow-[0_8px_16px_-8px_rgba(29,27,22,.45)] transition duration-200 group-hover:-translate-y-2 group-hover:shadow-[0_14px_22px_-10px_rgba(29,27,22,.5)] ${item.cor}`}
+                                        >
+                                            <Icone className="h-8 w-8 xl:h-7 xl:w-7" strokeWidth={1.9} />
+                                        </span>
+                                        <span className="mt-2.5 flex min-h-[2.4rem] items-start justify-center px-1 font-display text-[13px] font-bold leading-[1.15rem] text-feira-900 group-hover:text-feira-600">
+                                            {item.nome}
+                                        </span>
+                                        <span className="mt-1.5 flex h-7 w-full items-center justify-center border-r border-feira-900/15 bg-etiqueta-400 font-preco text-[15px] font-bold leading-none text-feira-900">
+                                            {item.total.toLocaleString('pt-BR')}
+                                            <span className="ml-1 text-[11px] font-semibold text-feira-800/70">itens</span>
+                                        </span>
+                                        <span className="h-2.5 w-full bg-feira-800 shadow-[0_6px_10px_-4px_rgba(8,42,25,.45)]" aria-hidden="true" />
                                     </Link>
                                 );
                             })}
-                            <Link to="/produtos" className="group flex flex-col justify-between rounded-2xl bg-feira-700 p-4 text-papel-50 transition hover:-translate-y-1 hover:bg-feira-800">
-                                <span className="font-preco text-xs font-bold uppercase tracking-[0.15em] text-etiqueta-300">Catálogo</span>
-                                <span className="font-display text-lg font-bold leading-tight">Todos os produtos</span>
-                                <ArrowRight className="text-etiqueta-400 transition group-hover:translate-x-1" />
-                            </Link>
                         </div>
                     )}
                 </section>
