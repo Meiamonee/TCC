@@ -172,6 +172,42 @@ test('API e banco de dados', async (t) => {
         assert.equal(sabonete.corpo.total, 0);
     });
 
+    await t.test('sugere similares de outra marca e usa substitutos na lista', async () => {
+        const sanmichel = [
+            { id: '20', name: 'Feijão Carioca San Michel 1kg', price: 'R$ 5,49', unit: 'un', department: 'Mercearia', url: 'https://sanmichel.test/produto/20/feijao' },
+            { id: '21', name: 'Feijão Carioca Du Irineu 1kg', price: 'R$ 7,95', unit: 'un', department: 'Mercearia', url: 'https://sanmichel.test/produto/21/feijao' },
+            { id: '22', name: 'Feijão Carioca Kicaldo 1kg', price: 'R$ 6,50', unit: 'un', department: 'Mercearia', url: 'https://sanmichel.test/produto/22/feijao' },
+            { id: '23', name: 'Feijão Preto San Michel 1kg', price: 'R$ 4,99', unit: 'un', department: 'Mercearia', url: 'https://sanmichel.test/produto/23/feijao' }
+        ];
+        await importarProdutosDoJson('sanmichel', { connect: false, produtos: sanmichel, agora: COLETA_2 });
+        invalidarEstatisticas();
+
+        const id = await buscarId('feijao carioca camil');
+        const { status, corpo } = await api(`/api/produtos/${id}/similares`);
+        assert.equal(status, 200);
+        assert.deepEqual(
+            corpo.similares.map(item => item.name),
+            ['Feijão Carioca San Michel 1kg', 'Feijão Carioca Kicaldo 1kg'],
+            'so cariocas de outra marca e mais baratos por kg; preto fica de fora'
+        );
+        assert.equal(corpo.similares[0].economiaPercentual, 21);
+
+        const comSimilar = await api('/api/lista/cotacao', { method: 'POST', body: JSON.stringify({ itens: [{ id, quantidade: 2 }] }) });
+        const sanMichelCom = comSimilar.corpo.porMercado.find(item => item.supermercado === 'sanmichel');
+        assert.equal(sanMichelCom.encontrados, 1);
+        assert.equal(sanMichelCom.encontradosIguais, 0);
+        assert.equal(sanMichelCom.total, 10.98);
+        assert.equal(sanMichelCom.substituicoes[0].substituto, 'Feijão Carioca San Michel 1kg');
+        assert.equal(comSimilar.corpo.compraDividida.itens[0].tipo, 'similar');
+
+        const semSimilar = await api('/api/lista/cotacao', {
+            method: 'POST',
+            body: JSON.stringify({ itens: [{ id, quantidade: 2, aceitaSimilar: false }] })
+        });
+        const sanMichelSem = semSimilar.corpo.porMercado.find(item => item.supermercado === 'sanmichel');
+        assert.equal(sanMichelSem.encontrados, 0, 'sem aceitar outra marca, o San Michel nao tem o item');
+    });
+
     await t.test('valida entradas e protege a rota de scraping', async () => {
         assert.equal((await api('/api/produtos/123/comparacao')).status, 404);
         assert.equal((await api('/api/produtos/6600aaaaaaaaaaaaaaaaaaaa')).status, 404);

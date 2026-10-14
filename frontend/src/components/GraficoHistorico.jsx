@@ -30,9 +30,10 @@ const GraficoHistorico = ({ historico }) => {
 
     return (
         <div>
-            <svg viewBox={`0 0 ${largura} ${altura}`} className="h-40 w-full" role="img" aria-label="Histórico de preço">
+            {/* preserveAspectRatio="none" estica o grafico na largura toda; a linha mantem a espessura. */}
+            <svg viewBox={`0 0 ${largura} ${altura}`} preserveAspectRatio="none" className="h-40 w-full" role="img" aria-label="Histórico de preço">
                 <path d={`${caminho} V${altura - margem} H${x(tMin)} Z`} fill="#d5eadb" />
-                <path d={caminho} fill="none" stroke="#1f7a45" strokeWidth="3" strokeLinejoin="round" />
+                <path d={caminho} fill="none" stroke="#1f7a45" strokeWidth="3" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
             </svg>
             <div className="mt-2 flex flex-wrap justify-between gap-2 text-xs text-tinta-500">
                 <span>{new Date(tMin).toLocaleDateString('pt-BR')}</span>

@@ -5,7 +5,8 @@ const CHAVE = 'superpreco:lista-compras'
 function carregar() {
     try {
         const salvo = JSON.parse(localStorage.getItem(CHAVE) || '[]')
-        return Array.isArray(salvo) ? salvo : []
+        // Listas salvas antes da opcao de substituicao aceitam outra marca por padrao.
+        return Array.isArray(salvo) ? salvo.map(item => ({ aceitaSimilar: true, ...item })) : []
     } catch {
         return []
     }
@@ -34,7 +35,9 @@ export function useListaCompras() {
                 preco: produto.priceNumber,
                 supermercadoNome: produto.supermercadoNome,
                 imagem: produto.image,
-                quantidade: 1
+                quantidade: 1,
+                // Se o mercado nao tiver este produto, aceita um similar de outra marca.
+                aceitaSimilar: true
             }]
         })
     }, [])
@@ -45,10 +48,14 @@ export function useListaCompras() {
             : atual.map(item => item.id === id ? { ...item, quantidade } : item))
     }, [])
 
+    const alternarSimilar = useCallback((id) => {
+        setItens(atual => atual.map(item => item.id === id ? { ...item, aceitaSimilar: !item.aceitaSimilar } : item))
+    }, [])
+
     const limpar = useCallback(() => setItens([]), [])
 
     return useMemo(
-        () => ({ itens, adicionar, alterarQuantidade, limpar }),
-        [itens, adicionar, alterarQuantidade, limpar]
+        () => ({ itens, adicionar, alterarQuantidade, alternarSimilar, limpar }),
+        [itens, adicionar, alterarQuantidade, alternarSimilar, limpar]
     )
 }

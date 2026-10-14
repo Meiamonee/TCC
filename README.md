@@ -36,6 +36,7 @@ Para abrir o site no celular ou tablet pela mesma rede Wi-Fi durante o desenvolv
 - **Data da coleta** em cada produto.
 - **Preço por kg/L/m/unidade**, calculado a partir do nome do produto.
 - **Comparação do mesmo produto entre supermercados**: considera marca, variante (zero, integral, sabor...) e tamanho da embalagem (ver `backend/services/comparacao.js`).
+- **Produtos similares**: quando o mesmo produto não existe em outro mercado (ou existe mais barato de outra marca), o sistema sugere opções do mesmo tipo, mesma versão e tamanho parecido, comparadas pelo preço por kg/L. Na lista de compras, cada item pode aceitar ou não um substituto de outra marca, e cada mercado mostra o total "só com itens iguais" e "com substitutos".
 - **Histórico de preços** de cada produto, com destaque para o menor preço do período.
 - **Lista de compras**: total em cada supermercado e a economia comprando cada item onde é mais barato.
 - **Cesta básica do DIEESE** (Região Sudeste): custo mínimo em cada supermercado.

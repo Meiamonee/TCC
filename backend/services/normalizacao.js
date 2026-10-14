@@ -43,7 +43,11 @@ const VARIANTES = new Set([
     'coco', 'limao', 'neutro', 'maca', 'laranja', 'uva', 'morango', 'baunilha', 'menta',
     'hortela', 'lavanda', 'abacaxi', 'maracuja', 'pessego', 'cereja', 'canela',
     'guarana', 'tangerina', 'manga', 'goiaba', 'framboesa', 'amora', 'caramelo',
-    'flores', 'floral', 'talco', 'eucalipto', 'pinho', 'clear', 'pimenta', 'ervas'
+    'flores', 'floral', 'talco', 'eucalipto', 'pinho', 'clear', 'pimenta', 'ervas',
+    // Tipos de vinho (e de feijao/chocolate "branco"): tinto nao substitui branco.
+    'tinto', 'branco', 'rose', 'seco',
+    // Cores e tipos de grao: feijao preto nao substitui carioca; azeitona verde nao substitui preta.
+    'preto', 'preta', 'vermelho', 'vermelha', 'verde', 'rajado', 'fradinho', 'jalo', 'bolinha', 'mulatinho'
 ]);
 
 const UNIDADES_MEDIDA = [

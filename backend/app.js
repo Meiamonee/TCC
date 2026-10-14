@@ -6,7 +6,7 @@ const Produto = require('./models/Produto');
 const HistoricoPreco = require('./models/HistoricoPreco');
 const Supermercado = require('./models/Supermercado');
 const { formatarPreco, SUPERMARKETS } = require('./services/importProducts');
-const { buscarEquivalentes, precoComparavel } = require('./services/comparacao');
+const { buscarEquivalentes, buscarSimilares, precoComparavel } = require('./services/comparacao');
 const { cotarLista } = require('./services/listaCompras');
 const { calcularCestaBasica } = require('./services/cestaBasica');
 const { obterEstatisticas } = require('./services/estatisticas');
@@ -197,6 +197,31 @@ function criarApp() {
                 maisBarato: String(item._id) === String(maisBarato._id)
             })),
             economiaMaxima: Math.round((Math.max(...opcoes.map(o => o.produto.preco)) - maisBarato.preco) * 100) / 100
+        });
+    }));
+
+    // Produtos parecidos de outras marcas (em qualquer supermercado) mais baratos por kg/L/un.
+    app.get('/api/produtos/:id/similares', rota(async (req, res) => {
+        const produto = await carregarProduto(req.params.id);
+        const limite = Math.min(Math.max(Number.parseInt(req.query.limite, 10) || 6, 1), 20);
+        const referencia = precoComparavel(produto);
+
+        const similares = (await buscarSimilares(produto))
+            .filter(item => precoComparavel(item) < referencia)
+            .slice(0, limite);
+
+        res.json({
+            produto: formatarProduto(produto),
+            criterio: 'Mesmo tipo de produto, mesma versão e tamanho parecido (até 25% de diferença), de outra marca.',
+            similares: similares.map(item => ({
+                ...formatarProduto(item),
+                similar: true,
+                mesmoSupermercado: item.supermercado === produto.supermercado,
+                economiaPorUnidade: produto.precoPorUnidade && item.precoPorUnidade
+                    ? Math.round((produto.precoPorUnidade - item.precoPorUnidade) * 100) / 100
+                    : null,
+                economiaPercentual: Math.round((1 - precoComparavel(item) / referencia) * 100)
+            }))
         });
     }));
 

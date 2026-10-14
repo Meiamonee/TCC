@@ -9,6 +9,7 @@ import SeloMercado from '../components/SeloMercado';
 import Preco from '../components/Preco';
 import GraficoHistorico from '../components/GraficoHistorico';
 import ImagemProduto from '../components/ImagemProduto';
+import SimilaresMaisBaratos from '../components/SimilaresMaisBaratos';
 import { useDispositivo } from '../useDispositivo';
 
 const Produto = () => {
@@ -146,7 +147,7 @@ const Produto = () => {
                         {outros > 0 ? `Em ${opcoes.length} supermercados` : 'Só encontramos neste supermercado'}
                     </h2>
                     <p className="mt-1 text-sm text-tinta-500">
-                        {outros > 0 ? 'Do mais barato para o mais caro.' : 'Os outros mercados não vendem este produto pelo site, ou vendem outra marca ou tamanho.'}
+                        {outros > 0 ? 'Do mais barato para o mais caro.' : 'Os outros mercados não vendem este mesmo produto pelo site. Veja abaixo as opções parecidas de outras marcas.'}
                     </p>
 
                     <ol className="mt-6 space-y-3">
@@ -238,6 +239,8 @@ const Produto = () => {
                         Consideramos o mesmo produto quando marca, versão (zero, integral, sabor...) e tamanho da embalagem coincidem.
                     </p>
                 </section>
+
+                <SimilaresMaisBaratos produto={produto} />
 
                 <section className="rounded-[2rem] border border-papel-300 bg-papel-50 p-5 sm:p-8">
                     <div className="mb-5 flex flex-wrap items-end justify-between gap-3">

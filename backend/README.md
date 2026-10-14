@@ -13,7 +13,7 @@ Responsabilidades:
 - `app.js`: rotas da API (sem iniciar o servidor, para facilitar os testes).
 - `server.js`: conecta ao MongoDB, inicia a API e o agendamento da coleta.
 - `services/normalizacao.js`: palavras relevantes, variantes, quantidade, preço por unidade e categoria padronizada.
-- `services/comparacao.js`: encontra o mesmo produto nos outros supermercados.
+- `services/comparacao.js`: encontra o mesmo produto nos outros supermercados e os similares de outras marcas (núcleo do produto + qualificadores, mesma versão e tamanho parecido).
 - `services/listaCompras.js`: cotação da lista de compras.
 - `services/cestaBasica.js`: custo da cesta básica do DIEESE por supermercado.
 - `services/importProducts.js`: importação dos arquivos do scraper e histórico de preços.
@@ -62,12 +62,13 @@ Testes unitários (normalização e comparação) e de integração (API) com `n
 | GET | `/api/produtos` | Lista paginada. Parâmetros: `search`, `categoria`, `supermercado`, `alimentos=true`, `ofertas=true`, `ordenar` (`menor-preco`, `maior-preco`, `menor-preco-unidade`, `nome`), `page`, `limit` (máx. 100) |
 | GET | `/api/produtos/:id` | Um produto |
 | GET | `/api/produtos/:id/comparacao` | O mesmo produto nos outros supermercados, do mais barato ao mais caro |
+| GET | `/api/produtos/:id/similares` | Produtos parecidos de outras marcas, mais baratos por kg/L/un (`limite`, padrão 6) |
 | GET | `/api/produtos/:id/historico` | Histórico de preço (`dias`, padrão 90) |
 | GET | `/api/categorias` | Categorias padronizadas com total de produtos |
 | GET | `/api/supermercados` | Supermercados ativos, total de produtos e última coleta |
 | GET | `/api/cesta-basica` | Custo da cesta básica do DIEESE em cada supermercado |
 | GET | `/api/estatisticas` | Painel: produtos coletados, última e próxima coleta, números por mercado e departamento, cesta básica e maiores variações de preço |
-| POST | `/api/lista/cotacao` | Cota uma lista: `{ "itens": [{ "id": "...", "quantidade": 2 }] }` |
+| POST | `/api/lista/cotacao` | Cota uma lista: `{ "itens": [{ "id": "...", "quantidade": 2, "aceitaSimilar": true }] }`. Com `aceitaSimilar`, mercados sem o mesmo produto entram com o similar mais barato |
 | GET | `/api/scraping/status` | Situação da coleta |
 | POST | `/api/scraping/atualizar` | Dispara a coleta (requer `Authorization: Bearer <ADMIN_TOKEN>`) |
 

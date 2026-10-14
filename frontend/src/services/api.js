@@ -47,6 +47,10 @@ export function fetchComparacao(id) {
     return request(`/produtos/${id}/comparacao`)
 }
 
+export function fetchSimilares(id, limite = 6) {
+    return request(`/produtos/${id}/similares?limite=${limite}`)
+}
+
 export function fetchHistorico(id) {
     return request(`/produtos/${id}/historico`)
 }
