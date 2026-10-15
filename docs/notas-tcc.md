@@ -87,11 +87,23 @@ Uma coleta completa dos 4 mercados leva cerca de 1h30. Por isso a atualização 
 
 ## Implantação
 
-Hospedagem gratuita, com o passo a passo em `docs/implantacao.md`:
-- **Site** no Cloudflare Pages.
-- **Banco** no MongoDB Atlas Free: cerca de 512 MB; o banco tinha uns 40 MB em out/2026.
-- **API e coleta** numa VM Oracle Cloud Always Free (Ubuntu, Chromium + ChromeDriver, Caddy com HTTPS, serviço systemd).
-- **Por que não Cloudflare Workers**: no plano gratuito são 10 ms de CPU por requisição e 128 MB de memória, o que não comporta a comparação sobre 27 mil produtos; e não há como rodar o Chrome/Selenium.
+Ambiente em produção (out/2026), todo gratuito; detalhes em `docs/implantacao.md`:
+- **Site**: Cloudflare Pages (https://superpreco.pages.dev).
+- **API**: Render, plano grátis (https://superpreco-api.onrender.com), configurada pelo `render.yaml`.
+- **Banco**: MongoDB Atlas Free em São Paulo; o banco tinha cerca de 40 MB, com 27 mil produtos e 30 mil pontos de histórico.
+- **Coleta**: GitHub Actions às 6h e 18h, com Selenium e Chrome headless e um job por mercado em paralelo, gravando no Atlas.
+
+Decisões:
+- **Cloudflare Workers descartado**: no plano gratuito são 10 ms de CPU por requisição e 128 MB de memória, e não há Chrome para o Selenium.
+- **VM Oracle Always Free**: era a primeira opção, mas não foi possível criar a conta; o instalador ficou em `deploy/oracle/`.
+- **Render**: não tem Chrome e "dorme" após 15 minutos sem uso, por isso a coleta roda no GitHub Actions.
+- **Repositório público**: necessário para ter minutos ilimitados de Actions. O histórico foi verificado e não continha segredos; a conexão com o banco fica em secrets do GitHub e do Render.
+- **node-cron**: continua sendo o agendador quando a API roda em servidor próprio. No Render fica desligado (`SCHEDULER_ENABLED=false`).
+
+Problemas resolvidos na implantação:
+- No Windows, o Node não resolvia o endereço `mongodb+srv://` (`querySrv ECONNREFUSED`). Foi criada a opção `DNS_SERVERS`.
+- O SuperVale passou a ter banners de campanha que carregam antes do menu. O scraper pegou só 6 "departamentos" e o importador marcou 2.146 produtos como indisponíveis. A correção foi esperar o menu "Ir para departamento de ..." e não marcar indisponíveis quando a coleta traz menos de 60% dos produtos.
+- Foram removidos 548 pontos de histórico gravados com o preço por kg nos produtos em embalagem, antes da correção do preço da embalagem.
 
 ## Histórico do repositório
 
