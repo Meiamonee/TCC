@@ -79,6 +79,19 @@ function csv(cabecalho, linhas) {
     return [cabecalho, ...linhas].map(linha => linha.map(celula).join(';')).join('\n') + '\n';
 }
 
+// Separa uma linha de CSV com ";" respeitando campos entre aspas (ex.: "Bala Mentos 37,5g").
+function lerLinhaCsv(linha) {
+    const campos = [];
+    let atual = '';
+    let entreAspas = false;
+    for (let i = 0; i < linha.length; i++) {
+        const c = linha[i];
+        if (c === '"' && entreAspas && linha[i + 1] === '"') { atual += '"'; i++; } else if (c === '"') { entreAspas = !entreAspas; } else if (c === ';' && !entreAspas) { campos.push(atual); atual = ''; } else { atual += c; }
+    }
+    campos.push(atual);
+    return campos;
+}
+
 function salvar(caminho, conteudo) {
     fs.mkdirSync(path.dirname(caminho), { recursive: true });
     fs.writeFileSync(caminho, conteudo, 'utf8');
@@ -181,8 +194,10 @@ function prepararValidacao(grupos) {
         return { amostra: amostra.length, respondidos: 0, corretos: 0, precisao: null };
     }
 
-    const linhas = fs.readFileSync(ARQUIVO_VALIDACAO, 'utf8').trim().split(/\r?\n/).slice(1);
-    const respostas = linhas.map(linha => linha.split(';').pop().trim().toLowerCase()).filter(Boolean);
+    // Le a coluna mesmo_produto pelo cabecalho (pode haver uma coluna de observacao depois dela).
+    const [cabecalho, ...linhas] = fs.readFileSync(ARQUIVO_VALIDACAO, 'utf8').trim().split(/\r?\n/);
+    const coluna = cabecalho.split(';').indexOf('mesmo_produto');
+    const respostas = linhas.map(linha => (lerLinhaCsv(linha)[coluna] || '').trim().toLowerCase()).filter(Boolean);
     const corretos = respostas.filter(resposta => resposta.startsWith('s')).length;
     return {
         amostra: linhas.length,

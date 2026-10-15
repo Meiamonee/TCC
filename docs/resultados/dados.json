@@ -1,11 +1,11 @@
 {
-  "geradoEm": "2026-10-15T14:13:24.460Z",
+  "geradoEm": "2026-10-15T22:47:41.139Z",
   "banco": "Mercados",
   "validacao": {
     "amostra": 50,
-    "respondidos": 0,
-    "corretos": 0,
-    "precisao": null
+    "respondidos": 50,
+    "corretos": 44,
+    "precisao": 88
   },
   "avaliacao": {
     "sus": null,
@@ -15,45 +15,45 @@
     {
       "slug": "supervale",
       "nome": "SuperVale",
-      "produtos": 3287,
-      "alimentos": 2116,
-      "ofertas": 44,
-      "comPrecoPorUnidade": 3078,
-      "ultimaColeta": "2026-10-15T04:24:56.197Z"
+      "produtos": 3284,
+      "alimentos": 2114,
+      "ofertas": 130,
+      "comPrecoPorUnidade": 3075,
+      "ultimaColeta": "2026-10-15T14:19:19.421Z"
     },
     {
       "slug": "vilasul",
       "nome": "Vila Sul",
-      "produtos": 9013,
-      "alimentos": 5821,
-      "ofertas": 0,
-      "comPrecoPorUnidade": 8193,
-      "ultimaColeta": "2026-10-15T05:06:57.132Z"
+      "produtos": 9035,
+      "alimentos": 5827,
+      "ofertas": 460,
+      "comPrecoPorUnidade": 8204,
+      "ultimaColeta": "2026-10-15T14:51:30.505Z"
     },
     {
       "slug": "sanmichel",
       "nome": "San Michel",
-      "produtos": 5010,
-      "alimentos": 3134,
-      "ofertas": 115,
-      "comPrecoPorUnidade": 4378,
-      "ultimaColeta": "2026-10-15T04:33:56.790Z"
+      "produtos": 5036,
+      "alimentos": 3160,
+      "ofertas": 125,
+      "comPrecoPorUnidade": 4396,
+      "ultimaColeta": "2026-10-15T14:33:01.562Z"
     },
     {
       "slug": "pedrilho",
       "nome": "Pedrilho",
-      "produtos": 9516,
+      "produtos": 9507,
       "alimentos": 5500,
       "ofertas": 0,
-      "comPrecoPorUnidade": 8628,
-      "ultimaColeta": "2026-10-15T04:50:20.276Z"
+      "comPrecoPorUnidade": 8620,
+      "ultimaColeta": "2026-10-15T14:39:25.549Z"
     }
   ],
-  "indisponiveis": 143,
+  "indisponiveis": 171,
   "categorias": [
     [
       "Higiene e Saúde",
-      4861
+      4851
     ],
     [
       "Mercearia",
@@ -61,101 +61,101 @@
     ],
     [
       "Bebidas",
-      3003
+      3011
     ],
     [
       "Biscoitos e Chocolates",
-      2959
+      2955
     ],
     [
       "Limpeza",
-      2902
+      2908
     ],
     [
       "Matinais e Sobremesas",
-      2794
+      2797
     ],
     [
       "Bazar e Utilidades",
-      2114
+      2119
     ],
     [
       "Frios e Laticínios",
-      1859
+      1861
     ],
     [
       "Congelados",
-      813
+      819
     ],
     [
       "Carnes e Peixes",
-      584
+      589
     ],
     [
       "Padaria",
-      567
+      570
     ],
     [
       "Hortifruti",
-      539
+      546
     ],
     [
       "Pet",
-      378
+      383
     ]
   ],
   "cobertura": {
     "geral": {
-      "total": 26826,
-      "comEquivalente": 9280,
-      "comEquivalenteOuSimilar": 19475,
-      "emTodosComSubstituto": 12272,
-      "percentualEquivalente": 34.6,
-      "percentualEquivalenteOuSimilar": 72.6,
-      "percentualEmTodos": 45.7
+      "total": 26862,
+      "comEquivalente": 9311,
+      "comEquivalenteOuSimilar": 19529,
+      "emTodosComSubstituto": 12341,
+      "percentualEquivalente": 34.7,
+      "percentualEquivalenteOuSimilar": 72.7,
+      "percentualEmTodos": 45.9
     },
     "porMercado": {
       "supervale": {
-        "total": 3287,
-        "comEquivalente": 1731,
-        "comEquivalenteOuSimilar": 2839,
-        "emTodosComSubstituto": 1940,
-        "percentualEquivalente": 52.7,
-        "percentualEquivalenteOuSimilar": 86.4,
-        "percentualEmTodos": 59
+        "total": 3284,
+        "comEquivalente": 1728,
+        "comEquivalenteOuSimilar": 2835,
+        "emTodosComSubstituto": 1949,
+        "percentualEquivalente": 52.6,
+        "percentualEquivalenteOuSimilar": 86.3,
+        "percentualEmTodos": 59.3
       },
       "vilasul": {
-        "total": 9013,
-        "comEquivalente": 2765,
-        "comEquivalenteOuSimilar": 6173,
-        "emTodosComSubstituto": 3762,
+        "total": 9035,
+        "comEquivalente": 2771,
+        "comEquivalenteOuSimilar": 6192,
+        "emTodosComSubstituto": 3784,
         "percentualEquivalente": 30.7,
         "percentualEquivalenteOuSimilar": 68.5,
-        "percentualEmTodos": 41.7
+        "percentualEmTodos": 41.9
       },
       "sanmichel": {
-        "total": 5010,
-        "comEquivalente": 2339,
-        "comEquivalenteOuSimilar": 3919,
-        "emTodosComSubstituto": 2447,
+        "total": 5036,
+        "comEquivalente": 2352,
+        "comEquivalenteOuSimilar": 3942,
+        "emTodosComSubstituto": 2467,
         "percentualEquivalente": 46.7,
-        "percentualEquivalenteOuSimilar": 78.2,
-        "percentualEmTodos": 48.8
+        "percentualEquivalenteOuSimilar": 78.3,
+        "percentualEmTodos": 49
       },
       "pedrilho": {
-        "total": 9516,
-        "comEquivalente": 2445,
-        "comEquivalenteOuSimilar": 6544,
-        "emTodosComSubstituto": 4123,
-        "percentualEquivalente": 25.7,
-        "percentualEquivalenteOuSimilar": 68.8,
-        "percentualEmTodos": 43.3
+        "total": 9507,
+        "comEquivalente": 2460,
+        "comEquivalenteOuSimilar": 6560,
+        "emTodosComSubstituto": 4141,
+        "percentualEquivalente": 25.9,
+        "percentualEquivalenteOuSimilar": 69,
+        "percentualEmTodos": 43.6
       }
     }
   },
   "precos": {
-    "grupos": 4696,
-    "gruposAnormais": 73,
+    "grupos": 4697,
+    "gruposAnormais": 81,
     "exemplosAnormais": [
       "Lasanha Seara 4 Queijos 600gr (supervale, R$ 16.99) × Lasanha 4 Queijos Seara Caixa 600g (pedrilho, R$ 6.6) × Lasanha Seara 4 Queijos 600gr (sanmichel, R$ 15.99) × Lasanha Seara 4 Queijos 600gr (vilasul, R$ 20.41)",
       "Iogurte Grego Nestle Light Tradicional, Morango E Maracuja 540gr (supervale, R$ 18.9) × Iogurte Grego Tradicional + Morango + Maracujá Light Nestlé Bandeja 540g 6 Unidades Leve Mais Pague Menos (pedrilho, R$ 2.99) × Iogurte Com Polpa De Frutas Grego Nestlé Light Tradicional, Morango E Maracuja 540g (sanmichel, R$ 18.99)",
@@ -163,188 +163,188 @@
       "Alface Crespa Folhatta Un (supervale, R$ 7.49) × Alface Crespa (pedrilho, R$ 3.99) × Alface Crespa Folhatta (vilasul, R$ 12.09)",
       "Alface Lisa Baby Un (supervale, R$ 7.99) × Alface Lisa (pedrilho, R$ 3.99) × Alface Lisa Baby Folhatta (vilasul, R$ 13.19)"
     ],
-    "diferencaP75Percentual": 32.4,
-    "diferencaMediaPercentual": 26.2,
-    "diferencaMedianaPercentual": 18.8,
-    "diferencaMediaReais": 2.57,
-    "gruposComDiferencaAcimaDe20": 2206,
-    "gruposMesmoPreco": 57,
+    "diferencaP75Percentual": 33.4,
+    "diferencaMediaPercentual": 26.7,
+    "diferencaMedianaPercentual": 19.3,
+    "diferencaMediaReais": 2.61,
+    "gruposComDiferencaAcimaDe20": 2279,
+    "gruposMesmoPreco": 47,
     "faixas": [
       {
         "rotulo": "Mesmo preço",
-        "grupos": 57
+        "grupos": 47
       },
       {
         "rotulo": "Até 10%",
-        "grupos": 1175
+        "grupos": 1143
       },
       {
         "rotulo": "10% a 20%",
-        "grupos": 1258
+        "grupos": 1228
       },
       {
         "rotulo": "20% a 50%",
-        "grupos": 1638
+        "grupos": 1690
       },
       {
         "rotulo": "Mais de 50%",
-        "grupos": 568
+        "grupos": 589
       }
     ],
     "maisBarato": [
       {
         "supermercado": "supervale",
-        "presencas": 2342,
-        "vezesMaisBarato": 646.4,
-        "percentualDasPresencas": 27.6
+        "presencas": 2337,
+        "vezesMaisBarato": 626.8,
+        "percentualDasPresencas": 26.8
       },
       {
         "supermercado": "vilasul",
-        "presencas": 3368,
-        "vezesMaisBarato": 578.1,
-        "percentualDasPresencas": 17.2
+        "presencas": 3364,
+        "vezesMaisBarato": 708.1,
+        "percentualDasPresencas": 21
       },
       {
         "supermercado": "sanmichel",
-        "presencas": 2936,
-        "vezesMaisBarato": 1829.9,
-        "percentualDasPresencas": 62.3
+        "presencas": 2947,
+        "vezesMaisBarato": 1753.7,
+        "percentualDasPresencas": 59.5
       },
       {
         "supermercado": "pedrilho",
-        "presencas": 2940,
-        "vezesMaisBarato": 1641.6,
-        "percentualDasPresencas": 55.8
+        "presencas": 2947,
+        "vezesMaisBarato": 1608.4,
+        "percentualDasPresencas": 54.6
       }
     ],
     "pares": [
       {
         "a": "sanmichel",
         "b": "vilasul",
-        "produtosEmComum": 2053,
-        "aMaisBaratoPercentual": 85.7,
-        "bMaisBaratoPercentual": 13.6,
-        "empatesPercentual": 0.6,
-        "diferencaMedianaPercentual": 14.9
+        "produtosEmComum": 2056,
+        "aMaisBaratoPercentual": 81.2,
+        "bMaisBaratoPercentual": 18.1,
+        "empatesPercentual": 0.7,
+        "diferencaMedianaPercentual": 13.7
       },
       {
         "a": "pedrilho",
         "b": "vilasul",
-        "produtosEmComum": 1853,
-        "aMaisBaratoPercentual": 72.7,
-        "bMaisBaratoPercentual": 26.2,
+        "produtosEmComum": 1854,
+        "aMaisBaratoPercentual": 69.5,
+        "bMaisBaratoPercentual": 29.4,
         "empatesPercentual": 1,
-        "diferencaMedianaPercentual": 10.7
+        "diferencaMedianaPercentual": 9.8
       },
       {
         "a": "pedrilho",
         "b": "sanmichel",
-        "produtosEmComum": 1524,
-        "aMaisBaratoPercentual": 43.1,
-        "bMaisBaratoPercentual": 53.7,
-        "empatesPercentual": 3.1,
+        "produtosEmComum": 1540,
+        "aMaisBaratoPercentual": 42.9,
+        "bMaisBaratoPercentual": 53.8,
+        "empatesPercentual": 3.4,
         "diferencaMedianaPercentual": -1.8
       },
       {
         "a": "supervale",
         "b": "vilasul",
-        "produtosEmComum": 1434,
-        "aMaisBaratoPercentual": 58.4,
-        "bMaisBaratoPercentual": 40.4,
+        "produtosEmComum": 1428,
+        "aMaisBaratoPercentual": 54.3,
+        "bMaisBaratoPercentual": 44.5,
         "empatesPercentual": 1.3,
-        "diferencaMedianaPercentual": 3.4
+        "diferencaMedianaPercentual": 1.7
       },
       {
         "a": "pedrilho",
         "b": "supervale",
-        "produtosEmComum": 1426,
-        "aMaisBaratoPercentual": 66.5,
-        "bMaisBaratoPercentual": 29.2,
-        "empatesPercentual": 4.3,
-        "diferencaMedianaPercentual": 7.6
+        "produtosEmComum": 1425,
+        "aMaisBaratoPercentual": 66.4,
+        "bMaisBaratoPercentual": 29.8,
+        "empatesPercentual": 3.8,
+        "diferencaMedianaPercentual": 7.5
       },
       {
         "a": "sanmichel",
         "b": "supervale",
-        "produtosEmComum": 1239,
-        "aMaisBaratoPercentual": 67.6,
-        "bMaisBaratoPercentual": 24.3,
-        "empatesPercentual": 8.1,
+        "produtosEmComum": 1242,
+        "aMaisBaratoPercentual": 67,
+        "bMaisBaratoPercentual": 25.4,
+        "empatesPercentual": 7.6,
         "diferencaMedianaPercentual": 9.3
       }
     ],
     "porCategoria": [
       {
         "categoria": "Higiene e Saúde",
-        "grupos": 839,
+        "grupos": 837,
         "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 40.9
+        "percentual": 39.8
       },
       {
         "categoria": "Mercearia",
-        "grupos": 767,
+        "grupos": 771,
         "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 39.4
+        "percentual": 37.4
       },
       {
         "categoria": "Bebidas",
-        "grupos": 579,
+        "grupos": 581,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 35.8
+        "percentual": 34.7
       },
       {
         "categoria": "Biscoitos e Chocolates",
         "grupos": 525,
         "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 44.5
+        "percentual": 42.4
       },
       {
         "categoria": "Matinais e Sobremesas",
         "grupos": 493,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 42
+        "percentual": 41.4
       },
       {
         "categoria": "Limpeza",
         "grupos": 461,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 44
+        "percentual": 43.6
       },
       {
         "categoria": "Frios e Laticínios",
-        "grupos": 363,
+        "grupos": 359,
         "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 51.1
+        "percentual": 48.6
       },
       {
         "categoria": "Bazar e Utilidades",
-        "grupos": 202,
+        "grupos": 199,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 41.5
+        "percentual": 40.1
       },
       {
         "categoria": "Congelados",
-        "grupos": 162,
+        "grupos": 165,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 41.7
+        "percentual": 38.8
       },
       {
         "categoria": "Padaria",
         "grupos": 116,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 41.4
+        "percentual": 40.5
       },
       {
         "categoria": "Hortifruti",
-        "grupos": 71,
+        "grupos": 72,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 48.6
+        "percentual": 43.8
       },
       {
         "categoria": "Carnes e Peixes",
         "grupos": 68,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 38.2
+        "percentual": 35.3
       },
       {
         "categoria": "Pet",
@@ -356,12 +356,12 @@
   },
   "cesta": {
     "referencia": "Cesta básica DIEESE - Região Sudeste (Decreto-Lei 399/1938)",
-    "calculadoEm": "2026-10-15T14:12:48.142Z",
+    "calculadoEm": "2026-10-15T22:47:00.758Z",
     "porMercado": [
       {
         "supermercado": "supervale",
         "supermercadoNome": "SuperVale",
-        "total": 720.82,
+        "total": 696.1,
         "itensEncontrados": 13,
         "itensTotal": 13,
         "itens": [
@@ -370,8 +370,8 @@
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Carne Bovina Acem Moído 500gr",
-            "precoPorUnidade": 39.9,
-            "custo": 239.4,
+            "precoPorUnidade": 35.9,
+            "custo": 215.4,
             "opcoes": 8
           },
           {
@@ -387,7 +387,7 @@
             "item": "Feijão",
             "quantidade": 4.5,
             "unidade": "kg",
-            "produto": "Feijao Carioca Classe A 2kg",
+            "produto": "Feijao Carioca Du Irineu Tipo 1 1kg",
             "precoPorUnidade": 8.99,
             "custo": 40.46,
             "opcoes": 7
@@ -460,8 +460,8 @@
             "quantidade": 3,
             "unidade": "kg",
             "produto": "Acucar Cristal Monte Alegre 5kg",
-            "precoPorUnidade": 3,
-            "custo": 9,
+            "precoPorUnidade": 2.76,
+            "custo": 8.28,
             "opcoes": 3
           },
           {
@@ -487,7 +487,7 @@
       {
         "supermercado": "vilasul",
         "supermercadoNome": "Vila Sul",
-        "total": 905.44,
+        "total": 831.74,
         "itensEncontrados": 13,
         "itensTotal": 13,
         "itens": [
@@ -496,17 +496,17 @@
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Carne Bovina Friboi Acém 700g",
-            "precoPorUnidade": 42.89,
-            "custo": 257.34,
+            "precoPorUnidade": 35.99,
+            "custo": 215.94,
             "opcoes": 27
           },
           {
             "item": "Leite",
             "quantidade": 7.5,
             "unidade": "L",
-            "produto": "Leite L.vida Quata 1lt Integral",
-            "precoPorUnidade": 5.61,
-            "custo": 42.08,
+            "produto": "Leite Porto Alegre Longa Vida Integral 1l",
+            "precoPorUnidade": 5.19,
+            "custo": 38.93,
             "opcoes": 7
           },
           {
@@ -558,18 +558,18 @@
             "item": "Pão francês",
             "quantidade": 6,
             "unidade": "kg",
-            "produto": "Mini Pão Francês 250g (aprox 8 Paes)",
-            "precoPorUnidade": 19.8,
-            "custo": 118.8,
-            "opcoes": 1
+            "produto": "Pão Francês",
+            "precoPorUnidade": 15.87,
+            "custo": 95.22,
+            "opcoes": 2
           },
           {
             "item": "Café em pó",
             "quantidade": 0.6,
             "unidade": "kg",
-            "produto": "Café Bom Dia Tradicional 500g",
-            "precoPorUnidade": 43.78,
-            "custo": 26.27,
+            "produto": "Café União Pouco Extra Forte 500g",
+            "precoPorUnidade": 37.8,
+            "custo": 22.68,
             "opcoes": 71
           },
           {
@@ -586,8 +586,8 @@
             "quantidade": 3,
             "unidade": "kg",
             "produto": "Acucar Cristal Delta 5kg",
-            "precoPorUnidade": 3.24,
-            "custo": 9.72,
+            "precoPorUnidade": 2.58,
+            "custo": 7.74,
             "opcoes": 4
           },
           {
@@ -613,7 +613,7 @@
       {
         "supermercado": "sanmichel",
         "supermercadoNome": "San Michel",
-        "total": 613.87,
+        "total": 576.67,
         "itensEncontrados": 12,
         "itensTotal": 13,
         "itens": [
@@ -667,17 +667,17 @@
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Batata Granel 600g",
-            "precoPorUnidade": 7.98,
-            "custo": 47.88,
-            "opcoes": 15
+            "precoPorUnidade": 5.78,
+            "custo": 34.68,
+            "opcoes": 16
           },
           {
             "item": "Tomate",
             "quantidade": 9,
             "unidade": "kg",
             "produto": "Tomate Italiano 500g",
-            "precoPorUnidade": 11,
-            "custo": 99,
+            "precoPorUnidade": 9.9,
+            "custo": 89.1,
             "opcoes": 2
           },
           {
@@ -694,17 +694,17 @@
             "quantidade": 0.6,
             "unidade": "kg",
             "produto": "Café Bom Dia Extra Forte 500g",
-            "precoPorUnidade": 35.98,
-            "custo": 21.59,
+            "precoPorUnidade": 31.98,
+            "custo": 19.19,
             "opcoes": 44
           },
           {
             "item": "Banana",
             "quantidade": 9,
             "unidade": "kg",
-            "produto": "Banana Prata Da Roca 1kg",
-            "precoPorUnidade": 6.29,
-            "custo": 56.61,
+            "produto": "Banana Nanica 800g",
+            "precoPorUnidade": 4.99,
+            "custo": 44.91,
             "opcoes": 2
           },
           {
@@ -878,8 +878,8 @@
       },
       {
         "termo": "feijao carioca 1kg",
-        "produto": "Feijão Carioca Du Irineu 1kg",
-        "supermercado": "sanmichel"
+        "produto": "Feijao Carioca Du Irineu Tipo 1 1kg",
+        "supermercado": "supervale"
       },
       {
         "termo": "acucar refinado 1kg",
@@ -918,7 +918,7 @@
       },
       {
         "termo": "margarina 500g",
-        "produto": "Margarina Doriana Cremosa Com Sal 500gr",
+        "produto": "Margarina Doriana Sem Sal 500gr",
         "supermercado": "supervale"
       },
       {
@@ -949,7 +949,7 @@
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5c22",
               "nome": "Arroz Super Ecco Tipo 1 5kg",
-              "preco": 25.81,
+              "preco": 21.98,
               "tipo": "igual"
             },
             "sanmichel": {
@@ -967,15 +967,15 @@
           }
         },
         {
-          "id": "6acf131a424246fe7ea3bdee",
-          "nome": "Feijão Carioca Du Irineu 1kg",
+          "id": "6a500326d9bf4419554f14ec",
+          "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
           "quantidade": 1,
           "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6a500326d9bf4419554f14ec",
               "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
-              "preco": 11.44,
+              "preco": 8.99,
               "tipo": "igual"
             },
             "vilasul": {
@@ -1223,15 +1223,15 @@
           }
         },
         {
-          "id": "6acf1318be7f4fa7f4f83ad1",
-          "nome": "Margarina Doriana Cremosa Com Sal 500gr",
+          "id": "6acf1318be7f4fa7f4f83ab9",
+          "nome": "Margarina Doriana Sem Sal 500gr",
           "quantidade": 1,
           "aceitaSimilar": true,
           "precos": {
             "supervale": {
-              "id": "6acf1318be7f4fa7f4f83ad1",
-              "nome": "Margarina Doriana Cremosa Com Sal 500gr",
-              "preco": 4.99,
+              "id": "6acf1318be7f4fa7f4f83ab9",
+              "nome": "Margarina Doriana Sem Sal 500gr",
+              "preco": 5.99,
               "tipo": "igual"
             },
             "vilasul": {
@@ -1241,9 +1241,9 @@
               "tipo": "igual"
             },
             "sanmichel": {
-              "id": "6acf131b424246fe7ea3d38e",
-              "nome": "Margarina Doriana Cremosa Com Sal 500g",
-              "preco": 6.98,
+              "id": "6acf131b424246fe7ea3d276",
+              "nome": "Margarina Doriana Sem Sal 500g",
+              "preco": 8.99,
               "tipo": "igual"
             },
             "pedrilho": {
@@ -1323,8 +1323,8 @@
         {
           "supermercado": "supervale",
           "supermercadoNome": "SuperVale",
-          "total": 107.4,
-          "totalIguais": 98.41,
+          "total": 105.95,
+          "totalIguais": 96.96,
           "encontrados": 12,
           "encontradosIguais": 11,
           "substituicoes": [
@@ -1339,8 +1339,8 @@
         {
           "supermercado": "vilasul",
           "supermercadoNome": "Vila Sul",
-          "total": 109.15,
-          "totalIguais": 103.56,
+          "total": 105.32,
+          "totalIguais": 99.73,
           "encontrados": 12,
           "encontradosIguais": 11,
           "substituicoes": [
@@ -1355,8 +1355,8 @@
         {
           "supermercado": "sanmichel",
           "supermercadoNome": "San Michel",
-          "total": 99.72,
-          "totalIguais": 90.54,
+          "total": 101.73,
+          "totalIguais": 92.55,
           "encontrados": 12,
           "encontradosIguais": 10,
           "substituicoes": [
@@ -1387,8 +1387,8 @@
       "melhorMercado": {
         "supermercado": "sanmichel",
         "supermercadoNome": "San Michel",
-        "total": 99.72,
-        "totalIguais": 90.54,
+        "total": 101.73,
+        "totalIguais": 92.55,
         "encontrados": 12,
         "encontradosIguais": 10,
         "substituicoes": [
@@ -1406,8 +1406,8 @@
         "faltando": []
       },
       "compraDividida": {
-        "total": 92.01,
-        "economiaSobreMelhorMercado": 7.71,
+        "total": 92.05,
+        "economiaSobreMelhorMercado": 9.68,
         "itens": [
           {
             "id": "6acf1521096b7555d122b84f",
@@ -1422,16 +1422,16 @@
             "subtotal": 20.4
           },
           {
-            "id": "6acf131a424246fe7ea3bdee",
-            "nome": "Feijão Carioca Du Irineu 1kg",
+            "id": "6a500326d9bf4419554f14ec",
+            "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
             "quantidade": 1,
             "tipo": "igual",
-            "supermercado": "sanmichel",
-            "supermercadoNome": "San Michel",
-            "produtoId": "6acf131a424246fe7ea3bdee",
-            "produto": "Feijão Carioca Du Irineu 1kg",
-            "preco": 9.95,
-            "subtotal": 9.95
+            "supermercado": "supervale",
+            "supermercadoNome": "SuperVale",
+            "produtoId": "6a500326d9bf4419554f14ec",
+            "produto": "Feijao Carioca Du Irineu Tipo 1 1kg",
+            "preco": 8.99,
+            "subtotal": 8.99
           },
           {
             "id": "6acf1318be7f4fa7f4f840a7",
@@ -1518,16 +1518,16 @@
             "subtotal": 4.19
           },
           {
-            "id": "6acf1318be7f4fa7f4f83ad1",
-            "nome": "Margarina Doriana Cremosa Com Sal 500gr",
+            "id": "6acf1318be7f4fa7f4f83ab9",
+            "nome": "Margarina Doriana Sem Sal 500gr",
             "quantidade": 1,
             "tipo": "igual",
             "supermercado": "supervale",
             "supermercadoNome": "SuperVale",
-            "produtoId": "6acf1318be7f4fa7f4f83ad1",
-            "produto": "Margarina Doriana Cremosa Com Sal 500gr",
-            "preco": 4.99,
-            "subtotal": 4.99
+            "produtoId": "6acf1318be7f4fa7f4f83ab9",
+            "produto": "Margarina Doriana Sem Sal 500gr",
+            "preco": 5.99,
+            "subtotal": 5.99
           },
           {
             "id": "6acf131910fd0b23fe2d5bb0",
@@ -1558,86 +1558,86 @@
     }
   },
   "historico": {
-    "registros": 0,
-    "produtosAcompanhados": 0,
+    "registros": 797,
+    "produtosAcompanhados": 797,
     "produtosQueMudaram": 0,
     "mudancas": 0,
     "altas": 0,
     "quedas": 0,
     "variacaoMedianaAltas": 0,
     "variacaoMedianaQuedas": 0,
-    "primeiraData": null,
-    "ultimaData": null,
+    "primeiraData": "2026-10-15",
+    "ultimaData": "2026-10-15",
     "porDia": [],
     "maioresAltas": [],
     "maioresQuedas": []
   },
   "coletas": {
-    "execucoes": 1,
-    "agendadas": 0,
-    "jobs": 4,
-    "jobsComSucesso": 4,
+    "execucoes": 2,
+    "agendadas": 1,
+    "jobs": 8,
+    "jobsComSucesso": 8,
     "taxaDeSucesso": 100,
     "duracaoMedianaMinutos": {
-      "supervale": 19.7,
-      "vilasul": 61.9,
-      "sanmichel": 28.8,
-      "pedrilho": 45.3
+      "supervale": 22.7,
+      "pedrilho": 45.6,
+      "sanmichel": 34.1,
+      "vilasul": 60.1
     }
   },
   "api": {
     "base": "https://superpreco-api.onrender.com/api",
-    "primeiraRespostaMs": 474,
+    "primeiraRespostaMs": 495,
     "rotas": [
       {
         "rota": "Busca de produtos",
         "caminho": "/produtos",
-        "medianaMs": 596,
-        "p90Ms": 701
+        "medianaMs": 512,
+        "p90Ms": 540
       },
       {
         "rota": "Detalhe do produto",
         "caminho": "/produtos/:id",
         "medianaMs": 275,
-        "p90Ms": 306
+        "p90Ms": 280
       },
       {
         "rota": "Comparação entre mercados",
         "caminho": "/produtos/:id/comparacao",
-        "medianaMs": 389,
-        "p90Ms": 411
+        "medianaMs": 391,
+        "p90Ms": 394
       },
       {
         "rota": "Similares de outras marcas",
         "caminho": "/produtos/:id/similares",
-        "medianaMs": 389,
-        "p90Ms": 397
+        "medianaMs": 390,
+        "p90Ms": 399
       },
       {
         "rota": "Histórico de preços",
         "caminho": "/produtos/:id/historico",
         "medianaMs": 387,
-        "p90Ms": 399
+        "p90Ms": 391
       },
       {
         "rota": "Cotação da lista de compras",
         "caminho": "/lista/cotacao",
         "medianaMs": 508,
-        "p90Ms": 515
+        "p90Ms": 517
       },
       {
         "rota": "Cesta básica",
         "caminho": "/cesta-basica",
-        "medianaMs": 153,
+        "medianaMs": 156,
         "p90Ms": 161
       },
       {
         "rota": "Painel de estatísticas",
         "caminho": "/estatisticas",
-        "medianaMs": 155,
-        "p90Ms": 158
+        "medianaMs": 156,
+        "p90Ms": 157
       }
     ],
-    "medidoEm": "2026-10-15T14:13:24.457Z"
+    "medidoEm": "2026-10-15T22:47:41.133Z"
   }
 }

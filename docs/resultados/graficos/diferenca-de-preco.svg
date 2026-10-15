@@ -2,7 +2,7 @@
   <title>Diferença entre o maior e o menor preço do mesmo produto</title>
   <rect width="760" height="294" fill="#ffffff"/>
   <text x="16" y="28" font-size="17" font-weight="700" fill="#1d1b16">Diferença entre o maior e o menor preço do mesmo produto</text>
-  <text x="16" y="50" font-size="12.5" fill="#6b665b">4.696 produtos encontrados em mais de um mercado</text>
+  <text x="16" y="50" font-size="12.5" fill="#6b665b">4.697 produtos encontrados em mais de um mercado</text>
   <line x1="190" y1="68" x2="190" y2="236" stroke="#e6dcc8" stroke-width="1"/>
   <text x="190" y="252" font-size="11" fill="#6b665b" text-anchor="middle">0</text>
   <line x1="430" y1="68" x2="430" y2="236" stroke="#e6dcc8" stroke-width="1"/>
@@ -11,19 +11,19 @@
   <text x="670" y="252" font-size="11" fill="#6b665b" text-anchor="middle">2.000</text>
   <line x1="190" y1="68" x2="190" y2="236" stroke="#6b665b" stroke-width="1"/>
   <text x="180" y="89" font-size="13" fill="#1d1b16" text-anchor="end">Mesmo preço</text>
-  <path d="M192,74 H199.68 Q203.68,74 203.68,78 V92 Q203.68,96 199.68,96 H192 Z" fill="#1f7a45"/>
-  <text x="211.68" y="89" font-size="13" font-weight="600" fill="#1d1b16">57 (1,2%)</text>
+  <path d="M192,74 H197.28 Q201.28,74 201.28,78 V92 Q201.28,96 197.28,96 H192 Z" fill="#1f7a45"/>
+  <text x="209.28" y="89" font-size="13" font-weight="600" fill="#1d1b16">47 (1%)</text>
   <text x="180" y="123" font-size="13" fill="#1d1b16" text-anchor="end">Até 10%</text>
-  <path d="M192,108 H468 Q472,108 472,112 V126 Q472,130 468,130 H192 Z" fill="#1f7a45"/>
-  <text x="480" y="123" font-size="13" font-weight="600" fill="#1d1b16">1.175 (25%)</text>
+  <path d="M192,108 H460.32 Q464.32,108 464.32,112 V126 Q464.32,130 460.32,130 H192 Z" fill="#1f7a45"/>
+  <text x="472.32" y="123" font-size="13" font-weight="600" fill="#1d1b16">1.143 (24,3%)</text>
   <text x="180" y="157" font-size="13" fill="#1d1b16" text-anchor="end">10% a 20%</text>
-  <path d="M192,142 H487.92 Q491.92,142 491.92,146 V160 Q491.92,164 487.92,164 H192 Z" fill="#1f7a45"/>
-  <text x="499.92" y="157" font-size="13" font-weight="600" fill="#1d1b16">1.258 (26,8%)</text>
+  <path d="M192,142 H480.71999999999997 Q484.71999999999997,142 484.71999999999997,146 V160 Q484.71999999999997,164 480.71999999999997,164 H192 Z" fill="#1f7a45"/>
+  <text x="492.71999999999997" y="157" font-size="13" font-weight="600" fill="#1d1b16">1.228 (26,1%)</text>
   <text x="180" y="191" font-size="13" fill="#1d1b16" text-anchor="end">20% a 50%</text>
-  <path d="M192,176 H579.12 Q583.12,176 583.12,180 V194 Q583.12,198 579.12,198 H192 Z" fill="#1f7a45"/>
-  <text x="591.12" y="191" font-size="13" font-weight="600" fill="#1d1b16">1.638 (34,9%)</text>
+  <path d="M192,176 H591.5999999999999 Q595.5999999999999,176 595.5999999999999,180 V194 Q595.5999999999999,198 591.5999999999999,198 H192 Z" fill="#1f7a45"/>
+  <text x="603.5999999999999" y="191" font-size="13" font-weight="600" fill="#1d1b16">1.690 (36%)</text>
   <text x="180" y="225" font-size="13" fill="#1d1b16" text-anchor="end">Mais de 50%</text>
-  <path d="M192,210 H322.32 Q326.32,210 326.32,214 V228 Q326.32,232 322.32,232 H192 Z" fill="#1f7a45"/>
-  <text x="334.32" y="225" font-size="13" font-weight="600" fill="#1d1b16">568 (12,1%)</text>
+  <path d="M192,210 H327.36 Q331.36,210 331.36,214 V228 Q331.36,232 327.36,232 H192 Z" fill="#1f7a45"/>
+  <text x="339.36" y="225" font-size="13" font-weight="600" fill="#1d1b16">589 (12,5%)</text>
   <text x="16" y="284" font-size="11" fill="#6b665b">Fonte: dados coletados pelo SuperPreço</text>
 </svg>

@@ -116,7 +116,12 @@ Medidas, testadas em `backend/test/seguranca.test.js` e documentadas em `docs/ap
 - **Limitações a discutir no texto:**
   - nomes genéricos sem marca ("Lemon Pepper 250g") podem casar com produtos de marca;
   - cadastros errados nos próprios sites (lata de Amstel a R$ 46,80) aparecem como diferenças anormais. As diferenças acima de 200% ficaram fora das médias (73 produtos);
-  - a precisão da comparação é medida na amostra `docs/resultados/validacao/amostra.csv`, com 50 pares a conferir à mão.
+- **Precisão da comparação** (validação manual feita pelo autor em 15/10/2026, com 50 pares "mesmo produto" sorteados e semente fixa, em `docs/resultados/validacao/amostra.csv`): **88%** (44 de 50). Os 6 erros, com o motivo anotado no arquivo:
+  - **outra versão ou sabor:** Coca-Cola Plus Café × Coca-Cola comum; Waffer chocolate × chocolate e avelã; biscoito amanteigado de chocolate × biscoito de chocolate;
+  - **kit × avulso:** shampoo + condicionador × só condicionador;
+  - **número de unidades:** 1 escova × pacote com 2;
+  - **embalagem:** garrafa de 355 ml × lata de 350 ml. A tolerância de 2% no tamanho aceitou a diferença de 1,4%.
+  - Todos vêm de palavras que distinguem o produto ("plus", "avelã", "kit", "2 unids", "garrafa") e que pesam pouco na semelhança dos nomes. Fica como melhoria futura.
 - **Variação de preços:** medida só a partir de 15/10/2026, porque antes o histórico mistura efeitos das correções da coleta.
 
 ## Tempo de coleta
