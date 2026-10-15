@@ -37,16 +37,17 @@ function escalaBonita(maximo) {
  * Grafico de barras horizontais.
  * itens: [{ rotulo, valor, texto?, destaque? }]; formatar: valor -> texto do eixo.
  */
-function graficoDeBarras({ titulo, subtitulo = '', itens, formatar = valor => String(valor), fonte = '' }) {
+// semTitulo: versao para documentos, em que o titulo e a fonte ficam na legenda da figura.
+function graficoDeBarras({ titulo, subtitulo = '', itens, formatar = valor => String(valor), fonte = '', semTitulo = false }) {
     const largura = 760;
     const margemEsquerda = 190;
     const margemDireita = 90;
     const alturaBarra = 22;
     const espaco = 12;
-    const topo = subtitulo ? 74 : 54;
+    const topo = semTitulo ? 18 : subtitulo ? 74 : 54;
     const areaLargura = largura - margemEsquerda - margemDireita;
     const areaAltura = itens.length * (alturaBarra + espaco) - espaco;
-    const altura = topo + areaAltura + 44 + (fonte ? 18 : 0);
+    const altura = topo + areaAltura + 44 + (fonte && !semTitulo ? 18 : 0);
 
     const { topo: maximo, passo } = escalaBonita(Math.max(...itens.map(item => item.valor), 0));
     const xDe = valor => margemEsquerda + (valor / maximo) * areaLargura;
@@ -72,12 +73,12 @@ function graficoDeBarras({ titulo, subtitulo = '', itens, formatar = valor => St
     return `<svg xmlns="http://www.w3.org/2000/svg" width="${largura}" height="${altura}" viewBox="0 0 ${largura} ${altura}" font-family="${FONTE}" role="img" aria-label="${escapar(titulo)}">
   <title>${escapar(titulo)}</title>
   <rect width="${largura}" height="${altura}" fill="${FUNDO}"/>
-  <text x="16" y="28" font-size="17" font-weight="700" fill="${TINTA}">${escapar(titulo)}</text>
-  ${subtitulo ? `<text x="16" y="50" font-size="12.5" fill="${TINTA_SECUNDARIA}">${escapar(subtitulo)}</text>` : ''}
+  ${semTitulo ? '' : `<text x="16" y="28" font-size="17" font-weight="700" fill="${TINTA}">${escapar(titulo)}</text>`}
+  ${subtitulo && !semTitulo ? `<text x="16" y="50" font-size="12.5" fill="${TINTA_SECUNDARIA}">${escapar(subtitulo)}</text>` : ''}
   ${grade.join('\n  ')}
   <line x1="${margemEsquerda}" y1="${topo - 6}" x2="${margemEsquerda}" y2="${topo + areaAltura + 4}" stroke="${TINTA_SECUNDARIA}" stroke-width="1"/>
   ${barras.join('\n  ')}
-  ${fonte ? `<text x="16" y="${altura - 10}" font-size="11" fill="${TINTA_SECUNDARIA}">${escapar(fonte)}</text>` : ''}
+  ${fonte && !semTitulo ? `<text x="16" y="${altura - 10}" font-size="11" fill="${TINTA_SECUNDARIA}">${escapar(fonte)}</text>` : ''}
 </svg>
 `;
 }

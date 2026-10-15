@@ -1,0 +1,11 @@
+{
+  "name": "gerador-artigo-tcc",
+  "private": true,
+  "description": "Gera o artigo do TCC em Word (.docx) a partir de docs/tcc/artigo.md",
+  "scripts": {
+    "gerar": "node gerar-docx.js"
+  },
+  "dependencies": {
+    "docx": "^9.11.0"
+  }
+}

@@ -31,3 +31,8 @@ scraper/debug_*.png
 Thumbs.db
 .idea/
 .vscode/
+
+# Texto do TCC: fica so no computador do autor (o repositorio e publico).
+# O gerador do Word (docs/tcc/gerador/) vai para o git.
+docs/tcc/*
+!docs/tcc/gerador/
