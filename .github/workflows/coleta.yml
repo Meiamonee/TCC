@@ -1,0 +1,96 @@
+# Coleta de precos na nuvem: o GitHub roda o scraper (Selenium + Chrome headless) nos horarios
+# abaixo e grava os produtos no MongoDB Atlas, o mesmo banco usado pela API no Render.
+# Cada supermercado roda em um job separado, em paralelo: a coleta termina mais rapido e a
+# falha de um mercado nao atrapalha os outros.
+name: Coleta de precos
+
+on:
+  schedule:
+    # Horarios em UTC: 09:00 e 21:00 UTC = 6h e 18h em Brasilia (mesmo horario do node-cron).
+    - cron: '0 9,21 * * *'
+  # Permite disparar a coleta manualmente pela aba Actions do GitHub.
+  workflow_dispatch:
+    inputs:
+      mercado:
+        description: 'Supermercado (supervale, vilasul, sanmichel, pedrilho) ou "todos"'
+        required: false
+        default: 'todos'
+
+# Uma coleta por vez: se a anterior ainda estiver rodando, a nova espera.
+concurrency:
+  group: coleta-de-precos
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  coletar:
+    name: Coleta ${{ matrix.mercado }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        mercado: [supervale, vilasul, sanmichel, pedrilho]
+    if: ${{ github.event_name == 'schedule' || github.event.inputs.mercado == 'todos' || github.event.inputs.mercado == '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            backend/package-lock.json
+            scraper/package-lock.json
+
+      - name: Instalar dependencias
+        run: |
+          npm --prefix backend ci --omit=dev
+          npm --prefix scraper ci --omit=dev
+
+      - name: Coletar e importar
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          SCRAPER_PAGE_DELAY_MS: '500'
+          SCRAPER_PAGE_DELAY_JITTER_MS: '500'
+          TZ: America/Sao_Paulo
+        # O Chrome e o ChromeDriver ja vem instalados na maquina do GitHub (ubuntu-latest).
+        run: npm --prefix backend run atualizar -- ${{ matrix.mercado }}
+
+  coletar-um:
+    name: Coleta ${{ github.event.inputs.mercado }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mercado != 'todos' && github.event.inputs.mercado != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            backend/package-lock.json
+            scraper/package-lock.json
+
+      - name: Instalar dependencias
+        run: |
+          npm --prefix backend ci --omit=dev
+          npm --prefix scraper ci --omit=dev
+
+      - name: Coletar e importar
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          SCRAPER_PAGE_DELAY_MS: '500'
+          SCRAPER_PAGE_DELAY_JITTER_MS: '500'
+          TZ: America/Sao_Paulo
+          # O texto digitado vai por variavel de ambiente (e nao direto no comando) e so
+          # aceita os mercados conhecidos.
+          MERCADO: ${{ github.event.inputs.mercado }}
+        run: |
+          case "$MERCADO" in
+            supervale|vilasul|sanmichel|pedrilho) npm --prefix backend run atualizar -- "$MERCADO" ;;
+            *) echo "Mercado desconhecido: $MERCADO"; exit 1 ;;
+          esac
