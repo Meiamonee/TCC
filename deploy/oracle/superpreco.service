@@ -1,0 +1,18 @@
+# Servico systemd da API do SuperPreco. A coleta agendada (node-cron) roda dentro dela.
+# O instalar.sh troca __USUARIO__ e __PROJETO__ e copia para /etc/systemd/system/.
+[Unit]
+Description=SuperPreco - API e coleta de precos
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=__USUARIO__
+WorkingDirectory=__PROJETO__/backend
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=TZ=America/Sao_Paulo
+
+[Install]
+WantedBy=multi-user.target

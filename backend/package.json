@@ -11,7 +11,8 @@
     "scheduler:now": "node scheduler.js --run-now",
     "atualizar": "node scripts/atualizar.js",
     "importar": "node scripts/importar.js",
-    "migrar": "node scripts/migrar.js"
+    "migrar": "node scripts/migrar.js",
+    "copiar-banco": "node scripts/copiarBanco.js"
   },
   "keywords": [],
   "author": "",

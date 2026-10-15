@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Scripts shell precisam de fim de linha LF para rodar na VM Linux.
+*.sh text eol=lf

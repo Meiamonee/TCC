@@ -1,0 +1,2 @@
+# Cloudflare Pages: toda rota do site (ex.: /produto/123) abre o index.html do React.
+/* /index.html 200
