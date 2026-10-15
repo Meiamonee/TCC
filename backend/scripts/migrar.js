@@ -40,7 +40,7 @@ async function migrarHistorico(colecao) {
 }
 
 async function recalcularCampos(colecao) {
-    const cursor = colecao.find({}, { projection: { nome: 1, preco: 1, unidade: 1, categoria: 1, departamentoOriginal: 1 } });
+    const cursor = colecao.find({}, { projection: { nome: 1, preco: 1, unidade: 1, embalagem: 1, categoria: 1, departamentoOriginal: 1 } });
     let operacoes = [];
     let total = 0;
 
