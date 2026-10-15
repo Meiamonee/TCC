@@ -31,6 +31,11 @@ const { graficoDeBarras } = require('../analise/graficos');
 // Com --api, mede tambem o tempo de resposta da API publicada.
 
 const SAIDA = path.resolve(__dirname, '../../docs/resultados');
+
+// A variacao de precos so e medida a partir desta data. Antes dela o historico mistura mudancas de
+// verdade com efeitos das correcoes da coleta (ex.: preco por kg trocado pelo preco da embalagem
+// em 14 e 15/10/2026), que pareceriam altas e quedas que nao aconteceram.
+const INICIO_HISTORICO_CONFIAVEL = new Date('2026-10-15T06:00:00Z');
 const REPOSITORIO = 'Meiamonee/TCC';
 const FONTE = 'Fonte: dados coletados pelo SuperPreço';
 
@@ -55,10 +60,13 @@ const numero = valor => Number(valor).toLocaleString('pt-BR');
 const porcento = valor => `${String(valor).replace('.', ',')}%`;
 const nomeDe = slug => SUPERMARKETS[slug]?.nome || slug;
 
+// Tabela em Markdown: colunas de numeros, precos e percentuais alinhadas a direita; texto a esquerda.
 function tabela(cabecalho, linhas) {
+    const ehNumero = valor => /^\**(R\$ )?-?[\d.,]+(%| ms| min)?( de \d+)?\**$/.test(String(valor).trim());
+    const alinhamentos = cabecalho.map((_, i) => (linhas.length && linhas.every(linha => ehNumero(linha[i])) ? '---:' : '---'));
     return [
         `| ${cabecalho.join(' | ')} |`,
-        `| ${cabecalho.map((_, i) => (i === 0 ? '---' : '---:')).join(' | ')} |`,
+        `| ${alinhamentos.join(' | ')} |`,
         ...linhas.map(linha => `| ${linha.join(' | ')} |`)
     ].join('\n');
 }
@@ -229,7 +237,7 @@ async function main() {
     const cotacao = await cotarLista(itensLista.map(item => ({ id: String(item.produto._id), quantidade: 1, aceitaSimilar: true })));
 
     // 4. Historico de precos
-    const registros = await HistoricoPreco.find().select('produto supermercado preco data -_id').lean();
+    const registros = await HistoricoPreco.find({ data: { $gte: INICIO_HISTORICO_CONFIAVEL } }).select('produto supermercado preco data -_id').lean();
     const produtosPorId = new Map(produtos.map(produto => [String(produto._id), produto]));
     const historico = analisarHistorico(registros, produtosPorId);
 
@@ -247,6 +255,25 @@ async function main() {
     const geradoEm = new Date();
     const dados = { geradoEm, banco: mongoose.connection.name, validacao, porMercado, indisponiveis, categorias, cobertura, precos, cesta, lista: { itens: itensLista.map(item => ({ termo: item.termo, produto: item.produto.nome, supermercado: item.produto.supermercado })), cotacao }, historico, coletas, api };
     escrever(dados);
+}
+
+// So da para comparar o total da cesta entre mercados que tem todos os itens.
+function textoCesta(cesta) {
+    const incompletos = cesta.porMercado.filter(m => m.itensEncontrados < m.itensTotal);
+    const linhas = [];
+    if (cesta.maisBarato) {
+        const completos = cesta.porMercado.filter(m => m.itensEncontrados === m.itensTotal).sort((a, b) => a.total - b.total);
+        const maisCaro = completos[completos.length - 1];
+        linhas.push(`- **Mais barato com a cesta completa:** ${nomeDe(cesta.maisBarato.supermercado)}, com ${reais(cesta.maisBarato.total)}.`);
+        if (maisCaro && maisCaro.supermercado !== cesta.maisBarato.supermercado) {
+            linhas.push(`- **Mais caro:** ${nomeDe(maisCaro.supermercado)}, com ${reais(maisCaro.total)}. A diferença é de ${reais(maisCaro.total - cesta.maisBarato.total)} por mês (${porcento(arredondar(((maisCaro.total - cesta.maisBarato.total) / cesta.maisBarato.total) * 100, 1))}).`);
+        }
+    }
+    for (const m of incompletos) {
+        const faltando = m.itens.filter(item => item.custo === null).map(item => item.item).join(', ');
+        linhas.push(`- **${nomeDe(m.supermercado)}** não entra na comparação do total: falta ${faltando} no site.`);
+    }
+    return linhas.join('\n');
 }
 
 function textoValidacao(validacao) {
@@ -436,6 +463,8 @@ ${tabela(['Categoria', 'Produtos comparados', 'Mais barato mais vezes', '% das v
 ${tabela(['Supermercado', 'Cesta básica', 'Itens encontrados'],
         [...cesta.porMercado].sort((a, b) => a.total - b.total).map(m => [nomeDe(m.supermercado), reais(m.total), `${m.itensEncontrados} de ${m.itensTotal}`]))}
 
+${textoCesta(cesta)}
+
 ${fCesta}
 
 **Lista de exemplo** com ${d.lista.itens.length} itens básicos, um de cada. Para cada item foi escolhido o produto vendido no maior número de mercados:
@@ -452,6 +481,8 @@ ${tabela(['Supermercado', 'Total', 'Só itens iguais', 'Trocas por similar', 'It
 ${fLista}
 
 ## 4. Variação de preços no período
+
+A variação é medida só a partir de ${INICIO_HISTORICO_CONFIAVEL.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })}. Antes disso, o histórico mistura mudanças reais com efeitos das correções feitas na coleta, como a troca do preço por kg pelo preço da embalagem, que apareceriam como altas e quedas que não aconteceram.
 
 - **Período:** ${historico.primeiraData || '—'} a ${historico.ultimaData || '—'}.
 - **Registros:** ${numero(historico.registros)} registros de preço de ${numero(historico.produtosAcompanhados)} produtos.

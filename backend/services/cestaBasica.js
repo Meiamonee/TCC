@@ -27,8 +27,26 @@ function arredondar(valor) {
     return Math.round(valor * 100) / 100;
 }
 
+// Os precos so mudam a cada coleta (2 vezes por dia); guardar o calculo por alguns minutos evita
+// ler milhares de produtos do banco a cada visita (a rota levava ~3,8 s no servidor gratuito).
+const VALIDADE_CACHE_MS = 10 * 60 * 1000;
+let cache = null;
+
+async function calcularCestaBasica({ forcar = false } = {}) {
+    if (!forcar && cache && Date.now() - cache.calculadoEm < VALIDADE_CACHE_MS) {
+        return cache.valor;
+    }
+    const valor = await calcularSemCache();
+    cache = { valor, calculadoEm: Date.now() };
+    return valor;
+}
+
+function invalidarCestaBasica() {
+    cache = null;
+}
+
 // Custo minimo da cesta basica em cada supermercado, com o produto escolhido para cada item.
-async function calcularCestaBasica() {
+async function calcularSemCache() {
     const slugs = Object.keys(SUPERMARKETS);
     const produtos = await Produto.find({
         disponivel: true,
@@ -83,5 +101,6 @@ async function calcularCestaBasica() {
 
 module.exports = {
     ITENS_CESTA,
-    calcularCestaBasica
+    calcularCestaBasica,
+    invalidarCestaBasica
 };

@@ -61,6 +61,7 @@ async function executarAtualizacao(opcoes = {}) {
         console.log(`Atualizacao iniciada em ${estado.inicio.toLocaleString('pt-BR')} (${opcoes.origem || 'manual'}).`);
         const resultado = await executarPipelineScraping({ mercado: opcoes.mercado });
         invalidarEstatisticas();
+        require('./cestaBasica').invalidarCestaBasica();
         // Carregado aqui para evitar dependencia circular (estatisticas usa o estado do agendador).
         require('./estatisticas').invalidarEstatisticasGerais();
         estado.ultimaExecucao = {
