@@ -16,6 +16,8 @@ const {
     calcularCobertura,
     calcularEquivalentes,
     escolherProdutoDaLista,
+    analisarSus,
+    analisarTempos,
     mediana,
     montarGrupos,
     sortearAmostra
@@ -30,7 +32,8 @@ const { graficoDeBarras } = require('../analise/graficos');
 //   npm --prefix backend run analise -- --api https://superpreco-api.onrender.com/api
 // Com --api, mede tambem o tempo de resposta da API publicada.
 
-const SAIDA = path.resolve(__dirname, '../../docs/resultados');
+// ANALISE_SAIDA e ANALISE_AVALIACAO permitem testar o script sem mexer em docs/.
+const SAIDA = process.env.ANALISE_SAIDA || path.resolve(__dirname, '../../docs/resultados');
 
 // A variacao de precos so e medida a partir desta data. Antes dela o historico mistura mudancas de
 // verdade com efeitos das correcoes da coleta (ex.: preco por kg trocado pelo preco da embalagem
@@ -189,6 +192,33 @@ function prepararValidacao(grupos) {
     };
 }
 
+// Testes com usuarios (docs/avaliacao): planilhas preenchidas a mao, separador ";".
+const AVALIACAO = process.env.ANALISE_AVALIACAO || path.resolve(__dirname, '../../docs/avaliacao');
+
+function lerPlanilha(arquivo) {
+    const caminho = path.join(AVALIACAO, arquivo);
+    if (!fs.existsSync(caminho)) return [];
+    const [cabecalho, ...linhas] = fs.readFileSync(caminho, 'utf8').trim().split(/\r?\n/).map(linha => linha.split(';').map(celula => celula.trim()));
+    return linhas.filter(linha => linha.some(Boolean)).map(linha => Object.fromEntries(cabecalho.map((coluna, i) => [coluna, linha[i]])));
+}
+
+function lerAvaliacao() {
+    const sus = lerPlanilha('sus.csv').map(linha => ({
+        participante: linha.participante,
+        respostas: Array.from({ length: 10 }, (_, i) => Number.parseInt(linha[`q${i + 1}`], 10))
+    }));
+    const tempos = lerPlanilha('tempo.csv').map(linha => ({
+        participante: linha.participante,
+        metodo: String(linha.metodo).toLowerCase().replace(/[^a-z]/g, ''),
+        segundos: Number(String(linha.segundos).replace(',', '.')),
+        acertou: String(linha.acertou).toLowerCase().startsWith('s')
+    }));
+    return {
+        sus: sus.length ? analisarSus(sus) : null,
+        tempos: tempos.length ? analisarTempos(tempos) : null
+    };
+}
+
 async function main() {
     const indiceApi = process.argv.indexOf('--api');
     const apiBase = indiceApi > -1 ? process.argv[indiceApi + 1] : null;
@@ -253,8 +283,39 @@ async function main() {
     await mongoose.disconnect();
 
     const geradoEm = new Date();
-    const dados = { geradoEm, banco: mongoose.connection.name, validacao, porMercado, indisponiveis, categorias, cobertura, precos, cesta, lista: { itens: itensLista.map(item => ({ termo: item.termo, produto: item.produto.nome, supermercado: item.produto.supermercado })), cotacao }, historico, coletas, api };
+    const avaliacao = lerAvaliacao();
+    const dados = { geradoEm, banco: mongoose.connection.name, validacao, avaliacao, porMercado, indisponiveis, categorias, cobertura, precos, cesta, lista: { itens: itensLista.map(item => ({ termo: item.termo, produto: item.produto.nome, supermercado: item.produto.supermercado })), cotacao }, historico, coletas, api };
     escrever(dados);
+}
+
+const minutos = segundos => `${String(arredondar(segundos / 60, 1)).replace('.', ',')} min`;
+
+function textoAvaliacao({ sus, tempos }) {
+    const partes = [];
+    if (tempos) {
+        partes.push(`**Tempo da pesquisa de preços.** Tarefa: descobrir em qual mercado uma lista de 10 itens sai mais barata.
+
+- **Participantes:** ${tempos.participantes}, cada um fez a tarefa dos dois jeitos.
+
+${tabela(['Método', 'Tentativas', 'Tempo médio', 'Mediana', 'Acertaram o mercado mais barato'], [
+            ['Manual (sites dos mercados)', String(tempos.manual.tentativas), minutos(tempos.manual.mediaSegundos), minutos(tempos.manual.medianaSegundos), `${tempos.manual.acertos} de ${tempos.manual.tentativas}`],
+            ['SuperPreço', String(tempos.superpreco.tentativas), minutos(tempos.superpreco.mediaSegundos), minutos(tempos.superpreco.medianaSegundos), `${tempos.superpreco.acertos} de ${tempos.superpreco.tentativas}`]
+        ])}
+
+- **Redução média do tempo** com o SuperPreço: ${porcento(tempos.reducaoMediaPercentual)} por participante.`);
+    } else {
+        partes.push('**Tempo da pesquisa de preços:** ainda não aplicado. Preencha `docs/avaliacao/tempo.csv`.');
+    }
+
+    if (sus) {
+        partes.push(`**Usabilidade (SUS).**
+- **Pontuação média:** ${String(sus.media).replace('.', ',')}${sus.desvioPadrao !== null ? ` (desvio padrão ${String(sus.desvioPadrao).replace('.', ',')})` : ''}, de 0 a 100, com ${sus.participantes} participantes.
+- **Faixa:** de ${String(sus.minimo).replace(".", ",")} a ${String(sus.maximo).replace(".", ",")}.
+- **Acima da média de referência (68):** ${sus.acimaDaMedia68} de ${sus.participantes} participantes.`);
+    } else {
+        partes.push('**Usabilidade (SUS):** ainda não aplicado. Preencha `docs/avaliacao/sus.csv`.');
+    }
+    return partes.join('\n\n');
 }
 
 // So da para comparar o total da cesta entre mercados que tem todos os itens.
@@ -507,6 +568,12 @@ ${tabela(['Rota', 'Caminho', 'Mediana', 'Percentil 90'], api.rotas.map(r => [r.r
 
 ${fApi}
 ` : ''}
+## 6. Avaliação com usuários
+
+Roteiro e planilhas em \`docs/avaliacao/\`. A conferência dos requisitos do TCC também está lá.
+
+${textoAvaliacao(d.avaliacao)}
+
 ## Figuras
 
 ${figuras.map((f, i) => `${i + 1}. \`graficos/${f.arquivo}\`: ${f.legenda}`).join('\n')}

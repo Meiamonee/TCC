@@ -53,3 +53,12 @@ test('tamanhos diferentes nao sao equivalentes', () => {
     assert.ok(!equivalentes(produto('Cerveja Heineken 350ml', 4.98), produto('Cerveja Heineken 600ml', 9.9)));
     assert.ok(!equivalentes(produto('Refrigerante Coca Cola Pet 2lt', 10.99), produto('Refrigerante Coca Cola Pet 2,5lt', 11.9)));
 });
+
+test('sal grosso ou para churrasco nao equivale ao sal refinado', () => {
+    // Encontrado na amostra de validacao da analise de dados.
+    const statsSal = { total: 5000, frequencia: new Map(Object.entries({ sal: 60, cisne: 30, churrasco: 40, grosso: 20 })) };
+    const refinado = produto('Sal Refinado Cisne Pacote 1kg', 4.19);
+    assert.ok(saoEquivalentes(refinado, produto('Sal Para Churrasco Cisne 1kg', 5.29), statsSal) < LIMITE_SIMILARIDADE);
+    assert.ok(saoEquivalentes(refinado, produto('Sal Grosso Cisne 1kg', 4.99), statsSal) < LIMITE_SIMILARIDADE);
+    assert.ok(saoEquivalentes(refinado, produto('Sal Refinado Iodado Cisne 1kg', 4.29), statsSal) >= LIMITE_SIMILARIDADE);
+});

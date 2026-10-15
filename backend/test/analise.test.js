@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { analisarHistorico, analisarPrecos, mediana, montarGrupos, sortearAmostra } = require('../analise/calculos');
+const { analisarHistorico, analisarPrecos, analisarSus, analisarTempos, mediana, montarGrupos, pontuacaoSus, sortearAmostra } = require('../analise/calculos');
 
 // Calculos da analise de dados (capitulo de resultados) com dados pequenos e conhecidos.
 
@@ -90,4 +90,37 @@ test('sortearAmostra e reproduzivel e nao repete pares', () => {
     assert.equal(primeira.length, 20);
     assert.deepEqual(primeira.map(([a, b]) => a._id + b._id), segunda.map(([a, b]) => a._id + b._id));
     assert.equal(new Set(primeira.map(([a, b]) => a._id + b._id)).size, 20);
+});
+
+test('pontuacao SUS segue a regra de Brooke (impares r-1, pares 5-r, soma x 2,5)', () => {
+    assert.equal(pontuacaoSus([5, 1, 5, 1, 5, 1, 5, 1, 5, 1]), 100);
+    assert.equal(pontuacaoSus([1, 5, 1, 5, 1, 5, 1, 5, 1, 5]), 0);
+    assert.equal(pontuacaoSus([3, 3, 3, 3, 3, 3, 3, 3, 3, 3]), 50);
+    assert.equal(pontuacaoSus([4, 2, 4, 1, 4, 2, 5, 1, 4, 2]), 82.5);
+    assert.throws(() => pontuacaoSus([5, 1, 5]), /10 respostas/);
+    assert.throws(() => pontuacaoSus([6, 1, 5, 1, 5, 1, 5, 1, 5, 1]), /entre 1 e 5/);
+});
+
+test('analisarSus resume a media e quantos ficaram acima de 68', () => {
+    const resultado = analisarSus([
+        { participante: 'A', respostas: [5, 1, 5, 1, 5, 1, 5, 1, 5, 1] },
+        { participante: 'B', respostas: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3] }
+    ]);
+    assert.equal(resultado.participantes, 2);
+    assert.equal(resultado.media, 75);
+    assert.equal(resultado.acimaDaMedia68, 1);
+});
+
+test('analisarTempos compara a pesquisa manual com o SuperPreco por participante', () => {
+    const resultado = analisarTempos([
+        { participante: 'A', metodo: 'manual', segundos: 600, acertou: true },
+        { participante: 'A', metodo: 'superpreco', segundos: 120, acertou: true },
+        { participante: 'B', metodo: 'manual', segundos: 400, acertou: false },
+        { participante: 'B', metodo: 'superpreco', segundos: 200, acertou: true }
+    ]);
+    assert.equal(resultado.participantes, 2);
+    assert.equal(resultado.manual.mediaSegundos, 500);
+    assert.equal(resultado.superpreco.mediaSegundos, 160);
+    assert.equal(resultado.manual.acertos, 1);
+    assert.equal(resultado.reducaoMediaPercentual, 65); // (80% + 50%) / 2
 });

@@ -311,8 +311,68 @@ function analisarHistorico(registros, produtosPorId) {
     };
 }
 
+// System Usability Scale (Brooke, 1996): respostas de 1 a 5 nas 10 afirmacoes. Impares contam
+// (resposta - 1), pares (5 - resposta); a soma vezes 2,5 vai de 0 a 100.
+function pontuacaoSus(respostas) {
+    if (respostas.length !== 10 || respostas.some(r => !Number.isInteger(r) || r < 1 || r > 5)) {
+        throw new Error('O SUS precisa de 10 respostas entre 1 e 5');
+    }
+    const soma = respostas.reduce((total, resposta, i) => total + (i % 2 === 0 ? resposta - 1 : 5 - resposta), 0);
+    return soma * 2.5;
+}
+
+function desvioPadrao(valores) {
+    if (valores.length < 2) return null;
+    const m = media(valores);
+    return Math.sqrt(valores.reduce((soma, valor) => soma + (valor - m) ** 2, 0) / (valores.length - 1));
+}
+
+function analisarSus(linhas) {
+    const pontuacoes = linhas.map(linha => ({ participante: linha.participante, pontuacao: pontuacaoSus(linha.respostas) }));
+    const valores = pontuacoes.map(item => item.pontuacao);
+    return {
+        participantes: pontuacoes.length,
+        media: valores.length ? arredondar(media(valores), 1) : null,
+        desvioPadrao: valores.length > 1 ? arredondar(desvioPadrao(valores), 1) : null,
+        minimo: valores.length ? Math.min(...valores) : null,
+        maximo: valores.length ? Math.max(...valores) : null,
+        acimaDaMedia68: valores.filter(valor => valor > 68).length,
+        pontuacoes
+    };
+}
+
+// Teste de tempo: cada participante cota a mesma lista nos sites (manual) e no SuperPreco.
+function analisarTempos(linhas) {
+    const por = metodo => linhas.filter(linha => linha.metodo === metodo);
+    const resumo = lista => ({
+        tentativas: lista.length,
+        mediaSegundos: lista.length ? arredondar(media(lista.map(l => l.segundos)), 1) : null,
+        medianaSegundos: lista.length ? arredondar(mediana(lista.map(l => l.segundos)), 1) : null,
+        acertos: lista.filter(l => l.acertou).length
+    });
+    const manual = resumo(por('manual'));
+    const superpreco = resumo(por('superpreco'));
+
+    // Reducao por participante (so quem fez os dois jeitos).
+    const reducoes = [...new Set(linhas.map(l => l.participante))].map(participante => {
+        const m = linhas.find(l => l.participante === participante && l.metodo === 'manual');
+        const s = linhas.find(l => l.participante === participante && l.metodo === 'superpreco');
+        return m && s ? ((m.segundos - s.segundos) / m.segundos) * 100 : null;
+    }).filter(valor => valor !== null);
+
+    return {
+        participantes: reducoes.length,
+        manual,
+        superpreco,
+        reducaoMediaPercentual: reducoes.length ? arredondar(media(reducoes), 1) : null
+    };
+}
+
 module.exports = {
     analisarHistorico,
+    analisarSus,
+    analisarTempos,
+    pontuacaoSus,
     analisarPrecos,
     arredondar,
     calcularCobertura,

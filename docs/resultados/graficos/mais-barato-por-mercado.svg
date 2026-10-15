@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="Quando o mesmo produto está em vários mercados, quem cobra menos?">
+  <title>Quando o mesmo produto está em vários mercados, quem cobra menos?</title>
+  <rect width="760" height="260" fill="#ffffff"/>
+  <text x="16" y="28" font-size="17" font-weight="700" fill="#1d1b16">Quando o mesmo produto está em vários mercados, quem cobra menos?</text>
+  <text x="16" y="50" font-size="12.5" fill="#6b665b">Percentual das comparações em que o mercado tem o menor preço (empates divididos)</text>
+  <line x1="190" y1="68" x2="190" y2="202" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="190" y="218" font-size="11" fill="#6b665b" text-anchor="middle">0%</text>
+  <line x1="310" y1="68" x2="310" y2="202" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="310" y="218" font-size="11" fill="#6b665b" text-anchor="middle">20%</text>
+  <line x1="430" y1="68" x2="430" y2="202" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="430" y="218" font-size="11" fill="#6b665b" text-anchor="middle">40%</text>
+  <line x1="550" y1="68" x2="550" y2="202" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="550" y="218" font-size="11" fill="#6b665b" text-anchor="middle">60%</text>
+  <line x1="670" y1="68" x2="670" y2="202" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="670" y="218" font-size="11" fill="#6b665b" text-anchor="middle">80%</text>
+  <line x1="190" y1="68" x2="190" y2="202" stroke="#6b665b" stroke-width="1"/>
+  <text x="180" y="89" font-size="13" fill="#1d1b16" text-anchor="end">San Michel</text>
+  <path d="M192,74 H559.8 Q563.8,74 563.8,78 V92 Q563.8,96 559.8,96 H192 Z" fill="#1f7a45"/>
+  <text x="571.8" y="89" font-size="13" font-weight="600" fill="#1d1b16">62,3% de 2.936</text>
+  <text x="180" y="123" font-size="13" fill="#1d1b16" text-anchor="end">Pedrilho</text>
+  <path d="M192,108 H520.8 Q524.8,108 524.8,112 V126 Q524.8,130 520.8,130 H192 Z" fill="#1f7a45"/>
+  <text x="532.8" y="123" font-size="13" font-weight="600" fill="#1d1b16">55,8% de 2.940</text>
+  <text x="180" y="157" font-size="13" fill="#1d1b16" text-anchor="end">SuperVale</text>
+  <path d="M192,142 H351.6 Q355.6,142 355.6,146 V160 Q355.6,164 351.6,164 H192 Z" fill="#1f7a45"/>
+  <text x="363.6" y="157" font-size="13" font-weight="600" fill="#1d1b16">27,6% de 2.342</text>
+  <text x="180" y="191" font-size="13" fill="#1d1b16" text-anchor="end">Vila Sul</text>
+  <path d="M192,176 H289.2 Q293.2,176 293.2,180 V194 Q293.2,198 289.2,198 H192 Z" fill="#1f7a45"/>
+  <text x="301.2" y="191" font-size="13" font-weight="600" fill="#1d1b16">17,2% de 3.368</text>
+  <text x="16" y="250" font-size="11" fill="#6b665b">Fonte: dados coletados pelo SuperPreço</text>
+</svg>

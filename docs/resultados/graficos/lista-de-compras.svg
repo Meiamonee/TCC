@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="294" viewBox="0 0 760 294" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="Lista de compras de exemplo (12 itens básicos)">
+  <title>Lista de compras de exemplo (12 itens básicos)</title>
+  <rect width="760" height="294" fill="#ffffff"/>
+  <text x="16" y="28" font-size="17" font-weight="700" fill="#1d1b16">Lista de compras de exemplo (12 itens básicos)</text>
+  <text x="16" y="50" font-size="12.5" fill="#6b665b">Com troca por similar quando o mercado não tem o item; última barra: comprando cada item onde é mais barato</text>
+  <line x1="190" y1="68" x2="190" y2="236" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="190" y="252" font-size="11" fill="#6b665b" text-anchor="middle">R$ 0</text>
+  <line x1="430" y1="68" x2="430" y2="236" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="430" y="252" font-size="11" fill="#6b665b" text-anchor="middle">R$ 100</text>
+  <line x1="670" y1="68" x2="670" y2="236" stroke="#e6dcc8" stroke-width="1"/>
+  <text x="670" y="252" font-size="11" fill="#6b665b" text-anchor="middle">R$ 200</text>
+  <line x1="190" y1="68" x2="190" y2="236" stroke="#6b665b" stroke-width="1"/>
+  <text x="180" y="89" font-size="13" fill="#1d1b16" text-anchor="end">San Michel</text>
+  <path d="M192,74 H425.328 Q429.328,74 429.328,78 V92 Q429.328,96 425.328,96 H192 Z" fill="#1f7a45"/>
+  <text x="437.328" y="89" font-size="13" font-weight="600" fill="#1d1b16">R$ 99,72</text>
+  <text x="180" y="123" font-size="13" fill="#1d1b16" text-anchor="end">SuperVale</text>
+  <path d="M192,108 H443.76 Q447.76,108 447.76,112 V126 Q447.76,130 443.76,130 H192 Z" fill="#1f7a45"/>
+  <text x="455.76" y="123" font-size="13" font-weight="600" fill="#1d1b16">R$ 107,40</text>
+  <text x="180" y="157" font-size="13" fill="#1d1b16" text-anchor="end">Vila Sul</text>
+  <path d="M192,142 H447.96000000000004 Q451.96000000000004,142 451.96000000000004,146 V160 Q451.96000000000004,164 447.96000000000004,164 H192 Z" fill="#1f7a45"/>
+  <text x="459.96000000000004" y="157" font-size="13" font-weight="600" fill="#1d1b16">R$ 109,15</text>
+  <text x="180" y="191" font-size="13" fill="#1d1b16" text-anchor="end">Pedrilho</text>
+  <path d="M192,176 H450.048 Q454.048,176 454.048,180 V194 Q454.048,198 450.048,198 H192 Z" fill="#1f7a45"/>
+  <text x="462.048" y="191" font-size="13" font-weight="600" fill="#1d1b16">R$ 110,02</text>
+  <text x="180" y="225" font-size="13" fill="#1d1b16" text-anchor="end">Compra dividida</text>
+  <path d="M192,210 H406.824 Q410.824,210 410.824,214 V228 Q410.824,232 406.824,232 H192 Z" fill="#0c3d24"/>
+  <text x="418.824" y="225" font-size="13" font-weight="600" fill="#1d1b16">R$ 92,01</text>
+  <text x="16" y="284" font-size="11" fill="#6b665b">Fonte: dados coletados pelo SuperPreço</text>
+</svg>

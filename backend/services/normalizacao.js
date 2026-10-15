@@ -50,7 +50,9 @@ const VARIANTES = new Set([
     // Tipos de vinho (e de feijao/chocolate "branco"): tinto nao substitui branco.
     'tinto', 'branco', 'rose', 'seco',
     // Cores e tipos de grao: feijao preto nao substitui carioca; azeitona verde nao substitui preta.
-    'preto', 'preta', 'vermelho', 'vermelha', 'verde', 'rajado', 'fradinho', 'jalo', 'bolinha', 'mulatinho'
+    'preto', 'preta', 'vermelho', 'vermelha', 'verde', 'rajado', 'fradinho', 'jalo', 'bolinha', 'mulatinho',
+    // Tipos de sal (encontrado na analise de dados): sal grosso/para churrasco nao e o refinado.
+    'grosso', 'churrasco'
 ]);
 
 const UNIDADES_MEDIDA = [

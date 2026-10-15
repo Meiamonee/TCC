@@ -61,7 +61,7 @@ Coleta de 14/10/2026:
 
 | Módulo | Testes | Como |
 | --- | ---: | --- |
-| Backend | 50 | `node:test`; integração com MongoDB no banco `SuperPreco_test` e testes de segurança sem banco |
+| Backend | 62 | `node:test`; integração com MongoDB no banco `SuperPreco_test`, testes de segurança e dos cálculos da análise |
 | Scraper | 16 | `node:test` + Selenium; o Chrome headless abre páginas de exemplo |
 
 - **Testes do scraper**:
@@ -94,6 +94,30 @@ Medidas, testadas em `backend/test/seguranca.test.js` e documentadas em `docs/ap
   - Os testes acharam um erro: um item `null` na lista derrubava a cotação com erro 500.
 - **Rota administrativa**: token de no mínimo 16 caracteres, comparado em tempo constante.
 - **Dependências**: o `npm audit` apontou 3 vulnerabilidades no backend (proxy-addr crítica, mongoose alta, qs moderada), corrigidas com `npm audit fix`. Backend, scraper e as dependências de produção do frontend ficaram com 0 vulnerabilidades. Restam 7 em ferramentas de build do frontend (Tailwind 3), que não vão para o site; corrigi-las exigiria migrar para o Tailwind 4.
+
+## Análise de dados e avaliação (Etapa 4)
+
+- **Relatório:** `npm --prefix backend run analise -- --api <url>` gera `docs/resultados/README.md` com tabelas (CSV) e gráficos (SVG). A comparação usa as mesmas regras do site, com todos os produtos na memória (cerca de 1,5 min no Atlas). Rodar de novo perto da entrega.
+- **Avaliação da funcionalidade:** em `docs/avaliacao/` ficam a tabela "requisito × entrega" e os roteiros do teste de tempo (manual × SuperPreço) e do SUS. As planilhas `tempo.csv` e `sus.csv` entram no relatório automaticamente.
+- **Primeiros números** (15/10/2026, banco de produção):
+  - 26.826 produtos.
+  - 34,6% têm o mesmo produto em outro mercado; com similares, 72,7%.
+  - Diferença entre o maior e o menor preço do mesmo produto: mediana 18,8% (média 26,2%), acima de 20% em 47% dos produtos.
+  - San Michel é o mais barato em 62% das comparações em que aparece, e Vila Sul em 17%.
+  - Cesta básica completa: Pedrilho R$ 664,42 × Vila Sul R$ 905,44 (36% a mais). O San Michel ficou de fora por não vender pão francês no site.
+  - Lista de 12 itens: San Michel R$ 99,72 × Pedrilho R$ 110,02. Comprando cada item onde é mais barato, R$ 92,01.
+  - API publicada: mediana de 150 a 500 ms por rota.
+- **Problemas que a análise revelou** (corrigidos):
+  - granel (por kg) era tratado como o mesmo produto que uma embalagem;
+  - pacotes "leve 12 pague 10" (L12p10) eram comparados com o produto avulso;
+  - "sal para churrasco" era tratado como o mesmo produto que "sal refinado";
+  - a migração ignorava o tamanho da embalagem;
+  - a cesta básica levava 3,8 s por chamada e passou para 0,15 s com cache.
+- **Limitações a discutir no texto:**
+  - nomes genéricos sem marca ("Lemon Pepper 250g") podem casar com produtos de marca;
+  - cadastros errados nos próprios sites (lata de Amstel a R$ 46,80) aparecem como diferenças anormais. As diferenças acima de 200% ficaram fora das médias (73 produtos);
+  - a precisão da comparação é medida na amostra `docs/resultados/validacao/amostra.csv`, com 50 pares a conferir à mão.
+- **Variação de preços:** medida só a partir de 15/10/2026, porque antes o histórico mistura efeitos das correções da coleta.
 
 ## Tempo de coleta
 
