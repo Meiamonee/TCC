@@ -115,16 +115,20 @@ function extrairQuantidade(nome) {
         }
     }
 
+    // Pacote promocional "leve 12 pague 10", escrito por extenso ou abreviado ("L12p10"):
+    // a quantidade do nome e de cada unidade do pacote.
+    const promocao = texto.match(/\bleve\s*(\d+)\s*pague\b/) || texto.match(/\bl(\d+)p\d+\b/);
+
     // Embalagens com varias unidades: "12 rolos", "com 4 unid", "leve 12 pague 11", "10 unidades".
-    const contagem = texto.match(/\bleve\s*(\d+)\s*pague\b/)
+    const contagem = promocao
         || texto.match(/\b(\d+)\s*(?:un|und|unid|unidades?|rolos?|pecas?|saches?|capsulas?|cap)\b/)
         || texto.match(/\bcom\s*(\d+)\b/);
     const multiplicador = contagem ? Number(contagem[1]) : 1;
 
     if (medida && quantidade > 0) {
-        // Em massa e volume a quantidade do nome ja e o total ("Caldo 57g 6 unid");
-        // em comprimento ela e por rolo ("Papel 20m com 12 rolos").
-        const porItem = medida === 'comprimento' && !/\b\d+\s*x\s*\d/.test(texto);
+        // Em massa e volume a quantidade do nome ja e o total ("Caldo 57g 6 unid"), exceto nos
+        // pacotes promocionais; em comprimento ela e por rolo ("Papel 20m com 12 rolos").
+        const porItem = (medida === 'comprimento' && !/\b\d+\s*x\s*\d/.test(texto)) || Boolean(promocao);
         return { medida, quantidade: porItem ? quantidade * multiplicador : quantidade };
     }
 

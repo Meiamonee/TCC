@@ -26,6 +26,18 @@ test('mesmo produto escrito de formas diferentes e equivalente', () => {
     assert.ok(equivalentes(produto('Arroz Pilecco Nobre Tipo1 5kg', 26.89), produto('Arroz Polido Tipo 1 Pilecco Nobre Pacote 5kg', 26.8)));
 });
 
+test('produto a granel so equivale a outro a granel, nao a uma embalagem', () => {
+    // Encontrado na analise de dados: "Bacon R$ 37,90/kg" era comparado com "Bacon Sadia 100g".
+    const statsBacon = { total: 5000, frequencia: new Map(Object.entries({ bacon: 40, sadia: 60, seara: 60 })) };
+    const granel = produto('Bacon', 37.9, 'kg');
+    assert.ok(saoEquivalentes(granel, produto('Bacon Sadia 100g', 2.49), statsBacon) < LIMITE_SIMILARIDADE);
+    assert.ok(saoEquivalentes(granel, produto('Bacon Kg', 39.9, 'kg'), statsBacon) >= LIMITE_SIMILARIDADE);
+});
+
+test('pacote com varias unidades nao equivale ao produto avulso', () => {
+    assert.ok(!equivalentes(produto('Cerveja Heineken 350ml', 4.98), produto('Cerveja Heineken 350ml Leve 12 Pague 10', 49.8)));
+});
+
 test('marcas diferentes nao sao equivalentes', () => {
     assert.ok(!equivalentes(produto('Feijão Carioca Camil 1kg', 6.99), produto('Feijão Carioca Tipo 1 Cabrera 1kg', 10.07)));
     assert.ok(!equivalentes(produto('Detergente Líquido Ypê Neutro 500ml', 2.59), produto('Detergente Liquido Suprema Neutro 500ml', 2.66)));

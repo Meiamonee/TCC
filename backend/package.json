@@ -12,7 +12,8 @@
     "atualizar": "node scripts/atualizar.js",
     "importar": "node scripts/importar.js",
     "migrar": "node scripts/migrar.js",
-    "copiar-banco": "node scripts/copiarBanco.js"
+    "copiar-banco": "node scripts/copiarBanco.js",
+    "analise": "node scripts/analise.js"
   },
   "keywords": [],
   "author": "",

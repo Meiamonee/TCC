@@ -84,9 +84,11 @@ function vendidoAPeso(produto) {
     return produto.unidade === 'kg';
 }
 
+// O "mesmo produto" tem o mesmo tamanho: produto a granel (vendido por kg) so equivale a outro
+// a granel. "Bacon R$ 37,90/kg" e "Bacon Sadia 100g" podem ser similares, mas nao o mesmo produto.
 function quantidadesCompativeis(a, b) {
     if (vendidoAPeso(a) || vendidoAPeso(b)) {
-        return vendidoAPeso(a) === vendidoAPeso(b) || a.medida === b.medida;
+        return vendidoAPeso(a) === vendidoAPeso(b);
     }
 
     if (a.quantidadeBase && b.quantidadeBase) {
@@ -140,6 +142,13 @@ function precoComparavel(produto) {
     return produto.precoPorUnidade || produto.preco;
 }
 
+// Palavras mais raras do nome, que costumam identificar marca e tipo; usadas para buscar candidatos.
+function palavrasChave(produto, stats) {
+    return [...(produto.tokens || [])]
+        .sort((x, y) => peso(y, stats) - peso(x, stats))
+        .slice(0, 3);
+}
+
 // Encontra, em cada um dos outros supermercados, o produto equivalente mais parecido.
 async function buscarEquivalentes(produto) {
     if (!produto.tokens || produto.tokens.length === 0) {
@@ -148,18 +157,19 @@ async function buscarEquivalentes(produto) {
 
     const stats = await carregarEstatisticas();
 
-    // Busca candidatos pelas palavras mais raras do nome, que costumam identificar marca e tipo.
-    const palavrasChave = [...produto.tokens]
-        .sort((x, y) => peso(y, stats) - peso(x, stats))
-        .slice(0, 3);
-
     const candidatos = await Produto.find({
         disponivel: true,
         supermercado: { $ne: produto.supermercado },
-        tokens: { $in: palavrasChave },
+        tokens: { $in: palavrasChave(produto, stats) },
         variantes: produto.variantes || []
     }).limit(800).lean();
 
+    return escolherEquivalentes(produto, candidatos, stats);
+}
+
+// Entre os candidatos (de outros mercados, com alguma palavra-chave em comum), fica com o mais
+// parecido de cada mercado. Separado da consulta ao banco para a analise de dados reaproveitar.
+function escolherEquivalentes(produto, candidatos, stats) {
     const melhorPorMercado = new Map();
 
     for (const candidato of candidatos) {
@@ -278,7 +288,9 @@ module.exports = {
     LIMITE_SIMILARIDADE,
     buscarEquivalentes,
     buscarSimilares,
+    escolherEquivalentes,
     montarEstatisticas,
+    palavrasChave,
     palavrasDeTipo,
     saoSimilares,
     carregarEstatisticas,

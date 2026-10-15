@@ -28,6 +28,13 @@ test('extrairQuantidade le volume, massa, multipacks e rolos', () => {
     assert.deepEqual(extrairQuantidade('Alface Crespa'), { medida: null, quantidade: null });
 });
 
+test('pacote promocional "leve X pague Y" soma as unidades do pacote', () => {
+    // Encontrado na analise de dados: o pacote com 12 cremes dentais era comparado com um avulso.
+    assert.deepEqual(extrairQuantidade('Creme Dental Oral B 70g L12p10 4em1'), { medida: 'massa', quantidade: 840 });
+    assert.deepEqual(extrairQuantidade('Sabonete Lux 85g Leve 6 Pague 5'), { medida: 'massa', quantidade: 510 });
+    assert.deepEqual(extrairQuantidade('Creme Dental Oral-b 4 Em 1 70g'), { medida: 'massa', quantidade: 70 });
+});
+
 test('calcularPrecoPorUnidade converte para R$/kg, R$/L e R$/m', () => {
     assert.deepEqual(
         calcularPrecoPorUnidade({ nome: 'Refrigerante Coca Cola Pet 2lt', preco: 10.99, unidadeVenda: 'un' }),
