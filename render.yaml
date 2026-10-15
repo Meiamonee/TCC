@@ -18,10 +18,11 @@ services:
       # e grava no mesmo banco (MongoDB Atlas).
       - key: SCHEDULER_ENABLED
         value: "false"
-      # O Render recebe as requisicoes em um proxy e repassa o IP do cliente no
-      # X-Forwarded-For; o limite de requisicoes por IP depende disso.
+      # O limite de requisicoes e por IP do visitante. No Render a requisicao passa por 3
+      # saltos (Cloudflare, proxy do Render e o balanceador interno), conferido em 15/10/2026
+      # com MOSTRAR_IP=true: X-Forwarded-For = "<cliente>, <Cloudflare>, <Render>".
       - key: TRUST_PROXY
-        value: "10"
+        value: "3"
       - key: MOSTRAR_IP
         value: "true"
       # Preenchidos no painel do Render (nao ficam no git).
