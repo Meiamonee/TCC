@@ -170,6 +170,28 @@ test('cotacao e rota administrativa tem limites proprios, menores', async (t) =>
     }
 });
 
+test('atras da Cloudflare, o limite usa o IP real informado em CF-Connecting-IP', async (t) => {
+    const original = process.env.CLIENT_IP_HEADER;
+    t.after(() => {
+        if (original === undefined) delete process.env.CLIENT_IP_HEADER;
+        else process.env.CLIENT_IP_HEADER = original;
+    });
+    process.env.CLIENT_IP_HEADER = 'cf-connecting-ip';
+
+    const limitado = await subir({ limites: { geral: 2 } });
+    try {
+        const como = ip => ({ headers: { 'CF-Connecting-IP': ip } });
+        assert.equal((await chamar(limitado.base, '/api/scraping/status', como('189.0.0.1'))).status, 200);
+        assert.equal((await chamar(limitado.base, '/api/scraping/status', como('189.0.0.1'))).status, 200);
+        assert.equal((await chamar(limitado.base, '/api/scraping/status', como('189.0.0.1'))).status, 429);
+
+        // Outro visitante tem a sua propria cota.
+        assert.equal((await chamar(limitado.base, '/api/scraping/status', como('200.0.0.2'))).status, 200);
+    } finally {
+        limitado.servidor.close();
+    }
+});
+
 test('CORS libera so o endereco do site configurado', async (t) => {
     const original = process.env.CORS_ORIGIN;
     t.after(() => {

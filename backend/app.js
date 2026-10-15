@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const { rateLimit } = require('express-rate-limit');
+const { ipKeyGenerator, rateLimit } = require('express-rate-limit');
 const mongoose = require('mongoose');
 const Produto = require('./models/Produto');
 const HistoricoPreco = require('./models/HistoricoPreco');
@@ -203,10 +203,20 @@ function exigirAdmin(req, _res, next) {
 
 const rota = handler => (req, res, next) => Promise.resolve(handler(req, res, next)).catch(next);
 
+// IP de quem fez a requisicao. Na hospedagem atras da Cloudflare (Render), CLIENT_IP_HEADER=cf-connecting-ip
+// usa o cabecalho que a Cloudflare preenche com o IP real e que o cliente nao consegue falsificar
+// (a quantidade de proxies no X-Forwarded-For varia entre requisicoes la). Sem ele, usa req.ip.
+function ipDoCliente(req) {
+    const cabecalho = process.env.CLIENT_IP_HEADER;
+    return (cabecalho && req.get(cabecalho)) || req.ip;
+}
+
 function criarLimitador(maximo, janelaMs, { ignorar } = {}) {
     return rateLimit({
         windowMs: janelaMs,
         skip: ignorar,
+        // ipKeyGenerator agrupa enderecos IPv6 da mesma rede, como recomenda a biblioteca.
+        keyGenerator: req => ipKeyGenerator(ipDoCliente(req)),
         limit: maximo,
         standardHeaders: 'draft-8',
         legacyHeaders: false,
@@ -248,7 +258,7 @@ function criarApp({ limites = {} } = {}) {
             scrapingEmExecucao: obterEstado().emExecucao,
             // So para conferir o TRUST_PROXY na hospedagem: mostra o IP que a API enxerga
             // (o de quem fez a requisicao), usado no limite de requisicoes.
-            ...(process.env.MOSTRAR_IP === 'true' ? { ip: req.ip } : {})
+            ...(process.env.MOSTRAR_IP === 'true' ? { ip: ipDoCliente(req) } : {})
         });
     });
 
