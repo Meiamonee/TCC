@@ -1,38 +1,47 @@
-// Gera o artigo do TCC em Word (.docx), no formato ABNT de artigo, a partir de docs/tcc/artigo.md.
+// Gera o artigo do TCC em Word (.docx) a partir de docs/tcc/artigo.md, com o mesmo modelo do
+// artigo original do campus (TCC-4): pagina Carta com margens de 2,54 cm, Times New Roman 12,
+// espacamento 1,5, titulos "1. INTRODUÇÃO" em negrito, autores a direita e notas de rodape.
 // Uso: npm --prefix docs/tcc/gerador install && npm --prefix docs/tcc/gerador run gerar
 //
 // Marcacoes aceitas no Markdown:
-//   #! TITULO        titulo centralizado sem numero (RESUMO, ABSTRACT)
+//   #! TITULO        titulo sem numero (RESUMO, ABSTRACT), a esquerda e em negrito
 //   # / ## / ###     secoes numeradas automaticamente (REFERÊNCIAS fica sem numero)
-//   ![Figura N – legenda](figuras/arquivo.png)   figura, com a legenda acima
-//   Tabela N – ...   legenda de tabela, seguida de uma tabela em Markdown
-//   Fonte: ...       fonte da figura ou tabela (fonte menor)
+//   ![Figura N. legenda](figuras/arquivo.png)   figura, com a legenda acima
+//   Tabela N. ...    legenda de tabela, seguida de uma tabela em Markdown
+//   Fonte: ...       fonte da figura ou tabela
 //   - item           lista com marcadores
 //   **negrito**, *italico*, [[texto]] (destacado em amarelo: trecho a completar)
 const fs = require('fs');
 const path = require('path');
 const {
-    AlignmentType, BorderStyle, Document, Footer, FootnoteReferenceRun, HeadingLevel, ImageRun,
-    LevelFormat, Packer, PageNumber, Paragraph, Table, TableCell, TableRow, TextRun, WidthType
+    AlignmentType, BorderStyle, Document, FootnoteReferenceRun, HeadingLevel, ImageRun,
+    LevelFormat, Packer, PageBreak, Paragraph, Table, TableCell, TableRow, TextRun, WidthType
 } = require('docx');
 
 const RAIZ = path.resolve(__dirname, '..');
 const ENTRADA = path.join(RAIZ, 'artigo.md');
 const SAIDA = path.join(RAIZ, 'SuperPreco-artigo-TCC.docx');
 
-const FONTE = 'Arial';
+// ---------- Modelo do artigo original ----------
+const FONTE = 'Times New Roman';
+const FONTE_TABELA = 'Arial'; // as tabelas do original usam Arial
 const TAMANHO = 24; // 12 pt (em meios-pontos)
-const TAMANHO_PEQUENO = 20; // 10 pt
+const TAMANHO_TITULO = 26; // 13 pt
+const TAMANHO_TABELA = 20; // 10 pt
+const TAMANHO_NOTA = 20; // 10 pt
 const LINHA_1_5 = 360;
-const RECUO = 709; // 1,25 cm
-const CM = 567; // 1 cm em DXA
-const LARGURA_TEXTO = 16 * CM; // A4 (21 cm) - margens 3 cm + 2 cm
-const LARGURA_IMAGEM_PX = 580;
+const LINHA_SIMPLES = 240;
+const RECUO = 720; // 1,27 cm, como no original
+const POLEGADA = 1440; // em DXA
+const PAGINA = { width: 12240, height: 15840 }; // Carta (21,59 x 27,94 cm)
+const MARGEM = POLEGADA; // 2,54 cm
+const LARGURA_TEXTO = PAGINA.width - 2 * MARGEM;
+const LARGURA_IMAGEM_PX = 600;
 
-const TITULO = 'SUPERPREÇO: UMA FERRAMENTA WEB PARA ANÁLISE E COMPARAÇÃO DE PREÇOS EM SUPERMERCADOS';
+const TITULO = 'SUPERPREÇO: UMA FERRAMENTA WEB PARA ANÁLISE E COMPARAÇÃO DE PREÇOS EM SUPERMERCADOS.';
 const AUTORES = [
-    { nome: 'Pedro Lucas de Souza Faria', nota: 'Discente, IFSULDEMINAS – campus Poços de Caldas. E-mail: pedro.faria@alunos.ifsuldeminas.edu.br' },
-    { nome: 'Douglas Fabiano de Sousa Nunes', nota: 'Docente orientador, IFSULDEMINAS – campus Poços de Caldas. E-mail: douglas.nunes@ifsuldeminas.edu.br' }
+    { nome: 'Pedro Lucas de Souza Faria', nota: ['Discente, IFSULDEMINAS – ', '*campus*', ' Poços de Caldas. E-mail: pedro.faria@alunos.ifsuldeminas.edu.br'] },
+    { nome: 'Douglas Fabiano de Sousa Nunes', nota: ['Docente orientador, IFSULDEMINAS – ', '*campus*', ' Poços de Caldas. E-mail: douglas.nunes@ifsuldeminas.edu.br'] }
 ];
 
 // ---------- Texto com negrito, italico e destaque ----------
@@ -43,26 +52,13 @@ function trechos(texto, base = {}) {
     for (const m of texto.matchAll(padrao)) {
         if (m.index > ultimo) runs.push(new TextRun({ text: texto.slice(ultimo, m.index), ...base }));
         const t = m[0];
-        if (t.startsWith('**')) runs.push(new TextRun({ text: t.slice(2, -2), bold: true, ...base }));
-        else if (t.startsWith('[[')) runs.push(new TextRun({ text: t.slice(2, -2), highlight: 'yellow', ...base }));
-        else runs.push(new TextRun({ text: t.slice(1, -1), italics: true, ...base }));
+        if (t.startsWith('**')) runs.push(new TextRun({ text: t.slice(2, -2), ...base, bold: true }));
+        else if (t.startsWith('[[')) runs.push(new TextRun({ text: t.slice(2, -2), ...base, highlight: 'yellow' }));
+        else runs.push(new TextRun({ text: t.slice(1, -1), ...base, italics: true }));
         ultimo = m.index + t.length;
     }
     if (ultimo < texto.length) runs.push(new TextRun({ text: texto.slice(ultimo), ...base }));
     return runs;
-}
-
-function paragrafo(texto, { contexto = 'corpo', ...opcoes } = {}) {
-    const corpo = contexto === 'corpo';
-    return new Paragraph({
-        children: trechos(texto),
-        alignment: contexto === 'referencias' ? AlignmentType.LEFT : AlignmentType.JUSTIFIED,
-        indent: corpo ? { firstLine: RECUO } : undefined,
-        spacing: contexto === 'referencias'
-            ? { line: 240, after: 240 }
-            : contexto === 'resumo' ? { line: 240, after: 120 } : { line: LINHA_1_5, after: 0 },
-        ...opcoes
-    });
 }
 
 // ---------- Imagens ----------
@@ -71,18 +67,22 @@ function tamanhoPng(arquivo) {
     return { buffer, largura: buffer.readUInt32BE(16), altura: buffer.readUInt32BE(20) };
 }
 
-function figura(legenda, caminho) {
+function legenda(texto) {
+    return new Paragraph({
+        children: trechos(texto),
+        alignment: AlignmentType.CENTER,
+        spacing: { before: 240, after: 120, line: LINHA_SIMPLES },
+        keepNext: true
+    });
+}
+
+function figura(texto, caminho) {
     const { buffer, largura, altura } = tamanhoPng(path.join(RAIZ, caminho));
     // Capturas de celular ficam mais estreitas para nao ocuparem uma pagina inteira.
     const alvo = largura < altura ? 260 : LARGURA_IMAGEM_PX;
     const escala = alvo / largura;
     return [
-        new Paragraph({
-            children: trechos(legenda, { size: TAMANHO_PEQUENO }),
-            alignment: AlignmentType.CENTER,
-            spacing: { before: 240, after: 60, line: 240 },
-            keepNext: true
-        }),
+        legenda(texto),
         new Paragraph({
             children: [new ImageRun({ type: 'png', data: buffer, transformation: { width: Math.round(largura * escala), height: Math.round(altura * escala) } })],
             alignment: AlignmentType.CENTER,
@@ -106,6 +106,7 @@ function tabela(linhas) {
     larguras[larguras.length - 1] += LARGURA_TEXTO - larguras.reduce((a, b) => a + b, 0);
 
     const borda = { style: BorderStyle.SINGLE, size: 4, color: '000000' };
+    const base = { font: FONTE_TABELA, size: TAMANHO_TABELA };
     return new Table({
         width: { size: LARGURA_TEXTO, type: WidthType.DXA },
         columnWidths: larguras,
@@ -115,11 +116,11 @@ function tabela(linhas) {
             children: linha.map((texto, j) => new TableCell({
                 width: { size: larguras[j], type: WidthType.DXA },
                 borders: { top: borda, bottom: borda, left: borda, right: borda },
-                margins: { top: 40, bottom: 40, left: 80, right: 80 },
+                margins: { top: 60, bottom: 60, left: 100, right: 100 },
                 children: [new Paragraph({
-                    children: trechos(i === 0 ? `**${texto.replace(/\*\*/g, '')}**` : texto, { size: TAMANHO_PEQUENO }),
-                    alignment: alinhamentoDireita[j] ? AlignmentType.RIGHT : AlignmentType.LEFT,
-                    spacing: { line: 240 },
+                    children: trechos(i === 0 ? `**${texto.replace(/\*\*/g, '')}**` : texto, base),
+                    alignment: i === 0 ? AlignmentType.CENTER : alinhamentoDireita[j] ? AlignmentType.RIGHT : AlignmentType.LEFT,
+                    spacing: { line: LINHA_SIMPLES },
                     // Mantem a tabela inteira na mesma pagina (e junto da fonte, logo abaixo).
                     keepNext: true
                 })]
@@ -138,17 +139,19 @@ function montar() {
     const filhos = [];
     const numeros = [0, 0, 0];
     let contexto = 'resumo';
+    let primeiraSecao = true;
 
-    // Titulo e autores (com as notas de rodape), como no modelo do TCC.
+    // Titulo e autores, como no modelo: titulo centralizado em negrito; autores a direita,
+    // em negrito, com o numero da nota de rodape.
     filhos.push(new Paragraph({
-        children: [new TextRun({ text: TITULO, bold: true, size: 28 })],
+        children: [new TextRun({ text: TITULO, bold: true, size: TAMANHO_TITULO })],
         alignment: AlignmentType.CENTER,
-        spacing: { after: 360, line: 276 }
+        spacing: { before: 720, after: 720, line: LINHA_1_5 }
     }));
     AUTORES.forEach((autor, i) => filhos.push(new Paragraph({
-        children: [new TextRun({ text: autor.nome }), new FootnoteReferenceRun(i + 1)],
+        children: [new TextRun({ text: autor.nome, bold: true }), new FootnoteReferenceRun(i + 1)],
         alignment: AlignmentType.RIGHT,
-        spacing: { after: i === AUTORES.length - 1 ? 360 : 0 }
+        spacing: { after: 240, line: LINHA_1_5 }
     })));
 
     for (const bloco of blocos(md)) {
@@ -156,10 +159,12 @@ function montar() {
 
         if (bloco.startsWith('#! ')) {
             contexto = 'resumo';
+            const nome = bloco.slice(3).trim();
             filhos.push(new Paragraph({
-                children: [new TextRun({ text: bloco.slice(3).trim(), bold: true })],
-                alignment: AlignmentType.CENTER,
-                spacing: { before: 240, after: 240 },
+                children: [new TextRun({ text: nome, bold: true })],
+                // O abstract comeca na pagina seguinte ao resumo.
+                pageBreakBefore: /^ABSTRACT$/i.test(nome),
+                spacing: { before: 120, after: 0, line: LINHA_1_5 },
                 keepNext: true
             }));
             continue;
@@ -171,19 +176,21 @@ function montar() {
             const nome = titulo[2].trim();
             const semNumero = /^REFER[ÊE]NCIAS$/i.test(nome);
             contexto = semNumero ? 'referencias' : 'corpo';
-            let rotulo = nome;
+            let rotulo = nome.toUpperCase();
             if (!semNumero) {
                 numeros[nivel - 1]++;
                 for (let i = nivel; i < 3; i++) numeros[i] = 0;
-                rotulo = `${numeros.slice(0, nivel).join('.')} ${nivel === 1 ? nome.toUpperCase() : nome}`;
+                rotulo = nivel === 1 ? `${numeros[0]}. ${nome.toUpperCase()}` : `${numeros.slice(0, nivel).join('.')} ${nome}`;
             }
             filhos.push(new Paragraph({
                 heading: [HeadingLevel.HEADING_1, HeadingLevel.HEADING_2, HeadingLevel.HEADING_3][nivel - 1],
-                children: [new TextRun({ text: rotulo, bold: nivel < 3, font: FONTE, size: TAMANHO, color: '000000' })],
-                alignment: semNumero ? AlignmentType.CENTER : AlignmentType.LEFT,
-                spacing: { before: nivel === 1 ? 480 : 360, after: 240, line: LINHA_1_5 },
+                children: [new TextRun({ text: rotulo, bold: true, font: FONTE, size: TAMANHO, color: '000000' })],
+                // Como no original, a introducao comeca em uma pagina nova, depois do resumo.
+                pageBreakBefore: nivel === 1 && primeiraSecao,
+                spacing: { before: nivel === 1 ? 360 : 240, after: 0, line: LINHA_1_5 },
                 keepNext: true
             }));
+            if (nivel === 1) primeiraSecao = false;
             continue;
         }
 
@@ -198,39 +205,56 @@ function montar() {
             continue;
         }
 
-        if (bloco.startsWith('Tabela ')) {
-            filhos.push(new Paragraph({
-                children: trechos(bloco, { size: TAMANHO_PEQUENO }),
-                alignment: AlignmentType.CENTER,
-                spacing: { before: 240, after: 60, line: 240 },
-                keepNext: true
-            }));
+        if (/^Tabela \d+\./.test(bloco)) {
+            filhos.push(legenda(bloco));
             continue;
         }
 
         if (bloco.startsWith('Fonte:')) {
             filhos.push(new Paragraph({
-                children: trechos(bloco, { size: TAMANHO_PEQUENO }),
+                children: trechos(bloco, { size: TAMANHO_NOTA }),
                 alignment: AlignmentType.CENTER,
-                spacing: { before: 60, after: 240, line: 240 }
+                spacing: { before: 60, after: 240, line: LINHA_SIMPLES }
             }));
             continue;
         }
 
         if (linhas.every(l => l.startsWith('- '))) {
-            for (const linha of linhas) {
-                filhos.push(new Paragraph({
-                    children: trechos(linha.slice(2)),
-                    numbering: { reference: 'marcadores', level: 0 },
-                    alignment: AlignmentType.JUSTIFIED,
-                    spacing: { line: LINHA_1_5 }
-                }));
-            }
+            linhas.forEach((linha, i) => filhos.push(new Paragraph({
+                children: trechos(linha.slice(2)),
+                numbering: { reference: 'marcadores', level: 0 },
+                alignment: AlignmentType.LEFT,
+                spacing: { before: i === 0 ? 120 : 0, after: i === linhas.length - 1 ? 120 : 0, line: 276 }
+            })));
             continue;
         }
 
-        const semRecuo = contexto !== 'corpo' || /^\*\*(Palavras-chave|Keywords):\*\*/.test(bloco);
-        filhos.push(paragrafo(linhas.join(' '), { contexto: semRecuo && contexto === 'corpo' ? 'resumo' : contexto }));
+        const texto = linhas.join(' ');
+        if (/^\*\*(Palavras-chave|Keywords):\*\*/.test(texto)) {
+            // No original a linha de palavras-chave fica inteira em negrito.
+            filhos.push(new Paragraph({
+                children: [new TextRun({ text: texto.replace(/\*\*/g, ''), bold: true })],
+                alignment: AlignmentType.JUSTIFIED,
+                spacing: { before: 480, after: 0, line: LINHA_1_5 }
+            }));
+            continue;
+        }
+
+        if (contexto === 'referencias') {
+            filhos.push(new Paragraph({
+                children: trechos(texto),
+                alignment: AlignmentType.JUSTIFIED,
+                spacing: { line: LINHA_SIMPLES, after: 240 }
+            }));
+            continue;
+        }
+
+        filhos.push(new Paragraph({
+            children: trechos(texto),
+            alignment: AlignmentType.JUSTIFIED,
+            indent: { firstLine: RECUO },
+            spacing: { line: LINHA_1_5, after: 0 }
+        }));
     }
 
     return filhos;
@@ -241,36 +265,40 @@ const documento = new Document({
     title: TITULO,
     styles: {
         default: { document: { run: { font: FONTE, size: TAMANHO } } },
-        paragraphStyles: [1, 2, 3].map(n => ({
-            id: `Heading${n}`,
-            name: `Heading ${n}`,
-            basedOn: 'Normal',
-            next: 'Normal',
-            quickFormat: true,
-            run: { font: FONTE, size: TAMANHO, bold: n < 3, color: '000000' },
-            paragraph: { outlineLevel: n - 1 }
-        }))
+        paragraphStyles: [
+            ...[1, 2, 3].map(n => ({
+                id: `Heading${n}`,
+                name: `Heading ${n}`,
+                basedOn: 'Normal',
+                next: 'Normal',
+                quickFormat: true,
+                run: { font: FONTE, size: TAMANHO, bold: true, color: '000000' },
+                paragraph: { outlineLevel: n - 1 }
+            })),
+            {
+                id: 'FootnoteText',
+                name: 'footnote text',
+                basedOn: 'Normal',
+                run: { font: FONTE, size: TAMANHO_NOTA },
+                paragraph: { spacing: { line: LINHA_SIMPLES } }
+            }
+        ]
     },
     numbering: {
         config: [{
             reference: 'marcadores',
-            levels: [{ level: 0, format: LevelFormat.BULLET, text: '•', alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 709, hanging: 283 } } } }]
+            levels: [{ level: 0, format: LevelFormat.BULLET, text: '●', alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }]
         }]
     },
     footnotes: Object.fromEntries(AUTORES.map((autor, i) => [i + 1, {
-        children: [new Paragraph({ children: [new TextRun({ text: autor.nota, size: TAMANHO_PEQUENO })] })]
+        children: [new Paragraph({ children: autor.nota.flatMap(parte => trechos(parte, { size: TAMANHO_NOTA })) })]
     }])),
     sections: [{
         properties: {
             page: {
-                size: { width: 21 * CM, height: Math.round(29.7 * CM) },
-                margin: { top: 3 * CM, left: 3 * CM, bottom: 2 * CM, right: 2 * CM }
+                size: PAGINA,
+                margin: { top: MARGEM, left: MARGEM, bottom: MARGEM, right: MARGEM }
             }
-        },
-        footers: {
-            default: new Footer({
-                children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ children: [PageNumber.CURRENT], size: TAMANHO_PEQUENO })] })]
-            })
         },
         children: montar()
     }]
