@@ -1,0 +1,25 @@
+# Configuracao da API no Render (plano gratuito). Criada pelo painel do Render em
+# New > Blueprint, apontando para este repositorio. Ver docs/implantacao.md.
+services:
+  - type: web
+    name: superpreco-api
+    runtime: node
+    plan: free
+    # O Render nao tem servidor no Brasil; Virginia e a regiao mais proxima.
+    region: virginia
+    rootDir: backend
+    buildCommand: npm install --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # O servidor gratuito nao tem Chrome; a coleta com Selenium roda em outra maquina
+      # e grava no mesmo banco (MongoDB Atlas).
+      - key: SCHEDULER_ENABLED
+        value: "false"
+      # Preenchidos no painel do Render (nao ficam no git).
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
