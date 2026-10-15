@@ -72,6 +72,27 @@ Coleta de 14/10/2026:
   - Exemplo: abóbora de 2,8 kg aparecia como "de R$ 13,97 por R$ 3,99/kg", um desconto aparente de 71%, quando o correto é de R$ 4,99/kg para R$ 3,99/kg (20%).
   - Corrigido convertendo também o preço anterior para kg.
 
+- **Preço da embalagem × preço por kg** (encontrado comparando com o site):
+  - Produtos pesados em bandeja no VipCommerce mostram dois preços: o cobrado pela embalagem ("R$ 48,93 /700g") e o preço por kg só como informação ("R$ 69,90/kg").
+  - O scraper guardava o preço por kg como se fosse o preço do produto. Afetava cerca de 560 produtos (SuperVale 120, Vila Sul 339, San Michel 100), quase todos carnes e frios.
+  - Correção: o extrator lê os campos `data-cy` do card ("preco", "unidade", "preco-antigo") e guarda o preço cobrado e o tamanho da embalagem. O backend calcula o preço por kg a partir do peso informado pelo site.
+
+## Tempo de coleta
+
+Coleta das 18h de 14/10/2026, sequencial e sem pausa entre páginas:
+- cerca de 16 min por mercado VipCommerce (San Michel: 5.016 produtos em 16,2 min);
+- 45 min no Pedrilho (9.516 produtos).
+
+Uma coleta completa dos 4 mercados leva cerca de 1h30. Por isso a atualização é periódica (node-cron, 6h e 18h) e não contínua; recoletar tudo a todo momento também sobrecarregaria os sites.
+
+## Implantação
+
+Hospedagem gratuita, com o passo a passo em `docs/implantacao.md`:
+- **Site** no Cloudflare Pages.
+- **Banco** no MongoDB Atlas Free: cerca de 512 MB; o banco tinha uns 40 MB em out/2026.
+- **API e coleta** numa VM Oracle Cloud Always Free (Ubuntu, Chromium + ChromeDriver, Caddy com HTTPS, serviço systemd).
+- **Por que não Cloudflare Workers**: no plano gratuito são 10 ms de CPU por requisição e 128 MB de memória, o que não comporta a comparação sobre 27 mil produtos; e não há como rodar o Chrome/Selenium.
+
 ## Histórico do repositório
 
 - Em 14/10/2026 o `main` do GitHub passou a ser a versão alinhada ao texto do TCC.
