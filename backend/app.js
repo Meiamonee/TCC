@@ -248,7 +248,11 @@ function criarApp({ limites = {} } = {}) {
             scrapingEmExecucao: obterEstado().emExecucao,
             // So para conferir o TRUST_PROXY na hospedagem: mostra o IP que a API enxerga
             // (o de quem fez a requisicao), usado no limite de requisicoes.
-            ...(process.env.MOSTRAR_IP === 'true' ? { ip: req.ip, cadeia: req.ips } : {})
+            ...(process.env.MOSTRAR_IP === 'true' ? {
+                ip: req.ip,
+                cadeia: req.ips,
+                cabecalhos: Object.fromEntries(Object.entries(req.headers).filter(([nome]) => /ip|forwarded|^cf-|^x-real/i.test(nome)))
+            } : {})
         });
     });
 
