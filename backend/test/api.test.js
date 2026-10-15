@@ -208,6 +208,110 @@ test('API e banco de dados', async (t) => {
         assert.equal(sanMichelSem.encontrados, 0, 'sem aceitar outra marca, o San Michel nao tem o item');
     });
 
+    // Daqui em diante: SuperVale (coca, heineken, feijao camil; sabonete indisponivel),
+    // Vila Sul (coca, heineken, feijao cabrera) e San Michel (4 feijoes) = 10 disponiveis.
+
+    await t.test('mostra o detalhe de um produto com mercado e data da coleta', async () => {
+        const id = await buscarId('cerveja heineken 350ml');
+        const { status, corpo } = await api(`/api/produtos/${id}`);
+        assert.equal(status, 200);
+        assert.equal(corpo.id, id);
+        assert.equal(corpo.supermercado, 'supervale');
+        assert.equal(corpo.supermercadoNome, 'SuperVale');
+        assert.equal(corpo.priceNumber, 4.98);
+        assert.equal(corpo.url, 'https://supervale.test/produto/2/heineken');
+        assert.ok(corpo.dataColeta);
+    });
+
+    await t.test('ordena e pagina a lista de produtos', async () => {
+        const menor = await api('/api/produtos?ordenar=menor-preco&limit=3');
+        assert.deepEqual(menor.corpo.data.map(item => item.priceNumber), [4.98, 4.99, 5.49]);
+        assert.equal(menor.corpo.total, 10);
+        assert.equal(menor.corpo.totalPages, 4);
+
+        const maior = await api('/api/produtos?ordenar=maior-preco&limit=1');
+        assert.equal(maior.corpo.data[0].priceNumber, 10.07);
+
+        const porKg = await api('/api/produtos?ordenar=menor-preco-unidade&search=feijao&limit=1');
+        assert.equal(porKg.corpo.data[0].name, 'Feijão Preto San Michel 1kg');
+
+        const alem = await api('/api/produtos?page=99');
+        assert.equal(alem.status, 200);
+        assert.deepEqual(alem.corpo.data, []);
+
+        // Limite fora da faixa e corrigido (1 a 100), em vez de devolver tudo de uma vez.
+        const grande = await api('/api/produtos?limit=100000');
+        assert.equal(grande.corpo.limit, 100);
+    });
+
+    await t.test('so mostra indisponiveis quando pedido', async () => {
+        const padrao = await api('/api/produtos?search=sabonete');
+        assert.equal(padrao.corpo.total, 0);
+
+        const todos = await api('/api/produtos?search=sabonete&includeIndisponiveis=true');
+        assert.equal(todos.corpo.total, 1);
+        assert.equal(todos.corpo.data[0].disponivel, false);
+    });
+
+    await t.test('lista categorias padronizadas, com filtro por mercado', async () => {
+        const { status, corpo } = await api('/api/categorias');
+        assert.equal(status, 200);
+        const porNome = Object.fromEntries(corpo.map(item => [item.nome, item]));
+        assert.equal(porNome.Mercearia.total, 6);
+        assert.equal(porNome.Bebidas.total, 4);
+        assert.equal(porNome.Mercearia.alimento, true);
+        assert.ok(!porNome['Higiene e Saúde'], 'o sabonete esta indisponivel');
+
+        const sanMichel = await api('/api/categorias?supermercado=sanmichel');
+        assert.deepEqual(sanMichel.corpo, [{ nome: 'Mercearia', total: 4, alimento: true }]);
+    });
+
+    await t.test('lista os supermercados com endereco, total e ultima coleta', async () => {
+        const { status, corpo } = await api('/api/supermercados');
+        assert.equal(status, 200);
+        assert.deepEqual(corpo.map(item => item.slug).sort(), ['pedrilho', 'sanmichel', 'supervale', 'vilasul']);
+
+        const supervaleInfo = corpo.find(item => item.slug === 'supervale');
+        assert.equal(supervaleInfo.totalProdutos, 3);
+        assert.equal(supervaleInfo.endereco, 'Av. João Pinheiro, 1460');
+        assert.equal(new Date(supervaleInfo.ultimaColeta).toISOString(), COLETA_2.toISOString());
+
+        assert.equal(corpo.find(item => item.slug === 'pedrilho').totalProdutos, 0);
+    });
+
+    await t.test('sugere produtos relacionados do mesmo tipo, sem repetir o proprio', async () => {
+        const id = await buscarId('feijao carioca camil');
+        const { status, corpo } = await api(`/api/produtos/${id}/relacionados?limite=3`);
+        assert.equal(status, 200);
+        assert.equal(corpo.tipo, 'feijao');
+        assert.equal(corpo.produtos.length, 3);
+        assert.ok(corpo.produtos.every(item => item.id !== id && /feij/i.test(item.name)));
+        // Do menor preco por kg para o maior.
+        assert.equal(corpo.produtos[0].name, 'Feijão Preto San Michel 1kg');
+    });
+
+    await t.test('informa a saude da API e o estado da coleta', async () => {
+        const saude = await api('/api/health');
+        assert.equal(saude.status, 200);
+        assert.equal(saude.corpo.ok, true);
+        assert.equal(saude.corpo.database, mongoose.connection.name);
+
+        const coleta = await api('/api/scraping/status');
+        assert.equal(coleta.status, 200);
+        assert.equal(coleta.corpo.emExecucao, false);
+    });
+
+    await t.test('ignora ids que nao existem mais na lista de compras', async () => {
+        const id = await buscarId('cerveja heineken 350ml');
+        const { status, corpo } = await api('/api/lista/cotacao', {
+            method: 'POST',
+            body: JSON.stringify({ itens: [{ id, quantidade: 1 }, { id: '6600aaaaaaaaaaaaaaaaaaaa', quantidade: 3 }, { id: 'nao-e-id' }] })
+        });
+        assert.equal(status, 200);
+        assert.equal(corpo.itens.length, 1);
+        assert.equal(corpo.melhorMercado.supermercado, 'supervale');
+    });
+
     await t.test('valida entradas e protege a rota de scraping', async () => {
         assert.equal((await api('/api/produtos/123/comparacao')).status, 404);
         assert.equal((await api('/api/produtos/6600aaaaaaaaaaaaaaaaaaaa')).status, 404);
@@ -218,14 +322,14 @@ test('API e banco de dados', async (t) => {
             delete process.env.ADMIN_TOKEN;
             assert.equal((await api('/api/scraping/atualizar', { method: 'POST' })).status, 503);
 
-            process.env.ADMIN_TOKEN = 'segredo-de-teste';
+            process.env.ADMIN_TOKEN = 'segredo-de-teste-bem-longo';
             const semToken = await api('/api/scraping/atualizar', { method: 'POST' });
             assert.equal(semToken.status, 401);
             const tokenErrado = await api('/api/scraping/atualizar', { method: 'POST', headers: { Authorization: 'Bearer outro' } });
             assert.equal(tokenErrado.status, 401);
             const mercadoInvalido = await api('/api/scraping/atualizar', {
                 method: 'POST',
-                headers: { Authorization: 'Bearer segredo-de-teste' },
+                headers: { Authorization: 'Bearer segredo-de-teste-bem-longo' },
                 body: JSON.stringify({ mercado: 'inexistente' })
             });
             assert.equal(mercadoInvalido.status, 400);

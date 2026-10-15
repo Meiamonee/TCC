@@ -18,6 +18,12 @@ services:
       # e grava no mesmo banco (MongoDB Atlas).
       - key: SCHEDULER_ENABLED
         value: "false"
+      # O Render recebe as requisicoes em um proxy e repassa o IP do cliente no
+      # X-Forwarded-For; o limite de requisicoes por IP depende disso.
+      - key: TRUST_PROXY
+        value: "1"
+      - key: MOSTRAR_IP
+        value: "true"
       # Preenchidos no painel do Render (nao ficam no git).
       - key: MONGODB_URI
         sync: false
