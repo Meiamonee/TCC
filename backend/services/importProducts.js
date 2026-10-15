@@ -12,6 +12,11 @@ const { MERCADOS } = require('../../scraper/mercados');
 
 const SCRAPER_OUTPUT_DIR = path.resolve(__dirname, '../../scraper/output');
 
+// Abaixo desta fracao dos produtos disponiveis, a coleta e tratada como incompleta.
+const FRACAO_MINIMA_DA_COLETA = 0.6;
+// Mercados pequenos (ou o primeiro import) nao passam pela conferencia.
+const MINIMO_PARA_CONFERIR_COLETA = 100;
+
 const SUPERMARKETS = Object.fromEntries(MERCADOS.map(mercado => [
     mercado.slug,
     {
@@ -270,7 +275,21 @@ async function importarProdutosDoJson(supermercadoSlug, options = {}) {
         })), { ordered: false });
     }
 
-    const indisponiveis = await Produto.updateMany(
+    // Uma coleta que trouxe bem menos produtos que o mercado tinha disponiveis provavelmente
+    // falhou no meio (site lento, menu que nao carregou). Nesse caso os produtos que nao
+    // apareceram continuam disponiveis com o preco anterior, em vez de sumirem do comparador.
+    const disponiveisAntes = await Produto.countDocuments({ supermercado: config.slug, disponivel: true });
+    const coletaIncompleta = disponiveisAntes >= MINIMO_PARA_CONFERIR_COLETA
+        && idsNoScraper.length < disponiveisAntes * FRACAO_MINIMA_DA_COLETA;
+
+    if (coletaIncompleta) {
+        console.warn(
+            `[${config.slug}] Coleta incompleta: ${idsNoScraper.length} produtos contra ${disponiveisAntes} disponiveis antes. ` +
+            'Os produtos que nao vieram nesta coleta foram mantidos como estavam.'
+        );
+    }
+
+    const indisponiveis = coletaIncompleta ? { modifiedCount: 0 } : await Produto.updateMany(
         {
             supermercado: config.slug,
             produtoId: { $nin: idsNoScraper },
@@ -298,6 +317,7 @@ async function importarProdutosDoJson(supermercadoSlug, options = {}) {
         atualizados,
         precosMudaram,
         indisponiveis: indisponiveis.modifiedCount,
+        coletaIncompleta,
         erros
     };
 }

@@ -25,17 +25,16 @@ test.after(async () => {
 const SEM_ESPERA = { delay: { pageDelayMs: 0, pageDelayJitterMs: 0 } };
 const porId = produtos => Object.fromEntries(produtos.map(produto => [produto.id, produto]));
 
-test('VipCommerce: descobre departamentos sem repetir e com o nome certo', async () => {
+test('VipCommerce: espera o menu de departamentos e ignora os banners de campanha', async () => {
     const mercado = { slug: 'teste', url: `${servidor.url}/vip`, enderecoLoja: 'Av. João Pinheiro, 1460' };
     const departamentos = await vipcommerce.descobrirDepartamentos(driver, mercado);
 
+    // Os banners ("TERÇA E QUARTA VERDE SITE", "happy1") carregam antes do menu; se fossem usados,
+    // a coleta pegaria so parte dos departamentos e com nomes de campanha (bug de 14/10/2026).
     assert.deepEqual(departamentos, [
-        // Nome vindo do aria-label "Ir para departamento de ...".
         { slug: 'hortifruti', nome: 'Hortifruti', url: `${servidor.url}/vip/departamentos/hortifruti` },
-        // So a primeira linha do texto do link (a segunda e a contagem de produtos).
-        { slug: 'bebidas-alcoolicas', nome: 'Bebidas Alcoólicas', url: `${servidor.url}/vip/departamentos/bebidas-alcoolicas` },
-        // Link sem texto: o nome e montado a partir do slug.
-        { slug: 'frios-e-laticinios', nome: 'Frios e laticinios', url: `${servidor.url}/vip/departamentos/frios-e-laticinios` }
+        { slug: 'bebidas', nome: 'Bebidas', url: `${servidor.url}/vip/departamentos/bebidas` },
+        { slug: 'frios-e-laticinios', nome: 'Frios e laticínios', url: `${servidor.url}/vip/departamentos/frios-e-laticinios` }
     ]);
 });
 

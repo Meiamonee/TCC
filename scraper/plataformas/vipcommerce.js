@@ -14,18 +14,31 @@ function nomeDoSlug(slug) {
     return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
+// Links do menu "Departamentos" tem aria-label "Ir para departamento de <nome>". A pagina
+// inicial tambem tem banners que apontam para departamentos (ex.: "QUINTA DA CARNE SITE" ->
+// /departamentos/carnes), e eles podem carregar antes do menu.
+const MENU_DEPARTAMENTOS = 'a[href*="/departamentos/"][aria-label^="Ir para departamento"]';
+const ESPERA_MENU_MS = 30000;
+
 async function descobrirDepartamentos(driver, mercado) {
     await driver.get(mercado.url);
     await driver.wait(until.elementLocated(By.css('a[href*="/departamentos/"]')), 30000);
     await confirmarUnidade(driver, mercado);
 
-    const links = await driver.executeScript(() => {
-        return Array.from(document.querySelectorAll('a[href*="/departamentos/"]')).map(link => ({
+    // Espera o menu de departamentos; so usa os outros links se a loja nao tiver esse menu.
+    const temMenu = await driver.wait(until.elementLocated(By.css(MENU_DEPARTAMENTOS)), ESPERA_MENU_MS)
+        .then(() => true, () => false);
+    if (!temMenu) {
+        console.log(`[${mercado.slug}] Menu de departamentos nao encontrado; usando os links da pagina.`);
+    }
+
+    const links = await driver.executeScript((seletor) => {
+        return Array.from(document.querySelectorAll(seletor)).map(link => ({
             href: link.getAttribute('href'),
             texto: (link.innerText || '').trim(),
             rotulo: link.getAttribute('aria-label') || link.getAttribute('title') || ''
         }));
-    });
+    }, temMenu ? MENU_DEPARTAMENTOS : 'a[href*="/departamentos/"]');
 
     const departamentos = new Map();
 

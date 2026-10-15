@@ -2,16 +2,28 @@
 <html lang="pt-BR">
 <head><meta charset="utf-8"><title>Inicio VipCommerce</title></head>
 <body>
-<!-- Pagina inicial simplificada de uma loja VipCommerce (fixture de teste). -->
+<!-- Pagina inicial simplificada de uma loja VipCommerce (fixture de teste), baseada no SuperVale em 15/10/2026. -->
 <header>
     <span>Retirar em:</span> <span>Av. João Pinheiro, 1460 - Centro, Poços de Caldas</span>
 </header>
-<nav>
-    <a href="/departamentos/hortifruti" aria-label="Ir para departamento de Hortifruti"><img src="" alt=""></a>
-    <a href="/departamentos/hortifruti?page=2">Hortifruti</a>
-    <a href="/departamentos/bebidas-alcoolicas"><span>Bebidas Alcoólicas</span><br><small>12 produtos</small></a>
-    <a href="/departamentos/frios-e-laticinios"></a>
+<!-- Banners de campanha: carregam primeiro e tambem apontam para departamentos. -->
+<section>
+    <a href="/departamentos/hortifruti" aria-label="TERÇA E QUARTA VERDE SITE"><img src="" alt=""></a>
+    <a href="/departamentos/bebidas/cerveja" aria-label="happy1"><img src="" alt=""></a>
     <a href="/produto/123/arroz">Arroz em destaque</a>
-</nav>
+</section>
+<nav id="menu"></nav>
+<script>
+    // Como no site real, o menu "Departamentos" aparece depois dos banners.
+    setTimeout(() => {
+        document.getElementById('menu').innerHTML = `
+            <ul>
+                <li><a href="/departamentos/hortifruti" aria-label="Ir para departamento de Hortifruti">Hortifruti</a></li>
+                <li><a href="/departamentos/bebidas" aria-label="Ir para departamento de Bebidas">Bebidas</a></li>
+                <li><a href="/departamentos/frios-e-laticinios" aria-label="Ir para departamento de Frios e laticínios">Frios e laticínios</a></li>
+                <li><a href="/departamentos/bebidas?page=2" aria-label="Ir para departamento de Bebidas">Bebidas</a></li>
+            </ul>`;
+    }, 600);
+</script>
 </body>
 </html>
