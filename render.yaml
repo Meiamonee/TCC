@@ -27,7 +27,7 @@ services:
       - key: TRUST_PROXY
         value: "1"
       - key: MOSTRAR_IP
-        value: "true"
+        value: "false"
       # Preenchidos no painel do Render (nao ficam no git).
       - key: MONGODB_URI
         sync: false

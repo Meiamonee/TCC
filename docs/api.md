@@ -119,7 +119,7 @@ A rota fica desligada (`503`) quando `ADMIN_TOKEN` não está definido ou tem me
 
 | Medida | Como funciona |
 | --- | --- |
-| Limite de requisições por IP | 300 consultas/min no geral; 30 cotações/min; 5 tentativas/min na rota administrativa. Passou do limite, a resposta é `429` com o cabeçalho `Retry-After`. `/health` fica fora do limite. Atrás de proxy, `TRUST_PROXY` diz quantos proxies confiar para achar o IP real. |
+| Limite de requisições por IP | 300 consultas/min no geral; 30 cotações/min; 5 tentativas/min na rota administrativa. Passou do limite, a resposta é `429` com o cabeçalho `Retry-After`. `/health` fica fora do limite. No Render, o IP do visitante vem do cabeçalho `CF-Connecting-IP` (`CLIENT_IP_HEADER`), que a Cloudflare preenche e o cliente não consegue falsificar; um IP falso no `X-Forwarded-For` é ignorado. |
 | Cabeçalhos de segurança (helmet) | `Content-Security-Policy: default-src 'none'`, HSTS, `X-Content-Type-Options: nosniff`, proibição de iframe; sem `X-Powered-By`. |
 | CORS | Só o endereço do site (`CORS_ORIGIN`) pode chamar a API pelo navegador. |
 | Validação das entradas | Parâmetros desconhecidos, repetidos ou fora da faixa geram `400` com uma mensagem clara. A busca é tratada como texto: caracteres especiais não viram expressão regular. Corpo das requisições limitado a 20 KB (`413`). |

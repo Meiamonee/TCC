@@ -61,7 +61,7 @@ Coleta de 14/10/2026:
 
 | Módulo | Testes | Como |
 | --- | ---: | --- |
-| Backend | 28 | `node:test`; integração com MongoDB no banco `SuperPreco_test` |
+| Backend | 50 | `node:test`; integração com MongoDB no banco `SuperPreco_test` e testes de segurança sem banco |
 | Scraper | 16 | `node:test` + Selenium; o Chrome headless abre páginas de exemplo |
 
 - **Testes do scraper**:
@@ -70,12 +70,30 @@ Coleta de 14/10/2026:
 - **Bug encontrado pelos testes**:
   - No VipCommerce, produtos a peso em embalagem fechada vinham com o preço atual por kg e o preço anterior da embalagem inteira.
   - Exemplo: abóbora de 2,8 kg aparecia como "de R$ 13,97 por R$ 3,99/kg", um desconto aparente de 71%, quando o correto é de R$ 4,99/kg para R$ 3,99/kg (20%).
-  - Corrigido convertendo também o preço anterior para kg.
+  - Primeira correção: converter o preço anterior para kg. Depois foi substituída pela solução definitiva do item abaixo: guardar o preço cobrado pela embalagem (R$ 11,17 por 2,8 kg, "de" R$ 13,97).
 
 - **Preço da embalagem × preço por kg** (encontrado comparando com o site):
   - Produtos pesados em bandeja no VipCommerce mostram dois preços: o cobrado pela embalagem ("R$ 48,93 /700g") e o preço por kg só como informação ("R$ 69,90/kg").
   - O scraper guardava o preço por kg como se fosse o preço do produto. Afetava cerca de 560 produtos (SuperVale 120, Vila Sul 339, San Michel 100), quase todos carnes e frios.
   - Correção: o extrator lê os campos `data-cy` do card ("preco", "unidade", "preco-antigo") e guarda o preço cobrado e o tamanho da embalagem. O backend calcula o preço por kg a partir do peso informado pelo site.
+
+## Segurança da API (Etapa 3)
+
+Medidas, testadas em `backend/test/seguranca.test.js` e documentadas em `docs/api.md`:
+
+- **Limite de requisições por IP** (express-rate-limit):
+  - 300 consultas/min no geral, 30 cotações de lista/min e 5 tentativas/min na rota administrativa.
+  - Acima do limite, a resposta é `429` com `Retry-After`.
+  - No Render o visitante é identificado pelo `CF-Connecting-IP` da Cloudflare. O número de saltos no `X-Forwarded-For` variava entre requisições, e com um valor fixo de `TRUST_PROXY` um IP falso enviado pelo cliente chegou a ser aceito. Na versão final, foi conferido que um IP falso no `X-Forwarded-For` é ignorado e que a Cloudflare recusa um `CF-Connecting-IP` falso.
+- **Cabeçalhos de segurança** (helmet): CSP `default-src 'none'`, HSTS, `nosniff` e bloqueio de iframe; o servidor não anuncia o Express.
+- **Validação das entradas**:
+  - supermercado e ordenação desconhecidos geram `400`;
+  - busca de até 100 caracteres, parâmetros repetidos recusados e página máxima;
+  - lista de compras com até 100 itens e quantidade entre 0 e 999;
+  - corpo das requisições limitado a 20 KB.
+  - Os testes acharam um erro: um item `null` na lista derrubava a cotação com erro 500.
+- **Rota administrativa**: token de no mínimo 16 caracteres, comparado em tempo constante.
+- **Dependências**: o `npm audit` apontou 3 vulnerabilidades no backend (proxy-addr crítica, mongoose alta, qs moderada), corrigidas com `npm audit fix`. Backend, scraper e as dependências de produção do frontend ficaram com 0 vulnerabilidades. Restam 7 em ferramentas de build do frontend (Tailwind 3), que não vão para o site; corrigi-las exigiria migrar para o Tailwind 4.
 
 ## Tempo de coleta
 
