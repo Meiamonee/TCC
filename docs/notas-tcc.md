@@ -100,6 +100,17 @@ Decisões:
 - **Repositório público**: necessário para ter minutos ilimitados de Actions. O histórico foi verificado e não continha segredos; a conexão com o banco fica em secrets do GitHub e do Render.
 - **node-cron**: continua sendo o agendador quando a API roda em servidor próprio. No Render fica desligado (`SCHEDULER_ENABLED=false`).
 
+Primeira coleta completa no GitHub Actions (15/10/2026), com os 4 mercados em paralelo, pausa de 0,5 s entre páginas e todos com sucesso:
+
+| Mercado | Duração | Produtos |
+| --- | --- | ---: |
+| SuperVale | 20 min | 3.287 |
+| San Michel | 29 min | 5.010 |
+| Pedrilho | 45 min | 9.516 |
+| Vila Sul | 62 min | 9.013 |
+
+O total foi de cerca de 1 hora, contra cerca de 1h30 da coleta sequencial no PC. O Pedrilho, que tem proteção contra robôs (Cloudflare), não bloqueou as máquinas do GitHub.
+
 Problemas resolvidos na implantação:
 - No Windows, o Node não resolvia o endereço `mongodb+srv://` (`querySrv ECONNREFUSED`). Foi criada a opção `DNS_SERVERS`.
 - O SuperVale passou a ter banners de campanha que carregam antes do menu. O scraper pegou só 6 "departamentos" e o importador marcou 2.146 produtos como indisponíveis. A correção foi esperar o menu "Ir para departamento de ..." e não marcar indisponíveis quando a coleta traz menos de 60% dos produtos.
