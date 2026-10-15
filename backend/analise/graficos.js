@@ -39,15 +39,20 @@ function escalaBonita(maximo) {
  */
 // semTitulo: versao para documentos, em que o titulo e a fonte ficam na legenda da figura.
 function graficoDeBarras({ titulo, subtitulo = '', itens, formatar = valor => String(valor), fonte = '', semTitulo = false }) {
-    const largura = 760;
-    const margemEsquerda = 190;
-    const margemDireita = 90;
-    const alturaBarra = 22;
-    const espaco = 12;
-    const topo = semTitulo ? 18 : subtitulo ? 74 : 54;
+    // Nos documentos a figura e reduzida para caber na pagina: letras e barras maiores para
+    // continuarem legiveis depois da reducao.
+    const doc = semTitulo;
+    const largura = doc ? 700 : 760;
+    const margemEsquerda = doc ? 250 : 190;
+    const margemDireita = doc ? 175 : 90;
+    const alturaBarra = doc ? 32 : 22;
+    const espaco = doc ? 16 : 12;
+    const letra = doc ? 18 : 13;
+    const letraEixo = doc ? 17 : 11;
+    const topo = doc ? 18 : subtitulo ? 74 : 54;
     const areaLargura = largura - margemEsquerda - margemDireita;
     const areaAltura = itens.length * (alturaBarra + espaco) - espaco;
-    const altura = topo + areaAltura + 44 + (fonte && !semTitulo ? 18 : 0);
+    const altura = topo + areaAltura + (doc ? 50 : 44) + (fonte && !semTitulo ? 18 : 0);
 
     const { topo: maximo, passo } = escalaBonita(Math.max(...itens.map(item => item.valor), 0));
     const xDe = valor => margemEsquerda + (valor / maximo) * areaLargura;
@@ -55,8 +60,8 @@ function graficoDeBarras({ titulo, subtitulo = '', itens, formatar = valor => St
     const grade = [];
     for (let valor = 0; valor <= maximo + 1e-9; valor += passo) {
         const x = xDe(valor);
-        grade.push(`<line x1="${x}" y1="${topo - 6}" x2="${x}" y2="${topo + areaAltura + 4}" stroke="${GRADE}" stroke-width="1"/>`);
-        grade.push(`<text x="${x}" y="${topo + areaAltura + 20}" font-size="11" fill="${TINTA_SECUNDARIA}" text-anchor="middle">${escapar(formatar(valor))}</text>`);
+        grade.push(`<line x1="${x}" y1="${topo - 6}" x2="${x}" y2="${topo + areaAltura + 4}" stroke="${doc ? '#c9bfab' : GRADE}" stroke-width="${doc ? 1.5 : 1}"/>`);
+        grade.push(`<text x="${x}" y="${topo + areaAltura + (doc ? 26 : 20)}" font-size="${letraEixo}" fill="${doc ? TINTA : TINTA_SECUNDARIA}" text-anchor="middle">${escapar(formatar(valor))}</text>`);
     }
 
     const barras = itens.map((item, indice) => {
@@ -64,9 +69,9 @@ function graficoDeBarras({ titulo, subtitulo = '', itens, formatar = valor => St
         const fim = xDe(item.valor);
         // 2px de folga entre a barra e o eixo vertical (espaco de superficie).
         return [
-            `<text x="${margemEsquerda - 10}" y="${y + alturaBarra / 2 + 4}" font-size="13" fill="${TINTA}" text-anchor="end">${escapar(item.rotulo)}</text>`,
+            `<text x="${margemEsquerda - 10}" y="${y + alturaBarra / 2 + letra * 0.35}" font-size="${letra}" fill="${TINTA}" text-anchor="end">${escapar(item.rotulo)}</text>`,
             barra(margemEsquerda + 2, y, Math.max(fim - margemEsquerda - 2, 0), alturaBarra, item.destaque ? COR_DESTAQUE : COR_BARRA),
-            `<text x="${fim + 8}" y="${y + alturaBarra / 2 + 4}" font-size="13" font-weight="600" fill="${TINTA}">${escapar(item.texto ?? formatar(item.valor))}</text>`
+            `<text x="${fim + 8}" y="${y + alturaBarra / 2 + letra * 0.35}" font-size="${letra}" font-weight="600" fill="${TINTA}">${escapar(item.texto ?? formatar(item.valor))}</text>`
         ].join('\n  ');
     });
 
