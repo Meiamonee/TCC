@@ -1,5 +1,8 @@
 require('dotenv').config({ quiet: true });
 const mongoose = require('mongoose');
+const configurarDns = require('./dns');
+
+configurarDns();
 
 const DEFAULT_MONGODB_URI = 'mongodb://localhost:27017/Mercados';
 

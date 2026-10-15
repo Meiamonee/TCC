@@ -1,5 +1,6 @@
 require('dotenv').config({ quiet: true });
 const mongoose = require('mongoose');
+require('../config/dns')();
 
 // Copia o banco inteiro (produtos, historico de precos, categorias e supermercados) de um
 // MongoDB para outro, com os indices. Usado para levar o banco local para o MongoDB Atlas
