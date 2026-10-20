@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { criarNavegador } = require('../lib/navegador');
+const { criarNavegador, recuperarAbaTravada } = require('../lib/navegador');
 const { confirmarUnidade } = require('../lib/unidade');
 const vipcommerce = require('../plataformas/vipcommerce');
 const ibecom = require('../plataformas/ibecom');
@@ -136,4 +136,20 @@ test('a coleta e abortada quando a pagina mostra outra unidade da rede', async (
         confirmarUnidade(driver, mercado, { tempoMaximoMs: 500 }),
         /Unidade inesperada/
     );
+});
+
+test('Quando a aba do Chrome trava, a coleta abre uma aba nova e continua', async () => {
+    // chrome://crash derruba a aba de proposito, como aconteceu na coleta da Vila Sul.
+    const erro = await driver.get('chrome://crash').then(() => driver.getTitle()).then(() => null, error => error);
+    assert.ok(erro, 'a aba deveria ter travado');
+    assert.equal(await recuperarAbaTravada(driver, erro), true);
+
+    await driver.get(`${servidor.url}/vip`);
+    assert.match(await driver.getCurrentUrl(), /\/vip/);
+    // a aba da coleta e uma nova reserva para a proxima vez
+    assert.equal((await driver.getAllWindowHandles()).length, 2);
+});
+
+test('recuperarAbaTravada ignora erros que nao sao de aba travada', async () => {
+    assert.equal(await recuperarAbaTravada(driver, new Error('timeout')), false);
 });

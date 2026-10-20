@@ -1,5 +1,5 @@
 const { By, until } = require('selenium-webdriver');
-const { aguardarEntrePaginas, comTentativas, sleep } = require('../lib/navegador');
+const { aguardarEntrePaginas, comTentativas, recuperarAbaTravada, sleep } = require('../lib/navegador');
 const { confirmarUnidade } = require('../lib/unidade');
 
 // Extrator para lojas da plataforma VipCommerce (SuperVale, Vila Sul, San Michel).
@@ -126,18 +126,24 @@ async function raspar(driver, mercado, opcoes) {
         while (pagina <= MAX_PAGINAS_POR_DEPARTAMENTO) {
             const url = `${departamento.url}?page=${pagina}`;
 
+            let encontrados;
             try {
-                await comTentativas(`${departamento.nome} p.${pagina}`, async () => {
-                    await driver.get(url);
-                    await driver.wait(until.elementLocated(By.css(CARD_SELECTOR)), 20000);
+                encontrados = await comTentativas(`${departamento.nome} p.${pagina}`, async () => {
+                    try {
+                        await driver.get(url);
+                        await driver.wait(until.elementLocated(By.css(CARD_SELECTOR)), 20000);
+                        await sleep(1500);
+                        return await extrairProdutosDaPagina(driver);
+                    } catch (error) {
+                        await recuperarAbaTravada(driver, error);
+                        throw error;
+                    }
                 });
-                await sleep(1500);
             } catch (_error) {
                 console.log(`[${mercado.slug}] ${departamento.nome}: pagina ${pagina} nao carregou; encerrando o departamento.`);
                 break;
             }
 
-            const encontrados = await extrairProdutosDaPagina(driver);
             // A ordenacao do site pode repetir produtos entre paginas vizinhas, entao so
             // consideramos o fim depois de paginas seguidas sem nenhum produto novo.
             const novos = encontrados.filter(produto => !vistosNoDepartamento.has(produto.id));

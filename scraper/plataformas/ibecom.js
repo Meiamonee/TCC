@@ -1,5 +1,5 @@
 const { By, until } = require('selenium-webdriver');
-const { aguardarEntrePaginas, comTentativas, sleep } = require('../lib/navegador');
+const { aguardarEntrePaginas, comTentativas, recuperarAbaTravada, sleep } = require('../lib/navegador');
 const { confirmarUnidade } = require('../lib/unidade');
 
 // Extrator para lojas da plataforma iBecom (Pedrilho).
@@ -14,8 +14,13 @@ const ROLAGENS_SEM_NOVIDADE_PARA_PARAR = 3;
 async function abrirComProdutos(driver, url) {
     try {
         await comTentativas(url, async () => {
-            await driver.get(url);
-            await driver.wait(until.elementLocated(By.css(CARD_SELECTOR)), 30000);
+            try {
+                await driver.get(url);
+                await driver.wait(until.elementLocated(By.css(CARD_SELECTOR)), 30000);
+            } catch (error) {
+                await recuperarAbaTravada(driver, error);
+                throw error;
+            }
         });
         await sleep(1500);
         return true;

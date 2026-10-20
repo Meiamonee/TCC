@@ -104,13 +104,52 @@ async function criarNavegador(options = {}) {
         builder = builder.setChromeService(new chrome.ServiceBuilder(chromeDriverPath));
     }
 
-    return builder.build();
+    const driver = await builder.build();
+    await abrirAbaReserva(driver);
+    return driver;
+}
+
+// Quando a aba do Chrome trava ("tab crashed"), todo comando seguinte nela falha, inclusive
+// abrir uma aba nova a partir dela. Por isso o navegador ja nasce com uma aba reserva em branco:
+// se a aba da coleta travar, passamos para a reserva, fechamos a travada e abrimos outra reserva.
+const ABA_TRAVADA = /tab crashed|target crashed|page crash/i;
+
+async function abrirAbaReserva(driver) {
+    const atual = await driver.getWindowHandle();
+    await driver.switchTo().newWindow('tab');
+    await driver.switchTo().window(atual);
+}
+
+// Devolve true se a aba estava travada e a coleta pode continuar na aba nova.
+async function recuperarAbaTravada(driver, error) {
+    if (!ABA_TRAVADA.test(error?.message || '')) {
+        return false;
+    }
+
+    console.log('  A aba do navegador travou; continuando em uma aba nova.');
+    let viva = null;
+    for (const aba of await driver.getAllWindowHandles()) {
+        await driver.switchTo().window(aba);
+        try {
+            await driver.getTitle();
+            viva = viva || aba;
+        } catch (_erro) {
+            await driver.close().catch(() => {});
+        }
+    }
+    if (!viva) {
+        throw error;
+    }
+    await driver.switchTo().window(viva);
+    await abrirAbaReserva(driver);
+    return true;
 }
 
 module.exports = {
     aguardarEntrePaginas,
     comTentativas,
     criarNavegador,
+    recuperarAbaTravada,
     getDelayConfig,
     sleep
 };
