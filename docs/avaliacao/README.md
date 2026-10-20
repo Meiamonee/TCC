@@ -45,6 +45,15 @@ Requisitos definidos na seção 3.1 (Levantamento de Requisitos) e nos objetivos
 | Scraper: extratores no Chrome com páginas de exemplo, configuração e utilitários | 16 |
 | **Total** (`npm test`) | **78** |
 
+## Formato escolhido: questionário rápido no Google Forms
+
+Os participantes não vão comparar preços site por site nem montar listas, então a avaliação aplicada é um questionário de cerca de 5 minutos, criado por `criar-formulario.gs` (cole em https://script.google.com/home/projects/create e execute `criarFormulario`). Nele a pessoa:
+- faz duas tarefas curtas no SuperPreço (achar o mercado mais barato de um café e o da cesta básica), informando quanto tempo levou;
+- estima quanto tempo levaria sem o SuperPreço;
+- responde ao SUS (seção 3) e a duas afirmações sobre economia e confiança nos preços.
+
+O teste cronometrado da seção 2 e a ficha impressa (`ficha-teste-usuarios.docx`) ficam como alternativa, caso haja participantes presenciais.
+
 ## 2. Teste de tempo: pesquisa manual × SuperPreço
 
 **Objetivo:** verificar o resultado esperado de "reduzir o tempo médio gasto em pesquisas manuais de preços".
@@ -53,16 +62,20 @@ Requisitos definidos na seção 3.1 (Levantamento de Requisitos) e nos objetivos
 
 **Tarefa:** com a lista abaixo, descobrir **em qual dos 4 supermercados a lista sai mais barata e quanto custa**.
 
-1. Arroz tipo 1, 5 kg
-2. Feijão carioca, 1 kg
-3. Açúcar refinado, 1 kg
-4. Café, 500 g
-5. Óleo de soja, 900 ml
-6. Leite integral, 1 L
-7. Macarrão espaguete, 500 g
-8. Farinha de trigo, 1 kg
-9. Sal refinado, 1 kg
-10. Margarina, 500 g
+1. Arroz Super Ecco tipo 1, 5 kg
+2. Feijão carioca Du Irineu, 1 kg
+3. Açúcar refinado União, 1 kg
+4. Café 3 Corações tradicional, 500 g
+5. Óleo de soja Liza, 900 ml
+6. Leite integral Itambé, 1 L
+7. Macarrão espaguete nº 8 Galo, 500 g
+8. Farinha de trigo Renata tradicional, 1 kg
+9. Sal refinado Cisne, 1 kg
+10. Margarina Doriana com sal, 500 g
+
+Os itens têm marca e tamanho definidos e existem nos 4 mercados, para que a tarefa tenha uma resposta certa. Como os preços mudam a cada coleta, rode `node docs/avaliacao/gabarito.js` no dia do teste para saber qual mercado é o mais barato.
+
+**Ficha impressa:** `ficha-teste-usuarios.docx` (gerada por `node docs/tcc/gerador/gerar-ficha.js`) traz o termo de participação, o perfil, a tarefa, o SUS, perguntas abertas e a folha do avaliador.
 
 **Como fazer:**
 - **Manual:** a pessoa usa só os sites dos mercados (supervalesupermercados.com.br, vilasul.com.br, supersanmichel.com.br, pedrilho.com.br) e anota os preços, em papel ou calculadora.
