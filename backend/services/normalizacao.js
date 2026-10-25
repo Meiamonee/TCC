@@ -52,7 +52,9 @@ const VARIANTES = new Set([
     // Cores e tipos de grao: feijao preto nao substitui carioca; azeitona verde nao substitui preta.
     'preto', 'preta', 'vermelho', 'vermelha', 'verde', 'rajado', 'fradinho', 'jalo', 'bolinha', 'mulatinho',
     // Tipos de sal (encontrado na analise de dados): sal grosso/para churrasco nao e o refinado.
-    'grosso', 'churrasco'
+    'grosso', 'churrasco',
+    // Teste da cesta basica: carne suina nao substitui bovina, banana nanica nao substitui prata.
+    'bovina', 'bovino', 'suina', 'suino', 'prata', 'nanica', 'grape'
 ]);
 
 const UNIDADES_MEDIDA = [
@@ -87,6 +89,12 @@ function normalizarTexto(texto) {
         .replace(/\b(sem|zero|0%?)\s*alcool\b/g, ' semalcool ')
         .replace(/\b(sem|zero)\s*gluten\b/g, ' semgluten ')
         .replace(/\bsemi\s*desnatado\b/g, ' semidesnatado ')
+        // Alimentos de nome composto que sao outro produto: batata doce nao substitui batata
+        // inglesa, e pao de forma ou de queijo nao substitui pao frances (achado no teste da cesta).
+        .replace(/\bbatatas?\s+doces?\b/g, ' batatadoce ')
+        .replace(/\bp(?:ao|aes)\s+(?:de\s+)?forma\b/g, ' paoforma ')
+        .replace(/\bp(?:ao|aes)\s+(?:de\s+)?queijo\b/g, ' paoqueijo ')
+        .replace(/\bp(?:ao|aes)\s+frances(?:es)?\b/g, ' paofrances ')
         .replace(/(\d),(\d)/g, '$1.$2')
         .replace(/[^a-z0-9.%\s]/g, ' ')
         .replace(/\.(?!\d)|(?<!\d)\./g, ' ')
@@ -177,6 +185,12 @@ function gerarTokens(nome) {
         .filter(palavra => palavra.length > 1 && !ehTokenDeQuantidade(palavra) && !PALAVRAS_IGNORADAS.has(palavra));
 
     const variantes = new Set(palavras.filter(palavra => VARIANTES.has(palavra)));
+
+    // Carne moida nao e substituida por um corte inteiro (figado, costela). So vale para carne:
+    // no cafe, "moido" aparece em uns nomes e em outros nao, para o mesmo produto.
+    if (palavras.includes('carne') && (palavras.includes('moida') || palavras.includes('moido'))) {
+        variantes.add('moida');
+    }
 
     // "Cerveja ... Zero" e cerveja sem alcool, nao sem acucar.
     if (palavras.includes('cerveja') && variantes.delete('zero')) {

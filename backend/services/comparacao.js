@@ -212,9 +212,12 @@ function palavrasDeTipo(produto, stats) {
     const tokens = produto.tokens || [];
     const tamanhoDoNucleo = token => stats.porNucleo.get(token)?.total || 0;
 
-    // O nucleo e a palavra do nome que mais aparece como primeira palavra no catalogo,
-    // o que cobre nomes em outra ordem ("Puro Malte Pilsen Cerveja 350ml").
-    const nucleo = [...tokens].sort((a, b) => tamanhoDoNucleo(b) - tamanhoDoNucleo(a))[0];
+    // O nucleo e a primeira palavra do nome quando ela abre nomes no catalogo ("Manteiga ... com
+    // Sal" e manteiga, nao sal). Senao, a palavra que mais abre nomes, o que cobre nomes em outra
+    // ordem ("Puro Malte Pilsen Cerveja 350ml").
+    const nucleo = tamanhoDoNucleo(tokens[0]) >= MINIMO_PRODUTOS_NUCLEO
+        ? tokens[0]
+        : [...tokens].sort((a, b) => tamanhoDoNucleo(b) - tamanhoDoNucleo(a))[0];
     if (!nucleo || tamanhoDoNucleo(nucleo) < MINIMO_PRODUTOS_NUCLEO) {
         return [];
     }
@@ -246,6 +249,9 @@ function saoSimilares(original, candidato, stats) {
     const [nucleo, ...qualificadores] = palavrasDeTipo(original, stats);
     const tokensCandidato = new Set(candidato.tokens || []);
     if (!nucleo || !tokensCandidato.has(nucleo)) return false;
+    // O candidato tem que ser do mesmo tipo, nao so citar a palavra: "Margarina Manteiga com Sal"
+    // e margarina, nao manteiga.
+    if (palavrasDeTipo(candidato, stats)[0] !== nucleo) return false;
 
     if (qualificadores.every(token => tokensCandidato.has(token))) return true;
 

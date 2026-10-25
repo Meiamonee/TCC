@@ -87,21 +87,20 @@ A resposta tem o formato `{ data: [produtos], total, page, limit, totalPages }`.
 Exemplo de requisição:
 
 ```json
-{ "itens": [ { "id": "6acf131910fd0b23fe2d2d98", "quantidade": 2, "aceitaSimilar": true } ] }
+{ "itens": [ { "id": "6acf131910fd0b23fe2d2d98", "quantidade": 2 } ] }
 ```
 
 Regras dos itens:
 - `id` é obrigatório.
 - `quantidade` vai de mais de 0 até 999; o padrão é 1.
-- `aceitaSimilar` (padrão `true`) permite trocar por outra marca quando o mercado não tem o item.
 - A lista pode ter no máximo 100 itens.
 - Ids que não existem mais são ignorados.
 
-A resposta mostra, por mercado:
-- o total e quanto sai só com itens iguais;
-- as trocas feitas e os itens que faltaram;
-- o melhor mercado;
-- a compra dividida, com o mais barato de cada item.
+A resposta mostra:
+- por mercado, o total somando **só o mesmo produto** (marca, versão e tamanho), os produtos usados em cada item e os itens que faltaram;
+- o melhor mercado (mais itens encontrados e, entre eles, o menor total);
+- a compra dividida, com cada item no mercado onde o mesmo produto é mais barato;
+- `similares`: para cada item que não existe em todos os mercados, o similar mais barato de outra marca em cada mercado que não tem o item. Os similares não entram em nenhum total.
 
 ### Coleta e saúde
 

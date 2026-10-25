@@ -172,7 +172,7 @@ test('API e banco de dados', async (t) => {
         assert.equal(sabonete.corpo.total, 0);
     });
 
-    await t.test('sugere similares de outra marca e usa substitutos na lista', async () => {
+    await t.test('sugere similares de outra marca e mostra na lista separados do total', async () => {
         const sanmichel = [
             { id: '20', name: 'Feijão Carioca San Michel 1kg', price: 'R$ 5,49', unit: 'un', department: 'Mercearia', url: 'https://sanmichel.test/produto/20/feijao' },
             { id: '21', name: 'Feijão Carioca Du Irineu 1kg', price: 'R$ 7,95', unit: 'un', department: 'Mercearia', url: 'https://sanmichel.test/produto/21/feijao' },
@@ -192,20 +192,31 @@ test('API e banco de dados', async (t) => {
         );
         assert.equal(corpo.similares[0].economiaPercentual, 21);
 
-        const comSimilar = await api('/api/lista/cotacao', { method: 'POST', body: JSON.stringify({ itens: [{ id, quantidade: 2 }] }) });
-        const sanMichelCom = comSimilar.corpo.porMercado.find(item => item.supermercado === 'sanmichel');
-        assert.equal(sanMichelCom.encontrados, 1);
-        assert.equal(sanMichelCom.encontradosIguais, 0);
-        assert.equal(sanMichelCom.total, 10.98);
-        assert.equal(sanMichelCom.substituicoes[0].substituto, 'Feijão Carioca San Michel 1kg');
-        assert.equal(comSimilar.corpo.compraDividida.itens[0].tipo, 'similar');
+        // Na lista, o similar nao entra no total: aparece separado, no mercado que nao tem o item.
+        const cotacao = (await api('/api/lista/cotacao', { method: 'POST', body: JSON.stringify({ itens: [{ id, quantidade: 2 }] }) })).corpo;
+        const sanMichel = cotacao.porMercado.find(item => item.supermercado === 'sanmichel');
+        assert.equal(sanMichel.encontrados, 0);
+        assert.equal(sanMichel.total, 0);
+        assert.deepEqual(sanMichel.faltando, ['Feijao Carioca Camil 1kg']);
+        assert.equal(cotacao.compraDividida.itens[0].supermercado, 'supervale', 'a compra dividida so usa o mesmo produto');
 
-        const semSimilar = await api('/api/lista/cotacao', {
-            method: 'POST',
-            body: JSON.stringify({ itens: [{ id, quantidade: 2, aceitaSimilar: false }] })
-        });
-        const sanMichelSem = semSimilar.corpo.porMercado.find(item => item.supermercado === 'sanmichel');
-        assert.equal(sanMichelSem.encontrados, 0, 'sem aceitar outra marca, o San Michel nao tem o item');
+        assert.equal(cotacao.similares.length, 1);
+        const similarSanMichel = cotacao.similares[0].opcoes.find(opcao => opcao.supermercado === 'sanmichel');
+        assert.equal(similarSanMichel.produto.nome, 'Feijão Carioca San Michel 1kg');
+        assert.ok(cotacao.similares[0].faltaEm.includes('sanmichel'));
+        assert.ok(!cotacao.similares[0].faltaEm.includes('supervale'));
+
+        // Lista completa com similares: o San Michel entra com o feijao de outra marca.
+        const completaSanMichel = cotacao.comSimilares.find(item => item.supermercado === 'sanmichel');
+        assert.equal(completaSanMichel.total, 10.98);
+        assert.equal(completaSanMichel.itens[0].tipo, 'similar');
+        assert.equal(cotacao.comSimilares.find(item => item.supermercado === 'supervale').itens[0].tipo, 'igual');
+
+        // Tabela item x mercado: igual, similar ou nada; e a data da coleta de cada mercado.
+        assert.equal(cotacao.itens[0].precos.supervale.tipo, 'igual');
+        assert.equal(cotacao.itens[0].precos.sanmichel.tipo, 'similar');
+        assert.equal(cotacao.itens[0].precos.sanmichel.subtotal, 10.98);
+        assert.ok(cotacao.porMercado.find(item => item.supermercado === 'supervale').dataColeta);
     });
 
     // Daqui em diante: SuperVale (coca, heineken, feijao camil; sabonete indisponivel),

@@ -279,7 +279,7 @@ async function main() {
     const itensLista = LISTA_EXEMPLO
         .map(termo => ({ termo, produto: escolherProdutoDaLista(termo, produtos, equivalentes, Produto.normalizarNome) }))
         .filter(item => item.produto);
-    const cotacao = await cotarLista(itensLista.map(item => ({ id: String(item.produto._id), quantidade: 1, aceitaSimilar: true })));
+    const cotacao = await cotarLista(itensLista.map(item => ({ id: String(item.produto._id), quantidade: 1 })));
 
     // 4. Historico de precos
     const registros = await HistoricoPreco.find({ data: { $gte: INICIO_HISTORICO_CONFIAVEL } }).select('produto supermercado preco data -_id').lean();
@@ -507,7 +507,7 @@ ${tabela(['Supermercado', 'Produtos', 'Mesmo produto em outro mercado', 'Mesmo o
 
 - **Mesmo produto:** só ${porcento(cobertura.geral.percentualEquivalente)} dos produtos aparecem em pelo menos um outro mercado com a mesma marca, versão e tamanho.
 - **Com similares:** contando produtos parecidos de outra marca, ${porcento(cobertura.geral.percentualEquivalenteOuSimilar)} passam a ter com o que comparar. Os similares têm o mesmo tipo e departamento e tamanho até 25% diferente, comparados por kg/L/un.
-- **Por que isso importa:** a diferença justifica a funcionalidade de similares e de substitutos na lista de compras.
+- **Por que isso importa:** a diferença justifica a funcionalidade de similares, que na lista de compras aparecem separados dos totais.
 
 ${fCobertura}
 
@@ -547,8 +547,8 @@ ${fCesta}
 
 ${tabela(['Item procurado', 'Produto', 'Mercado'], d.lista.itens.map(item => [item.termo, item.produto, nomeDe(item.supermercado)]))}
 
-${tabela(['Supermercado', 'Total', 'Só itens iguais', 'Trocas por similar', 'Itens faltando'],
-        [...d.lista.cotacao.porMercado].sort((a, b) => a.total - b.total).map(m => [nomeDe(m.supermercado), reais(m.total), reais(m.totalIguais), String(m.substituicoes.length), String(m.faltando.length)]))}
+${tabela(['Supermercado', 'Total (só produtos iguais)', 'Itens encontrados', 'Itens faltando'],
+        [...d.lista.cotacao.porMercado].sort((a, b) => a.total - b.total).map(m => [nomeDe(m.supermercado), reais(m.total), String(m.encontrados), String(m.faltando.length)]))}
 
 - **Melhor mercado:** ${melhorLista ? `${nomeDe(melhorLista.supermercado)}, com ${reais(melhorLista.total)}` : '—'}.
 - **Mais caro com a lista completa:** ${piorLista ? `${nomeDe(piorLista.supermercado)}, com ${reais(piorLista.total)}. A diferença é de ${reais(piorLista.total - (melhorLista?.total || 0))} (${porcento(arredondar(((piorLista.total - melhorLista.total) / melhorLista.total) * 100, 1))})` : '—'}.

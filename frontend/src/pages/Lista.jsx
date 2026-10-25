@@ -1,20 +1,20 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Minus, Plus, Receipt, Split, Trash2, Trophy } from 'lucide-react';
+import { Minus, Plus, Receipt, Replace, Split, Table2, Trash2, Trophy } from 'lucide-react';
 import { useApp } from '../AppContext';
 import { cotarLista } from '../services/api';
-import { formatarMoeda } from '../formatar';
+import { formatarDataColeta, formatarMoeda } from '../formatar';
 import { corBarraDoSupermercado } from '../supermercados';
 import SeloMercado from '../components/SeloMercado';
 import Preco from '../components/Preco';
+import TabelaComparacao from '../components/TabelaComparacao';
 import { useDispositivo } from '../useDispositivo';
 
 const valorCupom = valor => valor.toFixed(2).replace('.', ',');
 
 const Lista = () => {
     const { lista } = useApp();
-    const { itens, alterarQuantidade, alternarSimilar, limpar } = lista;
-    const [mercadoAberto, setMercadoAberto] = useState(null);
+    const { itens, alterarQuantidade, limpar } = lista;
     const [cotacao, setCotacao] = useState(null);
     const [carregando, setCarregando] = useState(false);
     const [erro, setErro] = useState(null);
@@ -29,11 +29,7 @@ const Lista = () => {
         setCarregando(true);
         setErro(null);
         try {
-            setCotacao(await cotarLista(itens.map(item => ({
-                id: item.id,
-                quantidade: item.quantidade,
-                aceitaSimilar: item.aceitaSimilar !== false
-            }))));
+            setCotacao(await cotarLista(itens.map(item => ({ id: item.id, quantidade: item.quantidade }))));
             // No celular o resultado fica abaixo do cupom; leva o usuario ate ele.
             if (mobile) window.setTimeout(() => resultadoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
         } catch (error) {
@@ -115,15 +111,6 @@ const Lista = () => {
                                         </span>
                                         <span className="numeros-tabulares font-semibold">{valorCupom(item.preco * item.quantidade)}</span>
                                     </div>
-                                    <label className="mt-1.5 flex cursor-pointer items-center gap-1.5 text-[11px] text-tinta-500">
-                                        <input
-                                            type="checkbox"
-                                            className="h-3.5 w-3.5 accent-feira-600"
-                                            checked={item.aceitaSimilar !== false}
-                                            onChange={() => { alternarSimilar(item.id); setCotacao(null); }}
-                                        />
-                                        ACEITO OUTRA MARCA SE NÃO TIVER
-                                    </label>
                                 </li>
                             ))}
                         </ul>
@@ -147,7 +134,7 @@ const Lista = () => {
                         <div className={`fundo-feira rounded-[1.75rem] p-6 text-papel-50 shadow-cartao sm:p-7 ${mobile ? 'hidden' : ''}`}>
                             <h2 className="text-2xl font-extrabold">Comparar nos {cotacao?.porMercado.length || 4} supermercados</h2>
                             <p className="mt-1 text-sm text-feira-100">
-                                Procuramos cada item nos outros mercados. Se um mercado não tiver o mesmo produto, usamos o similar mais barato de outra marca (quando você aceitar).
+                                Procuramos o mesmo produto (marca, versão e tamanho) nos outros mercados. Os totais somam só produtos iguais; quando um mercado não tem o item, mostramos um similar de outra marca à parte.
                             </p>
                             <button
                                 onClick={cotar}
@@ -166,102 +153,64 @@ const Lista = () => {
                                     <h3 className="mb-3 flex items-center gap-2 font-display text-lg font-extrabold text-feira-900">
                                         <Trophy size={19} className="text-etiqueta-500" /> Tudo num mercado só
                                     </h3>
-                                    <div className="grid gap-3 sm:grid-cols-2">
+                                    <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                                         {mercadosOrdenados.map(mercado => {
                                             const ehMelhor = melhor?.supermercado === mercado.supermercado;
-                                            const temTudo = mercado.encontrados === totalLinhas;
                                             return (
                                                 <div
                                                     key={mercado.supermercado}
-                                                    className={`relative overflow-hidden rounded-2xl border bg-papel-50 p-4 ${ehMelhor ? 'border-feira-400 ring-2 ring-feira-400/30' : 'border-papel-300'}`}
+                                                    className={`relative overflow-hidden rounded-2xl border bg-papel-50 p-3.5 ${ehMelhor ? 'border-feira-400 ring-2 ring-feira-400/30' : 'border-papel-300'}`}
                                                 >
                                                     <span className="absolute inset-y-0 left-0 w-1.5" style={{ background: corBarraDoSupermercado(mercado.supermercado) }} />
-                                                    <div className="flex items-start justify-between gap-2">
-                                                        <SeloMercado slug={mercado.supermercado} nome={mercado.supermercadoNome} />
-                                                        {ehMelhor && <span className="rounded-md bg-feira-600 px-2 py-0.5 font-preco text-xs font-bold uppercase text-white">Melhor opção</span>}
-                                                    </div>
-                                                    <div className="mt-3">
+                                                    <SeloMercado slug={mercado.supermercado} nome={mercado.supermercadoNome} />
+                                                    <div className="mt-2">
                                                         {mercado.encontrados > 0
                                                             ? <Preco valor={mercado.total} tamanho="m" className={ehMelhor ? 'text-feira-700' : ''} />
                                                             : <span className="font-display text-lg font-bold text-tinta-400">Não encontrado</span>}
                                                     </div>
-                                                    <p className="mt-1 text-xs text-tinta-500">
-                                                        {mercado.encontrados === 0
-                                                            ? 'Nenhum item da lista'
-                                                            : <>
-                                                                {temTudo ? 'Lista completa' : `${mercado.encontrados} de ${totalLinhas} itens`}
-                                                                {mercado.substituicoes.length > 0 && (
-                                                                    <> · <strong className="text-etiqueta-500">{mercado.substituicoes.length} similar{mercado.substituicoes.length > 1 ? 'es' : ''}</strong></>
-                                                                )}
-                                                            </>}
+                                                    <p className="mt-1 text-xs text-tinta-600">
+                                                        {mercado.encontrados === totalLinhas ? 'Lista completa' : `${mercado.encontrados} de ${totalLinhas} itens`}
                                                     </p>
-                                                    {mercado.substituicoes.length > 0 && (
-                                                        <p className="mt-0.5 text-[11px] text-tinta-500">
-                                                            Só itens iguais: <strong className="font-preco text-sm text-tinta-900">{formatarMoeda(mercado.totalIguais)}</strong> ({mercado.encontradosIguais} de {totalLinhas})
-                                                        </p>
+                                                    {mercado.dataColeta && (
+                                                        <p className="text-[11px] text-tinta-400">Preços de {formatarDataColeta(mercado.dataColeta)}</p>
                                                     )}
-                                                    {mercado.faltando.length > 0 && mercado.encontrados > 0 && (
-                                                        <p className="mt-1 line-clamp-2 text-[11px] text-tinta-400">Falta: {mercado.faltando.join(', ')}</p>
-                                                    )}
-                                                    {mercado.substituicoes.length > 0 && (
-                                                        <>
-                                                            <button
-                                                                onClick={() => setMercadoAberto(aberto => aberto === mercado.supermercado ? null : mercado.supermercado)}
-                                                                className="mt-2 text-[11px] font-bold text-feira-600 hover:text-feira-800"
-                                                            >
-                                                                {mercadoAberto === mercado.supermercado ? 'Ocultar trocas' : 'Ver trocas'}
-                                                            </button>
-                                                            {mercadoAberto === mercado.supermercado && (
-                                                                <ul className="mt-2 space-y-1.5 border-t border-dashed border-papel-300 pt-2">
-                                                                    {mercado.substituicoes.map(troca => (
-                                                                        <li key={troca.original} className="text-[11px] leading-4">
-                                                                            <span className="text-tinta-400 line-through">{troca.original}</span>
-                                                                            <span className="block text-tinta-700">→ {troca.substituto} <strong className="font-preco text-xs">{formatarMoeda(troca.preco)}</strong></span>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            )}
-                                                        </>
+                                                    {ehMelhor && (
+                                                        <p className="mt-1.5 inline-block rounded-md bg-feira-600 px-2 py-0.5 font-preco text-[11px] font-bold uppercase text-white">Melhor opção</p>
                                                     )}
                                                 </div>
                                             );
                                         })}
                                     </div>
+                                    <p className="mt-2 text-[11px] text-tinta-500">
+                                        Os totais somam só produtos iguais aos da sua lista. Melhor opção: o mercado com mais itens da lista e, entre eles, o mais barato.
+                                    </p>
                                 </div>
 
-                                <div className="rounded-[1.75rem] border-2 border-dashed border-etiqueta-500 bg-etiqueta-100 p-5 sm:p-6">
-                                    <h3 className="flex items-center gap-2 font-display text-lg font-extrabold text-feira-900"><Split size={19} /> Dividindo a compra</h3>
-                                    <p className="text-sm text-tinta-700">Cada item no mercado onde ele está mais barato:</p>
-                                    <div className="mt-3 flex flex-wrap items-end gap-x-4 gap-y-1">
-                                        <span className="etiqueta inline-block py-2 pr-5" style={{ '--furo': '#fff6cc' }}>
-                                            <Preco valor={cotacao.compraDividida.total} tamanho="m" />
-                                        </span>
+                                <div className="rounded-[1.75rem] border border-papel-300 bg-papel-50 p-5 shadow-cartao sm:p-6">
+                                    <h3 className="flex items-center gap-2 font-display text-lg font-extrabold text-feira-900"><Table2 size={19} /> Item por item</h3>
+                                    <p className="mb-3 text-sm text-tinta-600">
+                                        Preço de cada item em cada mercado, já multiplicado pela quantidade. Em <span className="rounded bg-feira-100 px-1 font-semibold text-feira-800">verde</span>, onde ele é mais barato; "—", onde o mercado não tem o mesmo produto.
+                                    </p>
+                                    <TabelaComparacao cotacao={cotacao} mercados={mercadosOrdenados} />
+                                    <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl bg-etiqueta-100 px-4 py-3 text-sm text-tinta-800">
+                                        <Split size={17} className="text-feira-700" />
+                                        <span>Comprando cada item onde está em verde:</span>
+                                        <strong className="font-preco text-lg text-feira-900">{formatarMoeda(cotacao.compraDividida.total)}</strong>
                                         {cotacao.compraDividida.economiaSobreMelhorMercado > 0 && (
-                                            <span className="pb-1 text-sm font-bold text-feira-700">
-                                                <span className="marcador">{formatarMoeda(cotacao.compraDividida.economiaSobreMelhorMercado)} a menos</span> que tudo no {melhor.supermercadoNome}
-                                            </span>
+                                            <span className="font-semibold text-feira-700">{formatarMoeda(cotacao.compraDividida.economiaSobreMelhorMercado)} a menos que tudo no {melhor.supermercadoNome}</span>
                                         )}
                                     </div>
-                                    <ul className="mt-4 space-y-2">
-                                        {cotacao.compraDividida.itens.map(item => (
-                                            <li key={item.id} className="flex items-center justify-between gap-3 border-b border-dashed border-etiqueta-500/40 pb-2 text-sm">
-                                                <span className="min-w-0 text-tinta-700">
-                                                    <span className="block truncate">{item.quantidade}× {item.nome}</span>
-                                                    {item.tipo === 'similar' && (
-                                                        <span className="block truncate text-[11px] text-tinta-500">
-                                                            <span className="mr-1 rounded bg-etiqueta-400 px-1 font-bold uppercase text-feira-900">similar</span>
-                                                            {item.produto}
-                                                        </span>
-                                                    )}
-                                                </span>
-                                                <span className="flex shrink-0 items-center gap-2">
-                                                    <SeloMercado slug={item.supermercado} nome={item.supermercadoNome} />
-                                                    <strong className="font-preco text-base">{formatarMoeda(item.subtotal)}</strong>
-                                                </span>
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
+
+                                {cotacao.similares.length > 0 && (
+                                    <div className="rounded-[1.75rem] border border-papel-300 bg-papel-50 p-5 shadow-cartao sm:p-6">
+                                        <h3 className="flex items-center gap-2 font-display text-lg font-extrabold text-feira-900"><Replace size={19} /> Completando com similares</h3>
+                                        <p className="mb-3 text-sm text-tinta-600">
+                                            A lista inteira em cada mercado: os produtos iguais e, onde falta, o similar mais barato de outra marca, <span className="rounded bg-etiqueta-100 px-1 font-semibold">destacado</span>. O total embaixo soma tudo.
+                                        </p>
+                                        <TabelaComparacao cotacao={cotacao} mercados={mercadosOrdenados} modo="similares" />
+                                    </div>
+                                )}
                             </>
                         )}
                     </section>
