@@ -167,3 +167,9 @@ Problemas resolvidos na implantação:
 
 - Em 14/10/2026 o `main` do GitHub passou a ser a versão alinhada ao texto do TCC.
 - Uma versão paralela anterior (um scraper por mercado, com Fonseca e arquivos de produtos versionados) foi preservada na branch `backup-main-d847fbc`.
+
+## Lista de compras: só produtos iguais nos totais (25/10/2026)
+
+- **Problema relatado pelo usuário:** o similar entrava no total de cada mercado e não ficava claro o que estava sendo comparado. Num teste, o "mesmo produto" do Pedrilho era o bolinho com massa e recheio invertidos, e a tela não mostrava qual produto foi usado.
+- **Nova página:** (1) cartões com o total **só de produtos iguais**, quantos itens cada mercado tem e a data da coleta; (2) tabela item × mercado com o mais barato em verde e a compra dividida; (3) tabela "Completando com similares": a lista inteira de cada mercado com o similar no lugar do que falta. Item vendido por kg é calculado pelo preço por kg (1 kg de tomate a granel × bandeja de 700 g).
+- **Teste com uma cesta básica (13 itens)** mostrou similares errados: carne suína (orelha) por carne bovina moída, batata doce por inglesa, pão de forma por pão francês, banana nanica por prata, margarina por manteiga. Corrigido com: nomes compostos (batata doce, pão de forma/queijo/francês viram um termo só), variantes bovina/suína e prata/nanica, "moída" como variante só para carne, núcleo do nome = primeira palavra e o candidato precisa ter o mesmo núcleo. Casos viraram testes (backend 63 testes).
