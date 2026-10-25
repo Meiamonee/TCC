@@ -1,4 +1,5 @@
 const Produto = require('../models/Produto');
+const { FABRICANTES, MARCAS } = require('./marcas');
 
 // Comparacao do mesmo produto entre supermercados.
 //
@@ -6,7 +7,8 @@ const Produto = require('../models/Produto');
 // 1. tem as mesmas variantes (zero, integral, sabor...);
 // 2. tem a mesma quantidade (tolerancia de 2%) ou sao ambos vendidos a peso;
 // 3. as palavras do nome sao parecidas, pesando mais as palavras raras (em geral a marca);
-// 4. nao ha, nos dois lados, palavras distintivas que o outro nao tem (marcas diferentes).
+// 4. nao ha, nos dois lados, palavras distintivas que o outro nao tem (marcas diferentes);
+// 5. se os dois tem marca conhecida (marcas.js), tem ao menos uma em comum.
 
 const LIMITE_SIMILARIDADE = 0.6;
 const TOLERANCIA_QUANTIDADE = 0.02;
@@ -108,7 +110,18 @@ function similaridade(a, b, stats) {
     const tokensA = new Set(a.tokens || []);
     const tokensB = new Set(b.tokens || []);
     const limiteDistintiva = stats.total * FRACAO_PALAVRA_DISTINTIVA;
-    const distintiva = token => (stats.frequencia.get(token) || 0) < limiteDistintiva;
+    const marcasA = [...tokensA].filter(token => MARCAS.has(token));
+    const marcasB = [...tokensB].filter(token => MARCAS.has(token));
+    const marcaEmComum = marcasA.some(marca => tokensB.has(marca) && !FABRICANTES.has(marca));
+    if (marcasA.length && marcasB.length && !marcasA.some(marca => tokensB.has(marca))) {
+        return 0;
+    }
+
+    // Marca sempre distingue, mesmo as muito frequentes. O nome do fabricante so deixa de contar
+    // quando os dois ja tem a mesma marca de produto ("Biscoito Nestle Negresco" x "Biscoito
+    // Negresco"); sozinho, ele e a marca ("Queijo Itambe" x "Queijo Porto Alegre").
+    const distintiva = token => (FABRICANTES.has(token) ? !marcaEmComum : MARCAS.has(token))
+        || (!MARCAS.has(token) && (stats.frequencia.get(token) || 0) < limiteDistintiva);
 
     const sobraEmA = [...tokensA].some(token => !tokensB.has(token) && distintiva(token));
     const sobraEmB = [...tokensB].some(token => !tokensA.has(token) && distintiva(token));
@@ -224,7 +237,9 @@ function palavrasDeTipo(produto, stats) {
 
     const grupo = stats.porNucleo.get(nucleo);
     const minimo = Math.max(MINIMO_COOCORRENCIAS, grupo.total * FRACAO_QUALIFICADOR);
+    // Marca nao e palavra de tipo: "Feijao Carioca Du Irineu" e feijao carioca de qualquer marca.
     const qualificadores = tokens.filter(token => token !== nucleo
+        && !MARCAS.has(token)
         && (grupo.contagem.get(token) || 0) >= minimo
         && (stats.nucleosPorPalavra.get(token) || 0) <= MAXIMO_NUCLEOS_QUALIFICADOR);
 

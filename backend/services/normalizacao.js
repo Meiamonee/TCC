@@ -3,6 +3,15 @@
 // "Refrigerante sem Acucar Coca-Cola Garrafa 2l"); estas funcoes extraem o que
 // importa para comparar: palavras relevantes, variantes, quantidade e preco por unidade.
 
+// Sabores e versoes que mudam o produto quando aparecem depois do tipo ("Maionese ... Gorgonzola",
+// "Ketchup Picante", "Sucrilhos Brigadeiro", "Limpador com Alcool"), mas que sao o proprio produto
+// quando abrem o nome ("Bacon Seara", "Carne Bovina", "Alcool 70"). Achados na taxonomia, etapa 1.
+const SABORES_FORA_DO_NUCLEO = new Set([
+    'picante', 'apimentado', 'gorgonzola', 'bacon', 'cebola', 'alho',
+    'calabresa', 'carne', 'galinha', 'frango', 'mel', 'brigadeiro', 'alcool', 'avela', 'parmegiana',
+    'nacho', 'pizza', 'churrasco', 'barbecue', 'ervas', 'bolonhesa', 'presunto', 'pistache'
+]);
+
 // Abreviacoes comuns nos nomes de produtos.
 const ABREVIACOES = {
     refrig: 'refrigerante',
@@ -20,6 +29,8 @@ const ABREVIACOES = {
     mac: 'macarrao',
     trad: 'tradicional',
     integ: 'integral',
+    ins: 'instantaneo',
+    inst: 'instantaneo',
     desnat: 'desnatado',
     ret: 'retornavel',
     // Nomes comerciais de acucar da Uniao que escondem o tipo do produto.
@@ -33,7 +44,9 @@ const PALAVRAS_IGNORADAS = new Set([
     'pet', 'garrafa', 'lata', 'latinha', 'caixa', 'cx', 'pacote', 'pct', 'pc', 'sache', 'sachet', 'frasco',
     'pote', 'vidro', 'bandeja', 'tampa', 'embalagem', 'economica', 'leve', 'pague', 'gratis',
     'uht', 'polido', 'refinado', 'tradicional', 'original', 'classico', 'unidade', 'unidades', 'un', 'und', 'unid',
-    'rolos', 'rolo', 'kit', 'cada', 'aprox', 'qtd', 'x', 'n', 'no', 'nr', 'numero'
+    'rolos', 'rolo', 'kit', 'cada', 'aprox', 'qtd', 'x', 'n', 'no', 'nr', 'numero',
+    // Mais embalagens (taxonomia, etapa 1): "Cup Noodles Copo", "Limpol Squeeze".
+    'copo', 'squeeze', 'tubo', 'bisnaga', 'saco', 'pacotes', 'potes', 'caixinha'
 ]);
 
 // Variantes que mudam o produto: so comparamos itens com exatamente as mesmas variantes.
@@ -43,7 +56,7 @@ const VARIANTES = new Set([
     'semgluten', 'parboilizado', 'retornavel', 'organico', 'demerara', 'mascavo', 'cristal', 'confeiteiro',
     'descafeinado', 'infantil', 'kids', 'refil',
     'intenso', 'forte', 'extraforte', 'suave', 'gourmet', 'expresso', 'espresso',
-    'coco', 'limao', 'neutro', 'maca', 'laranja', 'uva', 'morango', 'baunilha', 'menta',
+    'coco', 'limao', 'maca', 'laranja', 'uva', 'morango', 'baunilha', 'menta',
     'hortela', 'lavanda', 'abacaxi', 'maracuja', 'pessego', 'cereja', 'canela',
     'guarana', 'tangerina', 'manga', 'goiaba', 'framboesa', 'amora', 'caramelo',
     'flores', 'floral', 'talco', 'eucalipto', 'pinho', 'clear', 'pimenta', 'ervas',
@@ -105,6 +118,12 @@ function normalizarTexto(texto) {
 // Extrai a quantidade total da embalagem a partir do nome.
 // Ex.: "2,5l" -> 2500 ml; "12x350ml" -> 4200 ml; "20m Com 12 Rolos" -> 240 m.
 function extrairQuantidade(nome) {
+    const { medida, quantidade } = lerQuantidade(nome);
+    return { medida, quantidade };
+}
+
+// Igual a extrairQuantidade, mas diz tambem quantas unidades vem na embalagem (rolos de papel).
+function lerQuantidade(nome) {
     const texto = normalizarTexto(nome);
     let medida = null;
     let quantidade = null;
@@ -139,7 +158,7 @@ function extrairQuantidade(nome) {
         // Em massa e volume a quantidade do nome ja e o total ("Caldo 57g 6 unid"), exceto nos
         // pacotes promocionais; em comprimento ela e por rolo ("Papel 20m com 12 rolos").
         const porItem = (medida === 'comprimento' && !/\b\d+\s*x\s*\d/.test(texto)) || Boolean(promocao);
-        return { medida, quantidade: porItem ? quantidade * multiplicador : quantidade };
+        return { medida, quantidade: porItem ? quantidade * multiplicador : quantidade, itens: multiplicador };
     }
 
     if (multiplicador > 1) {
@@ -179,12 +198,29 @@ function ehTokenDeQuantidade(token) {
 
 // Palavras relevantes e variantes do produto, usadas na comparacao entre mercados.
 function gerarTokens(nome) {
-    const palavras = normalizarTexto(nome)
+    let palavras = normalizarTexto(nome)
         .split(' ')
         .map(palavra => ABREVIACOES[palavra] || palavra)
         .filter(palavra => palavra.length > 1 && !ehTokenDeQuantidade(palavra) && !PALAVRAS_IGNORADAS.has(palavra));
 
+    // "Leite Cond." e leite condensado, nao condicionador; e todo leite condensado e integral,
+    // entao a palavra nao diferencia ("Leite Condensado Cemil" x "Leite Condensado Integral Cemil").
+    if (palavras.includes('leite') && palavras.includes('condicionador')) {
+        palavras = palavras.map(palavra => (palavra === 'condicionador' ? 'condensado' : palavra));
+    }
+    if (palavras.includes('condensado')) {
+        palavras = palavras.filter(palavra => palavra !== 'integral');
+    }
+
     const variantes = new Set(palavras.filter(palavra => VARIANTES.has(palavra)));
+    // Kit (varios produtos juntos) nao e o mesmo que o produto avulso.
+    // "Shampoo 350ml + Condicionador 175ml" tambem e kit, mesmo sem a palavra (dois tamanhos
+    // ligados por "+"; "Rituais 85+", "Men+Care" e "L+ P-" nao contam).
+    const doisTamanhos = /\d\s*(?:ml|g|gr|kg|l|lt)\b[^+]*\+[^+]*\d\s*(?:ml|g|gr|kg|l|lt)\b/i;
+    if (/\bkit\b/.test(normalizarTexto(nome)) || doisTamanhos.test(nome)) variantes.add('kit');
+    for (const palavra of palavras.slice(1)) {
+        if (SABORES_FORA_DO_NUCLEO.has(palavra) && palavra !== palavras[0]) variantes.add(palavra);
+    }
 
     // Carne moida nao e substituida por um corte inteiro (figado, costela). So vale para carne:
     // no cafe, "moido" aparece em uns nomes e em outros nao, para o mesmo produto.
@@ -230,6 +266,12 @@ function categoriaCanonica(departamento) {
 // Campos derivados gravados junto com o produto no momento da importacao.
 function normalizarProduto({ nome, preco, unidadeVenda, embalagem, departamento }) {
     const { tokens, variantes } = gerarTokens(nome);
+    // Papel e afins: 8 rolos de 30 m nao e o mesmo produto que 6 rolos de 40 m, embora somem 240 m.
+    const { medida: medidaDoNome, itens } = lerQuantidade(nome);
+    if (medidaDoNome === 'comprimento' && itens > 1) {
+        variantes.push(`${itens}rolos`);
+        variantes.sort();
+    }
     const precoUnitario = calcularPrecoPorUnidade({ nome, preco, unidadeVenda, embalagem });
     const categoria = categoriaCanonica(departamento);
 

@@ -62,3 +62,30 @@ test('sal grosso ou para churrasco nao equivale ao sal refinado', () => {
     assert.ok(saoEquivalentes(refinado, produto('Sal Grosso Cisne 1kg', 4.99), statsSal) < LIMITE_SIMILARIDADE);
     assert.ok(saoEquivalentes(refinado, produto('Sal Refinado Iodado Cisne 1kg', 4.29), statsSal) >= LIMITE_SIMILARIDADE);
 });
+
+// Taxonomia, etapa 1: marcas, fabricantes, embalagens, sabores e numero de rolos.
+test('marcas diferentes nunca sao o mesmo produto, mesmo uma marca muito frequente', () => {
+    const catalogo = { total: 5000, frequencia: new Map(Object.entries({ requeijao: 120, cremoso: 150, nestle: 900, danone: 60, tirolez: 30, iogurte: 300, grego: 80, itambe: 200 })) };
+    const iguais = (a, b) => saoEquivalentes(produto(a, 8), produto(b, 8), catalogo) >= LIMITE_SIMILARIDADE;
+    assert.ok(!iguais('Requeijao Cremoso Nestle 200gr', 'Requeijão Cremoso Danone 200g'));
+    assert.ok(!iguais('Requeijao Cremoso Nestle 200gr', 'Requeijão Tirolez Cremoso 200g'));
+    assert.ok(!iguais('Iogurte Grego Nestle 450g', 'Iogurte Itambe Grego 450gr'));
+});
+
+test('o nome do fabricante pode aparecer ou nao no mesmo produto', () => {
+    const catalogo = { total: 5000, frequencia: new Map(Object.entries({ biscoito: 400, recheado: 130, nestle: 900, negresco: 20, leite: 600, condensado: 60, moca: 40, detergente: 200, liquido: 300, limpol: 30, bril: 25, bom: 80 })) };
+    const iguais = (a, b) => saoEquivalentes(produto(a, 5), produto(b, 5), catalogo) >= LIMITE_SIMILARIDADE;
+    assert.ok(iguais('Biscoito Nestlé Negresco 90g', 'Biscoito Recheado Negresco 90g'));
+    assert.ok(iguais('Leite Condensado Moça Nestlé 395g', 'Leite Condensado Integral Moça Lata 395g'));
+    assert.ok(iguais('Detergente Líquido Limpol Bom Bril 500ml', 'Detergente Líquido Limpol Squeeze 500ml'));
+});
+
+test('embalagem e abreviacao nao atrapalham; sabor, kit e numero de rolos sim', () => {
+    const catalogo = { total: 5000, frequencia: new Map(Object.entries({ macarrao: 500, instantaneo: 200, cup: 50, noodles: 44, bolonhesa: 54, molho: 470, tomate: 230, pomarola: 20, ketchup: 70, heinz: 30, papel: 230, higienico: 110, personal: 40, vip: 30, folha: 120, dupla: 90 })) };
+    const iguais = (a, b) => saoEquivalentes(produto(a, 5), produto(b, 5), catalogo) >= LIMITE_SIMILARIDADE;
+    assert.ok(iguais('Macarrao Ins. Cup Noodles Bolonhesa 72g', 'Macarrão Instantâneo Bolonhesa Cup Noodles Copo 72g'));
+    assert.ok(!iguais('Molho De Tomate Pomarola Bolonhesa Sachê 300g', 'Molho De Tomate Pomarola Tradicional Sache 300g'), 'bolonhesa e outro sabor');
+    assert.ok(!iguais('Ketchup Heinz Squeeze 397g', 'Kit Ketchup Maionese Heinz 397g'), 'kit nao e o produto avulso');
+    assert.ok(!iguais('Papel Higiênico Personal Vip Folha Dupla 30m Pacote 8 Unidades', 'Papel Higiênico Personal Vip Folha Dupla 40m 6un'), '8 rolos de 30 m nao sao 6 de 40 m');
+    assert.ok(iguais('Papel Higiênico Personal Vip Folha Dupla 20m Leve 12 Pague 11', 'Papel Higiênico Personal Vip Folha Dupla 20m 12 Unidades'));
+});
