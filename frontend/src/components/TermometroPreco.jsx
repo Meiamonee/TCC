@@ -1,8 +1,9 @@
 import React from 'react';
 import { formatarMoeda } from '../formatar';
-import { corBarraDoSupermercado } from '../supermercados';
+import { SUPERMERCADOS, corBarraDoSupermercado } from '../supermercados';
 
-// Regua do mais barato ao mais caro, com um marcador por supermercado.
+// Regua do mais barato ao mais caro, com um marcador por supermercado. Os mercados que nao vendem
+// o mesmo produto aparecem na legenda, para nao parecer que foram esquecidos.
 const TermometroPreco = ({ opcoes, idAtual }) => {
     if (!opcoes || opcoes.length < 2) return null;
 
@@ -11,6 +12,7 @@ const TermometroPreco = ({ opcoes, idAtual }) => {
     const maior = Math.max(...precos);
     const amplitude = maior - menor;
     const posicao = preco => (amplitude > 0 ? ((preco - menor) / amplitude) * 100 : 50);
+    const ausentes = SUPERMERCADOS.filter(mercado => !opcoes.some(opcao => opcao.supermercado === mercado.slug));
     const diferencaPercentual = menor > 0 ? Math.round((amplitude / menor) * 100) : 0;
 
     return (
@@ -50,6 +52,12 @@ const TermometroPreco = ({ opcoes, idAtual }) => {
                     <li key={opcao.id} className={`flex items-center gap-1.5 text-xs ${opcao.id === idAtual ? 'font-bold text-tinta-900' : 'text-tinta-500'}`}>
                         <span className="h-2.5 w-2.5 rounded-full" style={{ background: corBarraDoSupermercado(opcao.supermercado) }} />
                         {opcao.supermercadoNome}
+                    </li>
+                ))}
+                {ausentes.map(mercado => (
+                    <li key={mercado.slug} className="flex items-center gap-1.5 text-xs text-tinta-400" title="Este mercado não vende o mesmo produto (marca, versão e tamanho) pelo site">
+                        <span className="h-2.5 w-2.5 rounded-full border-2 bg-transparent" style={{ borderColor: corBarraDoSupermercado(mercado.slug) }} />
+                        {mercado.nome}: não vende este produto
                     </li>
                 ))}
             </ul>
