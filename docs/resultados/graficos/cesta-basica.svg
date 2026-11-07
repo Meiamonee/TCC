@@ -16,17 +16,17 @@
   <line x1="670" y1="68" x2="670" y2="202" stroke="#e6dcc8" stroke-width="1"/>
   <text x="670" y="218" font-size="11" fill="#6b665b" text-anchor="middle">R$ 1000</text>
   <line x1="190" y1="68" x2="190" y2="202" stroke="#6b665b" stroke-width="1"/>
-  <text x="180" y="89" font-size="13" fill="#1d1b16" text-anchor="end">San Michel</text>
-  <path d="M192,74 H462.80159999999995 Q466.80159999999995,74 466.80159999999995,78 V92 Q466.80159999999995,96 462.80159999999995,96 H192 Z" fill="#1f7a45"/>
-  <text x="474.80159999999995" y="89" font-size="13" font-weight="600" fill="#1d1b16">R$ 576,67 (12 de 13 itens)</text>
-  <text x="180" y="123" font-size="13" fill="#1d1b16" text-anchor="end">Pedrilho</text>
-  <path d="M192,108 H504.9216 Q508.9216,108 508.9216,112 V126 Q508.9216,130 504.9216,130 H192 Z" fill="#1f7a45"/>
-  <text x="516.9216" y="123" font-size="13" font-weight="600" fill="#1d1b16">R$ 664,42</text>
-  <text x="180" y="157" font-size="13" fill="#1d1b16" text-anchor="end">SuperVale</text>
-  <path d="M192,142 H520.128 Q524.128,142 524.128,146 V160 Q524.128,164 520.128,164 H192 Z" fill="#1f7a45"/>
-  <text x="532.128" y="157" font-size="13" font-weight="600" fill="#1d1b16">R$ 696,10</text>
-  <text x="180" y="191" font-size="13" fill="#1d1b16" text-anchor="end">Vila Sul</text>
-  <path d="M192,176 H585.2352000000001 Q589.2352000000001,176 589.2352000000001,180 V194 Q589.2352000000001,198 585.2352000000001,198 H192 Z" fill="#1f7a45"/>
-  <text x="597.2352000000001" y="191" font-size="13" font-weight="600" fill="#1d1b16">R$ 831,74</text>
+  <text x="180" y="89.55" font-size="13" fill="#1d1b16" text-anchor="end">SuperVale</text>
+  <path d="M192,74 H454.06080000000003 Q458.06080000000003,74 458.06080000000003,78 V92 Q458.06080000000003,96 454.06080000000003,96 H192 Z" fill="#1f7a45"/>
+  <text x="466.06080000000003" y="89.55" font-size="13" font-weight="600" fill="#1d1b16">R$ 558,46 (12 de 13 itens)</text>
+  <text x="180" y="123.55" font-size="13" fill="#1d1b16" text-anchor="end">San Michel</text>
+  <path d="M192,108 H487.49280000000005 Q491.49280000000005,108 491.49280000000005,112 V126 Q491.49280000000005,130 487.49280000000005,130 H192 Z" fill="#1f7a45"/>
+  <text x="499.49280000000005" y="123.55" font-size="13" font-weight="600" fill="#1d1b16">R$ 628,11 (12 de 13 itens)</text>
+  <text x="180" y="157.55" font-size="13" fill="#1d1b16" text-anchor="end">Pedrilho</text>
+  <path d="M192,142 H504.9216 Q508.9216,142 508.9216,146 V160 Q508.9216,164 504.9216,164 H192 Z" fill="#1f7a45"/>
+  <text x="516.9216" y="157.55" font-size="13" font-weight="600" fill="#1d1b16">R$ 664,42</text>
+  <text x="180" y="191.55" font-size="13" fill="#1d1b16" text-anchor="end">Vila Sul</text>
+  <path d="M192,176 H584.3616 Q588.3616,176 588.3616,180 V194 Q588.3616,198 584.3616,198 H192 Z" fill="#1f7a45"/>
+  <text x="596.3616" y="191.55" font-size="13" font-weight="600" fill="#1d1b16">R$ 829,92</text>
   <text x="16" y="250" font-size="11" fill="#6b665b">Fonte: dados coletados pelo SuperPreço</text>
 </svg>

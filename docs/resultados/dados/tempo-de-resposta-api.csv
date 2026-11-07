@@ -1,9 +1,9 @@
 rota;caminho;mediana_ms;p90_ms
-Busca de produtos;/produtos;512;540
-Detalhe do produto;/produtos/:id;275;280
-Comparação entre mercados;/produtos/:id/comparacao;391;394
-Similares de outras marcas;/produtos/:id/similares;390;399
-Histórico de preços;/produtos/:id/historico;387;391
-Cotação da lista de compras;/lista/cotacao;508;517
-Cesta básica;/cesta-basica;156;161
-Painel de estatísticas;/estatisticas;156;157
+Busca de produtos;/produtos;425;431
+Detalhe do produto;/produtos/:id;261;271
+Comparação entre mercados;/produtos/:id/comparacao;378;388
+Similares de outras marcas;/produtos/:id/similares;378;382
+Histórico de preços;/produtos/:id/historico;376;378
+Cotação da lista de compras;/lista/cotacao;494;499
+Cesta básica;/cesta-basica;147;150
+Painel de estatísticas;/estatisticas;148;162

@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-15T22:47:41.139Z",
+  "geradoEm": "2026-11-07T04:06:53.594Z",
   "banco": "Mercados",
   "validacao": {
     "amostra": 50,
@@ -8,361 +8,522 @@
     "precisao": 88
   },
   "avaliacao": {
-    "sus": null,
+    "sus": {
+      "participantes": 38,
+      "media": 87.2,
+      "desvioPadrao": 14.9,
+      "minimo": 45,
+      "maximo": 100,
+      "acimaDaMedia68": 32,
+      "pontuacoes": [
+        {
+          "participante": "P1",
+          "pontuacao": 85
+        },
+        {
+          "participante": "P2",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P3",
+          "pontuacao": 95
+        },
+        {
+          "participante": "P4",
+          "pontuacao": 95
+        },
+        {
+          "participante": "P5",
+          "pontuacao": 90
+        },
+        {
+          "participante": "P6",
+          "pontuacao": 80
+        },
+        {
+          "participante": "P7",
+          "pontuacao": 90
+        },
+        {
+          "participante": "P8",
+          "pontuacao": 45
+        },
+        {
+          "participante": "P9",
+          "pontuacao": 60
+        },
+        {
+          "participante": "P10",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P11",
+          "pontuacao": 77.5
+        },
+        {
+          "participante": "P12",
+          "pontuacao": 97.5
+        },
+        {
+          "participante": "P13",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P14",
+          "pontuacao": 87.5
+        },
+        {
+          "participante": "P15",
+          "pontuacao": 65
+        },
+        {
+          "participante": "P16",
+          "pontuacao": 95
+        },
+        {
+          "participante": "P17",
+          "pontuacao": 95
+        },
+        {
+          "participante": "P18",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P19",
+          "pontuacao": 95
+        },
+        {
+          "participante": "P20",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P21",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P22",
+          "pontuacao": 57.5
+        },
+        {
+          "participante": "P23",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P24",
+          "pontuacao": 80
+        },
+        {
+          "participante": "P25",
+          "pontuacao": 92.5
+        },
+        {
+          "participante": "P26",
+          "pontuacao": 90
+        },
+        {
+          "participante": "P27",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P28",
+          "pontuacao": 97.5
+        },
+        {
+          "participante": "P29",
+          "pontuacao": 97.5
+        },
+        {
+          "participante": "P30",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P31",
+          "pontuacao": 100
+        },
+        {
+          "participante": "P32",
+          "pontuacao": 70
+        },
+        {
+          "participante": "P33",
+          "pontuacao": 97.5
+        },
+        {
+          "participante": "P34",
+          "pontuacao": 72.5
+        },
+        {
+          "participante": "P35",
+          "pontuacao": 72.5
+        },
+        {
+          "participante": "P36",
+          "pontuacao": 67.5
+        },
+        {
+          "participante": "P37",
+          "pontuacao": 67.5
+        },
+        {
+          "participante": "P38",
+          "pontuacao": 100
+        }
+      ]
+    },
     "tempos": null
   },
   "porMercado": [
     {
       "slug": "supervale",
       "nome": "SuperVale",
-      "produtos": 3284,
-      "alimentos": 2114,
-      "ofertas": 130,
-      "comPrecoPorUnidade": 3075,
-      "ultimaColeta": "2026-10-15T14:19:19.421Z"
+      "produtos": 3314,
+      "alimentos": 2122,
+      "ofertas": 196,
+      "comPrecoPorUnidade": 3092,
+      "ultimaColeta": "2026-11-07T00:53:57.372Z"
     },
     {
       "slug": "vilasul",
       "nome": "Vila Sul",
-      "produtos": 9035,
-      "alimentos": 5827,
-      "ofertas": 460,
-      "comPrecoPorUnidade": 8204,
-      "ultimaColeta": "2026-10-15T14:51:30.505Z"
+      "produtos": 9196,
+      "alimentos": 5897,
+      "ofertas": 401,
+      "comPrecoPorUnidade": 8330,
+      "ultimaColeta": "2026-11-07T01:20:56.342Z"
     },
     {
       "slug": "sanmichel",
       "nome": "San Michel",
-      "produtos": 5036,
-      "alimentos": 3160,
-      "ofertas": 125,
-      "comPrecoPorUnidade": 4396,
-      "ultimaColeta": "2026-10-15T14:33:01.562Z"
+      "produtos": 4974,
+      "alimentos": 3098,
+      "ofertas": 166,
+      "comPrecoPorUnidade": 4335,
+      "ultimaColeta": "2026-11-07T01:00:38.462Z"
     },
     {
       "slug": "pedrilho",
       "nome": "Pedrilho",
-      "produtos": 9507,
-      "alimentos": 5500,
+      "produtos": 9490,
+      "alimentos": 5468,
       "ofertas": 0,
-      "comPrecoPorUnidade": 8620,
-      "ultimaColeta": "2026-10-15T14:39:25.549Z"
+      "comPrecoPorUnidade": 8603,
+      "ultimaColeta": "2026-11-07T01:20:37.574Z"
     }
   ],
-  "indisponiveis": 171,
+  "indisponiveis": 1464,
   "categorias": [
     [
       "Higiene e Saúde",
-      4851
+      4910
     ],
     [
       "Mercearia",
-      3453
+      3442
     ],
     [
       "Bebidas",
-      3011
+      3093
     ],
     [
       "Biscoitos e Chocolates",
-      2955
+      2981
     ],
     [
       "Limpeza",
-      2908
+      2930
     ],
     [
       "Matinais e Sobremesas",
-      2797
+      2813
     ],
     [
       "Bazar e Utilidades",
-      2119
+      2134
     ],
     [
       "Frios e Laticínios",
-      1861
+      1803
     ],
     [
       "Congelados",
-      819
+      802
     ],
     [
       "Carnes e Peixes",
-      589
+      576
     ],
     [
       "Padaria",
-      570
+      568
     ],
     [
       "Hortifruti",
-      546
+      507
     ],
     [
       "Pet",
-      383
+      415
     ]
   ],
   "cobertura": {
     "geral": {
-      "total": 26862,
-      "comEquivalente": 9311,
-      "comEquivalenteOuSimilar": 19529,
-      "emTodosComSubstituto": 12341,
-      "percentualEquivalente": 34.7,
-      "percentualEquivalenteOuSimilar": 72.7,
-      "percentualEmTodos": 45.9
+      "total": 26974,
+      "comEquivalente": 9107,
+      "comEquivalenteOuSimilar": 18518,
+      "emTodosComSubstituto": 10528,
+      "percentualEquivalente": 33.8,
+      "percentualEquivalenteOuSimilar": 68.7,
+      "percentualEmTodos": 39
     },
     "porMercado": {
       "supervale": {
-        "total": 3284,
+        "total": 3314,
         "comEquivalente": 1728,
-        "comEquivalenteOuSimilar": 2835,
-        "emTodosComSubstituto": 1949,
-        "percentualEquivalente": 52.6,
-        "percentualEquivalenteOuSimilar": 86.3,
-        "percentualEmTodos": 59.3
+        "comEquivalenteOuSimilar": 2788,
+        "emTodosComSubstituto": 1772,
+        "percentualEquivalente": 52.1,
+        "percentualEquivalenteOuSimilar": 84.1,
+        "percentualEmTodos": 53.5
       },
       "vilasul": {
-        "total": 9035,
-        "comEquivalente": 2771,
-        "comEquivalenteOuSimilar": 6192,
-        "emTodosComSubstituto": 3784,
-        "percentualEquivalente": 30.7,
-        "percentualEquivalenteOuSimilar": 68.5,
-        "percentualEmTodos": 41.9
+        "total": 9196,
+        "comEquivalente": 2716,
+        "comEquivalenteOuSimilar": 5802,
+        "emTodosComSubstituto": 3179,
+        "percentualEquivalente": 29.5,
+        "percentualEquivalenteOuSimilar": 63.1,
+        "percentualEmTodos": 34.6
       },
       "sanmichel": {
-        "total": 5036,
-        "comEquivalente": 2352,
-        "comEquivalenteOuSimilar": 3942,
-        "emTodosComSubstituto": 2467,
-        "percentualEquivalente": 46.7,
-        "percentualEquivalenteOuSimilar": 78.3,
-        "percentualEmTodos": 49
+        "total": 4974,
+        "comEquivalente": 2285,
+        "comEquivalenteOuSimilar": 3755,
+        "emTodosComSubstituto": 2053,
+        "percentualEquivalente": 45.9,
+        "percentualEquivalenteOuSimilar": 75.5,
+        "percentualEmTodos": 41.3
       },
       "pedrilho": {
-        "total": 9507,
-        "comEquivalente": 2460,
-        "comEquivalenteOuSimilar": 6560,
-        "emTodosComSubstituto": 4141,
-        "percentualEquivalente": 25.9,
-        "percentualEquivalenteOuSimilar": 69,
-        "percentualEmTodos": 43.6
+        "total": 9490,
+        "comEquivalente": 2378,
+        "comEquivalenteOuSimilar": 6173,
+        "emTodosComSubstituto": 3524,
+        "percentualEquivalente": 25.1,
+        "percentualEquivalenteOuSimilar": 65,
+        "percentualEmTodos": 37.1
       }
     }
   },
   "precos": {
-    "grupos": 4697,
-    "gruposAnormais": 81,
+    "grupos": 4520,
+    "gruposAnormais": 78,
     "exemplosAnormais": [
-      "Lasanha Seara 4 Queijos 600gr (supervale, R$ 16.99) × Lasanha 4 Queijos Seara Caixa 600g (pedrilho, R$ 6.6) × Lasanha Seara 4 Queijos 600gr (sanmichel, R$ 15.99) × Lasanha Seara 4 Queijos 600gr (vilasul, R$ 20.41)",
+      "Abacate 1kg (qtd.aprox.1un ) (supervale, R$ 5.99) × Abacate (pedrilho, R$ 2.99) × Abacate 1kg (vilasul, R$ 37.79)",
       "Iogurte Grego Nestle Light Tradicional, Morango E Maracuja 540gr (supervale, R$ 18.9) × Iogurte Grego Tradicional + Morango + Maracujá Light Nestlé Bandeja 540g 6 Unidades Leve Mais Pague Menos (pedrilho, R$ 2.99) × Iogurte Com Polpa De Frutas Grego Nestlé Light Tradicional, Morango E Maracuja 540g (sanmichel, R$ 18.99)",
       "Alface Roxa Folhatta Un (supervale, R$ 7.49) × Alface Roxa (pedrilho, R$ 3.99) × Alface Roxa Folhatta (vilasul, R$ 13.19)",
-      "Alface Crespa Folhatta Un (supervale, R$ 7.49) × Alface Crespa (pedrilho, R$ 3.99) × Alface Crespa Folhatta (vilasul, R$ 12.09)",
-      "Alface Lisa Baby Un (supervale, R$ 7.99) × Alface Lisa (pedrilho, R$ 3.99) × Alface Lisa Baby Folhatta (vilasul, R$ 13.19)"
+      "Alface Lisa Folhatta Un (supervale, R$ 7.79) × Alface Lisa (pedrilho, R$ 3.99) × Alface Lisa Folhatta (vilasul, R$ 13.19)",
+      "Refrigerante Coca Cola Sem Açucar Lata 350ml (supervale, R$ 4.59) × Refrigerante sem Açúcar Coca-Cola Lata 350ml (pedrilho, R$ 3.89) × Coca-cola Zero Lata 350ml (sanmichel, R$ 4.29) × Refrigerante Coca-cola S/açúcar Pack 350ml (vilasul, R$ 29.65)"
     ],
-    "diferencaP75Percentual": 33.4,
-    "diferencaMediaPercentual": 26.7,
-    "diferencaMedianaPercentual": 19.3,
-    "diferencaMediaReais": 2.61,
-    "gruposComDiferencaAcimaDe20": 2279,
-    "gruposMesmoPreco": 47,
+    "diferencaP75Percentual": 32.7,
+    "diferencaMediaPercentual": 26.1,
+    "diferencaMedianaPercentual": 18.5,
+    "diferencaMediaReais": 2.54,
+    "gruposComDiferencaAcimaDe20": 2126,
+    "gruposMesmoPreco": 49,
     "faixas": [
       {
         "rotulo": "Mesmo preço",
-        "grupos": 47
+        "grupos": 49
       },
       {
         "rotulo": "Até 10%",
-        "grupos": 1143
+        "grupos": 1171
       },
       {
         "rotulo": "10% a 20%",
-        "grupos": 1228
+        "grupos": 1174
       },
       {
         "rotulo": "20% a 50%",
-        "grupos": 1690
+        "grupos": 1576
       },
       {
         "rotulo": "Mais de 50%",
-        "grupos": 589
+        "grupos": 550
       }
     ],
     "maisBarato": [
       {
         "supermercado": "supervale",
-        "presencas": 2337,
-        "vezesMaisBarato": 626.8,
-        "percentualDasPresencas": 26.8
+        "presencas": 2235,
+        "vezesMaisBarato": 551.5,
+        "percentualDasPresencas": 24.7
       },
       {
         "supermercado": "vilasul",
-        "presencas": 3364,
-        "vezesMaisBarato": 708.1,
-        "percentualDasPresencas": 21
+        "presencas": 3207,
+        "vezesMaisBarato": 692.3,
+        "percentualDasPresencas": 21.6
       },
       {
         "supermercado": "sanmichel",
-        "presencas": 2947,
-        "vezesMaisBarato": 1753.7,
-        "percentualDasPresencas": 59.5
+        "presencas": 2754,
+        "vezesMaisBarato": 1674.5,
+        "percentualDasPresencas": 60.8
       },
       {
         "supermercado": "pedrilho",
-        "presencas": 2947,
-        "vezesMaisBarato": 1608.4,
-        "percentualDasPresencas": 54.6
+        "presencas": 2799,
+        "vezesMaisBarato": 1601.7,
+        "percentualDasPresencas": 57.2
       }
     ],
     "pares": [
       {
         "a": "sanmichel",
         "b": "vilasul",
-        "produtosEmComum": 2056,
-        "aMaisBaratoPercentual": 81.2,
-        "bMaisBaratoPercentual": 18.1,
-        "empatesPercentual": 0.7,
-        "diferencaMedianaPercentual": 13.7
+        "produtosEmComum": 1900,
+        "aMaisBaratoPercentual": 80.6,
+        "bMaisBaratoPercentual": 18.5,
+        "empatesPercentual": 0.9,
+        "diferencaMedianaPercentual": 13.2
       },
       {
         "a": "pedrilho",
         "b": "vilasul",
-        "produtosEmComum": 1854,
-        "aMaisBaratoPercentual": 69.5,
-        "bMaisBaratoPercentual": 29.4,
-        "empatesPercentual": 1,
-        "diferencaMedianaPercentual": 9.8
+        "produtosEmComum": 1730,
+        "aMaisBaratoPercentual": 69.7,
+        "bMaisBaratoPercentual": 28.8,
+        "empatesPercentual": 1.4,
+        "diferencaMedianaPercentual": 10
       },
       {
         "a": "pedrilho",
         "b": "sanmichel",
-        "produtosEmComum": 1540,
-        "aMaisBaratoPercentual": 42.9,
-        "bMaisBaratoPercentual": 53.8,
-        "empatesPercentual": 3.4,
-        "diferencaMedianaPercentual": -1.8
-      },
-      {
-        "a": "supervale",
-        "b": "vilasul",
-        "produtosEmComum": 1428,
-        "aMaisBaratoPercentual": 54.3,
-        "bMaisBaratoPercentual": 44.5,
-        "empatesPercentual": 1.3,
-        "diferencaMedianaPercentual": 1.7
+        "produtosEmComum": 1390,
+        "aMaisBaratoPercentual": 45.4,
+        "bMaisBaratoPercentual": 51.6,
+        "empatesPercentual": 3,
+        "diferencaMedianaPercentual": -1
       },
       {
         "a": "pedrilho",
         "b": "supervale",
-        "produtosEmComum": 1425,
-        "aMaisBaratoPercentual": 66.4,
-        "bMaisBaratoPercentual": 29.8,
-        "empatesPercentual": 3.8,
-        "diferencaMedianaPercentual": 7.5
+        "produtosEmComum": 1353,
+        "aMaisBaratoPercentual": 69.9,
+        "bMaisBaratoPercentual": 26.6,
+        "empatesPercentual": 3.5,
+        "diferencaMedianaPercentual": 9.1
+      },
+      {
+        "a": "supervale",
+        "b": "vilasul",
+        "produtosEmComum": 1328,
+        "aMaisBaratoPercentual": 50.5,
+        "bMaisBaratoPercentual": 48.2,
+        "empatesPercentual": 1.4,
+        "diferencaMedianaPercentual": 0.4
       },
       {
         "a": "sanmichel",
         "b": "supervale",
-        "produtosEmComum": 1242,
-        "aMaisBaratoPercentual": 67,
-        "bMaisBaratoPercentual": 25.4,
-        "empatesPercentual": 7.6,
-        "diferencaMedianaPercentual": 9.3
+        "produtosEmComum": 1112,
+        "aMaisBaratoPercentual": 68.3,
+        "bMaisBaratoPercentual": 24.6,
+        "empatesPercentual": 7,
+        "diferencaMedianaPercentual": 10.1
       }
     ],
     "porCategoria": [
       {
         "categoria": "Higiene e Saúde",
-        "grupos": 837,
+        "grupos": 824,
         "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 39.8
-      },
-      {
-        "categoria": "Mercearia",
-        "grupos": 771,
-        "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 37.4
-      },
-      {
-        "categoria": "Bebidas",
-        "grupos": 581,
-        "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 34.7
-      },
-      {
-        "categoria": "Biscoitos e Chocolates",
-        "grupos": 525,
-        "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 42.4
-      },
-      {
-        "categoria": "Matinais e Sobremesas",
-        "grupos": 493,
-        "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 41.4
-      },
-      {
-        "categoria": "Limpeza",
-        "grupos": 461,
-        "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 43.6
-      },
-      {
-        "categoria": "Frios e Laticínios",
-        "grupos": 359,
-        "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 48.6
-      },
-      {
-        "categoria": "Bazar e Utilidades",
-        "grupos": 199,
-        "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 40.1
-      },
-      {
-        "categoria": "Congelados",
-        "grupos": 165,
-        "maisBaratoMaisVezes": "pedrilho",
         "percentual": 38.8
       },
       {
-        "categoria": "Padaria",
-        "grupos": 116,
+        "categoria": "Mercearia",
+        "grupos": 722,
+        "maisBaratoMaisVezes": "sanmichel",
+        "percentual": 34.4
+      },
+      {
+        "categoria": "Bebidas",
+        "grupos": 580,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 40.5
+        "percentual": 36.1
+      },
+      {
+        "categoria": "Biscoitos e Chocolates",
+        "grupos": 514,
+        "maisBaratoMaisVezes": "sanmichel",
+        "percentual": 47.6
+      },
+      {
+        "categoria": "Matinais e Sobremesas",
+        "grupos": 490,
+        "maisBaratoMaisVezes": "pedrilho",
+        "percentual": 43.7
+      },
+      {
+        "categoria": "Limpeza",
+        "grupos": 458,
+        "maisBaratoMaisVezes": "pedrilho",
+        "percentual": 44.7
+      },
+      {
+        "categoria": "Frios e Laticínios",
+        "grupos": 331,
+        "maisBaratoMaisVezes": "sanmichel",
+        "percentual": 46.7
+      },
+      {
+        "categoria": "Bazar e Utilidades",
+        "grupos": 210,
+        "maisBaratoMaisVezes": "pedrilho",
+        "percentual": 40.2
+      },
+      {
+        "categoria": "Congelados",
+        "grupos": 131,
+        "maisBaratoMaisVezes": "pedrilho",
+        "percentual": 45.8
+      },
+      {
+        "categoria": "Padaria",
+        "grupos": 97,
+        "maisBaratoMaisVezes": "pedrilho",
+        "percentual": 42.3
       },
       {
         "categoria": "Hortifruti",
-        "grupos": 72,
+        "grupos": 70,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 43.8
+        "percentual": 50.7
       },
       {
         "categoria": "Carnes e Peixes",
-        "grupos": 68,
+        "grupos": 54,
         "maisBaratoMaisVezes": "pedrilho",
-        "percentual": 35.3
+        "percentual": 40.7
       },
       {
         "categoria": "Pet",
-        "grupos": 50,
+        "grupos": 39,
         "maisBaratoMaisVezes": "sanmichel",
-        "percentual": 48
+        "percentual": 41
       }
     ]
   },
   "cesta": {
     "referencia": "Cesta básica DIEESE - Região Sudeste (Decreto-Lei 399/1938)",
-    "calculadoEm": "2026-10-15T22:47:00.758Z",
+    "calculadoEm": "2026-11-07T04:05:24.893Z",
     "porMercado": [
       {
         "supermercado": "supervale",
         "supermercadoNome": "SuperVale",
-        "total": 696.1,
-        "itensEncontrados": 13,
+        "total": 558.46,
+        "itensEncontrados": 12,
         "itensTotal": 13,
         "itens": [
           {
@@ -370,15 +531,15 @@
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Carne Bovina Acem Moído 500gr",
-            "precoPorUnidade": 35.9,
-            "custo": 215.4,
-            "opcoes": 8
+            "precoPorUnidade": 39.9,
+            "custo": 239.4,
+            "opcoes": 9
           },
           {
             "item": "Leite",
             "quantidade": 7.5,
             "unidade": "L",
-            "produto": "Leite Uht Quata Integral 1lt",
+            "produto": "Leite Integral Bonolat 1lt",
             "precoPorUnidade": 5.48,
             "custo": 41.1,
             "opcoes": 5
@@ -387,7 +548,7 @@
             "item": "Feijão",
             "quantidade": 4.5,
             "unidade": "kg",
-            "produto": "Feijao Carioca Du Irineu Tipo 1 1kg",
+            "produto": "Feijao Carioca Classe A 2kg",
             "precoPorUnidade": 8.99,
             "custo": 40.46,
             "opcoes": 7
@@ -399,15 +560,15 @@
             "produto": "Arroz Komabem Tipo 1 5kg",
             "precoPorUnidade": 3.78,
             "custo": 11.34,
-            "opcoes": 11
+            "opcoes": 10
           },
           {
             "item": "Farinha de trigo",
             "quantidade": 1.5,
             "unidade": "kg",
             "produto": "Farinha De Trigo Nonita Especial 1kg",
-            "precoPorUnidade": 3.28,
-            "custo": 4.92,
+            "precoPorUnidade": 3.49,
+            "custo": 5.24,
             "opcoes": 5
           },
           {
@@ -415,18 +576,18 @@
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Batata Inglesa 1kg (qtd.aprox.5un )",
-            "precoPorUnidade": 8.9,
-            "custo": 53.4,
-            "opcoes": 12
+            "precoPorUnidade": 4.68,
+            "custo": 28.08,
+            "opcoes": 11
           },
           {
             "item": "Tomate",
             "quantidade": 9,
             "unidade": "kg",
-            "produto": "Tomate 700gr (qtd.aprox.4un )",
-            "precoPorUnidade": 11.9,
-            "custo": 107.1,
-            "opcoes": 1
+            "produto": null,
+            "precoPorUnidade": null,
+            "custo": null,
+            "opcoes": 0
           },
           {
             "item": "Pão francês",
@@ -444,15 +605,15 @@
             "produto": "Café Tradição Mineira Tradicional 500gr",
             "precoPorUnidade": 21.96,
             "custo": 13.18,
-            "opcoes": 33
+            "opcoes": 30
           },
           {
             "item": "Banana",
             "quantidade": 9,
             "unidade": "kg",
             "produto": "Banana Nanica 1,5kg ( Qtd.aprox.8un )",
-            "precoPorUnidade": 6.9,
-            "custo": 62.1,
+            "precoPorUnidade": 3.95,
+            "custo": 35.55,
             "opcoes": 2
           },
           {
@@ -460,8 +621,8 @@
             "quantidade": 3,
             "unidade": "kg",
             "produto": "Acucar Cristal Monte Alegre 5kg",
-            "precoPorUnidade": 2.76,
-            "custo": 8.28,
+            "precoPorUnidade": 3,
+            "custo": 9,
             "opcoes": 3
           },
           {
@@ -478,8 +639,8 @@
             "quantidade": 0.75,
             "unidade": "kg",
             "produto": "Manteiga Porto Alegre Com Sal 200gr",
-            "precoPorUnidade": 49.9,
-            "custo": 37.42,
+            "precoPorUnidade": 44.95,
+            "custo": 33.71,
             "opcoes": 5
           }
         ]
@@ -487,7 +648,7 @@
       {
         "supermercado": "vilasul",
         "supermercadoNome": "Vila Sul",
-        "total": 831.74,
+        "total": 829.92,
         "itensEncontrados": 13,
         "itensTotal": 13,
         "itens": [
@@ -495,37 +656,37 @@
             "item": "Carne bovina",
             "quantidade": 6,
             "unidade": "kg",
-            "produto": "Carne Bovina Friboi Acém 700g",
-            "precoPorUnidade": 35.99,
-            "custo": 215.94,
-            "opcoes": 27
+            "produto": "Acém Friboi 1kg",
+            "precoPorUnidade": 47.29,
+            "custo": 283.74,
+            "opcoes": 24
           },
           {
             "item": "Leite",
             "quantidade": 7.5,
             "unidade": "L",
-            "produto": "Leite Porto Alegre Longa Vida Integral 1l",
-            "precoPorUnidade": 5.19,
-            "custo": 38.93,
-            "opcoes": 7
+            "produto": "Leite L.vida Quata 1lt Integral",
+            "precoPorUnidade": 5.39,
+            "custo": 40.42,
+            "opcoes": 9
           },
           {
             "item": "Feijão",
             "quantidade": 4.5,
             "unidade": "kg",
-            "produto": "Feijão Carioca Tipo 1 Cabrera 1kg",
-            "precoPorUnidade": 10.07,
-            "custo": 45.32,
-            "opcoes": 6
+            "produto": "Feijao P.de Caldas 1kg Tipo 1",
+            "precoPorUnidade": 9.51,
+            "custo": 42.8,
+            "opcoes": 5
           },
           {
             "item": "Arroz",
             "quantidade": 3,
             "unidade": "kg",
-            "produto": "Arroz Alegrete Tipo 1 5kg",
-            "precoPorUnidade": 4.3,
-            "custo": 12.9,
-            "opcoes": 33
+            "produto": "Arroz Casili Tipo 1 5kg",
+            "precoPorUnidade": 4.95,
+            "custo": 14.85,
+            "opcoes": 30
           },
           {
             "item": "Farinha de trigo",
@@ -541,9 +702,9 @@
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Batata Lavada",
-            "precoPorUnidade": 14.29,
-            "custo": 85.74,
-            "opcoes": 22
+            "precoPorUnidade": 8.79,
+            "custo": 52.74,
+            "opcoes": 23
           },
           {
             "item": "Tomate",
@@ -561,24 +722,24 @@
             "produto": "Pão Francês",
             "precoPorUnidade": 15.87,
             "custo": 95.22,
-            "opcoes": 2
+            "opcoes": 3
           },
           {
             "item": "Café em pó",
             "quantidade": 0.6,
             "unidade": "kg",
-            "produto": "Café União Pouco Extra Forte 500g",
-            "precoPorUnidade": 37.8,
-            "custo": 22.68,
-            "opcoes": 71
+            "produto": "Café Forte 3 Corações 500g",
+            "precoPorUnidade": 43.78,
+            "custo": 26.27,
+            "opcoes": 75
           },
           {
             "item": "Banana",
             "quantidade": 9,
             "unidade": "kg",
-            "produto": "Banana Nanica Regiao",
-            "precoPorUnidade": 7.53,
-            "custo": 67.77,
+            "produto": "Banana Nanica 1.100kg (qtd.aprox. 8 Un.)",
+            "precoPorUnidade": 2.72,
+            "custo": 24.48,
             "opcoes": 6
           },
           {
@@ -586,18 +747,18 @@
             "quantidade": 3,
             "unidade": "kg",
             "produto": "Acucar Cristal Delta 5kg",
-            "precoPorUnidade": 2.58,
-            "custo": 7.74,
-            "opcoes": 4
+            "precoPorUnidade": 3.24,
+            "custo": 9.72,
+            "opcoes": 3
           },
           {
             "item": "Óleo de soja",
             "quantidade": 0.75,
             "unidade": "L",
-            "produto": "Oleo De Soja Vitaliv 900ml",
-            "precoPorUnidade": 8.62,
-            "custo": 6.47,
-            "opcoes": 2
+            "produto": "Óleo De Soja Liza 900ml",
+            "precoPorUnidade": 8.86,
+            "custo": 6.65,
+            "opcoes": 1
           },
           {
             "item": "Manteiga",
@@ -606,14 +767,14 @@
             "produto": "Manteiga Porto Alegre Com Sal 500g",
             "precoPorUnidade": 49.26,
             "custo": 36.95,
-            "opcoes": 18
+            "opcoes": 19
           }
         ]
       },
       {
         "supermercado": "sanmichel",
         "supermercadoNome": "San Michel",
-        "total": 576.67,
+        "total": 628.11,
         "itensEncontrados": 12,
         "itensTotal": 13,
         "itens": [
@@ -621,18 +782,18 @@
             "item": "Carne bovina",
             "quantidade": 6,
             "unidade": "kg",
-            "produto": "Acém Friboi Reserva Pedaço 1kg",
+            "produto": "Acém Friboi Reserva Cubos 1kg",
             "precoPorUnidade": 42.99,
             "custo": 257.94,
-            "opcoes": 20
+            "opcoes": 18
           },
           {
             "item": "Leite",
             "quantidade": 7.5,
             "unidade": "L",
-            "produto": "Leite Lvida Bonolat Tp-1l Integral",
-            "precoPorUnidade": 4.7,
-            "custo": 35.25,
+            "produto": "Leite Quata 1l Integral",
+            "precoPorUnidade": 4.59,
+            "custo": 34.42,
             "opcoes": 6
           },
           {
@@ -640,8 +801,8 @@
             "quantidade": 4.5,
             "unidade": "kg",
             "produto": "Feijão Carioca Camil 1kg",
-            "precoPorUnidade": 6.99,
-            "custo": 31.46,
+            "precoPorUnidade": 7.99,
+            "custo": 35.96,
             "opcoes": 5
           },
           {
@@ -649,26 +810,26 @@
             "quantidade": 3,
             "unidade": "kg",
             "produto": "Arroz San Michel 5kg",
-            "precoPorUnidade": 3.6,
-            "custo": 10.8,
+            "precoPorUnidade": 3.4,
+            "custo": 10.2,
             "opcoes": 18
           },
           {
             "item": "Farinha de trigo",
             "quantidade": 1.5,
             "unidade": "kg",
-            "produto": "Farinha De Trigo Sm 1kg Semolina",
-            "precoPorUnidade": 5.99,
-            "custo": 8.99,
-            "opcoes": 1
+            "produto": "Farinha De Trigo Renata Dia A Dia 1kg",
+            "precoPorUnidade": 4.75,
+            "custo": 7.13,
+            "opcoes": 2
           },
           {
             "item": "Batata",
             "quantidade": 6,
             "unidade": "kg",
             "produto": "Batata Granel 600g",
-            "precoPorUnidade": 5.78,
-            "custo": 34.68,
+            "precoPorUnidade": 3.98,
+            "custo": 23.88,
             "opcoes": 16
           },
           {
@@ -676,8 +837,8 @@
             "quantidade": 9,
             "unidade": "kg",
             "produto": "Tomate Italiano 500g",
-            "precoPorUnidade": 9.9,
-            "custo": 89.1,
+            "precoPorUnidade": 15,
+            "custo": 135,
             "opcoes": 2
           },
           {
@@ -702,9 +863,9 @@
             "item": "Banana",
             "quantidade": 9,
             "unidade": "kg",
-            "produto": "Banana Nanica 800g",
-            "precoPorUnidade": 4.99,
-            "custo": 44.91,
+            "produto": "Banana Prata Da Roca 1kg",
+            "precoPorUnidade": 6.49,
+            "custo": 58.41,
             "opcoes": 2
           },
           {
@@ -712,8 +873,8 @@
             "quantidade": 3,
             "unidade": "kg",
             "produto": "Açúcar Cristal Monte Alegre 5kg",
-            "precoPorUnidade": 2.78,
-            "custo": 8.34,
+            "precoPorUnidade": 3,
+            "custo": 9,
             "opcoes": 5
           },
           {
@@ -721,8 +882,8 @@
             "quantidade": 0.75,
             "unidade": "L",
             "produto": "Óleo Soja Pet Abc 900ml",
-            "precoPorUnidade": 8.21,
-            "custo": 6.16,
+            "precoPorUnidade": 8.32,
+            "custo": 6.24,
             "opcoes": 2
           },
           {
@@ -730,8 +891,8 @@
             "quantidade": 0.75,
             "unidade": "kg",
             "produto": "Manteiga Porto Alegre Com Sal 500g",
-            "precoPorUnidade": 39.8,
-            "custo": 29.85,
+            "precoPorUnidade": 40.98,
+            "custo": 30.74,
             "opcoes": 13
           }
         ]
@@ -747,7 +908,7 @@
             "item": "Carne bovina",
             "quantidade": 6,
             "unidade": "kg",
-            "produto": "Paleta Bovina",
+            "produto": "Músculo Bovino",
             "precoPorUnidade": 39.9,
             "custo": 239.4,
             "opcoes": 6
@@ -810,7 +971,7 @@
             "item": "Pão francês",
             "quantidade": 6,
             "unidade": "kg",
-            "produto": "Pao Frances Tradicional",
+            "produto": "Pão Francês Mini",
             "precoPorUnidade": 14.5,
             "custo": 87,
             "opcoes": 2
@@ -846,7 +1007,7 @@
             "item": "Óleo de soja",
             "quantidade": 0.75,
             "unidade": "L",
-            "produto": "Óleo de Soja Tipo 1 Liza Garrafa 900ml",
+            "produto": "Óleo de Soja Tipo 1 Coamo Garrafa 900ml",
             "precoPorUnidade": 8.78,
             "custo": 6.58,
             "opcoes": 6
@@ -878,18 +1039,18 @@
       },
       {
         "termo": "feijao carioca 1kg",
-        "produto": "Feijao Carioca Du Irineu Tipo 1 1kg",
-        "supermercado": "supervale"
+        "produto": "Feijão Carioca Du Irineu 1kg",
+        "supermercado": "sanmichel"
       },
       {
         "termo": "acucar refinado 1kg",
-        "produto": "Acucar Refinado Uniao 1kg",
-        "supermercado": "supervale"
+        "produto": "Açúcar Refinado União 1kg",
+        "supermercado": "sanmichel"
       },
       {
         "termo": "cafe 500g",
-        "produto": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
-        "supermercado": "sanmichel"
+        "produto": "Café 3 Corações Extra Forte 500g",
+        "supermercado": "vilasul"
       },
       {
         "termo": "oleo soja 900ml",
@@ -909,7 +1070,7 @@
       {
         "termo": "farinha trigo 1kg",
         "produto": "Farinha De Trigo Renata Dia A Dia 1kg",
-        "supermercado": "supervale"
+        "supermercado": "sanmichel"
       },
       {
         "termo": "sal refinado 1kg",
@@ -938,127 +1099,171 @@
           "id": "6acf1521096b7555d122b84f",
           "nome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f839b9",
               "nome": "Arroz Super Ecco Tipo 1 5kg",
               "preco": 20.98,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 20.98
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5c22",
               "nome": "Arroz Super Ecco Tipo 1 5kg",
-              "preco": 21.98,
-              "tipo": "igual"
+              "preco": 25.81,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 25.81
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3be1c",
               "nome": "Arroz Super Ecco Tipo 1 5kg",
-              "preco": 22.9,
-              "tipo": "igual"
+              "preco": 22.49,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 22.49
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122b84f",
               "nome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
               "preco": 20.4,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 20.4
             }
           }
         },
         {
-          "id": "6a500326d9bf4419554f14ec",
-          "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
+          "id": "6acf131a424246fe7ea3bdee",
+          "nome": "Feijão Carioca Du Irineu 1kg",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6a500326d9bf4419554f14ec",
               "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
-              "preco": 8.99,
-              "tipo": "igual"
+              "preco": 11.44,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 11.44
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5d46",
               "nome": "Feijão Carioca Du Irineu 1kg",
-              "preco": 11.19,
-              "tipo": "igual"
+              "preco": 10.63,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 10.63
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3bdee",
               "nome": "Feijão Carioca Du Irineu 1kg",
-              "preco": 9.95,
-              "tipo": "igual"
+              "preco": 10.49,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 10.49
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122b8f5",
               "nome": "Feijao Du Irineu 1Kg",
               "preco": 9.99,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 9.99
             }
           }
         },
         {
-          "id": "6acf1318be7f4fa7f4f840a7",
-          "nome": "Acucar Refinado Uniao 1kg",
+          "id": "6acf131a424246fe7ea3c17c",
+          "nome": "Açúcar Refinado União 1kg",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f840a7",
               "nome": "Acucar Refinado Uniao 1kg",
-              "preco": 3.99,
-              "tipo": "igual"
+              "preco": 4.69,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.69
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d3a5a",
               "nome": "Açúcar Refinado União 1kg",
-              "preco": 4.31,
-              "tipo": "igual"
+              "preco": 4.85,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.85
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3c17c",
               "nome": "Açúcar Refinado União 1kg",
-              "preco": 4.45,
-              "tipo": "igual"
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.59
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122c315",
               "nome": "Açúcar Refinado Especial União Pacote 1kg",
               "preco": 5.35,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.35
             }
           }
         },
         {
-          "id": "6acf131a424246fe7ea3bea2",
-          "nome": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
+          "id": "6acf131910fd0b23fe2d3b1c",
+          "nome": "Café 3 Corações Extra Forte 500g",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
-              "id": "6acf1318be7f4fa7f4f84187",
-              "nome": "Cafe Pacaembu Tradicional 500gr",
-              "preco": 27.98,
-              "tipo": "igual"
+              "id": "6acf1318be7f4fa7f4f840bb",
+              "nome": "Cafe 3 Coracoes Extra Forte 500g",
+              "preco": 24.9,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 24.9
             },
             "vilasul": {
-              "id": "6acf131910fd0b23fe2d3ae4",
-              "nome": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
-              "preco": 24.18,
-              "tipo": "igual"
+              "id": "6acf131910fd0b23fe2d3b1c",
+              "nome": "Café 3 Corações Extra Forte 500g",
+              "preco": 22.9,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 22.9
             },
             "sanmichel": {
-              "id": "6acf131a424246fe7ea3bea2",
-              "nome": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
-              "preco": 19.9,
-              "tipo": "igual"
+              "id": "6acf131a424246fe7ea3c072",
+              "nome": "Café 3 Corações Extra Forte 500g",
+              "preco": 23.9,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 23.9
             },
             "pedrilho": {
-              "id": "6acf1521096b7555d122c7a3",
-              "nome": "Café Torrado e Moído Tradicional Café Pacaembu Pacote 500g",
-              "preco": 29.49,
-              "tipo": "igual"
+              "id": "6acf1521096b7555d122c667",
+              "nome": "Café Torrado e Moído Extraforte 3 Corações Pacote 500g",
+              "preco": 31.99,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 31.99
             }
           }
         },
@@ -1066,31 +1271,42 @@
           "id": "6acf131a424246fe7ea3b3ac",
           "nome": "Óleo Soja Liza Pet 900ml",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f84261",
               "nome": "Oleo Soja Liza Pet 900ml",
               "preco": 7.68,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.68
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d58e4",
               "nome": "Óleo De Soja Liza 900ml",
               "preco": 7.97,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.97
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3b3ac",
               "nome": "Óleo Soja Liza Pet 900ml",
-              "preco": 7.49,
-              "tipo": "igual"
+              "preco": 7.55,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.55
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122d19d",
               "nome": "Óleo de Soja Tipo 1 Liza Garrafa 900ml",
               "preco": 7.9,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.9
             }
           }
         },
@@ -1098,31 +1314,42 @@
           "id": "6acf131b424246fe7ea3d32a",
           "nome": "Leite Quata 1l Integral",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f83b35",
               "nome": "Leite Uht Quata Integral 1lt",
               "preco": 5.48,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.48
             },
             "vilasul": {
               "id": "6acf131810fd0b23fe2d2c80",
               "nome": "Leite L.vida Quata 1lt Integral",
-              "preco": 5.61,
-              "tipo": "igual"
+              "preco": 5.39,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.39
             },
             "sanmichel": {
               "id": "6acf131b424246fe7ea3d32a",
               "nome": "Leite Quata 1l Integral",
-              "preco": 4.99,
-              "tipo": "igual"
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.59
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122b625",
               "nome": "Leite Longa Vida Quatá Integral 1L",
               "preco": 6.09,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 6.09
             }
           }
         },
@@ -1130,63 +1357,85 @@
           "id": "6acf1318be7f4fa7f4f84371",
           "nome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f84371",
               "nome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
-              "preco": 3.99,
-              "tipo": "igual"
+              "preco": 3.89,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 3.89
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5d08",
               "nome": "Macarrão Galo Semola Espaguete Furadinho Pa 500g",
               "preco": 4.27,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.27
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3b4f0",
               "nome": "Macarrão Galo Semola Espaguete Furadinho Pa 500g",
               "preco": 3.99,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 3.99
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122ce2d",
               "nome": "Macarrão de Sêmola Furadinho 5 Galo Pacote 500g",
               "preco": 4.59,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.59
             }
           }
         },
         {
-          "id": "6a500326d9bf4419554f14f8",
+          "id": "6ad3731adc85bc9751f5c8fc",
           "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6a500326d9bf4419554f14f8",
               "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
               "preco": 4.94,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.94
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5fe0",
               "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
               "preco": 5.38,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.38
             },
             "sanmichel": {
-              "id": "6acf131a424246fe7ea3be44",
-              "nome": "Farinha Trigo Renata Tradicional 1kg",
-              "preco": 5.69,
-              "tipo": "igual"
+              "id": "6ad3731adc85bc9751f5c8fc",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 4.75,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.75
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122b8b1",
               "nome": "Farinha de Trigo Tipo 1 Tradicional Renata Pacote 1kg",
               "preco": 6.69,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 6.69
             }
           }
         },
@@ -1194,31 +1443,42 @@
           "id": "6acf1521096b7555d122d015",
           "nome": "Sal Refinado Cisne Pacote 1kg",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f842f9",
               "nome": "Sal Refinado Tradicional Cisne 1kg",
               "preco": 4.95,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.95
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5aac",
               "nome": "Sal Refinado Tradicional Cisne 1kg",
               "preco": 4.61,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.61
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3b338",
               "nome": "Sal Refinado Tradicional Cisne 1kg",
               "preco": 4.2,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.2
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122d015",
               "nome": "Sal Refinado Cisne Pacote 1kg",
               "preco": 4.19,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.19
             }
           }
         },
@@ -1226,31 +1486,42 @@
           "id": "6acf1318be7f4fa7f4f83ab9",
           "nome": "Margarina Doriana Sem Sal 500gr",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6acf1318be7f4fa7f4f83ab9",
               "nome": "Margarina Doriana Sem Sal 500gr",
               "preco": 5.99,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.99
             },
             "vilasul": {
-              "id": "6acf131810fd0b23fe2d2b76",
-              "nome": "Margarina Doriana Cremosa Com Sal 500g",
-              "preco": 8.5,
-              "tipo": "igual"
+              "id": "6ad2be926b1d0542bc44af89",
+              "nome": "Margarina Doriana Sem Sal 500g",
+              "preco": 10.29,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 10.29
             },
             "sanmichel": {
               "id": "6acf131b424246fe7ea3d276",
               "nome": "Margarina Doriana Sem Sal 500g",
               "preco": 8.99,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 8.99
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122b679",
               "nome": "Margarina Cremosa com Sal Doriana Pote 500g",
               "preco": 7.89,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.89
             }
           }
         },
@@ -1258,31 +1529,42 @@
           "id": "6acf131910fd0b23fe2d5bb0",
           "nome": "Molho De Tomate Fugini Tradicional 300g",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
               "id": "6a500326d9bf4419554f15ea",
               "nome": "Molho De Tomate Fugini Tradicional 300gr",
-              "preco": 1.99,
-              "tipo": "igual"
+              "preco": 2.19,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 2.19
             },
             "vilasul": {
               "id": "6acf131910fd0b23fe2d5bb0",
               "nome": "Molho De Tomate Fugini Tradicional 300g",
               "preco": 1.73,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 1.73
             },
             "sanmichel": {
               "id": "6acf131a424246fe7ea3b508",
               "nome": "Molho Tomate Etti Tradicional 300g",
               "preco": 1.69,
-              "tipo": "similar"
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 1.69
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122cb7b",
               "nome": "Molho de Tomate Tradicional Fugini Sachê 300g",
               "preco": 1.95,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 1.95
             }
           }
         },
@@ -1290,130 +1572,1235 @@
           "id": "6acf1521096b7555d122c2a3",
           "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
           "quantidade": 1,
-          "aceitaSimilar": true,
           "precos": {
             "supervale": {
-              "id": "6acf1318be7f4fa7f4f840f7",
-              "nome": "Mistura Para Bolo Vilma Chocolate 400g",
-              "preco": 8.99,
-              "tipo": "similar"
+              "id": "6acf1318be7f4fa7f4f841b1",
+              "nome": "Achocolatado Pó Predilecta Sache 370gr",
+              "preco": 6.79,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 6.79
             },
             "vilasul": {
-              "id": "6acf131910fd0b23fe2d3cfa",
-              "nome": "Mist.bolo Italac Chocolate 400g",
+              "id": "6acf131910fd0b23fe2d3cee",
+              "nome": "Achocolatado ATI Sache 300g",
               "preco": 5.59,
-              "tipo": "similar"
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 5.59
             },
             "sanmichel": {
-              "id": "6acf131a424246fe7ea3be8e",
-              "nome": "Mistura Para Bolo Dr. Oetker 450g Chocolate",
-              "preco": 7.49,
-              "tipo": "similar"
+              "id": "6acf131a424246fe7ea3be94",
+              "nome": "Achocolatado Toddy Po Original 370g",
+              "preco": 10.9,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 10.9
             },
             "pedrilho": {
               "id": "6acf1521096b7555d122c2a3",
               "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
               "preco": 5.49,
-              "tipo": "igual"
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.49
             }
           }
+        }
+      ],
+      "comSimilares": [
+        {
+          "supermercado": "supervale",
+          "supermercadoNome": "SuperVale",
+          "total": 103.92,
+          "encontrados": 12,
+          "similares": 1,
+          "itens": [
+            {
+              "item": "6acf1521096b7555d122b84f",
+              "itemNome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f839b9",
+              "nome": "Arroz Super Ecco Tipo 1 5kg",
+              "preco": 20.98,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 20.98
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "itemNome": "Feijão Carioca Du Irineu 1kg",
+              "quantidade": 1,
+              "id": "6a500326d9bf4419554f14ec",
+              "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
+              "preco": 11.44,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 11.44
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "itemNome": "Açúcar Refinado União 1kg",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f840a7",
+              "nome": "Acucar Refinado Uniao 1kg",
+              "preco": 4.69,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.69
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "itemNome": "Café 3 Corações Extra Forte 500g",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f840bb",
+              "nome": "Cafe 3 Coracoes Extra Forte 500g",
+              "preco": 24.9,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 24.9
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "itemNome": "Óleo Soja Liza Pet 900ml",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f84261",
+              "nome": "Oleo Soja Liza Pet 900ml",
+              "preco": 7.68,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.68
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "itemNome": "Leite Quata 1l Integral",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f83b35",
+              "nome": "Leite Uht Quata Integral 1lt",
+              "preco": 5.48,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.48
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "itemNome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f84371",
+              "nome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
+              "preco": 3.89,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 3.89
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "itemNome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "quantidade": 1,
+              "id": "6a500326d9bf4419554f14f8",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 4.94,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.94
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "itemNome": "Sal Refinado Cisne Pacote 1kg",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f842f9",
+              "nome": "Sal Refinado Tradicional Cisne 1kg",
+              "preco": 4.95,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.95
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "itemNome": "Margarina Doriana Sem Sal 500gr",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f83ab9",
+              "nome": "Margarina Doriana Sem Sal 500gr",
+              "preco": 5.99,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.99
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "itemNome": "Molho De Tomate Fugini Tradicional 300g",
+              "quantidade": 1,
+              "id": "6a500326d9bf4419554f15ea",
+              "nome": "Molho De Tomate Fugini Tradicional 300gr",
+              "preco": 2.19,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 2.19
+            },
+            {
+              "item": "6acf1521096b7555d122c2a3",
+              "itemNome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+              "quantidade": 1,
+              "id": "6acf1318be7f4fa7f4f841b1",
+              "nome": "Achocolatado Pó Predilecta Sache 370gr",
+              "preco": 6.79,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 6.79
+            }
+          ],
+          "semOpcao": []
+        },
+        {
+          "supermercado": "vilasul",
+          "supermercadoNome": "Vila Sul",
+          "total": 109.42,
+          "encontrados": 12,
+          "similares": 1,
+          "itens": [
+            {
+              "item": "6acf1521096b7555d122b84f",
+              "itemNome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d5c22",
+              "nome": "Arroz Super Ecco Tipo 1 5kg",
+              "preco": 25.81,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 25.81
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "itemNome": "Feijão Carioca Du Irineu 1kg",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d5d46",
+              "nome": "Feijão Carioca Du Irineu 1kg",
+              "preco": 10.63,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 10.63
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "itemNome": "Açúcar Refinado União 1kg",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d3a5a",
+              "nome": "Açúcar Refinado União 1kg",
+              "preco": 4.85,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.85
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "itemNome": "Café 3 Corações Extra Forte 500g",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d3b1c",
+              "nome": "Café 3 Corações Extra Forte 500g",
+              "preco": 22.9,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 22.9
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "itemNome": "Óleo Soja Liza Pet 900ml",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d58e4",
+              "nome": "Óleo De Soja Liza 900ml",
+              "preco": 7.97,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.97
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "itemNome": "Leite Quata 1l Integral",
+              "quantidade": 1,
+              "id": "6acf131810fd0b23fe2d2c80",
+              "nome": "Leite L.vida Quata 1lt Integral",
+              "preco": 5.39,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.39
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "itemNome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d5d08",
+              "nome": "Macarrão Galo Semola Espaguete Furadinho Pa 500g",
+              "preco": 4.27,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.27
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "itemNome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d5fe0",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 5.38,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.38
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "itemNome": "Sal Refinado Cisne Pacote 1kg",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d5aac",
+              "nome": "Sal Refinado Tradicional Cisne 1kg",
+              "preco": 4.61,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.61
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "itemNome": "Margarina Doriana Sem Sal 500gr",
+              "quantidade": 1,
+              "id": "6ad2be926b1d0542bc44af89",
+              "nome": "Margarina Doriana Sem Sal 500g",
+              "preco": 10.29,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 10.29
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "itemNome": "Molho De Tomate Fugini Tradicional 300g",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d5bb0",
+              "nome": "Molho De Tomate Fugini Tradicional 300g",
+              "preco": 1.73,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 1.73
+            },
+            {
+              "item": "6acf1521096b7555d122c2a3",
+              "itemNome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+              "quantidade": 1,
+              "id": "6acf131910fd0b23fe2d3cee",
+              "nome": "Achocolatado ATI Sache 300g",
+              "preco": 5.59,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 5.59
+            }
+          ],
+          "semOpcao": []
+        },
+        {
+          "supermercado": "sanmichel",
+          "supermercadoNome": "San Michel",
+          "total": 108.13,
+          "encontrados": 12,
+          "similares": 2,
+          "itens": [
+            {
+              "item": "6acf1521096b7555d122b84f",
+              "itemNome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3be1c",
+              "nome": "Arroz Super Ecco Tipo 1 5kg",
+              "preco": 22.49,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 22.49
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "itemNome": "Feijão Carioca Du Irineu 1kg",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3bdee",
+              "nome": "Feijão Carioca Du Irineu 1kg",
+              "preco": 10.49,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 10.49
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "itemNome": "Açúcar Refinado União 1kg",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3c17c",
+              "nome": "Açúcar Refinado União 1kg",
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.59
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "itemNome": "Café 3 Corações Extra Forte 500g",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3c072",
+              "nome": "Café 3 Corações Extra Forte 500g",
+              "preco": 23.9,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 23.9
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "itemNome": "Óleo Soja Liza Pet 900ml",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3b3ac",
+              "nome": "Óleo Soja Liza Pet 900ml",
+              "preco": 7.55,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.55
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "itemNome": "Leite Quata 1l Integral",
+              "quantidade": 1,
+              "id": "6acf131b424246fe7ea3d32a",
+              "nome": "Leite Quata 1l Integral",
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.59
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "itemNome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3b4f0",
+              "nome": "Macarrão Galo Semola Espaguete Furadinho Pa 500g",
+              "preco": 3.99,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 3.99
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "itemNome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "quantidade": 1,
+              "id": "6ad3731adc85bc9751f5c8fc",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 4.75,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.75
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "itemNome": "Sal Refinado Cisne Pacote 1kg",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3b338",
+              "nome": "Sal Refinado Tradicional Cisne 1kg",
+              "preco": 4.2,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.2
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "itemNome": "Margarina Doriana Sem Sal 500gr",
+              "quantidade": 1,
+              "id": "6acf131b424246fe7ea3d276",
+              "nome": "Margarina Doriana Sem Sal 500g",
+              "preco": 8.99,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 8.99
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "itemNome": "Molho De Tomate Fugini Tradicional 300g",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3b508",
+              "nome": "Molho Tomate Etti Tradicional 300g",
+              "preco": 1.69,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 1.69
+            },
+            {
+              "item": "6acf1521096b7555d122c2a3",
+              "itemNome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+              "quantidade": 1,
+              "id": "6acf131a424246fe7ea3be94",
+              "nome": "Achocolatado Toddy Po Original 370g",
+              "preco": 10.9,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "tipo": "similar",
+              "precoPorKg": null,
+              "subtotal": 10.9
+            }
+          ],
+          "semOpcao": []
+        },
+        {
+          "supermercado": "pedrilho",
+          "supermercadoNome": "Pedrilho",
+          "total": 112.52,
+          "encontrados": 12,
+          "similares": 0,
+          "itens": [
+            {
+              "item": "6acf1521096b7555d122b84f",
+              "itemNome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122b84f",
+              "nome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+              "preco": 20.4,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 20.4
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "itemNome": "Feijão Carioca Du Irineu 1kg",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122b8f5",
+              "nome": "Feijao Du Irineu 1Kg",
+              "preco": 9.99,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 9.99
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "itemNome": "Açúcar Refinado União 1kg",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122c315",
+              "nome": "Açúcar Refinado Especial União Pacote 1kg",
+              "preco": 5.35,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.35
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "itemNome": "Café 3 Corações Extra Forte 500g",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122c667",
+              "nome": "Café Torrado e Moído Extraforte 3 Corações Pacote 500g",
+              "preco": 31.99,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 31.99
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "itemNome": "Óleo Soja Liza Pet 900ml",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122d19d",
+              "nome": "Óleo de Soja Tipo 1 Liza Garrafa 900ml",
+              "preco": 7.9,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.9
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "itemNome": "Leite Quata 1l Integral",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122b625",
+              "nome": "Leite Longa Vida Quatá Integral 1L",
+              "preco": 6.09,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 6.09
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "itemNome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122ce2d",
+              "nome": "Macarrão de Sêmola Furadinho 5 Galo Pacote 500g",
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.59
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "itemNome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122b8b1",
+              "nome": "Farinha de Trigo Tipo 1 Tradicional Renata Pacote 1kg",
+              "preco": 6.69,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 6.69
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "itemNome": "Sal Refinado Cisne Pacote 1kg",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122d015",
+              "nome": "Sal Refinado Cisne Pacote 1kg",
+              "preco": 4.19,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 4.19
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "itemNome": "Margarina Doriana Sem Sal 500gr",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122b679",
+              "nome": "Margarina Cremosa com Sal Doriana Pote 500g",
+              "preco": 7.89,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 7.89
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "itemNome": "Molho De Tomate Fugini Tradicional 300g",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122cb7b",
+              "nome": "Molho de Tomate Tradicional Fugini Sachê 300g",
+              "preco": 1.95,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 1.95
+            },
+            {
+              "item": "6acf1521096b7555d122c2a3",
+              "itemNome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+              "quantidade": 1,
+              "id": "6acf1521096b7555d122c2a3",
+              "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+              "preco": 5.49,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "tipo": "igual",
+              "precoPorKg": null,
+              "subtotal": 5.49
+            }
+          ],
+          "semOpcao": []
         }
       ],
       "porMercado": [
         {
           "supermercado": "supervale",
           "supermercadoNome": "SuperVale",
-          "total": 105.95,
-          "totalIguais": 96.96,
-          "encontrados": 12,
-          "encontradosIguais": 11,
-          "substituicoes": [
+          "dataColeta": "2026-11-07T00:53:57.372Z",
+          "total": 97.13,
+          "encontrados": 11,
+          "produtos": [
             {
-              "original": "Achocolatado em Pó Muky Chocolate Pacote 400g",
-              "substituto": "Mistura Para Bolo Vilma Chocolate 400g",
-              "preco": 8.99
+              "item": "6acf1521096b7555d122b84f",
+              "id": "6acf1318be7f4fa7f4f839b9",
+              "nome": "Arroz Super Ecco Tipo 1 5kg",
+              "preco": 20.98,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 20.98
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "id": "6a500326d9bf4419554f14ec",
+              "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
+              "preco": 11.44,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 11.44
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "id": "6acf1318be7f4fa7f4f840a7",
+              "nome": "Acucar Refinado Uniao 1kg",
+              "preco": 4.69,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 4.69
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "id": "6acf1318be7f4fa7f4f840bb",
+              "nome": "Cafe 3 Coracoes Extra Forte 500g",
+              "preco": 24.9,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 24.9
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "id": "6acf1318be7f4fa7f4f84261",
+              "nome": "Oleo Soja Liza Pet 900ml",
+              "preco": 7.68,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 7.68
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "id": "6acf1318be7f4fa7f4f83b35",
+              "nome": "Leite Uht Quata Integral 1lt",
+              "preco": 5.48,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 5.48
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "id": "6acf1318be7f4fa7f4f84371",
+              "nome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
+              "preco": 3.89,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 3.89
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "id": "6a500326d9bf4419554f14f8",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 4.94,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 4.94
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "id": "6acf1318be7f4fa7f4f842f9",
+              "nome": "Sal Refinado Tradicional Cisne 1kg",
+              "preco": 4.95,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 4.95
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "id": "6acf1318be7f4fa7f4f83ab9",
+              "nome": "Margarina Doriana Sem Sal 500gr",
+              "preco": 5.99,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 5.99
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "id": "6a500326d9bf4419554f15ea",
+              "nome": "Molho De Tomate Fugini Tradicional 300gr",
+              "preco": 2.19,
+              "dataColeta": "2026-11-07T00:53:57.372Z",
+              "quantidade": 1,
+              "subtotal": 2.19
             }
           ],
-          "faltando": []
+          "faltando": [
+            "Achocolatado em Pó Muky Chocolate Pacote 400g"
+          ]
         },
         {
           "supermercado": "vilasul",
           "supermercadoNome": "Vila Sul",
-          "total": 105.32,
-          "totalIguais": 99.73,
-          "encontrados": 12,
-          "encontradosIguais": 11,
-          "substituicoes": [
+          "dataColeta": "2026-11-07T01:20:56.342Z",
+          "total": 103.83,
+          "encontrados": 11,
+          "produtos": [
             {
-              "original": "Achocolatado em Pó Muky Chocolate Pacote 400g",
-              "substituto": "Mist.bolo Italac Chocolate 400g",
-              "preco": 5.59
+              "item": "6acf1521096b7555d122b84f",
+              "id": "6acf131910fd0b23fe2d5c22",
+              "nome": "Arroz Super Ecco Tipo 1 5kg",
+              "preco": 25.81,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 25.81
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "id": "6acf131910fd0b23fe2d5d46",
+              "nome": "Feijão Carioca Du Irineu 1kg",
+              "preco": 10.63,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 10.63
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "id": "6acf131910fd0b23fe2d3a5a",
+              "nome": "Açúcar Refinado União 1kg",
+              "preco": 4.85,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 4.85
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "id": "6acf131910fd0b23fe2d3b1c",
+              "nome": "Café 3 Corações Extra Forte 500g",
+              "preco": 22.9,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 22.9
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "id": "6acf131910fd0b23fe2d58e4",
+              "nome": "Óleo De Soja Liza 900ml",
+              "preco": 7.97,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 7.97
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "id": "6acf131810fd0b23fe2d2c80",
+              "nome": "Leite L.vida Quata 1lt Integral",
+              "preco": 5.39,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 5.39
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "id": "6acf131910fd0b23fe2d5d08",
+              "nome": "Macarrão Galo Semola Espaguete Furadinho Pa 500g",
+              "preco": 4.27,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 4.27
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "id": "6acf131910fd0b23fe2d5fe0",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 5.38,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 5.38
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "id": "6acf131910fd0b23fe2d5aac",
+              "nome": "Sal Refinado Tradicional Cisne 1kg",
+              "preco": 4.61,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 4.61
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "id": "6ad2be926b1d0542bc44af89",
+              "nome": "Margarina Doriana Sem Sal 500g",
+              "preco": 10.29,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 10.29
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "id": "6acf131910fd0b23fe2d5bb0",
+              "nome": "Molho De Tomate Fugini Tradicional 300g",
+              "preco": 1.73,
+              "dataColeta": "2026-11-07T01:20:56.342Z",
+              "quantidade": 1,
+              "subtotal": 1.73
             }
           ],
-          "faltando": []
+          "faltando": [
+            "Achocolatado em Pó Muky Chocolate Pacote 400g"
+          ]
         },
         {
           "supermercado": "sanmichel",
           "supermercadoNome": "San Michel",
-          "total": 101.73,
-          "totalIguais": 92.55,
-          "encontrados": 12,
-          "encontradosIguais": 10,
-          "substituicoes": [
+          "dataColeta": "2026-11-07T01:00:38.462Z",
+          "total": 95.54,
+          "encontrados": 10,
+          "produtos": [
             {
-              "original": "Molho De Tomate Fugini Tradicional 300g",
-              "substituto": "Molho Tomate Etti Tradicional 300g",
-              "preco": 1.69
+              "item": "6acf1521096b7555d122b84f",
+              "id": "6acf131a424246fe7ea3be1c",
+              "nome": "Arroz Super Ecco Tipo 1 5kg",
+              "preco": 22.49,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 22.49
             },
             {
-              "original": "Achocolatado em Pó Muky Chocolate Pacote 400g",
-              "substituto": "Mistura Para Bolo Dr. Oetker 450g Chocolate",
-              "preco": 7.49
+              "item": "6acf131a424246fe7ea3bdee",
+              "id": "6acf131a424246fe7ea3bdee",
+              "nome": "Feijão Carioca Du Irineu 1kg",
+              "preco": 10.49,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 10.49
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "id": "6acf131a424246fe7ea3c17c",
+              "nome": "Açúcar Refinado União 1kg",
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 4.59
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "id": "6acf131a424246fe7ea3c072",
+              "nome": "Café 3 Corações Extra Forte 500g",
+              "preco": 23.9,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 23.9
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "id": "6acf131a424246fe7ea3b3ac",
+              "nome": "Óleo Soja Liza Pet 900ml",
+              "preco": 7.55,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 7.55
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "id": "6acf131b424246fe7ea3d32a",
+              "nome": "Leite Quata 1l Integral",
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 4.59
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "id": "6acf131a424246fe7ea3b4f0",
+              "nome": "Macarrão Galo Semola Espaguete Furadinho Pa 500g",
+              "preco": 3.99,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 3.99
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "id": "6ad3731adc85bc9751f5c8fc",
+              "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
+              "preco": 4.75,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 4.75
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "id": "6acf131a424246fe7ea3b338",
+              "nome": "Sal Refinado Tradicional Cisne 1kg",
+              "preco": 4.2,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 4.2
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "id": "6acf131b424246fe7ea3d276",
+              "nome": "Margarina Doriana Sem Sal 500g",
+              "preco": 8.99,
+              "dataColeta": "2026-11-07T01:00:38.462Z",
+              "quantidade": 1,
+              "subtotal": 8.99
             }
           ],
-          "faltando": []
+          "faltando": [
+            "Molho De Tomate Fugini Tradicional 300g",
+            "Achocolatado em Pó Muky Chocolate Pacote 400g"
+          ]
         },
         {
           "supermercado": "pedrilho",
           "supermercadoNome": "Pedrilho",
-          "total": 110.02,
-          "totalIguais": 110.02,
+          "dataColeta": "2026-11-07T01:20:37.574Z",
+          "total": 112.52,
           "encontrados": 12,
-          "encontradosIguais": 12,
-          "substituicoes": [],
+          "produtos": [
+            {
+              "item": "6acf1521096b7555d122b84f",
+              "id": "6acf1521096b7555d122b84f",
+              "nome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+              "preco": 20.4,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 20.4
+            },
+            {
+              "item": "6acf131a424246fe7ea3bdee",
+              "id": "6acf1521096b7555d122b8f5",
+              "nome": "Feijao Du Irineu 1Kg",
+              "preco": 9.99,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 9.99
+            },
+            {
+              "item": "6acf131a424246fe7ea3c17c",
+              "id": "6acf1521096b7555d122c315",
+              "nome": "Açúcar Refinado Especial União Pacote 1kg",
+              "preco": 5.35,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 5.35
+            },
+            {
+              "item": "6acf131910fd0b23fe2d3b1c",
+              "id": "6acf1521096b7555d122c667",
+              "nome": "Café Torrado e Moído Extraforte 3 Corações Pacote 500g",
+              "preco": 31.99,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 31.99
+            },
+            {
+              "item": "6acf131a424246fe7ea3b3ac",
+              "id": "6acf1521096b7555d122d19d",
+              "nome": "Óleo de Soja Tipo 1 Liza Garrafa 900ml",
+              "preco": 7.9,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 7.9
+            },
+            {
+              "item": "6acf131b424246fe7ea3d32a",
+              "id": "6acf1521096b7555d122b625",
+              "nome": "Leite Longa Vida Quatá Integral 1L",
+              "preco": 6.09,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 6.09
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f84371",
+              "id": "6acf1521096b7555d122ce2d",
+              "nome": "Macarrão de Sêmola Furadinho 5 Galo Pacote 500g",
+              "preco": 4.59,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 4.59
+            },
+            {
+              "item": "6ad3731adc85bc9751f5c8fc",
+              "id": "6acf1521096b7555d122b8b1",
+              "nome": "Farinha de Trigo Tipo 1 Tradicional Renata Pacote 1kg",
+              "preco": 6.69,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 6.69
+            },
+            {
+              "item": "6acf1521096b7555d122d015",
+              "id": "6acf1521096b7555d122d015",
+              "nome": "Sal Refinado Cisne Pacote 1kg",
+              "preco": 4.19,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 4.19
+            },
+            {
+              "item": "6acf1318be7f4fa7f4f83ab9",
+              "id": "6acf1521096b7555d122b679",
+              "nome": "Margarina Cremosa com Sal Doriana Pote 500g",
+              "preco": 7.89,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 7.89
+            },
+            {
+              "item": "6acf131910fd0b23fe2d5bb0",
+              "id": "6acf1521096b7555d122cb7b",
+              "nome": "Molho de Tomate Tradicional Fugini Sachê 300g",
+              "preco": 1.95,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 1.95
+            },
+            {
+              "item": "6acf1521096b7555d122c2a3",
+              "id": "6acf1521096b7555d122c2a3",
+              "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+              "preco": 5.49,
+              "dataColeta": "2026-11-07T01:20:37.574Z",
+              "quantidade": 1,
+              "subtotal": 5.49
+            }
+          ],
           "faltando": []
         }
       ],
       "melhorMercado": {
-        "supermercado": "sanmichel",
-        "supermercadoNome": "San Michel",
-        "total": 101.73,
-        "totalIguais": 92.55,
+        "supermercado": "pedrilho",
+        "supermercadoNome": "Pedrilho",
+        "dataColeta": "2026-11-07T01:20:37.574Z",
+        "total": 112.52,
         "encontrados": 12,
-        "encontradosIguais": 10,
-        "substituicoes": [
+        "produtos": [
           {
-            "original": "Molho De Tomate Fugini Tradicional 300g",
-            "substituto": "Molho Tomate Etti Tradicional 300g",
-            "preco": 1.69
+            "item": "6acf1521096b7555d122b84f",
+            "id": "6acf1521096b7555d122b84f",
+            "nome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
+            "preco": 20.4,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 20.4
           },
           {
-            "original": "Achocolatado em Pó Muky Chocolate Pacote 400g",
-            "substituto": "Mistura Para Bolo Dr. Oetker 450g Chocolate",
-            "preco": 7.49
+            "item": "6acf131a424246fe7ea3bdee",
+            "id": "6acf1521096b7555d122b8f5",
+            "nome": "Feijao Du Irineu 1Kg",
+            "preco": 9.99,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 9.99
+          },
+          {
+            "item": "6acf131a424246fe7ea3c17c",
+            "id": "6acf1521096b7555d122c315",
+            "nome": "Açúcar Refinado Especial União Pacote 1kg",
+            "preco": 5.35,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 5.35
+          },
+          {
+            "item": "6acf131910fd0b23fe2d3b1c",
+            "id": "6acf1521096b7555d122c667",
+            "nome": "Café Torrado e Moído Extraforte 3 Corações Pacote 500g",
+            "preco": 31.99,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 31.99
+          },
+          {
+            "item": "6acf131a424246fe7ea3b3ac",
+            "id": "6acf1521096b7555d122d19d",
+            "nome": "Óleo de Soja Tipo 1 Liza Garrafa 900ml",
+            "preco": 7.9,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 7.9
+          },
+          {
+            "item": "6acf131b424246fe7ea3d32a",
+            "id": "6acf1521096b7555d122b625",
+            "nome": "Leite Longa Vida Quatá Integral 1L",
+            "preco": 6.09,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 6.09
+          },
+          {
+            "item": "6acf1318be7f4fa7f4f84371",
+            "id": "6acf1521096b7555d122ce2d",
+            "nome": "Macarrão de Sêmola Furadinho 5 Galo Pacote 500g",
+            "preco": 4.59,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 4.59
+          },
+          {
+            "item": "6ad3731adc85bc9751f5c8fc",
+            "id": "6acf1521096b7555d122b8b1",
+            "nome": "Farinha de Trigo Tipo 1 Tradicional Renata Pacote 1kg",
+            "preco": 6.69,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 6.69
+          },
+          {
+            "item": "6acf1521096b7555d122d015",
+            "id": "6acf1521096b7555d122d015",
+            "nome": "Sal Refinado Cisne Pacote 1kg",
+            "preco": 4.19,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 4.19
+          },
+          {
+            "item": "6acf1318be7f4fa7f4f83ab9",
+            "id": "6acf1521096b7555d122b679",
+            "nome": "Margarina Cremosa com Sal Doriana Pote 500g",
+            "preco": 7.89,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 7.89
+          },
+          {
+            "item": "6acf131910fd0b23fe2d5bb0",
+            "id": "6acf1521096b7555d122cb7b",
+            "nome": "Molho de Tomate Tradicional Fugini Sachê 300g",
+            "preco": 1.95,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 1.95
+          },
+          {
+            "item": "6acf1521096b7555d122c2a3",
+            "id": "6acf1521096b7555d122c2a3",
+            "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+            "preco": 5.49,
+            "dataColeta": "2026-11-07T01:20:37.574Z",
+            "quantidade": 1,
+            "subtotal": 5.49
           }
         ],
         "faltando": []
       },
       "compraDividida": {
-        "total": 92.05,
-        "economiaSobreMelhorMercado": 9.68,
+        "total": 96.06,
+        "economiaSobreMelhorMercado": 16.46,
         "itens": [
           {
             "id": "6acf1521096b7555d122b84f",
             "nome": "Arroz Polido Tipo 1 Super Ecco Pacote 5kg",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "pedrilho",
             "supermercadoNome": "Pedrilho",
             "produtoId": "6acf1521096b7555d122b84f",
@@ -1422,94 +2809,86 @@
             "subtotal": 20.4
           },
           {
-            "id": "6a500326d9bf4419554f14ec",
-            "nome": "Feijao Carioca Du Irineu Tipo 1 1kg",
+            "id": "6acf131a424246fe7ea3bdee",
+            "nome": "Feijão Carioca Du Irineu 1kg",
             "quantidade": 1,
-            "tipo": "igual",
-            "supermercado": "supervale",
-            "supermercadoNome": "SuperVale",
-            "produtoId": "6a500326d9bf4419554f14ec",
-            "produto": "Feijao Carioca Du Irineu Tipo 1 1kg",
-            "preco": 8.99,
-            "subtotal": 8.99
+            "supermercado": "pedrilho",
+            "supermercadoNome": "Pedrilho",
+            "produtoId": "6acf1521096b7555d122b8f5",
+            "produto": "Feijao Du Irineu 1Kg",
+            "preco": 9.99,
+            "subtotal": 9.99
           },
           {
-            "id": "6acf1318be7f4fa7f4f840a7",
-            "nome": "Acucar Refinado Uniao 1kg",
+            "id": "6acf131a424246fe7ea3c17c",
+            "nome": "Açúcar Refinado União 1kg",
             "quantidade": 1,
-            "tipo": "igual",
-            "supermercado": "supervale",
-            "supermercadoNome": "SuperVale",
-            "produtoId": "6acf1318be7f4fa7f4f840a7",
-            "produto": "Acucar Refinado Uniao 1kg",
-            "preco": 3.99,
-            "subtotal": 3.99
-          },
-          {
-            "id": "6acf131a424246fe7ea3bea2",
-            "nome": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
-            "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "sanmichel",
             "supermercadoNome": "San Michel",
-            "produtoId": "6acf131a424246fe7ea3bea2",
-            "produto": "Café Torrado E Moído Tradicional Café Pacaembu Pacote 500g",
-            "preco": 19.9,
-            "subtotal": 19.9
+            "produtoId": "6acf131a424246fe7ea3c17c",
+            "produto": "Açúcar Refinado União 1kg",
+            "preco": 4.59,
+            "subtotal": 4.59
+          },
+          {
+            "id": "6acf131910fd0b23fe2d3b1c",
+            "nome": "Café 3 Corações Extra Forte 500g",
+            "quantidade": 1,
+            "supermercado": "vilasul",
+            "supermercadoNome": "Vila Sul",
+            "produtoId": "6acf131910fd0b23fe2d3b1c",
+            "produto": "Café 3 Corações Extra Forte 500g",
+            "preco": 22.9,
+            "subtotal": 22.9
           },
           {
             "id": "6acf131a424246fe7ea3b3ac",
             "nome": "Óleo Soja Liza Pet 900ml",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "sanmichel",
             "supermercadoNome": "San Michel",
             "produtoId": "6acf131a424246fe7ea3b3ac",
             "produto": "Óleo Soja Liza Pet 900ml",
-            "preco": 7.49,
-            "subtotal": 7.49
+            "preco": 7.55,
+            "subtotal": 7.55
           },
           {
             "id": "6acf131b424246fe7ea3d32a",
             "nome": "Leite Quata 1l Integral",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "sanmichel",
             "supermercadoNome": "San Michel",
             "produtoId": "6acf131b424246fe7ea3d32a",
             "produto": "Leite Quata 1l Integral",
-            "preco": 4.99,
-            "subtotal": 4.99
+            "preco": 4.59,
+            "subtotal": 4.59
           },
           {
             "id": "6acf1318be7f4fa7f4f84371",
             "nome": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "supervale",
             "supermercadoNome": "SuperVale",
             "produtoId": "6acf1318be7f4fa7f4f84371",
             "produto": "Macarrao Galo Semola Espaguete Furadinho Pa 500g",
-            "preco": 3.99,
-            "subtotal": 3.99
+            "preco": 3.89,
+            "subtotal": 3.89
           },
           {
-            "id": "6a500326d9bf4419554f14f8",
+            "id": "6ad3731adc85bc9751f5c8fc",
             "nome": "Farinha De Trigo Renata Dia A Dia 1kg",
             "quantidade": 1,
-            "tipo": "igual",
-            "supermercado": "supervale",
-            "supermercadoNome": "SuperVale",
-            "produtoId": "6a500326d9bf4419554f14f8",
+            "supermercado": "sanmichel",
+            "supermercadoNome": "San Michel",
+            "produtoId": "6ad3731adc85bc9751f5c8fc",
             "produto": "Farinha De Trigo Renata Dia A Dia 1kg",
-            "preco": 4.94,
-            "subtotal": 4.94
+            "preco": 4.75,
+            "subtotal": 4.75
           },
           {
             "id": "6acf1521096b7555d122d015",
             "nome": "Sal Refinado Cisne Pacote 1kg",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "pedrilho",
             "supermercadoNome": "Pedrilho",
             "produtoId": "6acf1521096b7555d122d015",
@@ -1521,7 +2900,6 @@
             "id": "6acf1318be7f4fa7f4f83ab9",
             "nome": "Margarina Doriana Sem Sal 500gr",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "supervale",
             "supermercadoNome": "SuperVale",
             "produtoId": "6acf1318be7f4fa7f4f83ab9",
@@ -1533,19 +2911,17 @@
             "id": "6acf131910fd0b23fe2d5bb0",
             "nome": "Molho De Tomate Fugini Tradicional 300g",
             "quantidade": 1,
-            "tipo": "similar",
-            "supermercado": "sanmichel",
-            "supermercadoNome": "San Michel",
-            "produtoId": "6acf131a424246fe7ea3b508",
-            "produto": "Molho Tomate Etti Tradicional 300g",
-            "preco": 1.69,
-            "subtotal": 1.69
+            "supermercado": "vilasul",
+            "supermercadoNome": "Vila Sul",
+            "produtoId": "6acf131910fd0b23fe2d5bb0",
+            "produto": "Molho De Tomate Fugini Tradicional 300g",
+            "preco": 1.73,
+            "subtotal": 1.73
           },
           {
             "id": "6acf1521096b7555d122c2a3",
             "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
             "quantidade": 1,
-            "tipo": "igual",
             "supermercado": "pedrilho",
             "supermercadoNome": "Pedrilho",
             "produtoId": "6acf1521096b7555d122c2a3",
@@ -1554,90 +2930,347 @@
             "subtotal": 5.49
           }
         ]
-      }
+      },
+      "similares": [
+        {
+          "id": "6acf131910fd0b23fe2d5bb0",
+          "nome": "Molho De Tomate Fugini Tradicional 300g",
+          "quantidade": 1,
+          "faltaEm": [
+            "sanmichel"
+          ],
+          "opcoes": [
+            {
+              "supermercado": "sanmichel",
+              "supermercadoNome": "San Michel",
+              "produto": {
+                "id": "6acf131a424246fe7ea3b508",
+                "nome": "Molho Tomate Etti Tradicional 300g",
+                "preco": 1.69,
+                "dataColeta": "2026-11-07T01:00:38.462Z"
+              }
+            }
+          ]
+        },
+        {
+          "id": "6acf1521096b7555d122c2a3",
+          "nome": "Achocolatado em Pó Muky Chocolate Pacote 400g",
+          "quantidade": 1,
+          "faltaEm": [
+            "supervale",
+            "vilasul",
+            "sanmichel"
+          ],
+          "opcoes": [
+            {
+              "supermercado": "supervale",
+              "supermercadoNome": "SuperVale",
+              "produto": {
+                "id": "6acf1318be7f4fa7f4f841b1",
+                "nome": "Achocolatado Pó Predilecta Sache 370gr",
+                "preco": 6.79,
+                "dataColeta": "2026-11-07T00:53:57.372Z"
+              }
+            },
+            {
+              "supermercado": "vilasul",
+              "supermercadoNome": "Vila Sul",
+              "produto": {
+                "id": "6acf131910fd0b23fe2d3cee",
+                "nome": "Achocolatado ATI Sache 300g",
+                "preco": 5.59,
+                "dataColeta": "2026-11-07T01:20:56.342Z"
+              }
+            },
+            {
+              "supermercado": "sanmichel",
+              "supermercadoNome": "San Michel",
+              "produto": {
+                "id": "6acf131a424246fe7ea3be94",
+                "nome": "Achocolatado Toddy Po Original 370g",
+                "preco": 10.9,
+                "dataColeta": "2026-11-07T01:00:38.462Z"
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "historico": {
-    "registros": 797,
-    "produtosAcompanhados": 797,
-    "produtosQueMudaram": 0,
-    "mudancas": 0,
-    "altas": 0,
-    "quedas": 0,
-    "variacaoMedianaAltas": 0,
-    "variacaoMedianaQuedas": 0,
+    "registros": 11605,
+    "produtosAcompanhados": 6842,
+    "produtosQueMudaram": 2406,
+    "mudancas": 4206,
+    "altas": 2749,
+    "quedas": 1457,
+    "variacaoMedianaAltas": 22.2,
+    "variacaoMedianaQuedas": -19.2,
     "primeiraData": "2026-10-15",
-    "ultimaData": "2026-10-15",
-    "porDia": [],
-    "maioresAltas": [],
-    "maioresQuedas": []
+    "ultimaData": "2026-11-07",
+    "porDia": [
+      {
+        "data": "2026-10-16",
+        "altas": 107,
+        "quedas": 4
+      },
+      {
+        "data": "2026-10-17",
+        "altas": 48,
+        "quedas": 15
+      },
+      {
+        "data": "2026-10-19",
+        "altas": 240,
+        "quedas": 21
+      },
+      {
+        "data": "2026-10-20",
+        "altas": 40,
+        "quedas": 24
+      },
+      {
+        "data": "2026-10-21",
+        "altas": 19,
+        "quedas": 7
+      },
+      {
+        "data": "2026-10-22",
+        "altas": 134,
+        "quedas": 88
+      },
+      {
+        "data": "2026-10-23",
+        "altas": 116,
+        "quedas": 38
+      },
+      {
+        "data": "2026-10-24",
+        "altas": 103,
+        "quedas": 51
+      },
+      {
+        "data": "2026-10-25",
+        "altas": 2,
+        "quedas": 3
+      },
+      {
+        "data": "2026-10-26",
+        "altas": 214,
+        "quedas": 50
+      },
+      {
+        "data": "2026-10-27",
+        "altas": 63,
+        "quedas": 90
+      },
+      {
+        "data": "2026-10-28",
+        "altas": 209,
+        "quedas": 13
+      },
+      {
+        "data": "2026-10-29",
+        "altas": 153,
+        "quedas": 119
+      },
+      {
+        "data": "2026-10-30",
+        "altas": 142,
+        "quedas": 66
+      },
+      {
+        "data": "2026-10-31",
+        "altas": 105,
+        "quedas": 28
+      },
+      {
+        "data": "2026-11-01",
+        "altas": 73,
+        "quedas": 6
+      },
+      {
+        "data": "2026-11-02",
+        "altas": 36,
+        "quedas": 24
+      },
+      {
+        "data": "2026-11-03",
+        "altas": 380,
+        "quedas": 447
+      },
+      {
+        "data": "2026-11-04",
+        "altas": 194,
+        "quedas": 95
+      },
+      {
+        "data": "2026-11-05",
+        "altas": 277,
+        "quedas": 214
+      },
+      {
+        "data": "2026-11-06",
+        "altas": 93,
+        "quedas": 54
+      },
+      {
+        "data": "2026-11-07",
+        "altas": 1,
+        "quedas": 0
+      }
+    ],
+    "maioresAltas": [
+      {
+        "produto": "Chocolate Moranguete Bel 13gr",
+        "supermercado": "supervale",
+        "data": "2026-10-31",
+        "anterior": 0.8,
+        "atual": 10,
+        "percentual": 1150
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-19",
+        "anterior": 3.9,
+        "atual": 46.8,
+        "percentual": 1100
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-21",
+        "anterior": 3.9,
+        "atual": 46.8,
+        "percentual": 1100
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-22",
+        "anterior": 3.9,
+        "atual": 46.8,
+        "percentual": 1100
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-23",
+        "anterior": 3.9,
+        "atual": 46.8,
+        "percentual": 1100
+      }
+    ],
+    "maioresQuedas": [
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-17",
+        "anterior": 46.8,
+        "atual": 3.9,
+        "percentual": -91.7
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-20",
+        "anterior": 46.8,
+        "atual": 3.9,
+        "percentual": -91.7
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-22",
+        "anterior": 46.8,
+        "atual": 3.9,
+        "percentual": -91.7
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-23",
+        "anterior": 46.8,
+        "atual": 3.9,
+        "percentual": -91.7
+      },
+      {
+        "produto": "Cerveja Lager Puro Malte Amstel Lata 350ml",
+        "supermercado": "pedrilho",
+        "data": "2026-10-24",
+        "anterior": 46.8,
+        "atual": 3.9,
+        "percentual": -91.7
+      }
+    ]
   },
   "coletas": {
-    "execucoes": 2,
-    "agendadas": 1,
-    "jobs": 8,
-    "jobsComSucesso": 8,
+    "execucoes": 30,
+    "agendadas": 30,
+    "jobs": 120,
+    "jobsComSucesso": 120,
     "taxaDeSucesso": 100,
     "duracaoMedianaMinutos": {
-      "supervale": 22.7,
-      "pedrilho": 45.6,
-      "sanmichel": 34.1,
-      "vilasul": 60.1
+      "sanmichel": 28.8,
+      "supervale": 20.9,
+      "vilasul": 51.6,
+      "pedrilho": 46.3
     }
   },
   "api": {
     "base": "https://superpreco-api.onrender.com/api",
-    "primeiraRespostaMs": 495,
+    "primeiraRespostaMs": 21845,
     "rotas": [
       {
         "rota": "Busca de produtos",
         "caminho": "/produtos",
-        "medianaMs": 512,
-        "p90Ms": 540
+        "medianaMs": 425,
+        "p90Ms": 431
       },
       {
         "rota": "Detalhe do produto",
         "caminho": "/produtos/:id",
-        "medianaMs": 275,
-        "p90Ms": 280
+        "medianaMs": 261,
+        "p90Ms": 271
       },
       {
         "rota": "Comparação entre mercados",
         "caminho": "/produtos/:id/comparacao",
-        "medianaMs": 391,
-        "p90Ms": 394
+        "medianaMs": 378,
+        "p90Ms": 388
       },
       {
         "rota": "Similares de outras marcas",
         "caminho": "/produtos/:id/similares",
-        "medianaMs": 390,
-        "p90Ms": 399
+        "medianaMs": 378,
+        "p90Ms": 382
       },
       {
         "rota": "Histórico de preços",
         "caminho": "/produtos/:id/historico",
-        "medianaMs": 387,
-        "p90Ms": 391
+        "medianaMs": 376,
+        "p90Ms": 378
       },
       {
         "rota": "Cotação da lista de compras",
         "caminho": "/lista/cotacao",
-        "medianaMs": 508,
-        "p90Ms": 517
+        "medianaMs": 494,
+        "p90Ms": 499
       },
       {
         "rota": "Cesta básica",
         "caminho": "/cesta-basica",
-        "medianaMs": 156,
-        "p90Ms": 161
+        "medianaMs": 147,
+        "p90Ms": 150
       },
       {
         "rota": "Painel de estatísticas",
         "caminho": "/estatisticas",
-        "medianaMs": 156,
-        "p90Ms": 157
+        "medianaMs": 148,
+        "p90Ms": 162
       }
     ],
-    "medidoEm": "2026-10-15T22:47:41.133Z"
+    "medidoEm": "2026-11-07T04:06:53.588Z"
   }
 }

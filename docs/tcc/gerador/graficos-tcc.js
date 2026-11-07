@@ -50,7 +50,8 @@ const graficos = {
             valor: m.total,
             texto: `${reais(m.total)}${m.itensEncontrados < m.itensTotal ? ` (${m.itensEncontrados} de ${m.itensTotal} itens)` : ''}`
         })),
-        formatar: valor => `R$ ${valor}`
+        // Sem "R$" no eixo: os rotulos se sobrepunham; o valor de cada barra ja traz a moeda.
+        formatar: numero
     })
 };
 

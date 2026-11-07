@@ -14,14 +14,14 @@
   <line x1="670" y1="68" x2="670" y2="168" stroke="#e6dcc8" stroke-width="1"/>
   <text x="670" y="184" font-size="11" fill="#6b665b" text-anchor="middle">80%</text>
   <line x1="190" y1="68" x2="190" y2="168" stroke="#6b665b" stroke-width="1"/>
-  <text x="180" y="89" font-size="13" fill="#1d1b16" text-anchor="end">Mesmo produto</text>
-  <path d="M192,74 H394.20000000000005 Q398.20000000000005,74 398.20000000000005,78 V92 Q398.20000000000005,96 394.20000000000005,96 H192 Z" fill="#1f7a45"/>
-  <text x="406.20000000000005" y="89" font-size="13" font-weight="600" fill="#1d1b16">34,7%</text>
-  <text x="180" y="123" font-size="13" fill="#1d1b16" text-anchor="end">Mesmo produto ou similar</text>
-  <path d="M192,108 H622.2 Q626.2,108 626.2,112 V126 Q626.2,130 622.2,130 H192 Z" fill="#0c3d24"/>
-  <text x="634.2" y="123" font-size="13" font-weight="600" fill="#1d1b16">72,7%</text>
-  <text x="180" y="157" font-size="13" fill="#1d1b16" text-anchor="end">Nos 4 mercados (c/ similar)</text>
-  <path d="M192,142 H461.4 Q465.4,142 465.4,146 V160 Q465.4,164 461.4,164 H192 Z" fill="#1f7a45"/>
-  <text x="473.4" y="157" font-size="13" font-weight="600" fill="#1d1b16">45,9%</text>
+  <text x="180" y="89.55" font-size="13" fill="#1d1b16" text-anchor="end">Mesmo produto</text>
+  <path d="M192,74 H388.79999999999995 Q392.79999999999995,74 392.79999999999995,78 V92 Q392.79999999999995,96 388.79999999999995,96 H192 Z" fill="#1f7a45"/>
+  <text x="400.79999999999995" y="89.55" font-size="13" font-weight="600" fill="#1d1b16">33,8%</text>
+  <text x="180" y="123.55" font-size="13" fill="#1d1b16" text-anchor="end">Mesmo produto ou similar</text>
+  <path d="M192,108 H598.2 Q602.2,108 602.2,112 V126 Q602.2,130 598.2,130 H192 Z" fill="#0c3d24"/>
+  <text x="610.2" y="123.55" font-size="13" font-weight="600" fill="#1d1b16">68,7%</text>
+  <text x="180" y="157.55" font-size="13" fill="#1d1b16" text-anchor="end">Nos 4 mercados (c/ similar)</text>
+  <path d="M192,142 H420 Q424,142 424,146 V160 Q424,164 420,164 H192 Z" fill="#1f7a45"/>
+  <text x="432" y="157.55" font-size="13" font-weight="600" fill="#1d1b16">39%</text>
   <text x="16" y="216" font-size="11" fill="#6b665b">Fonte: dados coletados pelo SuperPreço</text>
 </svg>
