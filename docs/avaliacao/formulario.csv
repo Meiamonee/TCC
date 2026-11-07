@@ -1,0 +1,39 @@
+participante;idade;compara_precos;aparelho;tarefa1_cafe;tarefa1_tempo;tarefa2_cesta;tarefa2_tempo;tempo_sem_superpreco;economizar;confiaria;usaria;sus
+P1;25 a 39 anos;Sempre;Computador;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;Mais de 30 minutos;4;4;Sim;85
+P2;25 a 39 anos;Sempre;Computador;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 5 a 15 minutos;5;5;Sim;100
+P3;25 a 39 anos;Às vezes;Celular;Vila Sul;De 1 a 3 minutos;Pedrilho;Menos de 1 minuto;De 5 a 15 minutos;5;4;Sim;95
+P4;Até 24 anos;Às vezes;Celular;San Michel;Menos de 1 minuto;Pedrilho;De 1 a 3 minutos;Não faria essa comparação;4;4;Sim;95
+P5;25 a 39 anos;Às vezes;Computador;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 5 a 15 minutos;5;5;Sim;90
+P6;Até 24 anos;Às vezes;Celular;San Michel;Menos de 1 minuto;Pedrilho;De 1 a 3 minutos;De 5 a 15 minutos;5;4;Sim;80
+P7;40 a 59 anos;Às vezes;Celular;SuperVale;Menos de 1 minuto;San Michel;Menos de 1 minuto;Mais de 30 minutos;4;5;Sim;90
+P8;25 a 39 anos;Sempre;Celular;San Michel;Mais de 3 minutos;Não consegui descobrir;De 1 a 3 minutos;Não faria essa comparação;3;4;Talvez;45
+P9;25 a 39 anos;Às vezes;Computador;Pedrilho;Menos de 1 minuto;San Michel;De 1 a 3 minutos;Mais de 30 minutos;5;5;Sim;60
+P10;25 a 39 anos;Sempre;Celular;San Michel;De 1 a 3 minutos;Pedrilho;Menos de 1 minuto;Mais de 30 minutos;5;5;Sim;100
+P11;Até 24 anos;Às vezes;Celular;SuperVale;De 1 a 3 minutos;Vila Sul;De 1 a 3 minutos;De 5 a 15 minutos;4;3;Talvez;77,5
+P12;25 a 39 anos;Nunca;Computador;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 5 a 15 minutos;5;5;Sim;97,5
+P13;40 a 59 anos;Às vezes;Celular;San Michel;De 1 a 3 minutos;Não consegui descobrir;De 1 a 3 minutos;Menos de 5 minutos;5;5;Sim;100
+P14;25 a 39 anos;Nunca;Celular;San Michel;De 1 a 3 minutos;Pedrilho;De 1 a 3 minutos;De 15 a 30 minutos;5;5;Sim;87,5
+P15;25 a 39 anos;Às vezes;Computador;SuperVale;Menos de 1 minuto;SuperVale;Menos de 1 minuto;Menos de 5 minutos;3;3;Sim;65
+P16;Até 24 anos;Às vezes;Computador;SuperVale;Menos de 1 minuto;Pedrilho;De 1 a 3 minutos;De 15 a 30 minutos;4;4;Sim;95
+P17;25 a 39 anos;Às vezes;Celular;San Michel;De 1 a 3 minutos;Pedrilho;De 1 a 3 minutos;Não faria essa comparação;5;5;Sim;95
+P18;25 a 39 anos;Às vezes;Celular;SuperVale;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;Mais de 30 minutos;5;5;Sim;100
+P19;25 a 39 anos;Às vezes;Computador;San Michel;Menos de 1 minuto;Pedrilho;De 1 a 3 minutos;Não faria essa comparação;5;5;Sim;95
+P20;Até 24 anos;Nunca;Celular;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 5 a 15 minutos;5;5;Sim;100
+P21;25 a 39 anos;Sempre;Computador;San Michel;De 1 a 3 minutos;Pedrilho;Menos de 1 minuto;De 5 a 15 minutos;5;4;Sim;100
+P22;Até 24 anos;Às vezes;Celular;San Michel;De 1 a 3 minutos;Pedrilho;De 1 a 3 minutos;Mais de 30 minutos;4;3;Talvez;57,5
+P23;Até 24 anos;Às vezes;Celular;Não consegui descobrir;Menos de 1 minuto;Não consegui descobrir;Menos de 1 minuto;Não faria essa comparação;5;5;Sim;100
+P24;Até 24 anos;Às vezes;Celular;Não consegui descobrir;De 1 a 3 minutos;Não consegui descobrir;Mais de 3 minutos;Não faria essa comparação;5;5;Sim;80
+P25;25 a 39 anos;Às vezes;Celular;San Michel;Menos de 1 minuto;San Michel;Menos de 1 minuto;De 5 a 15 minutos;5;5;Talvez;92,5
+P26;Até 24 anos;Às vezes;Celular;Não consegui descobrir;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 15 a 30 minutos;5;5;Sim;90
+P27;25 a 39 anos;Às vezes;Celular;San Michel;Menos de 1 minuto;Não consegui descobrir;De 1 a 3 minutos;Mais de 30 minutos;5;4;Sim;100
+P28;25 a 39 anos;Às vezes;Celular;San Michel;De 1 a 3 minutos;Não consegui descobrir;Mais de 3 minutos;Mais de 30 minutos;5;4;Talvez;97,5
+P29;40 a 59 anos;Às vezes;Celular;San Michel;Menos de 1 minuto;San Michel;De 1 a 3 minutos;Mais de 30 minutos;5;5;Sim;97,5
+P30;Até 24 anos;Às vezes;Computador;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 15 a 30 minutos;5;5;Sim;100
+P31;Até 24 anos;Às vezes;Computador;San Michel;Menos de 1 minuto;Pedrilho;Menos de 1 minuto;De 15 a 30 minutos;5;5;Sim;100
+P32;Até 24 anos;Às vezes;Celular;SuperVale;Menos de 1 minuto;Não consegui descobrir;Menos de 1 minuto;Mais de 30 minutos;5;4;Sim;70
+P33;Até 24 anos;Às vezes;Computador;SuperVale;Menos de 1 minuto;SuperVale;Menos de 1 minuto;Não faria essa comparação;5;5;Sim;97,5
+P34;40 a 59 anos;Sempre;Celular;San Michel;Menos de 1 minuto;SuperVale;De 1 a 3 minutos;Mais de 30 minutos;4;5;Sim;72,5
+P35;Até 24 anos;Sempre;Computador;SuperVale;De 1 a 3 minutos;SuperVale;De 1 a 3 minutos;Não faria essa comparação;5;5;Sim;72,5
+P36;Até 24 anos;Nunca;Computador;SuperVale;Menos de 1 minuto;SuperVale;De 1 a 3 minutos;Não faria essa comparação;4;4;Sim;67,5
+P37;40 a 59 anos;Às vezes;Celular;San Michel;De 1 a 3 minutos;San Michel;De 1 a 3 minutos;Não faria essa comparação;5;5;Sim;67,5
+P38;25 a 39 anos;Às vezes;Celular;San Michel;Menos de 1 minuto;Não consegui descobrir;Menos de 1 minuto;Não faria essa comparação;5;5;Sim;100
