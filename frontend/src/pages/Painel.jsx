@@ -120,7 +120,10 @@ const Painel = () => {
                         <Numero
                             rotulo="Próxima coleta"
                             valor={resumo.proximaColeta ? semAno(resumo.proximaColeta) : '--'}
-                            detalhe={resumo.proximaColeta ? formatarTempoRelativo(resumo.proximaColeta) : coleta.agendamento}
+                            detalhe={resumo.proximaColeta
+                                // O GitHub Actions costuma comecar a coleta algumas horas depois do horario programado.
+                                ? (coleta.externa ? 'programada · pode atrasar' : formatarTempoRelativo(resumo.proximaColeta))
+                                : coleta.agendamento}
                         />
                         <Numero
                             rotulo="Cesta mais barata"
@@ -138,6 +141,10 @@ const Painel = () => {
                         {coleta.emExecucao ? (
                             <span className="flex items-center gap-2 rounded-lg bg-etiqueta-400 px-3 py-1.5 font-bold text-feira-900">
                                 <Loader2 size={15} className="animate-spin" /> Coleta em andamento desde {formatarDataCompleta(coleta.inicio)}
+                            </span>
+                        ) : coleta.agendamento === 'desligado' ? (
+                            <span className="flex items-center gap-2 rounded-lg bg-papel-200 px-3 py-1.5 font-bold text-tinta-500">
+                                Coleta automática desligada
                             </span>
                         ) : (
                             <span className="flex items-center gap-2 rounded-lg bg-feira-100 px-3 py-1.5 font-bold text-feira-800">
@@ -248,7 +255,7 @@ const Painel = () => {
                     <div className="mt-6 grid gap-6 text-sm leading-6 text-feira-100 sm:grid-cols-2 lg:grid-cols-4">
                         <div>
                             <p className="font-display text-base font-bold text-papel-50">Coleta automática</p>
-                            <p>Um robô com Selenium WebDriver abre o site de cada supermercado e lê os produtos exibidos nas páginas, {coleta.agendamento}.</p>
+                            <p>Um robô com Selenium WebDriver abre o site de cada supermercado e lê os produtos exibidos nas páginas{coleta.agendamento === 'desligado' ? '' : `, ${coleta.agendamento}`}.</p>
                         </div>
                         <div>
                             <p className="font-display text-base font-bold text-papel-50">Unidade de Poços</p>

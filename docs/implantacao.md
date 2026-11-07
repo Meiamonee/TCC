@@ -41,6 +41,7 @@ Variáveis de ambiente:
 - `MONGODB_URI`: definida no painel do Render.
 - `CORS_ORIGIN`: `https://superpreco.pages.dev`.
 - `SCHEDULER_ENABLED`: `false`.
+- `COLETA_EXTERNA`: `GitHub Actions` (o painel mostra que a coleta continua, pelo GitHub Actions).
 
 No plano grátis a API "dorme" após 15 minutos sem uso. O primeiro acesso depois disso pode levar perto de 1 minuto.
 

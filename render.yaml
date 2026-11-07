@@ -18,6 +18,9 @@ services:
       # e grava no mesmo banco (MongoDB Atlas).
       - key: SCHEDULER_ENABLED
         value: "false"
+      # Quem faz a coleta (nos mesmos horarios, 6h e 18h); o painel do site mostra isso.
+      - key: COLETA_EXTERNA
+        value: "GitHub Actions"
       # O limite de requisicoes e por IP do visitante. O Render fica atras da Cloudflare, que
       # preenche CF-Connecting-IP com o IP real (o cliente nao consegue falsificar). O numero de
       # saltos no X-Forwarded-For varia entre requisicoes, entao ele nao e usado para isso

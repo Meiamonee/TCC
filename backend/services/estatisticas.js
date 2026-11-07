@@ -14,9 +14,27 @@ function arredondar(valor) {
     return Math.round(valor * 100) / 100;
 }
 
-// Proximo horario da coleta automatica padrao (6h e 18h de Brasilia).
+// Servico que faz a coleta fora da API (ex.: "GitHub Actions"), nos mesmos horarios do node-cron.
+// No Render o agendador da API fica desligado, mas a coleta continua acontecendo por fora.
+function coletaExterna() {
+    return process.env.COLETA_EXTERNA || null;
+}
+
+function agendadorDesligado() {
+    return process.env.SCHEDULER_ENABLED === 'false';
+}
+
+// Texto do agendamento mostrado no painel.
+function descricaoDoAgendamento() {
+    if (agendadorDesligado()) {
+        return coletaExterna() ? `todos os dias às 6h e às 18h, pelo ${coletaExterna()}` : 'desligado';
+    }
+    return process.env.SCRAPER_CRON || 'todos os dias às 6h e às 18h';
+}
+
+// Proximo horario programado da coleta automatica padrao (6h e 18h de Brasilia).
 function proximaColeta(agora = new Date()) {
-    if (process.env.SCRAPER_CRON || process.env.SCHEDULER_ENABLED === 'false') {
+    if (process.env.SCRAPER_CRON || (agendadorDesligado() && !coletaExterna())) {
         return null;
     }
 
@@ -163,9 +181,8 @@ async function calcularEstatisticas() {
             emExecucao: estado.emExecucao,
             inicio: estado.inicio,
             ultimaExecucao: estado.ultimaExecucao,
-            agendamento: process.env.SCHEDULER_ENABLED === 'false'
-                ? 'desligado'
-                : (process.env.SCRAPER_CRON || 'todos os dias às 6h e às 18h')
+            agendamento: descricaoDoAgendamento(),
+            externa: coletaExterna()
         },
         porMercado,
         categorias: Object.values(categorias).sort((a, b) => b.total - a.total),
@@ -200,6 +217,7 @@ function invalidarEstatisticasGerais() {
 
 module.exports = {
     invalidarEstatisticasGerais,
+    descricaoDoAgendamento,
     obterEstatisticas,
     proximaColeta
 };

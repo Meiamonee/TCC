@@ -80,6 +80,7 @@ Testes unitários (normalização e comparação) e de integração (API) com `n
 - `CORS_ORIGIN`: origens liberadas, separadas por vírgula.
 - `ADMIN_TOKEN`: token exigido em `POST /api/scraping/atualizar`. Sem ele, a atualização manual pela API fica desabilitada.
 - `SCHEDULER_ENABLED`: `false` desliga a coleta agendada junto com a API.
+- `COLETA_EXTERNA`: nome do serviço que faz a coleta quando o agendador está desligado (ex.: `GitHub Actions`); o painel passa a mostrar os horários programados em vez de "desligado".
 - `SCRAPER_CRON`: horário da coleta (formato cron). Padrão: `0 6,18 * * *` (6h e 18h, horário de Brasília).
 - `SCRAPER_PAGE_DELAY_MS` e `SCRAPER_PAGE_DELAY_JITTER_MS`: pausa entre páginas do scraper (base + variação aleatória).
 - `CHROME_BINARY_PATH` ou `SELENIUM_CHROME_BINARY_PATH`: caminho do Chrome usado pelo Selenium.
