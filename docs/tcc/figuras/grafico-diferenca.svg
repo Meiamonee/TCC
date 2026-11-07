@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="292" viewBox="0 0 700 292" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="Diferença de preço do mesmo produto">
+  <title>Diferença de preço do mesmo produto</title>
+  <rect width="700" height="292" fill="#ffffff"/>
+  
+  
+  <line x1="250" y1="12" x2="250" y2="246" stroke="#c9bfab" stroke-width="1.5"/>
+  <text x="250" y="268" font-size="17" fill="#1d1b16" text-anchor="middle">0</text>
+  <line x1="387.5" y1="12" x2="387.5" y2="246" stroke="#c9bfab" stroke-width="1.5"/>
+  <text x="387.5" y="268" font-size="17" fill="#1d1b16" text-anchor="middle">1.000</text>
+  <line x1="525" y1="12" x2="525" y2="246" stroke="#c9bfab" stroke-width="1.5"/>
+  <text x="525" y="268" font-size="17" fill="#1d1b16" text-anchor="middle">2.000</text>
+  <line x1="250" y1="12" x2="250" y2="246" stroke="#6b665b" stroke-width="1"/>
+  <text x="240" y="40.3" font-size="18" fill="#1d1b16" text-anchor="end">Mesmo preço</text>
+  <path d="M252,18 H254.36875 Q256.7375,18 256.7375,20.368750000000006 V47.631249999999994 Q256.7375,50 254.36875,50 H252 Z" fill="#1f7a45"/>
+  <text x="264.7375" y="40.3" font-size="18" font-weight="600" fill="#1d1b16">49 produtos (1,1%)</text>
+  <text x="240" y="88.3" font-size="18" fill="#1d1b16" text-anchor="end">Até 10%</text>
+  <path d="M252,66 H407.01250000000005 Q411.01250000000005,66 411.01250000000005,70 V94 Q411.01250000000005,98 407.01250000000005,98 H252 Z" fill="#1f7a45"/>
+  <text x="419.01250000000005" y="88.3" font-size="18" font-weight="600" fill="#1d1b16">1.171 produtos (25,9%)</text>
+  <text x="240" y="136.3" font-size="18" fill="#1d1b16" text-anchor="end">10% a 20%</text>
+  <path d="M252,114 H407.42499999999995 Q411.42499999999995,114 411.42499999999995,118 V142 Q411.42499999999995,146 407.42499999999995,146 H252 Z" fill="#1f7a45"/>
+  <text x="419.42499999999995" y="136.3" font-size="18" font-weight="600" fill="#1d1b16">1.174 produtos (26%)</text>
+  <text x="240" y="184.3" font-size="18" fill="#1d1b16" text-anchor="end">20% a 50%</text>
+  <path d="M252,162 H462.70000000000005 Q466.70000000000005,162 466.70000000000005,166 V190 Q466.70000000000005,194 462.70000000000005,194 H252 Z" fill="#1f7a45"/>
+  <text x="474.70000000000005" y="184.3" font-size="18" font-weight="600" fill="#1d1b16">1.576 produtos (34,9%)</text>
+  <text x="240" y="232.3" font-size="18" fill="#1d1b16" text-anchor="end">Mais de 50%</text>
+  <path d="M252,210 H321.625 Q325.625,210 325.625,214 V238 Q325.625,242 321.625,242 H252 Z" fill="#1f7a45"/>
+  <text x="333.625" y="232.3" font-size="18" font-weight="600" fill="#1d1b16">550 produtos (12,2%)</text>
+  
+</svg>
